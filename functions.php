@@ -29,6 +29,6 @@ add_action( 'after_setup_theme', 'panda_puss_theme_setup' );
  * Enqueue theme scripts and styles.
  */
 function panda_puss_theme_scripts() {
-    wp_enqueue_style( 'fse-tutorial-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'panda-puss-style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'panda_puss_theme_scripts' );
