@@ -167,6 +167,11 @@
         "textTransform": true,
       },
       "blocks": {
+        "core/button": {
+          "border": {
+            "customRadius": false,
+          }
+        },
         "core/group": {
           "color": {
             "palette": [
@@ -180,6 +185,16 @@
                 "slug": "white",
                 "name": "White",
               },
+              {
+                "color": "hsla(210, 100%, 25%, 1.0)",
+                "slug": "congress-blue",
+                "name": "Congress Blue",
+              },
+              {
+                "color": "hsla(90, 100%, 25%, 1.0)",
+                "slug": "verdun-green",
+                "name": "Verdun Green",
+              },
             ]
           },
           "custom": {
@@ -187,7 +202,9 @@
           },
         }
         "core/paragraph": {
-          "color": {},
+          "color": {
+            "custom: true",
+          },
           "custom": {},
           "layout": {},
           "spacing": {},
