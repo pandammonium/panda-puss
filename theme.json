@@ -91,7 +91,14 @@
         ],
         "text": true,
       }
-      "custom": {},
+      "custom": {
+        "baseFont": 16,
+          "lineHeight": {
+            "small": 1.2,
+            "medium": 1.4,
+            "large": 1.8,
+          },
+      },
       "layout": {
         "contentSize": "800px",
         "wideSize": "1000px",
@@ -166,15 +173,18 @@
               {
                 "color": "hsla(0, 0%, 0%, 1.0)",
                 "slug": "black",
-                "name": "Black"
+                "name": "Black",
               },
               {
                 "color": "hsla(360, 0%, 100%, 1.0)",
                 "slug": "white",
-                "name": "White"
+                "name": "White",
               },
             ]
-          }
+          },
+          "custom": {
+            "baseFont": 32,
+          },
         }
         "core/paragraph": {
           "color": {},
