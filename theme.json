@@ -40,58 +40,87 @@
       ],
       "gradients": [
         {
-          "gradient": "linear-gradient(120deg,hsla(0, 0%, 0%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
+          "gradient": "linear-gradient(to bottom,hsla(0, 0%, 0%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
           "slug": "black-to-white",
           "name": "Black to White"
         },
         {
-          "gradient": "linear-gradient(120deg,hsla(270, 100%, 50%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
+          "gradient": "linear-gradient(to bottom,hsla(270, 100%, 50%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
           "slug": "electric-violet-to-white",
           "name": "Electric Violet to White"
         },
         {
           "gradient": "radial-gradient(ellipse,hsla(270, 100%, 75%, 1.0) 5%,hsla(0, 0%, 0%, 1.0) 100%)",
-          "colors": ["", ""],
-          "slug": "heliotrope-to-black",
-          "name": "Heliotrope to Black"
+          "slug": "heliotrope-to-black-radial",
+          "name": "Heliotrope to Black Radial"
         },
         {
-          "gradient": "linear-gradient(120deg,hsla(270, 100%, 25%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
+          "gradient": "linear-gradient(to bottom,hsla(270, 100%, 75%, 1.0) 5%,hsla(0, 0%, 0%, 1.0) 100%)",
+          "slug": "heliotrope-to-black-linear",
+          "name": "Heliotrope to Black Linear"
+        },
+        {
+          "gradient": "linear-gradient(hsla(0, 0%, 0%, 1.0),hsla(270, 100%, 75%, 1.0) 50%,hsla(0, 0%, 0%, 1.0))",
+          "slug": "black-to-heliotrope-to-black-linear",
+          "name": "Black to Heliotrope to Black Linear"
+        },
+        {
+          "gradient": "linear-gradient(to bottom,hsla(270, 100%, 25%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
           "slug": "pigment-indigo-to-white",
           "name": "Pigment Indigo to White"
+        },
+        {
+          "gradient": "linear-gradient(to bottom,var(--wp--preset--color--silver) 0%,var(--wp--preset--color--white) 50%,var(--wp--preset--color--silver) 100%)",
+          "slug": "silver-to-white-to-silver-linear",
+          "name": "Silver to White to Silver Linear"
+        },
+        {
+          "gradient": "var(--wp--preset--gradient--silver-to-white-to-silver-linear)",
+          "slug": "bg",
+          "name": "Background"
         }
       ],
       "link": false,
       "palette": [
         {
-          "color": ["hsla(0, 0%, 0%, 1.0)"],
+          "color": "hsla(0, 0%, 0%, 1.0)",
           "slug": "black",
           "name": "Black"
         },
         {
-          "color": ["hsla(360, 0%, 100%, 1.0)"],
+          "color": "hsla(360, 0%, 100%, 1.0)",
           "slug": "white",
           "name": "White"
         },
         {
-          "color": ["hsla(360, 0%, 75%, 1.0)"],
+          "color": "hsla(360, 0%, 75%, 1.0)",
           "slug": "silver",
           "name": "Silver"
         },
         {
-          "color": ["hsla(270, 100%, 50%, 1.0)"],
+          "color": "hsla(270, 100%, 50%, 1.0)",
           "slug": "electric-violet",
           "name": "Electric Violet"
         },
         {
-          "color": ["hsla(270, 100%, 75%, 1.0)"],
+          "color": "hsla(270, 100%, 75%, 1.0)",
           "slug": "heliotrope",
           "name": "Heliotrope"
         },
         {
-          "color": ["hsla(270, 100%, 25%, 1.0)"],
+          "color": "hsla(270, 100%, 25%, 1.0)",
           "slug": "pigment-indigo",
           "name": "Pigment Indigo"
+        },
+        {
+          "color": "var(--wp--preset--color--pigment-indigo)",
+          "slug": "fg",
+          "name": "Foreground"
+        },
+        {
+          "color": "var(--wp--preset--color--white)",
+          "slug": "bg",
+          "name": "Background"
         }
       ],
       "text": true
