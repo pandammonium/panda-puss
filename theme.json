@@ -16,10 +16,79 @@
         "customGradient": true,
         "defaultGradients": true,
         "defaultPalette": true,
-        "duotone": [],
-        "gradients": [],
+        "duotone": [
+          {
+            "colors": ["hsla(0, 0%, 0%, 1.0)", "hsla(360, 0%, 100%, 1.0)"],
+            "slug: "black-and-white",
+            "name": "Black and White",
+          },
+          { // Text 14pt+
+            "colors": ["hsla(270, 100%, 50%, 1.0)", "hsla(360, 0%, 100%, 1.0)"],
+            "slug: "electric-violet-and-white",
+            "name": "Electric Violet and White",
+          },
+          {
+            "colors": ["hsla(270, 100%, 75%, 1.0)", "hsla(0, 0%, 0%, 1.0)"],
+            "slug: "heliotrope-and-black",
+            "name": "Heliotrope and Black",
+          },
+          {
+            "colors": ["hsla(270, 100%, 25%, 1.0)", "hsla(360, 0%, 100%, 1.0)"],
+            "slug: "pigment-indigo-and-white",
+            "name": "Pigment Indigo and White",
+          },
+        ],
+        "gradients": [
+          {
+            "gradient": "linear-gradient(120deg,hsla(0, 0%, 0%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
+            "slug: "black-to-white",
+            "name": "Black to White",
+          },
+          {
+            "gradient": "linear-gradient(120deg,hsla(270, 100%, 50%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
+            "slug: "electric-violet-to-white",
+            "name": "Electric Violet to White",
+          },
+          {
+            "gradient": "radial-gradient(ellipse,hsla(270, 100%, 75%, 1.0) 5%,hsla(0, 0%, 0%, 1.0) 100%)",
+            "colors": ["", ""],
+            "slug: "heliotrope-to-black",
+            "name": "Heliotrope to Black",
+          },
+          {
+            "gradient": "linear-gradient(120deg,hsla(270, 100%, 25%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
+            "slug: "pigment-indigo-to-white",
+            "name": "Pigment Indigo to White",
+          },
+        ],
         "link": false,
-        "palette": [],
+        "palette": [
+          {
+            "color": ["hsla(0, 0%, 0%, 1.0)"],
+            "slug: "black",
+            "name": "Black",
+          },
+          {
+            "color": ["hsla(360, 0%, 100%, 1.0)"],
+            "slug: "white",
+            "name": "White",
+          },
+          {
+            "color": ["hsla(270, 100%, 50%, 1.0)"],
+            "slug: "electric-violet",
+            "name": "Electric Violet",
+          },
+          {
+            "color": ["hsla(270, 100%, 75%, 1.0)"],
+            "slug: "heliotrope",
+            "name": "Heliotrope",
+          },
+          {
+            "color": ["hsla(270, 100%, 25%, 1.0)"],
+            "slug: "pigment-indigo",
+            "name": "Pigment Indigo",
+          },
+        ],
         "text": true,
       }
       "custom": {},
@@ -39,11 +108,50 @@
         "customFontSize": true,
         "customLineHeight": false,
         "dropCap": true,
-        "fontSizes": [],
-        "customFontSize": true,
-        "dropCap": true,
-        "fontFamilies": [],
-        "fontSizes": [],
+        "fontFamilies": [
+          {
+            "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell, \"Helvetica Neue\",sans-serif",
+            "slug": "system-font",
+            "name": "System Font",
+          },
+          {
+            "fontFamily": "sans-serif",
+            "slug": "sans-serif",
+            "name": "Sans Serif",
+          },
+          {
+            "fontFamily": "serif",
+            "slug": "serif",
+            "name": "Serif",
+          },
+          {
+            "fontFamily": "cursive",
+            "slug": "cursive",
+            "name": "Cursive",
+          },
+          {
+            "fontFamily": "monospace",
+            "slug": "monospace",
+            "name": "Monospace",
+          },
+        ],
+        "fontSizes": [
+          {
+            "size": 16,
+            "slug": "normal",
+            "name": "Normal",
+          },
+          {
+            "size": 8,
+            "slug": "small",
+            "name": "Small",
+          },
+          {
+            "size": 32,
+            "slug": "large",
+            "name": "Large",
+          },
+        ],
         "fontStyle": true,
         "fontWeight": true,
         "letterSpacing": true,
@@ -52,6 +160,22 @@
         "textTransform": true,
       },
       "blocks": {
+        "core/group": {
+          "color": {
+            "palette": [
+              {
+                "color": "hsla(0, 0%, 0%, 1.0)",
+                "slug": "black",
+                "name": "Black"
+              },
+              {
+                "color": "hsla(360, 0%, 100%, 1.0)",
+                "slug": "white",
+                "name": "White"
+              },
+            ]
+          }
+        }
         "core/paragraph": {
           "color": {},
           "custom": {},
