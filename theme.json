@@ -14,8 +14,8 @@
       "custom": true,
       "customDuotone": true,
       "customGradient": true,
-      "defaultGradients": true,
-      "defaultPalette": true,
+      "defaultGradients": false,
+      "defaultPalette": false,
       "duotone": [
         {
           "colors": ["hsla(0, 0%, 0%, 1.0)", "hsla(360, 0%, 100%, 1.0)"],
@@ -92,16 +92,6 @@
           "color": ["hsla(270, 100%, 25%, 1.0)"],
           "slug": "pigment-indigo",
           "name": "Pigment Indigo"
-        },
-        {
-          "color": ["var(--wp--preset--color--pigment-indigo)"],
-          "slug": "fg",
-          "name": "Foreground"
-        },
-        {
-          "color": ["var(--wp--preset--color--silver)"],
-          "slug": "gg",
-          "name": "Background"
         }
       ],
       "text": true
@@ -129,7 +119,7 @@
     "typography": {
       "customFontSize": true,
       "customLineHeight": false,
-      "dropCap": true,
+      "dropCap": false,
       "fontFamilies": [
         {
           "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell, \"Helvetica Neue\",sans-serif",
@@ -218,18 +208,13 @@
       },
       "core/paragraph": {
         "color": {
-          "custom": true
+          "custom": false
         },
         "custom": {},
         "layout": {},
         "spacing": {},
         "typography": {},
-        "border": {},
-        "color": {},
-        "custom": {},
-        "layout": {},
-        "spacing": {},
-        "typography": {}
+        "border": {}
       },
       "core/heading": {},
       "etc": {}
@@ -237,19 +222,15 @@
   },
   "styles": {
     "border": {
-      "radius": "value",
       "color": "value",
       "radius": "value",
       "style": "value",
       "width": "value"
     },
     "color": {
-      "background": "value",
+      "background": "var(--wp--preset--color--bg)",
       "gradient": "value",
-      "text": "var(--wp--preset--color--fg)",
-      "background": "value",
-      "gradient": "value",
-      "text": "value"
+      "text": "var(--wp--preset--color--fg)"
     },
     "filter": {
         "duotone": "value"
@@ -270,9 +251,7 @@
       }
     },
     "typography": {
-      "fontSize": "value",
-      "lineHeight": "value",
-      "fontFamily": "value",
+      "fontFamily": "var(--wp--preset--font-family--sans-serif)",
       "fontSize": "value",
       "fontStyle": "value",
       "fontWeight": "value",
@@ -283,6 +262,7 @@
     },
     "elements": {
       "link": {
+        "background": "var(--wp--preset--color--silver)",
         "border": {},
         "color": {},
         "spacing": {},
