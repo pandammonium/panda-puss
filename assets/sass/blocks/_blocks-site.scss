@@ -1,10 +1,8 @@
-$primary-fg: var(--panda-puss--global--colour--tundora);
-$primary-bg: var(--panda-puss--global--colour--heliotrope);
-
+@use '../initialise/colours';
 
 .wp-site-blocks {
-  background-color: $primary-bg;
-  color: $primary-fg;
+  background-color: colours.$primary-bg;
+  color: colours.$primary-fg;
 }
 
 .wp-block-site-title {
