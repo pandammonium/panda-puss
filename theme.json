@@ -46,15 +46,11 @@
       "textTransform": false
     },
     "blocks": {
-      "core/button": {
-        "border": {
-          "customRadius": false
-        }
-      },
+      "core/button": {},
       "core/group": {},
       "core/paragraph": {}
     }
-  }
+  },
   "styles": {
     "border": {
       "color": "value",
