@@ -3,140 +3,27 @@
   "settings": {
     "appearanceTools": false,
     "border": {
-      "color": true,
+      "color": false,
       "customRadius": false,
-      "radius": true,
-      "style": true,
-      "width": true
+      "radius": false,
+      "style": false,
+      "width": false
     },
     "color": {
-      "background": true,
-      "custom": true,
-      "customDuotone": true,
-      "customGradient": true,
+      "background": false,
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
       "defaultGradients": false,
       "defaultPalette": false,
-      "duotone": [
-        {
-          "colors": ["hsla(0, 0%, 0%, 1.0)", "hsla(360, 0%, 100%, 1.0)"],
-          "slug": "black-and-white",
-          "name": "Black and White"
-        },
-        {
-          "colors": ["hsla(270, 100%, 50%, 1.0)", "hsla(360, 0%, 100%, 1.0)"],
-          "slug": "electric-violet-and-white",
-          "name": "Electric Violet and White"
-        },
-        {
-          "colors": ["hsla(270, 100%, 75%, 1.0)", "hsla(0, 0%, 0%, 1.0)"],
-          "slug": "heliotrope-and-black",
-          "name": "Heliotrope and Black"
-        },
-        {
-          "colors": ["hsla(270, 100%, 25%, 1.0)", "hsla(360, 0%, 100%, 1.0)"],
-          "slug": "pigment-indigo-and-white",
-          "name": "Pigment Indigo and White"
-        }
-      ],
-      "gradients": [
-        {
-          "gradient": "linear-gradient(to bottom,hsla(0, 0%, 0%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
-          "slug": "black-to-white",
-          "name": "Black to White"
-        },
-        {
-          "gradient": "linear-gradient(to bottom,hsla(270, 100%, 50%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
-          "slug": "electric-violet-to-white",
-          "name": "Electric Violet to White"
-        },
-        {
-          "gradient": "radial-gradient(ellipse,hsla(270, 100%, 75%, 1.0) 5%,hsla(0, 0%, 0%, 1.0) 100%)",
-          "slug": "heliotrope-to-black-radial",
-          "name": "Heliotrope to Black Radial"
-        },
-        {
-          "gradient": "linear-gradient(to bottom,hsla(270, 100%, 75%, 1.0) 5%,hsla(0, 0%, 0%, 1.0) 100%)",
-          "slug": "heliotrope-to-black-linear",
-          "name": "Heliotrope to Black Linear"
-        },
-        {
-          "gradient": "linear-gradient(hsla(0, 0%, 0%, 1.0),hsla(270, 100%, 75%, 1.0) 50%,hsla(0, 0%, 0%, 1.0))",
-          "slug": "black-to-heliotrope-to-black-linear",
-          "name": "Black to Heliotrope to Black Linear"
-        },
-        {
-          "gradient": "linear-gradient(to bottom,hsla(270, 100%, 25%, 1.0) 0%,hsla(360, 0%, 100%, 1.0) 100%)",
-          "slug": "pigment-indigo-to-white",
-          "name": "Pigment Indigo to White"
-        },
-        {
-          "gradient": "linear-gradient(to bottom,var(--wp--preset--color--silver) 0%,var(--wp--preset--color--white) 50%,var(--wp--preset--color--silver) 100%)",
-          "slug": "silver-to-white-to-silver-linear",
-          "name": "Silver to White to Silver Linear"
-        },
-        {
-          "gradient": "var(--wp--preset--gradient--silver-to-white-to-silver-linear)",
-          "slug": "bg",
-          "name": "Background"
-        }
-      ],
+      "duotone": [],
+      "gradients": [],
       "link": false,
-      "palette": [
-        {
-          "color": "hsla(0, 0%, 0%, 1.0)",
-          "slug": "black",
-          "name": "Black"
-        },
-        {
-          "color": "hsla(360, 0%, 100%, 1.0)",
-          "slug": "white",
-          "name": "White"
-        },
-        {
-          "color": "hsla(360, 0%, 75%, 1.0)",
-          "slug": "silver",
-          "name": "Silver"
-        },
-        {
-          "color": "hsla(270, 100%, 50%, 1.0)",
-          "slug": "electric-violet",
-          "name": "Electric Violet"
-        },
-        {
-          "color": "hsla(270, 100%, 75%, 1.0)",
-          "slug": "heliotrope",
-          "name": "Heliotrope"
-        },
-        {
-          "color": "hsla(270, 100%, 25%, 1.0)",
-          "slug": "pigment-indigo",
-          "name": "Pigment Indigo"
-        },
-        {
-          "color": "var(--wp--preset--color--pigment-indigo)",
-          "slug": "fg",
-          "name": "Foreground"
-        },
-        {
-          "color": "var(--wp--preset--color--white)",
-          "slug": "bg",
-          "name": "Background"
-        }
-      ],
-      "text": true
+      "palette": [],
+      "text": false
     },
-    "custom": {
-      "baseFont": 16,
-      "lineHeight": {
-        "small": 1.2,
-        "medium": 1.4,
-        "large": 1.8
-      }
-    },
-    "layout": {
-      "contentSize": "800px",
-      "wideSize": "1000px"
-    },
+    "custom": {},
+    "layout": {},
     "spacing": {
       "blockGap": null,
       "customMargin": false,
@@ -146,59 +33,17 @@
       "units": [ "px", "ch", "em", "rem", "vh", "vw" ]
     },
     "typography": {
-      "customFontSize": true,
+      "customFontSize": false,
       "customLineHeight": false,
       "dropCap": false,
-      "fontFamilies": [
-        {
-          "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell, \"Helvetica Neue\",sans-serif",
-          "slug": "system-font",
-          "name": "System Font"
-        },
-        {
-          "fontFamily": "sans-serif",
-          "slug": "sans-serif",
-          "name": "Sans Serif"
-        },
-        {
-          "fontFamily": "serif",
-          "slug": "serif",
-          "name": "Serif"
-        },
-        {
-          "fontFamily": "cursive",
-          "slug": "cursive",
-          "name": "Cursive"
-        },
-        {
-          "fontFamily": "monospace",
-          "slug": "monospace",
-          "name": "Monospace"
-        }
-      ],
-      "fontSizes": [
-        {
-          "size": 16,
-          "slug": "normal",
-          "name": "Normal"
-        },
-        {
-          "size": 8,
-          "slug": "small",
-          "name": "Small"
-        },
-        {
-          "size": 32,
-          "slug": "large",
-          "name": "Large"
-        }
-      ],
-      "fontStyle": true,
-      "fontWeight": true,
-      "letterSpacing": true,
+      "fontFamilies": [],
+      "fontSizes": [],
+      "fontStyle": false,
+      "fontWeight": false,
+      "letterSpacing": false,
       "lineHeight": false,
-      "textDecoration": true,
-      "textTransform": true
+      "textDecoration": false,
+      "textTransform": false
     },
     "blocks": {
       "core/button": {
@@ -206,60 +51,21 @@
           "customRadius": false
         }
       },
-      "core/group": {
-        "color": {
-          "palette": [
-            {
-              "color": "hsla(0, 0%, 0%, 1.0)",
-              "slug": "black",
-              "name": "Black"
-            },
-            {
-              "color": "hsla(360, 0%, 100%, 1.0)",
-              "slug": "white",
-              "name": "White"
-            },
-            {
-              "color": "hsla(210, 100%, 25%, 1.0)",
-              "slug": "congress-blue",
-              "name": "Congress Blue"
-            },
-            {
-              "color": "hsla(90, 100%, 25%, 1.0)",
-              "slug": "verdun-green",
-              "name": "Verdun Green"
-            }
-          ]
-        },
-        "custom": {
-          "baseFont": 32
-        }
-      },
-      "core/paragraph": {
-        "color": {
-          "custom": false
-        },
-        "custom": {},
-        "layout": {},
-        "spacing": {},
-        "typography": {},
-        "border": {}
-      },
-      "core/heading": {},
-      "etc": {}
+      "core/group": {},
+      "core/paragraph": {}
     }
-  },
+  }
   "styles": {
     "border": {
-      "color": "var(--wp--preset--color--fg)",
-      "radius": "5px",
-      "style": "solid",
-      "width": "1px"
+      "color": "value",
+      "radius": "value",
+      "style": "value",
+      "width": "value"
     },
     "color": {
-      "background": "var(--wp--preset--color--bg)",
-      "gradient": "var(--wp--preset--gradient--bg)",
-      "text": "var(--wp--preset--color--fg)"
+      "background": "value",
+      "gradient": "value",
+      "text": "value"
     },
     "filter": {
         "duotone": "value"
@@ -280,8 +86,8 @@
       }
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--sans-serif)",
-      "fontSize": "var(--wp--preset--font-size--large)",
+      "fontFamily": "value",
+      "fontSize": "value",
       "fontStyle": "value",
       "fontWeight": "value",
       "letterSpacing": "value",
