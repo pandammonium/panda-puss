@@ -3,11 +3,11 @@
   "settings": {
     "appearanceTools": false,
     "border": {
-      "color": false,
+      "color": true,
       "customRadius": false,
-      "radius": false,
-      "style": false,
-      "width": false
+      "radius": true,
+      "style": true,
+      "width": true
     },
     "color": {
       "background": true,
