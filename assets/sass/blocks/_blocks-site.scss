@@ -1,0 +1,15 @@
+$primary-fg: var(--panda-puss--global--colour--fresh-aubergine);
+$primary-bg: var(--panda-puss--global--colour--silver);
+
+
+.wp-site-blocks {
+  background-color: $primary-bg;
+  color: $primary-fg;
+}
+
+.wp-block-site-title {
+
+}
+.wp-block-site-tagline {
+
+}

@@ -1,0 +1,109 @@
+.wp-block-group {
+
+  .wp-block-post-template {
+    border: 1px solid red;
+    // Flex container
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-flow: column wrap;
+    gap: var(--panda-puss--global--space--ver) var(--panda-puss--global--space--hor);
+    justify-content: flex-start;
+    // End of flex container
+
+    .wp-block-post {
+    border: 1px solid blue;
+      // Flex item
+      flex: 0 1 auto;
+      // End of flex item
+      // Grid container
+      display: inline-grid;
+      grid-template-columns: repeat(30px, minmax(20px, 1fr));
+      grid-template-rows: auto;
+      grid-template-areas:
+        "post-title post-title post-title"
+        "post-author post-author-avatar post-date"
+        "post-excerpt post-excerpt post-excerpt"
+        "post-terms-category . post-terms-post-tag"
+        "post-nav-link-previous . post-nav-link-next";
+      // End of grid contaaner
+
+      .wp-block-post-title{
+        border: 1px solid green;
+        // Grid item
+        grid-area: post-title;
+        // End of grid item
+      }
+
+      .wp-block-post-author {
+        border: 1px solid yellowgreen;
+        // Grid item
+        grid-area: post-author;
+        // End of grid item
+      }
+
+      .wp-block-post-author__avatar {
+        border: 1px solid yellowgreen;
+        // Grid item
+        grid-area: post-author-avatar;
+        // End of grid item
+      }
+
+      .wp-block-post-date {
+        border: 1px solid purple;
+        // Grid item
+        grid-area: post-date;
+        // End of grid item
+      }
+
+      .wp-block-post-excerpt {
+        border: 1px solid pink;
+        // Grid item
+        grid-area: post-excerpt;
+        // End of grid item
+      }
+
+      .wp-block-post-terms.taxonomy-category {
+        border: 1px solid palevioletred;
+        // Grid item
+        grid-area: post-terms-category;
+        // End of grid item
+      }
+      .wp-block-post-terms.taxonomy-post-tag {
+        border: 1px solid paleturquoise;
+        // Grid item
+        grid-area: post-terms-post-tag;
+        // End of grid item
+      }
+
+      .wp-block-post-content{
+        border: 1px solid darkblue;
+        // Grid item
+        grid-area: post-content;
+        // End of grid item
+      }
+
+      .wp-block-post-comments {
+        border: 1px solid darkmagenta;
+        // Grid item
+        grid-area: post-terms-comments;
+        // End of grid item
+      }
+
+      .wp-block-post-navigation-link.post-navigation-link-next {
+        border: 1px solid aquamarine;
+        // Grid item
+        grid-area: post-nav-link-next;
+        // End of grid item
+      }
+      .wp-block-post-navigation-link.post-navigation-link-previous {
+        border: 1px solid deeppink;
+        // Grid item
+        grid-area: post-nav-link-previous;
+        // End of grid item
+      }
+
+
+    }
+  }
+}
