@@ -121,9 +121,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 4. Set the hyphenation.
  */
 body {
-  background-color: var(--panda-puss--global--colour--heliotrope);
+  background-color: var(--panda-puss--global--colour--white);
   color: var(--panda-puss--global--colour--tundora);
-  font-family: var(--panda-puss--global--font-family--cursive) !important;
+  font-family: var(--panda-puss--global--font-family--sans-serif) !important;
   font-size: var(--panda-puss--global--font-size--medium);
   line-height: 1.5;
   /* 1 */
@@ -511,7 +511,7 @@ template {
 
 .wp-block-group .wp-block-post-template {
   margin: auto;
-  width: 900px;
+  width: 90%;
   align-content: flex-start;
   align-items: stretch;
   display: flex;
@@ -520,7 +520,6 @@ template {
   justify-content: flex-start;
 }
 .wp-block-group .wp-block-post-template .wp-block-post {
-  width: 50%;
   flex: 0 1 auto;
   display: grid;
   gap: calc(0.1 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
