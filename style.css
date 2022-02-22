@@ -509,96 +509,6 @@ template {
   text-align: center;
 }
 
-.single .wp-block-group,
-.page .wp-block-group {
-  margin: auto;
-  width: 90%;
-  display: grid;
-  gap: calc(0.1 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
-  grid-template-columns: [left] minmax(25px, 125px) [line1] 1fr [line2] 1fr [end];
-  grid-template-rows: [top] auto [title] 48px [author-date] auto [excerpt] auto [terms] auto [bottom];
-  grid-template-areas: "post-featured-image post-title post-title" "post-featured-image post-author post-date" "post-featured-image post-content post-content" "post-terms-category post-terms-category post-terms-category" "post-terms-post-tag post-terms-post-tag post-terms-post-tag" "post-nav-link-previous . post-nav-link-next" "post-comments post-comments post-comments";
-  place-content: stretch;
-  place-items: stretch;
-}
-.single .wp-block-group .wp-block-post-title,
-.page .wp-block-group .wp-block-post-title {
-  grid-area: post-title;
-}
-.single .wp-block-group .wp-block-post-author,
-.page .wp-block-group .wp-block-post-author {
-  grid-area: post-author;
-  display: inline-grid;
-  gap: 0;
-  grid-template-columns: [left] minmax(48px, max-content) [middle] 1fr [end];
-  grid-template-rows: auto;
-  grid-template-areas: "post-author-avatar post-author-content";
-}
-.single .wp-block-group .wp-block-post-author .wp-block-post-author__content,
-.page .wp-block-group .wp-block-post-author .wp-block-post-author__content {
-  grid-area: post-author-content;
-  place-self: center start;
-}
-.single .wp-block-group .wp-block-post-author .wp-block-post-author__content .wp-block-post-author__name,
-.page .wp-block-group .wp-block-post-author .wp-block-post-author__content .wp-block-post-author__name {
-  margin-left: calc(1 * var(--panda-puss--global--space--hor));
-}
-.single .wp-block-group .wp-block-post-author .wp-block-post-author__avatar,
-.page .wp-block-group .wp-block-post-author .wp-block-post-author__avatar {
-  margin: unset;
-  grid-area: post-author-avatar;
-  place-self: center end;
-}
-.single .wp-block-group .wp-block-post-author .wp-block-post-author__avatar .avatar,
-.page .wp-block-group .wp-block-post-author .wp-block-post-author__avatar .avatar {
-  vertical-align: bottom;
-}
-.single .wp-block-group .wp-block-post-date,
-.page .wp-block-group .wp-block-post-date {
-  grid-area: post-date;
-  place-self: center start;
-}
-.single .wp-block-group .wp-block-post-excerpt,
-.page .wp-block-group .wp-block-post-excerpt {
-  grid-area: post-excerpt;
-}
-.single .wp-block-group .wp-block-post-content,
-.page .wp-block-group .wp-block-post-content {
-  grid-area: post-content;
-}
-.single .wp-block-group .wp-block-post-featured-image,
-.page .wp-block-group .wp-block-post-featured-image {
-  margin-right: calc(2 * var(--panda-puss--global--space--hor));
-  align-self: stretch;
-  grid-area: post-featured-image;
-}
-.single .wp-block-group .wp-block-post-terms,
-.page .wp-block-group .wp-block-post-terms {
-  place-self: center;
-}
-.single .wp-block-group .wp-block-post-terms.taxonomy-category,
-.page .wp-block-group .wp-block-post-terms.taxonomy-category {
-  grid-area: post-terms-category;
-}
-.single .wp-block-group .wp-block-post-terms.taxonomy-post_tag,
-.page .wp-block-group .wp-block-post-terms.taxonomy-post_tag {
-  grid-area: post-terms-post-tag;
-}
-.single .wp-block-group .wp-block-post-comments,
-.page .wp-block-group .wp-block-post-comments {
-  grid-area: post-comments;
-}
-.single .wp-block-group .post-navigation-link-next.wp-block-post-navigation-link,
-.page .wp-block-group .post-navigation-link-next.wp-block-post-navigation-link {
-  grid-area: post-nav-link-next;
-  place-self: center end;
-}
-.single .wp-block-group .post-navigation-link-previous.wp-block-post-navigation-link,
-.page .wp-block-group .post-navigation-link-previous.wp-block-post-navigation-link {
-  grid-area: post-nav-link-previous;
-  place-self: center start;
-}
-
 .archive .wp-block-post-template,
 .blog .wp-block-post-template {
   align-content: flex-start;
@@ -698,6 +608,96 @@ template {
 }
 .archive .wp-block-post-template .wp-block-post .post-navigation-link-previous.wp-block-post-navigation-link,
 .blog .wp-block-post-template .wp-block-post .post-navigation-link-previous.wp-block-post-navigation-link {
+  grid-area: post-nav-link-previous;
+  place-self: center start;
+}
+
+.single .wp-block-group,
+.page .wp-block-group {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  gap: calc(0.1 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
+  grid-template-columns: [left] minmax(25px, 125px) [line1] 1fr [line2] 1fr [end];
+  grid-template-rows: [top] auto [title] 48px [author-date] auto [excerpt] auto [terms] auto [bottom];
+  grid-template-areas: "post-featured-image post-title post-title" "post-featured-image post-author post-date" "post-featured-image post-content post-content" "post-terms-category post-terms-category post-terms-category" "post-terms-post-tag post-terms-post-tag post-terms-post-tag" "post-nav-link-previous . post-nav-link-next" "post-comments post-comments post-comments";
+  place-content: stretch;
+  place-items: stretch;
+}
+.single .wp-block-group .wp-block-post-title,
+.page .wp-block-group .wp-block-post-title {
+  grid-area: post-title;
+}
+.single .wp-block-group .wp-block-post-author,
+.page .wp-block-group .wp-block-post-author {
+  grid-area: post-author;
+  display: inline-grid;
+  gap: 0;
+  grid-template-columns: [left] minmax(48px, max-content) [middle] 1fr [end];
+  grid-template-rows: auto;
+  grid-template-areas: "post-author-avatar post-author-content";
+}
+.single .wp-block-group .wp-block-post-author .wp-block-post-author__content,
+.page .wp-block-group .wp-block-post-author .wp-block-post-author__content {
+  grid-area: post-author-content;
+  place-self: center start;
+}
+.single .wp-block-group .wp-block-post-author .wp-block-post-author__content .wp-block-post-author__name,
+.page .wp-block-group .wp-block-post-author .wp-block-post-author__content .wp-block-post-author__name {
+  margin-left: calc(1 * var(--panda-puss--global--space--hor));
+}
+.single .wp-block-group .wp-block-post-author .wp-block-post-author__avatar,
+.page .wp-block-group .wp-block-post-author .wp-block-post-author__avatar {
+  margin: unset;
+  grid-area: post-author-avatar;
+  place-self: center end;
+}
+.single .wp-block-group .wp-block-post-author .wp-block-post-author__avatar .avatar,
+.page .wp-block-group .wp-block-post-author .wp-block-post-author__avatar .avatar {
+  vertical-align: bottom;
+}
+.single .wp-block-group .wp-block-post-date,
+.page .wp-block-group .wp-block-post-date {
+  grid-area: post-date;
+  place-self: center start;
+}
+.single .wp-block-group .wp-block-post-excerpt,
+.page .wp-block-group .wp-block-post-excerpt {
+  grid-area: post-excerpt;
+}
+.single .wp-block-group .wp-block-post-content,
+.page .wp-block-group .wp-block-post-content {
+  grid-area: post-content;
+}
+.single .wp-block-group .wp-block-post-featured-image,
+.page .wp-block-group .wp-block-post-featured-image {
+  margin-right: calc(2 * var(--panda-puss--global--space--hor));
+  align-self: stretch;
+  grid-area: post-featured-image;
+}
+.single .wp-block-group .wp-block-post-terms,
+.page .wp-block-group .wp-block-post-terms {
+  place-self: center;
+}
+.single .wp-block-group .wp-block-post-terms.taxonomy-category,
+.page .wp-block-group .wp-block-post-terms.taxonomy-category {
+  grid-area: post-terms-category;
+}
+.single .wp-block-group .wp-block-post-terms.taxonomy-post_tag,
+.page .wp-block-group .wp-block-post-terms.taxonomy-post_tag {
+  grid-area: post-terms-post-tag;
+}
+.single .wp-block-group .wp-block-post-comments,
+.page .wp-block-group .wp-block-post-comments {
+  grid-area: post-comments;
+}
+.single .wp-block-group .post-navigation-link-next.wp-block-post-navigation-link,
+.page .wp-block-group .post-navigation-link-next.wp-block-post-navigation-link {
+  grid-area: post-nav-link-next;
+  place-self: center end;
+}
+.single .wp-block-group .post-navigation-link-previous.wp-block-post-navigation-link,
+.page .wp-block-group .post-navigation-link-previous.wp-block-post-navigation-link {
   grid-area: post-nav-link-previous;
   place-self: center start;
 }
