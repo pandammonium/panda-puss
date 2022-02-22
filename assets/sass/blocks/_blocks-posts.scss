@@ -1,0 +1,29 @@
+@use 'post-content';
+
+// Used by index, archives, etc.
+
+.archive,
+.blog {
+  .wp-block-post-template {
+    // border: 1px solid red;
+    // Flex container
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    gap: calc(5 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
+    justify-content: flex-start;
+    // End of flex container
+    .wp-block-post {
+      // background-color: palegreen;
+      // border: 1px solid palegreen;
+      // width: 50%;
+      // Flex item
+      flex: 0 1 auto;
+      // End of flex item
+      // Grid container
+      @include post-content.post-content('excerpt');
+      // End of grid contaaner
+    }
+  }
+}
