@@ -702,4 +702,82 @@ template {
   place-self: center start;
 }
 
+.wp-block-post-comments {
+  display: grid;
+  grid-template-columns: [left] auto [right];
+  grid-template-rows: auto;
+  grid-template-areas: "comment-title" "comment-nav-top" "comment-list " "comment-nav" "comment-respond";
+}
+.wp-block-post-comments #comments {
+  grid-area: comment-title;
+}
+.wp-block-post-comments .navigation {
+  grid-area: comment-nav;
+}
+.wp-block-post-comments .navigation .alignleft {
+  color: darkmagenta;
+}
+.wp-block-post-comments .navigation .alignright {
+  color: darkorange;
+}
+.wp-block-post-comments #comments + .navigation {
+  grid-area: comment-nav-top;
+}
+.wp-block-post-comments .commentlist {
+  margin-top: calc(1 * var(--panda-puss--global--space--ver));
+  grid-area: comment-list;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  place-items: stretch;
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-meta {
+  display: grid;
+  gap: calc(0 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
+  grid-template-columns: minmax(2.5em, max-content) 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "comment-meta-author comment-meta-author" ". comment-meta-metadata" "comment-content comment-reply";
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author {
+  gap: calc(0 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
+  grid-area: comment-meta-author;
+  display: grid;
+  grid-template-columns: minmax(32px, max-content) minmax(32px, max-content) 4ch;
+  grid-template-rows: auto;
+  grid-template-areas: "comment-meta-author-avatar comment-meta-author-name comment-meta-author-says";
+  align-items: center;
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author .avatar {
+  grid-area: comment-meta-author-avatar;
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author .fn {
+  grid-area: comment-meta-author-name;
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author .says {
+  grid-area: comment-meta-author-says;
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-metadata {
+  grid-area: comment-meta-metadata;
+  margin-left: calc(2 * var(--panda-puss--global--space--hor));
+  display: grid;
+  gap: calc(0 * var(--panda-puss--global--space--ver)) calc(2 * var(--panda-puss--global--space--hor));
+  grid-template-columns: minmax(32px, max-content) 4ch;
+  grid-template-areas: "comment-meta-metadata-datetime comment-meta-metadata-edit-link";
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-metadata a > time {
+  grid-area: comment-meta-metadata-datetime;
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-metadata .edit-link {
+  grid-area: comment-meta-metadata-edit-link;
+}
+.wp-block-post-comments .commentlist .comment .comment-body .comment-content {
+  grid-area: comment-content;
+}
+.wp-block-post-comments .commentlist .comment .comment-body .reply {
+  grid-area: comment-reply;
+}
+.wp-block-post-comments .comment-respond {
+  grid-area: comment-respond;
+}
+
 /*# sourceMappingURL=style.css.map */
