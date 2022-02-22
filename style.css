@@ -16,6 +16,94 @@ Text Domain: panda-puss
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+:root {
+  --panda-puss--global--colour--hue--0: 0;
+  --panda-puss--global--colour--hue--30: 30;
+  --panda-puss--global--colour--hue--60: 60;
+  --panda-puss--global--colour--hue--90: 90;
+  --panda-puss--global--colour--hue--120: 120;
+  --panda-puss--global--colour--hue--150: 150;
+  --panda-puss--global--colour--hue--180: 180;
+  --panda-puss--global--colour--hue--210: 210;
+  --panda-puss--global--colour--hue--240: 240;
+  --panda-puss--global--colour--hue--270: 270;
+  --panda-puss--global--colour--hue--300: 300;
+  --panda-puss--global--colour--hue--330: 330;
+  --panda-puss--global--colour--saturation--0: 0%;
+  --panda-puss--global--colour--saturation--25: 25%;
+  --panda-puss--global--colour--saturation--50: 50%;
+  --panda-puss--global--colour--saturation--75: 75%;
+  --panda-puss--global--colour--saturation--100: 100%;
+  --panda-puss--global--colour--lightness--0: 0%;
+  --panda-puss--global--colour--lightness--25: 25%;
+  --panda-puss--global--colour--lightness--50: 50%;
+  --panda-puss--global--colour--lightness--75: 75%;
+  --panda-puss--global--colour--lightness--100: 100%;
+  --panda-puss--global--colour--transparency--0-00: 0.00;
+  --panda-puss--global--colour--transparency--0-25: 0.25;
+  --panda-puss--global--colour--transparency--0-50: 0.50;
+  --panda-puss--global--colour--transparency--0-75: 0.75;
+  --panda-puss--global--colour--transparency--1-00: 1.00;
+  --panda-puss--global--colour--black: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--0), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--tundora: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--grey: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--silver: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--white: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--100), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--red: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--flush-orange: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--yellow: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--chartreuse: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--green: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--spring-green: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--cyan: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--azure-radiance: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--100), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--blue: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--electric-violet: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--magenta: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--rose: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--vivid-tangerine: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--macaroni-and-cheese: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--dolly: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--reef: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--mint-green: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--aquamarine: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--anakiwa: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--malibu-1: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--malibu-2: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--heliotrope: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--blush-pink: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--hot-pink: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--maroon: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--cinnamon: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--olive: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--verdun-green: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--japanese-laurel: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--fun-green: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--teal: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--congress-blue: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--navy-blue: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--pigment-indigo: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--fresh-aubergine: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+  --panda-puss--global--colour--siren: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+}
+
+:root {
+  --panda-puss--global--font-family--serif: serif;
+  --panda-puss--global--font-family--sans-serif: sans-serif;
+  --panda-puss--global--font-family--cursive: cursive;
+  --panda-puss--global--font-family--monospace: monospace;
+  --panda-puss--global--font-size--small: 0.6rem;
+  --panda-puss--global--font-size--medium: 16px;
+  --panda-puss--global--font-size--large: 1.4rem;
+  --panda-puss--global--font-size--huge: 1.8rem;
+}
+
+:root {
+  --panda-puss--global--space: 1ch;
+  --panda-puss--global--space--hor: calc(0.5 * var(--panda-puss--global--space));
+  --panda-puss--global--space--ver: calc(2.0 * var(--panda-puss--global--space));
+}
+
 /**
  * -----------------------------------------------------------------------------
  * Normalise the CSS.
@@ -32,10 +120,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 3. Correct the box-sizing.
  * 4. Set the hyphenation.
  */
-html :not(a) {
-  font-family: sans-serif;
-  font-size: var(--font-size--default);
-  line-height: var(--spacing--line-height);
+body {
+  background-color: var(--panda-puss--global--colour--heliotrope);
+  color: var(--panda-puss--global--colour--tundora);
+  font-family: var(--panda-puss--global--font-family--cursive) !important;
+  font-size: var(--panda-puss--global--font-size--medium);
+  line-height: 1.5;
   /* 1 */
   text-size-adjust: 100%;
   /* 2 */
@@ -70,6 +160,8 @@ html :not(a) {
   hyphenate-limit-last: always;
   hyphenate-limit-zone: 8%;
   /* End of hyphenation */
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 /* Sections
@@ -409,103 +501,32 @@ template {
   display: none;
 }
 
-:root {
-  --panda-puss--global--colour--hue--0: 0;
-  --panda-puss--global--colour--hue--30: 30;
-  --panda-puss--global--colour--hue--60: 60;
-  --panda-puss--global--colour--hue--90: 90;
-  --panda-puss--global--colour--hue--120: 120;
-  --panda-puss--global--colour--hue--150: 150;
-  --panda-puss--global--colour--hue--180: 180;
-  --panda-puss--global--colour--hue--210: 210;
-  --panda-puss--global--colour--hue--240: 240;
-  --panda-puss--global--colour--hue--270: 270;
-  --panda-puss--global--colour--hue--300: 300;
-  --panda-puss--global--colour--hue--330: 330;
-  --panda-puss--global--colour--saturation--0: 0%;
-  --panda-puss--global--colour--saturation--25: 25%;
-  --panda-puss--global--colour--saturation--50: 50%;
-  --panda-puss--global--colour--saturation--75: 75%;
-  --panda-puss--global--colour--saturation--100: 100%;
-  --panda-puss--global--colour--lightness--0: 0%;
-  --panda-puss--global--colour--lightness--25: 25%;
-  --panda-puss--global--colour--lightness--50: 50%;
-  --panda-puss--global--colour--lightness--75: 75%;
-  --panda-puss--global--colour--lightness--100: 100%;
-  --panda-puss--global--colour--transparency--0-00: 0.00;
-  --panda-puss--global--colour--transparency--0-25: 0.25;
-  --panda-puss--global--colour--transparency--0-50: 0.50;
-  --panda-puss--global--colour--transparency--0-75: 0.75;
-  --panda-puss--global--colour--transparency--1-00: 1.00;
-  --panda-puss--global--colour--black: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--0), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--tundora: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--grey: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--silver: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--white: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--100), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--red: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--flush-orange: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--yellow: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--chartreuse: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--green: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--spring-green: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--cyan: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--azure-radiance: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--100), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--blue: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--electric-violet: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--magenta: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--rose: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--vivid-tangerine: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--macaroni-and-cheese: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--dolly: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--reef: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--mint-green: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--aquamarine: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--anakiwa: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--malibu-1: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--malibu-2: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--heliotrope: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--blush-pink: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--hot-pink: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--maroon: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--cinnamon: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--olive: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--verdun-green: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--japanese-laurel: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--fun-green: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--teal: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--congress-blue: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--navy-blue: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--pigment-indigo: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--fresh-aubergine: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--siren: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
+.wp-block-site-title {
+  text-align: center;
 }
 
-:root {
-  --panda-puss--global--space: 1ch;
-  --panda-puss--global--space--hor: calc(0.5 * var(--panda-puss--global--space));
-  --panda-puss--global--space--ver: calc(2.0 * var(--panda-puss--global--space));
-}
-
-.wp-site-blocks {
-  background-color: var(--panda-puss--global--colour--heliotrope);
-  color: var(--panda-puss--global--colour--tundora);
+.wp-block-site-tagline {
+  text-align: center;
 }
 
 .wp-block-group .wp-block-post-template {
+  margin: auto;
+  width: 900px;
   align-content: flex-start;
   align-items: stretch;
   display: flex;
-  flex-flow: column wrap;
-  gap: var(--panda-puss--global--space--ver) var(--panda-puss--global--space--hor);
+  flex-flow: row wrap;
+  gap: calc(5 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
   justify-content: flex-start;
 }
 .wp-block-group .wp-block-post-template .wp-block-post {
+  width: 50%;
   flex: 0 1 auto;
-  display: inline-grid;
-  gap: calc(0.2 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
-  grid-template-columns: [left] 150px [line1] 1fr [line2] 1fr [end];
-  grid-template-rows: auto;
-  grid-template-areas: "post-featured-image post-title post-title" "post-featured-image post-author post-date" "post-featured-image post-excerpt post-excerpt" "post-featured-image post-terms-category  post-terms-post-tag";
+  display: grid;
+  gap: calc(0.1 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
+  grid-template-columns: [left] minmax(25px, 125px) [line1] 1fr [line2] 1fr [end];
+  grid-template-rows: [top] auto [title] 48px [author-date] auto [excerpt] auto [terms] auto [bottom];
+  grid-template-areas: "post-featured-image post-title post-title" "post-featured-image post-author post-date" "post-featured-image post-excerpt post-excerpt" "post-featured-image post-terms-category post-terms-category" "post-featured-image post-terms-post-tag post-terms-post-tag";
   place-content: stretch;
   place-items: stretch;
 }
@@ -516,32 +537,42 @@ template {
   grid-area: post-author;
   display: inline-grid;
   gap: 0;
-  grid-template-columns: [left] minmax(50px, max-content) [middle] 1fr [end];
+  grid-template-columns: [left] minmax(48px, max-content) [middle] 1fr [end];
   grid-template-rows: auto;
   grid-template-areas: "post-author-avatar post-author-content";
-  place-content: stretch;
-  place-items: stretch;
 }
 .wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-author .wp-block-post-author__content {
   grid-area: post-author-content;
+  place-self: center start;
+}
+.wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-author .wp-block-post-author__content .wp-block-post-author__name {
+  margin-left: calc(1 * var(--panda-puss--global--space--hor));
 }
 .wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-author .wp-block-post-author__avatar {
+  margin: unset;
   grid-area: post-author-avatar;
+  place-self: center end;
+}
+.wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-author .wp-block-post-author__avatar .avatar {
+  vertical-align: bottom;
 }
 .wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-date {
   grid-area: post-date;
+  place-self: center start;
 }
 .wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-excerpt {
+  padding: 0;
   grid-area: post-excerpt;
 }
 .wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-featured-image {
+  margin-right: calc(2 * var(--panda-puss--global--space--hor));
   align-self: stretch;
   grid-area: post-featured-image;
 }
 .wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-terms.taxonomy-category {
   grid-area: post-terms-category;
 }
-.wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-terms.taxonomy-post-tag {
+.wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-terms.taxonomy-post_tag {
   grid-area: post-terms-post-tag;
 }
 .wp-block-group .wp-block-post-template .wp-block-post .wp-block-post-content {

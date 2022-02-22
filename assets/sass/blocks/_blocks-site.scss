@@ -1,13 +1,10 @@
-@use '../initialise/colours';
-
 .wp-site-blocks {
-  background-color: colours.$primary-bg;
-  color: colours.$primary-fg;
+
 }
 
 .wp-block-site-title {
-
+  text-align: center;
 }
 .wp-block-site-tagline {
-
+  text-align: center;
 }

@@ -2,31 +2,35 @@
 
   .wp-block-post-template {
     // border: 1px solid red;
+    margin: auto;
+    width: 900px;
     // Flex container
     align-content: flex-start;
     align-items: stretch;
     display: flex;
-    flex-flow: column wrap;
-    gap: var(--panda-puss--global--space--ver) var(--panda-puss--global--space--hor);
+    flex-flow: row wrap;
+    gap: calc(5 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
     justify-content: flex-start;
     // End of flex container
 
     .wp-block-post {
       // background-color: palegreen;
       // border: 1px solid palegreen;
+      width: 50%;
       // Flex item
       flex: 0 1 auto;
       // End of flex item
       // Grid container
-      display: inline-grid;
-      gap: calc(0.2 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
-      grid-template-columns: [left] 150px [line1] 1fr [line2] 1fr [end];
-      grid-template-rows: auto;
+      display: grid;
+      gap: calc(0.1 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
+      grid-template-columns: [left] minmax(25px, 125px) [line1] 1fr [line2] 1fr [end];
+      grid-template-rows: [top] auto [title] 48px [author-date] auto [excerpt] auto [terms] auto [bottom];
       grid-template-areas:
         "post-featured-image post-title post-title"
         "post-featured-image post-author post-date"
         "post-featured-image post-excerpt post-excerpt"
-        "post-featured-image post-terms-category  post-terms-post-tag"
+        "post-featured-image post-terms-category post-terms-category"
+        "post-featured-image post-terms-post-tag post-terms-post-tag"
         // "post-featured-image post-nav-link-previous post-nav-link-next"
         ;
       place-content: stretch;
@@ -36,6 +40,7 @@
       .wp-block-post-title{
         // background-color: green;
         // border: 1px solid green;
+        // margin: unset;
         // Grid item
         grid-area: post-title;
         // End of grid item
@@ -49,44 +54,56 @@
         // End of grid item
         // Grid container
         display: inline-grid;
-        gap: 0;//calc(0 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
-        grid-template-columns: [left] minmax(50px, max-content) [middle] 1fr [end];
+        gap: 0;
+        grid-template-columns: [left] minmax(48px, max-content) [middle] 1fr [end];
         grid-template-rows: auto;
         grid-template-areas:
           "post-author-avatar post-author-content"
           // "post-featured-image post-nav-link-previous post-nav-link-next"
           ;
-        place-content: stretch;
-        place-items: stretch;
+        // place-content: center;
+        // place-items: center start;
         // End of grid contaaner
         .wp-block-post-author__content {
           // background-color: yellowgreen;
           // border: 1px solid yellowgreen;
           // Grid item
           grid-area: post-author-content;
+          place-self: center start;
           // End of grid item
+          .wp-block-post-author__name {
+            // border: 1px solid blue;
+            margin-left: calc(1* var(--panda-puss--global--space--hor));
+          }
         }
         .wp-block-post-author__avatar {
           // background-color: greenyellow;
           // border: 1px solid greenyellow;
+          margin: unset; // Needed to override an 'inline' setting.
           // Grid item
           grid-area: post-author-avatar;
+          place-self: center end;
           // End of grid item
+          .avatar {
+            // border: 1px solid red;
+            vertical-align: bottom;
+          }
         }
       }
-
 
       .wp-block-post-date {
         // background-color: purple;
         // border: 1px solid purple;
         // Grid item
         grid-area: post-date;
+          place-self: center start;
         // End of grid item
       }
 
       .wp-block-post-excerpt {
         // background-color: pink;
         // border: 1px solid pink;
+        padding: 0;
         // Grid item
         grid-area: post-excerpt;
         // End of grid item
@@ -95,12 +112,20 @@
       .wp-block-post-featured-image {
         // background-color: gold;
         // border: 1px solid gold;
+        margin-right: calc(2 * var(--panda-puss--global--space--hor));
         // Grid item
         align-self: stretch;
         grid-area: post-featured-image;
         // End of grid item
       }
 
+      // .wp-block-post-terms {
+      //   // background-color: palevioletred;
+      //   border: 1px solid palevioletred;
+      //   // Grid item
+      //   grid-area: post-terms;
+      //   // End of grid item
+      // }
       .wp-block-post-terms.taxonomy-category {
         // background-color: palevioletred;
         // border: 1px solid palevioletred;
@@ -108,9 +133,9 @@
         grid-area: post-terms-category;
         // End of grid item
       }
-      .wp-block-post-terms.taxonomy-post-tag {
-        // background-color: paleturquoise;
-        // border: 1px solid paleturquoise;
+      .wp-block-post-terms.taxonomy-post_tag {
+        // background-color: red;
+        // border: 1px solid red;
         // Grid item
         grid-area: post-terms-post-tag;
         // End of grid item
@@ -147,7 +172,17 @@
         // End of grid item
       }
 
-
     }
+    // .wp-block-post::after {
+    //   // color: var(--colour--pandammonium-2);
+    //   content: '\2042';
+    //   display: block;
+    //   margin: calc(1 * var(--panda-puss--global--space--ver)) auto 0;
+    //   // text-align: center;
+    // }
+    // .wp-block-post:last-of-type::after {
+    // /* Have to use :last-of-type because the last article is not the last child of its parent. */
+    //   content: '\2028'; // Line separator
+    // }
   }
 }
