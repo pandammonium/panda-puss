@@ -50,75 +50,103 @@
       // Flex item
       // End of flex item
 
+      padding-left: 0;
+
+      .children .comment {
+        margin-left: calc(3 * var(--panda-puss--global--space--ver));
+      }
+
       .comment-body {
-        // display: inline-grid;
-        // grid-template-columns: [left] auto [middle1] auto [middle2] auto [right];
-        // grid-template-rows: auto;
-        // grid-template-areas:
-        //   "comment-meta-author comment-meta-metadata-datetime comment-meta-metadata-edit-link"
-        //   "comment-content comment-content comment-content"
-        //   "comment-reply comment-reply comment-reply"
-        // ;
+        margin-bottom: calc(1 * var(--panda-puss--global--space--ver));
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "comment-meta"
+          "comment-content"
+          "comment-reply"
+        ;
 
         .comment-meta {
-          // grid-area: comment-meta;
+          line-height: initial;
+          margin-left: 0;
+          grid-area: comment-meta;
           display: grid;
-          gap: calc(0 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
-          grid-template-columns: minmax(2.5em, max-content) 1fr;
+          gap: calc(1 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
+          grid-template-columns: max-content;
           grid-template-rows: auto;
           grid-template-areas:
-            "comment-meta-author comment-meta-author"
-            ". comment-meta-metadata"
-            "comment-content comment-reply"
+            "comment-meta-author comment-meta-metadata"
           ;
 
           .comment-author {
+            // border: 1px solid blue;
             gap: calc(0 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
             grid-area: comment-meta-author;
             display: grid;
-            grid-template-columns: minmax(32px, max-content) minmax(32px, max-content) 4ch;
-            grid-template-rows: auto;
+            grid-template-columns: 48px max-content 4ch;
+            grid-template-rows: 48px;
             grid-template-areas:
               "comment-meta-author-avatar comment-meta-author-name comment-meta-author-says"
             ;
-            align-items: center;
+            place-self: start;
 
             .avatar {
               grid-area: comment-meta-author-avatar;
+              place-self: center;
             }
             .fn {
               grid-area: comment-meta-author-name;
+              place-self: center start;
             }
             .says {
               grid-area: comment-meta-author-says;
+              place-self: center start;
             }
 
           }
           .comment-metadata {
+            // border: 1px solid green;
             grid-area: comment-meta-metadata;
-            margin-left: calc(2 * var(--panda-puss--global--space--hor));
+            place-self: start end;
 
             display: grid;
-            gap: calc(0 * var(--panda-puss--global--space--ver)) calc(2 * var(--panda-puss--global--space--hor));
+            gap: calc(0 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
             grid-template-columns: minmax(32px, max-content) 4ch;
+            grid-template-rows: 48px;
             grid-template-areas:
               "comment-meta-metadata-datetime comment-meta-metadata-edit-link"
             ;
+            place-self: center end;
 
-            a>time {
+            a {
               grid-area: comment-meta-metadata-datetime;
+              place-self: center end;
             }
             .edit-link {
               grid-area: comment-meta-metadata-edit-link;
+              place-self: center end;
             }
           }
         }
         .comment-content {
+          margin: 0;
+          padding: 0;
           grid-area: comment-content;
+          place-self: start;
         }
         .reply {
+          font-size: initial;
+          margin: 0;
+          padding: 0;
           grid-area: comment-reply;
+          place-self: start
         }
+      }
+      p {
+        font-size: initial;
+        line-height: initial;
+        margin: 0;
       }
     }
   }
@@ -128,3 +156,4 @@
     grid-area: comment-respond;
   }
 }
+
