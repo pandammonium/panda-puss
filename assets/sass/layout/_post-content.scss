@@ -34,7 +34,9 @@
     grid-template-areas:
       #{$grid-areas}
     ;
-    // End of grid contaaner
+    column-gap: calc(2 * var(--panda-puss--global--space--hor));
+    row-gap: 0;
+    // End of grid container
   }
 
   .wp-block-post-title {
@@ -55,50 +57,26 @@
     // Grid item
     grid-area: pp-post-metadata;
     // End of grid item
-    // Grid container
-    display: grid;
-    gap: 0;
-    grid-template-columns: minmax(20ch, 2fr) minmax(20ch, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      "post-author post-date"
-      "post-terms post-terms"
-      ;
-    place-self: stretch;
-    // End of grid container
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: calc(5 * var(--panda-puss--global--space--hor));
+    row-gap: 0;
 
     .wp-block-post-author {
       // background-color: yellow;
       // border: 1px solid darkkhaki;
       margin: 0;
       padding: 0;
-      // Grid item
-      grid-area: post-author;
-      // End of grid item
       // Grid container
       display: grid;
-      column-gap: calc(1 * var(--panda-puss--global--space--hor));
+      column-gap: calc(2 * var(--panda-puss--global--space--hor));
       row-gap: 0;
       grid-template-columns: 48px minmax(5ch, 1fr);
       grid-template-rows: auto;
       grid-template-areas:
         "post-author-avatar post-author-content"
         ;
-      // place-content: center;
-      // place-items: center start;
-      // End of grid contaaner
-      .wp-block-post-author__content {
-        // background-color: yellowgreen;
-        // border: 1px solid yellowgreen;
-        // Grid item
-        grid-area: post-author-content;
-        place-self: center stretch;
-        // End of grid item
-        .wp-block-post-author__name {
-          // border: 1px solid blue;
-          // margin-left: calc(1* var(--panda-puss--global--space--hor));
-        }
-      }
+      // End of grid container
       .wp-block-post-author__avatar {
         // background-color: greenyellow;
         // border: 1px solid greenyellow;
@@ -112,41 +90,47 @@
           vertical-align: bottom;
         }
       }
+      .wp-block-post-author__content {
+        // background-color: yellowgreen;
+        // border: 1px solid yellowgreen;
+        // Grid item
+        grid-area: post-author-content;
+        place-self: center stretch;
+        // End of grid item
+        .wp-block-post-author__name {
+          // border: 1px solid blue;
+        }
+      }
     }
 
     .wp-block-post-date {
       // background-color: purple;
       // border: 1px solid purple;
-      // Grid item
-      grid-area: post-date;
+      // Flex item
       place-self: center stretch;
-      // End of grid item
+      // End of flex item
     }
 
     .wp-block-group.pp-terms {
       // background-color: palevioletred;
       // border: 1px solid palevioletred;
       width: 100%;
-      grid-area: post-terms;
       column-gap: calc(2 * var(--panda-puss--global--space--hor));
       row-gap: 0;
       display: flex;
       flex-flow: row wrap;
+
       .wp-block-post-terms {
         margin: unset;
-        // Grid item
-        // End of grid item
       }
       .wp-block-post-terms.taxonomy-category {
-        // text-align: right;
         // Flex item
-        place-self:  stretch flex-end;
+        place-self:  stretch;
         // End of flex item
       }
       .wp-block-post-terms.taxonomy-post_tag {
-        // text-align: right;
         // Flex item
-        place-self: stretch flex-start;
+        place-self: stretch;
         // End of flex item
       }
     }
