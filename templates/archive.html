@@ -5,11 +5,19 @@
   <div class="wp-block-query">
     <!-- wp:post-template -->
       <!-- wp:post-title {"isLink":true} /-->
-      <!-- wp:post-author /-->
-      <!-- wp:post-date /-->
+      <!-- wp:group {"class":"pp-metadata"} -->
+      <div class="wp-block-group pp-metadata">
+        <!-- wp:post-author /-->
+        <!-- wp:post-date /-->
+        <!-- wp:group {"class":"pp-terms"} -->
+        <div class="wp-block-group pp-terms">
+          <!-- wp:post-terms {"term":"category"} /-->
+          <!-- wp:post-terms {"term":"post_tag"} /-->
+        </div>
+        <!-- /wp:group -->
+      </div>
+      <!-- /wp:group -->
       <!-- wp:post-featured-image {"isLink":true} /-->
-      <!-- wp:post-terms {"term":"post_tag"} /-->
-      <!-- wp:post-terms {"term":"category"} /-->
       <!-- wp:post-excerpt /-->
     <!-- /wp:post-template -->
     <!-- wp:query-pagination -->

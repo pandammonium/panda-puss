@@ -5,16 +5,17 @@
   // @debug $content-type;
 
   $title: "\"post-featured-image post-title post-title\"";
-  $author-date: "\"post-featured-image post-author post-date\"";
+  $metadata: "\"post-featured-image pp-post-metadata pp-post-metadata\"";
   $content: "\"post-featured-image post-" + $content-type + " post-" + $content-type  + "\"";
-  $category: "\"post-terms-category post-terms-category post-terms-category\"";
-  $tag: "\"post-terms-post-tag post-terms-post-tag post-terms-post-tag\"";
-  $grid-areas: #{$title} + " " + #{$author-date} + " "  + #{$content} + " "  + #{$category} + " "  + #{$tag};
+  // $category: "\"post-terms-category post-terms-category post-terms-category\"";
+  // $tag: "\"post-terms-post-tag post-terms-post-tag post-terms-post-tag\"";
+  // $grid-areas: #{$title} + " " + #{$author-date} + " "  + #{$content} + " "  + #{$category} + " "  + #{$tag};
+  $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
   @if $content-type == "content" {
     $single-nav: "\"post-nav-link-previous . post-nav-link-next\"";
     $single-comments: "\"post-comments post-comments post-comments\"";
     $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
-  }@else if $content-type == 'excerpt' {
+  } @else if $content-type == 'excerpt' {
   } @else {
     @error "Unknown post content type";
   }
@@ -27,83 +28,133 @@
     width: 90%;
     // Grid container
     display: grid;
-    gap: calc(0.1 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
-    grid-template-columns: [left] minmax(25px, 125px) [line1] 1fr [line2] 1fr [end];
-    grid-template-rows: [top] auto [title] 48px [author-date] auto [excerpt] auto [terms] auto [bottom];
+    gap: 0;
+    grid-template-columns: 125px minmax(10px, 1fr) minmax(10px, 1fr);
+    grid-template-rows: auto;
     grid-template-areas:
       #{$grid-areas}
     ;
-    place-content: stretch;
-    place-items: stretch;
     // End of grid contaaner
   }
 
   .wp-block-post-title {
     // background-color: green;
     // border: 1px solid green;
-    // z-index: 999;
-    // margin: unset;
+    margin: unset;
     // Grid item
     grid-area: post-title;
     // End of grid item
   }
 
-  .wp-block-post-author {
-    // background-color: yellow;
-    // border: 1px solid yellow;
+  .wp-block-group.pp-metadata {
+    // background-color: cornflowerblue;
+    // border: 1px solid cornflowerblue;
+    // z-index: 999;
+    margin: unset;
+    // width: 100%;
     // Grid item
-    grid-area: post-author;
+    grid-area: pp-post-metadata;
     // End of grid item
     // Grid container
-    display: inline-grid;
+    display: grid;
     gap: 0;
-    grid-template-columns: [left] minmax(48px, max-content) [middle] 1fr [end];
+    grid-template-columns: minmax(20ch, 2fr) minmax(20ch, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      "post-author-avatar post-author-content"
+      "post-author post-date"
+      "post-terms post-terms"
       ;
-    // place-content: center;
-    // place-items: center start;
-    // End of grid contaaner
-    .wp-block-post-author__content {
-      // background-color: yellowgreen;
-      // border: 1px solid yellowgreen;
-      // Grid item
-      grid-area: post-author-content;
-      place-self: center start;
-      // End of grid item
-      .wp-block-post-author__name {
-        // border: 1px solid blue;
-        margin-left: calc(1* var(--panda-puss--global--space--hor));
-      }
-    }
-    .wp-block-post-author__avatar {
-      // background-color: greenyellow;
-      // border: 1px solid greenyellow;
-      margin: unset; // Needed to override an 'inline' setting.
-      // Grid item
-      grid-area: post-author-avatar;
-      place-self: center end;
-      // End of grid item
-      .avatar {
-        // border: 1px solid red;
-        vertical-align: bottom;
-      }
-    }
-  }
+    place-self: stretch;
+    // End of grid container
 
-  .wp-block-post-date {
-    // background-color: purple;
-    // border: 1px solid purple;
-    // Grid item
-    grid-area: post-date;
-      place-self: center end;
-    // End of grid item
+    .wp-block-post-author {
+      // background-color: yellow;
+      // border: 1px solid darkkhaki;
+      margin: 0;
+      padding: 0;
+      // Grid item
+      grid-area: post-author;
+      // End of grid item
+      // Grid container
+      display: grid;
+      column-gap: calc(1 * var(--panda-puss--global--space--hor));
+      row-gap: 0;
+      grid-template-columns: 48px minmax(5ch, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        "post-author-avatar post-author-content"
+        ;
+      // place-content: center;
+      // place-items: center start;
+      // End of grid contaaner
+      .wp-block-post-author__content {
+        // background-color: yellowgreen;
+        // border: 1px solid yellowgreen;
+        // Grid item
+        grid-area: post-author-content;
+        place-self: center stretch;
+        // End of grid item
+        .wp-block-post-author__name {
+          // border: 1px solid blue;
+          // margin-left: calc(1* var(--panda-puss--global--space--hor));
+        }
+      }
+      .wp-block-post-author__avatar {
+        // background-color: greenyellow;
+        // border: 1px solid greenyellow;
+        margin: unset; // Needed to override an 'inline' setting.
+        // Grid item
+        grid-area: post-author-avatar;
+        place-self: center end;
+        // End of grid item
+        .avatar {
+          // border: 1px solid red;
+          vertical-align: bottom;
+        }
+      }
+    }
+
+    .wp-block-post-date {
+      // background-color: purple;
+      // border: 1px solid purple;
+      // Grid item
+      grid-area: post-date;
+      place-self: center stretch;
+      // End of grid item
+    }
+
+    .wp-block-group.pp-terms {
+      // background-color: palevioletred;
+      // border: 1px solid palevioletred;
+      width: 100%;
+      grid-area: post-terms;
+      column-gap: calc(2 * var(--panda-puss--global--space--hor));
+      row-gap: 0;
+      display: flex;
+      flex-flow: row wrap;
+      .wp-block-post-terms {
+        margin: unset;
+        // Grid item
+        // End of grid item
+      }
+      .wp-block-post-terms.taxonomy-category {
+        // text-align: right;
+        // Flex item
+        place-self:  stretch flex-end;
+        // End of flex item
+      }
+      .wp-block-post-terms.taxonomy-post_tag {
+        // text-align: right;
+        // Flex item
+        place-self: stretch flex-start;
+        // End of flex item
+      }
+    }
   }
 
   .wp-block-post-excerpt {
-    // background-color: darkblue;
-    // border: 1px solid darkblue;
+    // background-color: darkcyan;
+    // border: 1px solid darkcyan;
     // Grid item
     grid-area: post-excerpt;
     // End of grid item
@@ -115,35 +166,18 @@
     grid-area: post-content;
   }
 
+
   .wp-block-post-featured-image {
     // background-color: gold;
     // border: 1px solid gold;
-    margin-right: calc(2 * var(--panda-puss--global--space--hor));
+    margin: unset;
+    // margin-right: calc(2 * var(--panda-puss--global--space--hor));
     // Grid item
     align-self: stretch;
     grid-area: post-featured-image;
     // End of grid item
   }
 
-  .wp-block-post-terms {
-    // Grid item
-    place-self: center;
-    // End of grid item
-  }
-  .wp-block-post-terms.taxonomy-category {
-    // background-color: palevioletred;
-    // border: 1px solid palevioletred;
-    // Grid item
-    grid-area: post-terms-category;
-    // End of grid item
-  }
-  .wp-block-post-terms.taxonomy-post_tag {
-    // background-color: red;
-    // border: 1px solid red;
-    // Grid item
-    grid-area: post-terms-post-tag;
-    // End of grid item
-  }
 
   // Single post/page comments
   .wp-block-post-comments {
@@ -156,17 +190,17 @@
   // End of single post/page comments
 
   // Single post/page navigation
-  .post-navigation-link-next.wp-block-post-navigation-link {
-    // background-color: aquamarine;
-    // border: 1px solid aquamarine;
+  .wp-block-post-navigation-link {
+    // background-color: deeppink;
+    // border: 1px solid deeppink;
+  }
+  .wp-block-post-navigation-link.post-navigation-link-next {
     // Grid item
     grid-area: post-nav-link-next;
     place-self: center end;
     // End of grid item
   }
-  .post-navigation-link-previous.wp-block-post-navigation-link {
-    // background-color: deeppink;
-    // border: 1px solid deeppink;
+  .wp-block-post-navigation-link.post-navigation-link-previous {
     // Grid item
     grid-area: post-nav-link-previous;
     place-self: center start;
