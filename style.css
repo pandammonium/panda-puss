@@ -626,6 +626,34 @@ template {
   grid-area: post-nav-link-previous;
   place-self: center start;
 }
+.archive .wp-block-query-pagination,
+.blog .wp-block-query-pagination {
+  width: 100%;
+  display: grid;
+  column-gap: calc(2 * var(--panda-puss--global--space--hor));
+  row-gap: 0;
+  grid-template-columns: repeat(3, minmax(10ch, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas: "query-pagination-previous query-pagination-numbers query-pagination-next";
+}
+.archive .wp-block-query-pagination .wp-block-query-pagination-previous,
+.blog .wp-block-query-pagination .wp-block-query-pagination-previous {
+  margin: 0;
+  grid-area: query-pagination-previous;
+  place-self: stretch end;
+}
+.archive .wp-block-query-pagination .wp-block-query-pagination-numbers,
+.blog .wp-block-query-pagination .wp-block-query-pagination-numbers {
+  margin: 0;
+  grid-area: query-pagination-numbers;
+  place-self: stretch center;
+}
+.archive .wp-block-query-pagination .wp-block-query-pagination-next,
+.blog .wp-block-query-pagination .wp-block-query-pagination-next {
+  margin: 0;
+  grid-area: query-pagination-next;
+  place-self: stretch start;
+}
 
 .single .wp-block-group,
 .page .wp-block-group {
