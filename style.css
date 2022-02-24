@@ -509,6 +509,10 @@ template {
   text-align: center;
 }
 
+.wp-block-navigation {
+  margin: calc(2 * var(--panda-puss--global--space--ver)) auto;
+}
+
 .archive .wp-block-post-template,
 .blog .wp-block-post-template {
   align-content: flex-start;
