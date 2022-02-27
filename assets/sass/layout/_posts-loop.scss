@@ -3,8 +3,9 @@
 
 // Used by index, archives, etc.
 
-.archive,
-.blog {
+// .archive,
+// .blog,
+// .search-results {
   .wp-block-post-template {
     // border: 1px solid red;
     // Flex container
@@ -28,4 +29,4 @@
     }
   }
   @include pagination.pagination;
-}
+// }
