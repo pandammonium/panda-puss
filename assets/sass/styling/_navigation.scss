@@ -1,0 +1,4 @@
+.wp-block-navigation .has-child:where(:not(.open-on-click)) > .wp-block-navigation__submenu-container {
+  border: inherit;
+  margin-left: calc(3 * var(--panda-puss--global--space--hor));
+}
