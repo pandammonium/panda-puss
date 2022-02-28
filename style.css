@@ -510,17 +510,11 @@ template {
 }
 
 .wp-site-blocks {
-  border: 1px solid red;
   margin: auto;
   width: 95%;
 }
 
-.panda-puss-main {
-  border: 1px solid green;
-}
-
 .panda-puss-sidebar {
-  border: 1px solid blue;
   min-width: 200px;
   max-width: 400px;
 }
