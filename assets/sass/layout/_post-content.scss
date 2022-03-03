@@ -1,167 +1,50 @@
 @use 'sass:string';
+@use 'article';
 
 @mixin post-content($content-type) {
 
-  // @debug $content-type;
+  // @debug "Post content type: " + $content-type;
 
-  $title: "\"post-featured-image post-title post-title\"";
-  $metadata: "\"post-featured-image pp-post-metadata pp-post-metadata\"";
-  $content: "\"post-featured-image post-" + $content-type + " post-" + $content-type  + "\"";
-  // $category: "\"post-terms-category post-terms-category post-terms-category\"";
-  // $tag: "\"post-terms-post-tag post-terms-post-tag post-terms-post-tag\"";
-  // $grid-areas: #{$title} + " " + #{$author-date} + " "  + #{$content} + " "  + #{$category} + " "  + #{$tag};
-  $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
+  $article: "\"article article\"";
+
+  $grid-areas: #{$article};
   @if $content-type == "content" {
-    $single-nav: "\"post-nav-link-previous . post-nav-link-next\"";
-    $single-comments: "\"post-comments post-comments post-comments\"";
+    $single-nav: "\"post-nav-link-previous post-nav-link-next\"";
+    $single-comments: "\"post-comments post-comments\"";
     $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
   } @else if $content-type == 'excerpt' {
   } @else {
     @error "Unknown post content type";
   }
-  // @debug $grid-areas;
+  // @debug "Post content grid: " + $grid-areas;
+
+  // @debug "Post content parent: " + &;
 
   & {
     // background-color: red;
     // border: 1px solid red;
     margin: auto;
-    width: 90%;
+    // width: 90%;
     // Grid container
     display: grid;
     gap: 0;
-    grid-template-columns: 125px minmax(10px, 1fr) minmax(10px, 1fr);
+    grid-template-columns: minmax(10px, 1fr) minmax(10px, 1fr);
     grid-template-rows: auto;
-    grid-template-areas:
-      #{$grid-areas}
-    ;
+    grid-template-areas: #{$grid-areas};
     column-gap: calc(2 * var(--panda-puss--global--space--hor));
     row-gap: 0;
     // End of grid container
+
   }
 
-  .wp-block-post-title {
-    // background-color: green;
-    // border: 1px solid green;
-    margin: unset;
+  .pp-individual {
+    // background-color: palegoldenrod;
+    // border: 1px solid palegoldenrod;
     // Grid item
-    grid-area: post-title;
+    grid-area: article;
     // End of grid item
+    @include article.article($content-type);
   }
-
-  .wp-block-group.pp-metadata {
-    // background-color: cornflowerblue;
-    // border: 1px solid cornflowerblue;
-    // z-index: 999;
-    margin: unset;
-    // width: 100%;
-    // Grid item
-    grid-area: pp-post-metadata;
-    // End of grid item
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: calc(5 * var(--panda-puss--global--space--hor));
-    row-gap: 0;
-
-    .wp-block-post-author {
-      // background-color: yellow;
-      // border: 1px solid darkkhaki;
-      margin: 0;
-      padding: 0;
-      // Grid container
-      display: grid;
-      column-gap: calc(2 * var(--panda-puss--global--space--hor));
-      row-gap: 0;
-      grid-template-columns: 48px minmax(5ch, 1fr);
-      grid-template-rows: auto;
-      grid-template-areas:
-        "post-author-avatar post-author-content"
-        ;
-      // End of grid container
-      .wp-block-post-author__avatar {
-        // background-color: greenyellow;
-        // border: 1px solid greenyellow;
-        margin: unset; // Needed to override an 'inline' setting.
-        // Grid item
-        grid-area: post-author-avatar;
-        place-self: center end;
-        // End of grid item
-        .avatar {
-          // border: 1px solid red;
-          vertical-align: bottom;
-        }
-      }
-      .wp-block-post-author__content {
-        // background-color: yellowgreen;
-        // border: 1px solid yellowgreen;
-        // Grid item
-        grid-area: post-author-content;
-        place-self: center stretch;
-        // End of grid item
-        .wp-block-post-author__name {
-          // border: 1px solid blue;
-        }
-      }
-    }
-
-    .wp-block-post-date {
-      // background-color: purple;
-      // border: 1px solid purple;
-      // Flex item
-      place-self: center stretch;
-      // End of flex item
-    }
-
-    .wp-block-group.pp-terms {
-      // background-color: palevioletred;
-      // border: 1px solid palevioletred;
-      width: 100%;
-      column-gap: calc(2 * var(--panda-puss--global--space--hor));
-      row-gap: 0;
-      display: flex;
-      flex-flow: row wrap;
-
-      .wp-block-post-terms {
-        margin: unset;
-      }
-      .wp-block-post-terms.taxonomy-category {
-        // Flex item
-        place-self:  stretch;
-        // End of flex item
-      }
-      .wp-block-post-terms.taxonomy-post_tag {
-        // Flex item
-        place-self: stretch;
-        // End of flex item
-      }
-    }
-  }
-
-  .wp-block-post-excerpt {
-    // background-color: darkcyan;
-    // border: 1px solid darkcyan;
-    // Grid item
-    grid-area: post-excerpt;
-    // End of grid item
-  }
-  .wp-block-post-content {
-    // background-color: darkcyan;
-    // border: 1px solid darkcyan;
-    // Grid item
-    grid-area: post-content;
-  }
-
-
-  .wp-block-post-featured-image {
-    // background-color: gold;
-    // border: 1px solid gold;
-    margin: unset;
-    // margin-right: calc(2 * var(--panda-puss--global--space--hor));
-    // Grid item
-    align-self: stretch;
-    grid-area: post-featured-image;
-    // End of grid item
-  }
-
 
   // Single post/page comments
   .wp-block-post-comments {

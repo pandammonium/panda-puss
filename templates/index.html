@@ -1,16 +1,15 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
-
-<!-- wp:columns {"className":"panda-puss-site"} -->
-<div class="wp-block-columns panda-puss-site">
-  <!-- wp:column {"className":"panda-puss-main"} -->
-  <div class="wp-block-column panda-puss-main">
-    <!-- wp:group {"tagName":"main"} -->
-    <main class="wp-block-group">
-      <!-- wp:query -->
-
-
-      <div class="wp-block-query">
-        <!-- wp:post-template -->
+<!-- wp:columns {"className":"pp-site"} -->
+<div class="wp-block-columns pp-site">
+  <!-- wp:column {"className":"pp-content"} -->
+  <div class="wp-block-column pp-content">
+    <!-- wp:group {"tagName":"main","className":"pp-main"} -->
+    <main class="wp-block-group pp-main">
+      <!-- wp:query {"className":"pp-query"} -->
+      <div class="wp-block-query pp-query">
+        <!-- wp:post-template {"className":"pp-template"} -->
+        <!-- wp:group {"tagName":"article","className":"pp-individual"} -->
+        <article class="pp-individual">
           <!-- wp:post-title {"isLink":true} /-->
           <!-- wp:group {"className":"pp-metadata"} -->
           <div class="wp-block-group pp-metadata">
@@ -26,6 +25,8 @@
           <!-- /wp:group -->
           <!-- wp:post-featured-image {"isLink":true} /-->
           <!-- wp:post-excerpt /-->
+        </article>
+        <!-- /wp:group -->
         <!-- /wp:post-template -->
         <!-- wp:query-pagination -->
           <!-- wp:query-pagination-previous /-->
@@ -38,12 +39,11 @@
     <!-- /wp:group -->
   </div>
   <!-- /wp:column -->
-  <!-- wp:column {"className":"panda-puss-sidebar"} -->
-  <div class="wp-block-column panda-puss-sidebar">
+  <!-- wp:column {"className":"pp-sidebar"} -->
+  <div class="wp-block-column pp-sidebar">
     <!-- wp:template-part {"slug":"sidebar","tagName":"aside"} /-->
   </div>
   <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
-
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
