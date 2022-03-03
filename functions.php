@@ -66,6 +66,7 @@ add_action( 'after_setup_theme', 'panda_puss_theme_setup' );
 if ( ! function_exists( 'panda_puss_theme_scripts' ) ) :
   function panda_puss_theme_scripts() {
     wp_enqueue_style( 'panda-puss-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'pp-simple-line-icons', get_theme_file_uri("/assets/fonts/simple-line-icons/css/simple-line-icons.css") );
   }
 endif;
 add_action( 'wp_enqueue_scripts', 'panda_puss_theme_scripts' );
