@@ -42,6 +42,18 @@ if ( ! function_exists( 'panda_puss_theme_setup' ) ) :
    * Enable support for block styles.
    */
   add_theme_support( 'wp-block-styles' );
+
+  /**
+   * Add support for navigation menus.
+   */
+    register_nav_menus(
+      array(
+        'header' => __('Header navigation', 'panda-puss'),
+        'sidebar' => __('Sidebar navigation', 'panda-puss'),
+        'footer' => __('Footer navigation', 'panda-puss'),
+        'social' => __('Social navigation', 'panda-puss')
+      )
+    );
   }
 endif;
 add_action( 'after_setup_theme', 'panda_puss_theme_setup' );
@@ -51,9 +63,11 @@ add_action( 'after_setup_theme', 'panda_puss_theme_setup' );
  *
  * @since 0.0.1
  */
-function panda_puss_theme_scripts() {
-  wp_enqueue_style( 'panda-puss-style', get_stylesheet_uri() );
-}
+if ( ! function_exists( 'panda_puss_theme_scripts' ) ) :
+  function panda_puss_theme_scripts() {
+    wp_enqueue_style( 'panda-puss-style', get_stylesheet_uri() );
+  }
+endif;
 add_action( 'wp_enqueue_scripts', 'panda_puss_theme_scripts' );
 
 /**
@@ -61,11 +75,13 @@ add_action( 'wp_enqueue_scripts', 'panda_puss_theme_scripts' );
  *
  * @since 0.0.4
  */
-function remove_wp_block_library_css(){
-  wp_dequeue_style( 'wp-block-library' );
-  wp_dequeue_style( 'wp-block-library-theme' );
-  wp_dequeue_style( 'wc-block-style' ); // Remove Woocommerce block css
-  wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
-  wp_dequeue_style( 'global-styles' ); // Remove theme.json
-}
+if ( ! function_exists( 'remove_wp_block_library_css' ) ) :
+  function remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' ); // Remove Woocommerce block css
+    wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
+    wp_dequeue_style( 'global-styles' ); // Remove theme.json
+  }
+endif;
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
