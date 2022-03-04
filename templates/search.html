@@ -1,8 +1,8 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"pp-header"} /-->
 <!-- wp:columns {"className":"pp-site"} -->
 <div class="wp-block-columns pp-site">
   <!-- wp:column {"className":"pp-content"} -->
-  <div class="wp-block-column pp-contents">
+  <div class="wp-block-column pp-content">
     <!-- wp:group {"tagName":"main","className":"pp-main"} -->
     <main class="wp-block-group pp-main">
       <h1>Search results</h1>
@@ -12,27 +12,27 @@
           <!-- wp:group {"tagName":"article","className":"pp-individual"} -->
           <article class="wp-block-group pp-individual">
             <!-- wp:post-title {"isLink":true} /-->
-            <!-- wp:group {"class":"pp-metadata"} -->
+            <!-- wp:group {"className":"pp-metadata"} -->
             <div class="wp-block-group pp-metadata">
-              <!-- wp:post-author /-->
-              <!-- wp:post-date /-->
-              <!-- wp:group {"class":"pp-terms"} -->
+              <!-- wp:post-author {"className":"pp-author"} /-->
+              <!-- wp:post-date {"className":"pp-date"} /-->
+              <!-- wp:group {"className":"pp-terms"} -->
               <div class="wp-block-group pp-terms">
-                <!-- wp:post-terms {"term":"category"} /-->
-                <!-- wp:post-terms {"term":"post_tag"} /-->
+                <!-- wp:post-terms {"term":"category","className":"pp-terms-category"} /-->
+                <!-- wp:post-terms {"term":"post_tag","className":"pp-terms-post_tag"} /-->
               </div>
               <!-- /wp:group -->
             </div>
             <!-- /wp:group -->
-            <!-- wp:post-featured-image {"isLink":true} /-->
-            <!-- wp:post-excerpt /-->
+            <!-- wp:post-featured-image {"isLink":true,"className":"pp-featured_image"} /-->
+            <!-- wp:post-excerpt {"className":"pp-excerpt pp-content"} /-->
           </article>
           <!-- /wp:group -->
         <!-- /wp:post-template -->
-        <!-- wp:query-pagination -->
-          <!-- wp:query-pagination-previous /-->
-          <!-- wp:query-pagination-numbers /-->
-          <!-- wp:query-pagination-next /-->
+        <!-- wp:query-pagination {"className":"pp-pagination"} -->
+          <!-- wp:query-pagination-previous {"className":"pp-pagination-previous"} /-->
+          <!-- wp:query-pagination-numbers {"className":"pp-pagination-numbers"} /-->
+          <!-- wp:query-pagination-next {"className":"pp-pagination-next"} /-->
         <!-- /wp:query-pagination -->
       </div>
       <!-- /wp:query -->
@@ -42,9 +42,9 @@
   <!-- /wp:column -->
   <!-- wp:column {"className":"pp-sidebar"} -->
   <div class="wp-block-column pp-sidebar">
-    <!-- wp:template-part {"slug":"sidebar","tagName":"aside"} /-->
+    <!-- wp:template-part {"slug":"sidebar","tagName":"aside","className":"pp-sidebar"} /-->
   </div>
   <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"pp-footer"} /-->
