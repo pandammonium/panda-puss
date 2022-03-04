@@ -1,12 +1,12 @@
 @mixin pagination {
   .wp-block-query-pagination {
+    // background-color: brown;
     // border: 1px solid brown;
-    width: 100%;
     // Grid container
     display: grid;
     column-gap: calc(2 * var(--panda-puss--global--space--hor));
     row-gap: 0;
-    grid-template-columns: repeat(3, minmax(10ch, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
       "query-pagination-previous query-pagination-numbers query-pagination-next"
@@ -17,14 +17,19 @@
       margin: 0;
       // Grid item
       grid-area: query-pagination-previous;
-      place-self: stretch end;
+      align-self: stretch;
+      justify-self: start;
+      place-self: stretch start;
       // End of grid item
     }
     .wp-block-query-pagination-numbers {
-      // border: 1px stretch purple;
+      // background-color: purple;
+      // border: 1px solid purple;
       margin: 0;
       // Grid item
       grid-area: query-pagination-numbers;
+      align-self: stretch;
+      justify-self: center;
       place-self: stretch center;
       // End of grid item
     }
@@ -33,8 +38,11 @@
       margin: 0;
       // Grid item
       grid-area: query-pagination-next;
-      place-self: stretch start;
+      align-self: stretch;
+      justify-self: end;
+      place-self: stretch end;
       // End of grid item
     }
   }
 }
+
