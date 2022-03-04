@@ -513,12 +513,27 @@ template {
   margin: auto;
   width: 95%;
 }
-
-.pp-sidebar {
-  min-width: 200px;
-  max-width: 400px;
+.wp-site-blocks .wp-block-columns.pp-site {
+  gap: calc(1 * var(--panda-puss--global--space--ver)) calc(2 * var(--panda-puss--global--space--hor));
+  justify-content: flex-start;
+}
+.wp-site-blocks .wp-block-columns.pp-site .wp-block-column.pp-content {
+  flex: 2 1 auto;
+}
+.wp-site-blocks .wp-block-columns.pp-site .wp-block-column.pp-sidebar {
+  margin-left: 0;
+  flex: 1 0 clamp(200px, 30vw, 500px);
 }
 
+@media (min-width: 600px) and (max-width: 781px) {
+  .wp-block-columns.pp-site .wp-block-column.pp-content {
+    flex: 1 1 100% !important;
+  }
+  .wp-block-columns.pp-site .wp-block-column.pp-sidebar {
+    margin-left: 0;
+    flex: 1 1 100% !important;
+  }
+}
 .wp-block-navigation {
   margin: calc(2 * var(--panda-puss--global--space--ver)) auto;
 }
@@ -647,28 +662,33 @@ template {
 }
 
 .wp-block-query-pagination {
-  width: 100%;
   display: grid;
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
   row-gap: 0;
-  grid-template-columns: repeat(3, minmax(10ch, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "query-pagination-previous query-pagination-numbers query-pagination-next";
 }
 .wp-block-query-pagination .wp-block-query-pagination-previous {
   margin: 0;
   grid-area: query-pagination-previous;
-  place-self: stretch end;
+  align-self: stretch;
+  justify-self: start;
+  place-self: stretch start;
 }
 .wp-block-query-pagination .wp-block-query-pagination-numbers {
   margin: 0;
   grid-area: query-pagination-numbers;
+  align-self: stretch;
+  justify-self: center;
   place-self: stretch center;
 }
 .wp-block-query-pagination .wp-block-query-pagination-next {
   margin: 0;
   grid-area: query-pagination-next;
-  place-self: stretch start;
+  align-self: stretch;
+  justify-self: end;
+  place-self: stretch end;
 }
 
 .single .wp-block-group.pp-main,
