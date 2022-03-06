@@ -1,10 +1,16 @@
 .wp-site-blocks {
 
+  .wp-block-site-title {
+    text-align: center;
+
+    a:any-link {
+      color: currentColor;
+      text-decoration: none;
+    }
+  }
+  .wp-block-site-tagline {
+    text-align: center;
+  }
+
 }
 
-.wp-block-site-title {
-  text-align: center;
-}
-.wp-block-site-tagline {
-  text-align: center;
-}
