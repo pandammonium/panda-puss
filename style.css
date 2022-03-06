@@ -567,7 +567,6 @@ template {
   margin: auto;
   width: 100%;
   display: grid;
-  gap: 0;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "post-featured-image post-title" "post-featured-image pp-post-metadata" "post-featured-image post-excerpt";
@@ -711,7 +710,6 @@ template {
   margin: auto;
   width: 100%;
   display: grid;
-  gap: 0;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "post-featured-image post-title" "post-featured-image pp-post-metadata" "post-featured-image post-content" "post-nav-link-previous post-nav-link-next" "post-comments post-comments";

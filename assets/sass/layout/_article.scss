@@ -30,7 +30,6 @@
     width: 100%;
     // Grid container
     display: grid;
-    gap: 0;
     grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
