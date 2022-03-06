@@ -1,0 +1,91 @@
+:root {
+  --quotes--open-1: "‘";
+  --quotes--close-1: "’";
+  --quotes--open-2: "“";
+  --quotes--close-2: "”";
+  --quotes--open-3: "«";
+  --quotes--close-3: "»";
+  --quotes--open-4: "‹";
+  --quotes--close-4: "›";
+  --quotes--open-3a: "«\00A0";
+  --quotes--close-3a: "\00A0»";
+  --quotes--open-4a: "‹\00A0";
+  --quotes--close-4a: "\00A0›";
+  --quotes--open-5: "'";
+  --quotes--close-5: "'";
+  --quotes--open-6: '"';
+  --quotes--close-6: '"';
+  --quotes--open-7: '\\"';
+  --quotes--close-7: '\\"';
+  --quotes--open-8: '‚';
+  --quotes--open-8: '‛';
+  --quotes--open-9: '„';
+  --quotes--close-9: '‟';
+  --quotes-pattern-de:
+    var(--quotes--open-8)
+    var(--quotes--close-8)
+    var(--quotes--open-9)
+    var(--quotes--close-9)
+    var(--quotes--open-8)
+    var(--quotes--close-8)
+    var(--quotes--open-9)
+    var(--quotes--close-9);
+  --quotes--en-gb:
+    var(--quotes--open-1)
+    var(--quotes--close-1)
+    var(--quotes--open-2)
+    var(--quotes--close-2)
+    var(--quotes--open-1)
+    var(--quotes--close-1)
+    var(--quotes--open-2)
+    var(--quotes--close-2);
+  --quotes--en-us:
+    var(--quotes--open-2)
+    var(--quotes--close-2)
+    var(--quotes--open-1)
+    var(--quotes--close-1)
+    var(--quotes--open-2)
+    var(--quotes--close-2)
+    var(--quotes--open-1)
+    var(--quotes--close-1);
+  --quotes--eu:
+    var(--quotes--open-3)
+    var(--quotes--close-3)
+    var(--quotes--open-4)
+    var(--quotes--close-4)
+    var(--quotes--open-3)
+    var(--quotes--close-3)
+    var(--quotes--open-4)
+    var(--quotes--close-4);
+  --quotes--fr:
+    var(--quotes--open-3a)
+    var(--quotes--close-3a)
+    var(--quotes--open-4a)
+    var(--quotes--close-4a)
+    var(--quotes--open-3a)
+    var(--quotes--close-3a)
+    var(--quotes--open-4a)
+    var(--quotes--close-4a);
+  --quotes--json:
+    var(--quotes--open-6)
+    var(--quotes--close-6)
+    var(--quotes--open-7)
+    var(--quotes--close-7);
+  --quotes--default: var(--quotes--en-gb);
+
+  [lang="en-gb"] q {
+    quotes: var(--quotes--en-gb);
+  }
+  [lang="en-us"] q {
+    quotes: var(--quotes--en-us);
+  }
+  [lang="es"] q {
+    quotes: var(--quotes--eu);
+  }
+  [lang="fr"] q {
+    quotes: var(--quotes--fr);
+  }
+  q {
+    quotes: var(--quotes--default);
+  }
+}

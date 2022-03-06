@@ -1,21 +1,4 @@
-/*
-Theme Name: Panda-Puss
-Theme URI: https://pandammonium.org/wordpress/wordpress-dev/pandapuss/
-Author: pandammonium
-Author URI: https://pandammonium.org/
-Description:
-Tags: full-site-editing, blog, pandas
-Version: 0.0.3
-Requires at least: 5.9
-Tested up to: 5.9
-Requires PHP: 8.1.2
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: panda-puss
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
+@charset "UTF-8";
 :root {
   --panda-puss--global--colour--hue--0: 0;
   --panda-puss--global--colour--hue--30: 30;
@@ -96,12 +79,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --panda-puss--global--font-size--medium: 16px;
   --panda-puss--global--font-size--large: 1.4rem;
   --panda-puss--global--font-size--huge: 1.8rem;
-}
-
-:root {
-  --panda-puss--global--space: 1ch;
-  --panda-puss--global--space--hor: calc(0.5 * var(--panda-puss--global--space));
-  --panda-puss--global--space--ver: calc(2.0 * var(--panda-puss--global--space));
 }
 
 /**
@@ -499,6 +476,121 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+/*
+Theme Name: Panda-Puss
+Theme URI: https://pandammonium.org/wordpress/wordpress-dev/pandapuss/
+Author: pandammonium
+Author URI: https://pandammonium.org/
+Description:
+Tags: full-site-editing, blog, pandas
+Version: 0.0.3
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 8.1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: panda-puss
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+:root {
+  --panda-puss--global--space: 1ch;
+  --panda-puss--global--space--hor: calc(0.5 * var(--panda-puss--global--space));
+  --panda-puss--global--space--ver: calc(2.0 * var(--panda-puss--global--space));
+}
+
+:root {
+  --quotes--open-1: "‘";
+  --quotes--close-1: "’";
+  --quotes--open-2: "“";
+  --quotes--close-2: "”";
+  --quotes--open-3: "«";
+  --quotes--close-3: "»";
+  --quotes--open-4: "‹";
+  --quotes--close-4: "›";
+  --quotes--open-3a: "« ";
+  --quotes--close-3a: " »";
+  --quotes--open-4a: "‹ ";
+  --quotes--close-4a: " ›";
+  --quotes--open-5: "'";
+  --quotes--close-5: "'";
+  --quotes--open-6: '"';
+  --quotes--close-6: '"';
+  --quotes--open-7: '\\"';
+  --quotes--close-7: '\\"';
+  --quotes--open-8: "‚";
+  --quotes--open-8: "‛";
+  --quotes--open-9: "„";
+  --quotes--close-9: "‟";
+  --quotes-pattern-de:
+    var(--quotes--open-8)
+    var(--quotes--close-8)
+    var(--quotes--open-9)
+    var(--quotes--close-9)
+    var(--quotes--open-8)
+    var(--quotes--close-8)
+    var(--quotes--open-9)
+    var(--quotes--close-9);
+  --quotes--en-gb:
+    var(--quotes--open-1)
+    var(--quotes--close-1)
+    var(--quotes--open-2)
+    var(--quotes--close-2)
+    var(--quotes--open-1)
+    var(--quotes--close-1)
+    var(--quotes--open-2)
+    var(--quotes--close-2);
+  --quotes--en-us:
+    var(--quotes--open-2)
+    var(--quotes--close-2)
+    var(--quotes--open-1)
+    var(--quotes--close-1)
+    var(--quotes--open-2)
+    var(--quotes--close-2)
+    var(--quotes--open-1)
+    var(--quotes--close-1);
+  --quotes--eu:
+    var(--quotes--open-3)
+    var(--quotes--close-3)
+    var(--quotes--open-4)
+    var(--quotes--close-4)
+    var(--quotes--open-3)
+    var(--quotes--close-3)
+    var(--quotes--open-4)
+    var(--quotes--close-4);
+  --quotes--fr:
+    var(--quotes--open-3a)
+    var(--quotes--close-3a)
+    var(--quotes--open-4a)
+    var(--quotes--close-4a)
+    var(--quotes--open-3a)
+    var(--quotes--close-3a)
+    var(--quotes--open-4a)
+    var(--quotes--close-4a);
+  --quotes--json:
+    var(--quotes--open-6)
+    var(--quotes--close-6)
+    var(--quotes--open-7)
+    var(--quotes--close-7);
+  --quotes--default: var(--quotes--en-gb);
+}
+:root [lang=en-gb] q {
+  quotes: var(--quotes--en-gb);
+}
+:root [lang=en-us] q {
+  quotes: var(--quotes--en-us);
+}
+:root [lang=es] q {
+  quotes: var(--quotes--eu);
+}
+:root [lang=fr] q {
+  quotes: var(--quotes--fr);
+}
+:root q {
+  quotes: var(--quotes--default);
 }
 
 .wp-site-blocks .wp-block-site-title {
