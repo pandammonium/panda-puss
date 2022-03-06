@@ -4,26 +4,23 @@
 
   // @debug "Article type: " + $content-type;
 
-  $title: "\"post-featured-image post-title\"";
-  $metadata: "\"post-featured-image pp-post-metadata\"";
-  $content: "\"post-featured-image post-" + $content-type + "\"";
-  // $category: "\"post-terms-category post-terms-category post-terms-category\"";
-  // $tag: "\"post-terms-post-tag post-terms-post-tag post-terms-post-tag\"";
-  // $grid-areas: #{$title} + " " + #{$author-date} + " "  + #{$content} + " "  + #{$category} + " "  + #{$tag};
-  $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
-  @if $content-type == "content" {
-    $single-nav: "\"post-nav-link-previous post-nav-link-next\"";
-    $single-comments: "\"post-comments post-comments\"";
-    $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
-  } @else if $content-type == 'excerpt' {
-  } @else {
-    @error "Unknown post content type";
-  }
-  // @debug "Article grid: " + $grid-areas;
-
   // @debug "Article parent: " + &;
 
   & {
+    $title: "\"post-featured-image post-title\"";
+    $metadata: "\"post-featured-image pp-post-metadata\"";
+    $content: "\"post-featured-image post-" + $content-type + "\"";
+    $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
+    @if $content-type == "content" {
+      $single-nav: "\"post-nav-link-previous post-nav-link-next\"";
+      $single-comments: "\"post-comments post-comments\"";
+      $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
+    } @else if $content-type == 'excerpt' {
+    } @else {
+      @error "Unknown post content type";
+    }
+    // @debug "Article grid: " + $grid-areas;
+
     // background-color: yellow;
     // border: 1px solid yellow;
     margin: auto;
@@ -167,6 +164,38 @@
       grid-area: post-featured-image;
       // End of grid item
     }
+  }
+
+  &.pp-focus {
+    $featured-image: "\"post-featured-image post-featured-image\"";
+    $title: "\"post-title post-title\"";
+    $metadata: "\"pp-post-metadata pp-post-metadata\"";
+    $content: "\"post-" + $content-type + " post-" + $content-type + "\"";
+    $grid-areas: #{$title} + " " + #{$featured-image} + " " + #{$metadata} + " "  + #{$content};
+    @if $content-type == "content" {
+      $single-nav: "\"post-nav-link-previous post-nav-link-next\"";
+      $single-comments: "\"post-comments post-comments\"";
+      $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
+    } @else if $content-type == 'excerpt' {
+    } @else {
+      @error "Unknown post content type";
+    }
+    // @debug "Article grid (focus): " + $grid-areas;
+
+    // background-color: yellow;
+    // border: 1px solid yellow;
+    margin: auto;
+    width: 100%;
+    // Grid container
+    display: grid;
+    grid-template-columns: minmax(10px, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      #{$grid-areas}
+    ;
+    column-gap: calc(2 * var(--panda-puss--global--space--hor));
+    row-gap: 0;
+    // End of grid container
   }
 
 } // End of @mixin post-content
