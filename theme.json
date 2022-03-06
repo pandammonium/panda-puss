@@ -125,7 +125,29 @@
       "etc": {}
     }
   },
-  "customTemplates": [],
+  "customTemplates": [
+    {
+      "name":"page-with-sidebar",
+      "title":"Page + Sidebar",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name":"page-focus",
+      "title":"Focus Page",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name":"single-with-sidebar",
+      "title":"Single Post + Sidebar",
+      "postTypes": [
+        "post"
+      ]
+    }
+  ],
   "templateParts": [
     {
       "name": "header",
@@ -136,6 +158,31 @@
       "name": "footer",
       "title": "Footer",
       "area": "footer"
+    },
+    {
+      "name": "sidebar",
+      "title": "Sidebar: RHS",
+      "area": "sidebar"
+    },
+    {
+      "name": "article-loop",
+      "title": "Article in the Loop",
+      "area": "content"
+    },
+    {
+      "name": "article-single",
+      "title": "Single article in a post/page",
+      "area": "content"
+    },
+    {
+      "name": "navigation-loop",
+      "title": "Links to next and previous pages in the Loop",
+      "area": "nav"
+    },
+    {
+      "name": "navigation-single",
+      "title": "Links to next and previous posts",
+      "area": "nav"
     }
   ]
 }
