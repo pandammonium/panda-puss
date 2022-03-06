@@ -5,12 +5,12 @@
 
   // @debug "Post content type: " + $content-type;
 
-  $article: "\"article article\"";
+  $article: "\"article\"";
 
   $grid-areas: #{$article};
   @if $content-type == "content" {
-    $single-nav: "\"post-nav-link-previous post-nav-link-next\"";
-    $single-comments: "\"post-comments post-comments\"";
+    $single-nav: "\"navigation_single\"";
+    $single-comments: "\"post-comments\"";
     $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
   } @else if $content-type == 'excerpt' {
   } @else {
@@ -18,7 +18,7 @@
   }
   // @debug "Post content grid: " + $grid-areas;
 
-  // @debug "Post content parent: " + &;
+  @debug "Post content parent: " + &;
 
   & {
     // background-color: red;
@@ -28,7 +28,7 @@
     // Grid container
     display: grid;
     gap: 0;
-    grid-template-columns: minmax(10px, 1fr) minmax(10px, 1fr);
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas: #{$grid-areas};
     column-gap: calc(2 * var(--panda-puss--global--space--hor));
@@ -47,7 +47,7 @@
   }
 
   // Single post/page comments
-  .wp-block-post-comments {
+  .pp-comments {
     // background-color: darkmagenta;
     // border: 1px solid darkmagenta;
     // Grid item
@@ -57,21 +57,33 @@
   // End of single post/page comments
 
   // Single post/page navigation
-  .wp-block-post-navigation-link {
+  .pp-navigation_single.wp-block-template-part {
     // background-color: deeppink;
     // border: 1px solid deeppink;
-  }
-  .wp-block-post-navigation-link.post-navigation-link-next {
     // Grid item
-    grid-area: post-nav-link-next;
-    place-self: center end;
+    grid-area: navigation_single;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "navigation_single-link-previous navigation_single-link-next";
     // End of grid item
-  }
-  .wp-block-post-navigation-link.post-navigation-link-previous {
-    // Grid item
-    grid-area: post-nav-link-previous;
-    place-self: center start;
-    // End of grid item
+    // Grid container
+    display: grid;
+    // End of grid container
+    .pp-navigation-previous {
+      // background-color: lightblue;
+      // Grid item
+      grid-area: navigation_single-link-previous;
+      place-self: center start;
+      // End of grid item
+    }
+    .pp-navigation-next {
+      // background-color: lightgreen;
+      // Grid item
+      grid-area: navigation_single-link-next;
+      place-self: center end;
+      // End of grid item
+    }
   }
   // End of single post/page navigation
 

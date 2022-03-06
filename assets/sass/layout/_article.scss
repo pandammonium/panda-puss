@@ -152,7 +152,6 @@
       grid-area: post-content;
     }
 
-
     .wp-block-post-featured-image {
       // background-color: gold;
       // border: 1px solid gold;
@@ -164,34 +163,5 @@
       // End of grid item
     }
   }
-
-  // Single post/page comments
-  .wp-block-post-comments {
-    // background-color: darkmagenta;
-    // border: 1px solid darkmagenta;
-    // Grid item
-    grid-area: post-comments;
-    // End of grid item
-  }
-  // End of single post/page comments
-
-  // Single post/page navigation
-  .wp-block-post-navigation-link {
-    // background-color: deeppink;
-    // border: 1px solid deeppink;
-  }
-  .wp-block-post-navigation-link.post-navigation-link-next {
-    // Grid item
-    grid-area: post-nav-link-next;
-    place-self: center end;
-    // End of grid item
-  }
-  .wp-block-post-navigation-link.post-navigation-link-previous {
-    // Grid item
-    grid-area: post-nav-link-previous;
-    place-self: center start;
-    // End of grid item
-  }
-  // End of single post/page navigation
 
 } // End of @mixin post-content
