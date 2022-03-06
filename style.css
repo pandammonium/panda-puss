@@ -943,4 +943,8 @@ template {
   margin-left: calc(3 * var(--panda-puss--global--space--hor));
 }
 
+main {
+  outline: 1px solid red;
+}
+
 /*# sourceMappingURL=style.css.map */

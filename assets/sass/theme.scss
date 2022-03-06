@@ -3,3 +3,7 @@
 @use 'blocks/blocks';
 @use 'layout/layout';
 @use 'styling/styling';
+
+main {
+  outline: 1px solid red;
+}
