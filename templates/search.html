@@ -5,28 +5,14 @@
   <div class="wp-block-column pp-content">
     <!-- wp:group {"tagName":"main","className":"pp-main"} -->
     <main class="wp-block-group pp-main">
+      <!-- wp:header {"level":1} -->
       <h1>Search results</h1>
+      <!-- /wp:header -->
       <!-- wp:query {"className":"pp-query pp-search-results"} -->
       <div class="wp-block-query pp-query pp-search-results">
         <!-- wp:post-template {"className":"pp-template"} -->
           <!-- wp:group {"tagName":"article","className":"pp-individual"} -->
-          <article class="wp-block-group pp-individual">
-            <!-- wp:post-title {"isLink":true} /-->
-            <!-- wp:group {"className":"pp-metadata"} -->
-            <div class="wp-block-group pp-metadata">
-              <!-- wp:post-author {"className":"pp-author"} /-->
-              <!-- wp:post-date {"className":"pp-date"} /-->
-              <!-- wp:group {"className":"pp-terms"} -->
-              <div class="wp-block-group pp-terms">
-                <!-- wp:post-terms {"term":"category","className":"pp-terms-category"} /-->
-                <!-- wp:post-terms {"term":"post_tag","className":"pp-terms-post_tag"} /-->
-              </div>
-              <!-- /wp:group -->
-            </div>
-            <!-- /wp:group -->
-            <!-- wp:post-featured-image {"isLink":true,"className":"pp-featured_image"} /-->
-            <!-- wp:post-excerpt {"className":"pp-excerpt pp-content"} /-->
-          </article>
+          <!-- wp:template-part {"slug":"article","tagName":"article","className":"pp-individual"} /-->
           <!-- /wp:group -->
         <!-- /wp:post-template -->
         <!-- wp:query-pagination {"className":"pp-pagination"} -->
