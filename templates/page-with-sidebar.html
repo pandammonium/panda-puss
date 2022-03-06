@@ -1,0 +1,41 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"pp-header"} /-->
+<!-- wp:columns {"className":"pp-site"} -->
+<div class="wp-block-columns pp-site">
+  <!-- wp:column {"className":"pp-content"} -->
+  <div class="wp-block-column pp-content">
+    <!-- wp:group {"tagName":"main","className":"pp-main"} -->
+    <main class="wp-block-group pp-main">
+      <!-- wp:group {"tagName":"article","className":"pp-individual"} -->
+      <article class="wp-block-group pp-individual">
+        <!-- wp:post-title {"isLink":false} /-->
+        <!-- wp:group {"className":"pp-metadata"} -->
+        <div class="wp-block-group pp-metadata">
+          <!-- wp:post-author {"className":"pp-author"} /-->
+          <!-- wp:post-date {"className":"pp-date"} /-->
+          <!-- wp:group {"className":"pp-terms"} -->
+          <div class="wp-block-group pp-terms">
+            <!-- wp:post-terms {"term":"category","className":"pp-terms-category"} /-->
+            <!-- wp:post-terms {"term":"post_tag","className":"pp-terms-post_tag"} /-->
+          </div>
+          <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+        <!-- wp:post-featured-image {"isLink":false,"className":"pp-featured_image"} /-->
+        <!-- wp:post-content {"className":"pp-full_content pp-content"} /-->
+      </article>
+      <!-- /wp:group -->
+      <!-- wp:post-navigation-link {"type":"previous","className":"pp-post_nav pp-post_nav-previous","label":"Previous page"} /-->
+      <!-- wp:post-navigation-link {"type":"next","className":"pp-post_nav pp-post_nav-next","label":"Next page"} /-->
+      <!-- wp:post-comments {"className":"pp-comments"} /-->
+    </main>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:column -->
+  <!-- wp:column {"className":"pp-sidebar"} -->
+  <div class="wp-block-column pp-sidebar">
+    <!-- wp:template-part {"slug":"sidebar","tagName":"aside","className":"pp-sidebar"} /-->
+  </div>
+  <!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"pp-footer"} /-->
