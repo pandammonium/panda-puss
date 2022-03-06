@@ -576,6 +576,10 @@ template {
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
   row-gap: 0;
 }
+.pp-template .wp-block-post .pp-individual .pp-content img {
+  height: auto;
+  max-width: 100%;
+}
 .pp-template .wp-block-post .pp-individual .wp-block-post-title {
   margin: unset;
   grid-area: post-title;
@@ -714,6 +718,11 @@ template {
   grid-template-areas: "post-featured-image post-title" "post-featured-image pp-post-metadata" "post-featured-image post-content" "post-nav-link-previous post-nav-link-next" "post-comments post-comments";
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
   row-gap: 0;
+}
+.single .wp-block-group.pp-main .pp-individual .pp-content img,
+.page .wp-block-group.pp-main .pp-individual .pp-content img {
+  height: auto;
+  max-width: 100%;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-post-title,
 .page .wp-block-group.pp-main .pp-individual .wp-block-post-title {

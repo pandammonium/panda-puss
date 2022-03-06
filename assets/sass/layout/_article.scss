@@ -39,6 +39,11 @@
     row-gap: 0;
     // End of grid container
 
+    .pp-content img {
+      height: auto;
+      max-width: 100%;
+    }
+
     .wp-block-post-title {
       // background-color: green;
       // border: 1px solid green;
