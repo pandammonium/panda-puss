@@ -73,6 +73,9 @@
     var(--quotes--close-7);
   --quotes--default: var(--quotes--en-gb);
 
+  q {
+    quotes: var(--quotes--default);
+  }
   [lang="de"] q {
     quotes: var(--quotes--de);
   }
@@ -87,8 +90,5 @@
   }
   [lang="fr"] q {
     quotes: var(--quotes--fr);
-  }
-  q {
-    quotes: var(--quotes--default);
   }
 }
