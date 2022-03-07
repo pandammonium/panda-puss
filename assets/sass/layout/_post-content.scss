@@ -35,56 +35,54 @@
     row-gap: 0;
     // End of grid container
 
-  }
-
-  .pp-individual {
-    // background-color: palegoldenrod;
-    // border: 1px solid palegoldenrod;
-    // Grid item
-    grid-area: article;
-    // End of grid item
-    @include article.article($content-type);
-  }
-
-  // Single post/page comments
-  .pp-comments {
-    // background-color: darkmagenta;
-    // border: 1px solid darkmagenta;
-    // Grid item
-    grid-area: post-comments;
-    // End of grid item
-  }
-  // End of single post/page comments
-
-  // Single post/page navigation
-  .pp-navigation_single.wp-block-template-part {
-    // background-color: deeppink;
-    // border: 1px solid deeppink;
-    // Grid item
-    grid-area: navigation_single;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "navigation_single-link-previous navigation_single-link-next";
-    // End of grid item
-    // Grid container
-    display: grid;
-    // End of grid container
-    .pp-navigation-previous {
-      // background-color: lightblue;
+    .pp-individual {
+      // background-color: palegoldenrod;
+      // border: 1px solid palegoldenrod;
       // Grid item
-      grid-area: navigation_single-link-previous;
-      place-self: center start;
+      grid-area: article;
+      // End of grid item
+      @include article.article($content-type);
+    }
+
+    // Single post/page comments
+    .pp-comments {
+      // background-color: darkmagenta;
+      // border: 1px solid darkmagenta;
+      // Grid item
+      grid-area: post-comments;
       // End of grid item
     }
-    .pp-navigation-next {
-      // background-color: lightgreen;
-      // Grid item
-      grid-area: navigation_single-link-next;
-      place-self: center end;
-      // End of grid item
-    }
-  }
-  // End of single post/page navigation
+    // End of single post/page comments
 
+    // Single post/page navigation
+    .pp-navigation_single.wp-block-template-part {
+      // background-color: deeppink;
+      // border: 1px solid deeppink;
+      // Grid item
+      grid-area: navigation_single;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "navigation_single-link-previous navigation_single-link-next";
+      // End of grid item
+      // Grid container
+      display: grid;
+      // End of grid container
+      .pp-navigation-previous {
+        // background-color: lightblue;
+        // Grid item
+        grid-area: navigation_single-link-previous;
+        place-self: center start;
+        // End of grid item
+      }
+      .pp-navigation-next {
+        // background-color: lightgreen;
+        // Grid item
+        grid-area: navigation_single-link-next;
+        place-self: center end;
+        // End of grid item
+      }
+    }
+    // End of single post/page navigation
+  }
 } // End of @mixin post-content
