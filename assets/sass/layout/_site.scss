@@ -13,14 +13,14 @@
     .wp-block-column.pp-main_content {
       // border: 1px solid green;
       // Flex item
-      flex: 2 1 auto;
+      flex: 2 1 70vw;
       // End of flex item
     }
     .wp-block-column.pp-sidebar {
       // border: 1px solid blue;
       margin-left: 0;
       // Flex item
-      flex: 1 0 clamp(200px, 30vw, 500px);
+      flex: 1 1 30vw;
       // End of flex item
     }
   }
