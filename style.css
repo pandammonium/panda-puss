@@ -1,76 +1,5 @@
 @charset "UTF-8";
 :root {
-  --panda-puss--global--colour--hue--0: 0;
-  --panda-puss--global--colour--hue--30: 30;
-  --panda-puss--global--colour--hue--60: 60;
-  --panda-puss--global--colour--hue--90: 90;
-  --panda-puss--global--colour--hue--120: 120;
-  --panda-puss--global--colour--hue--150: 150;
-  --panda-puss--global--colour--hue--180: 180;
-  --panda-puss--global--colour--hue--210: 210;
-  --panda-puss--global--colour--hue--240: 240;
-  --panda-puss--global--colour--hue--270: 270;
-  --panda-puss--global--colour--hue--300: 300;
-  --panda-puss--global--colour--hue--330: 330;
-  --panda-puss--global--colour--saturation--0: 0%;
-  --panda-puss--global--colour--saturation--25: 25%;
-  --panda-puss--global--colour--saturation--50: 50%;
-  --panda-puss--global--colour--saturation--75: 75%;
-  --panda-puss--global--colour--saturation--100: 100%;
-  --panda-puss--global--colour--lightness--0: 0%;
-  --panda-puss--global--colour--lightness--25: 25%;
-  --panda-puss--global--colour--lightness--50: 50%;
-  --panda-puss--global--colour--lightness--75: 75%;
-  --panda-puss--global--colour--lightness--100: 100%;
-  --panda-puss--global--colour--transparency--0-00: 0.00;
-  --panda-puss--global--colour--transparency--0-25: 0.25;
-  --panda-puss--global--colour--transparency--0-50: 0.50;
-  --panda-puss--global--colour--transparency--0-75: 0.75;
-  --panda-puss--global--colour--transparency--1-00: 1.00;
-  --panda-puss--global--colour--black: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--0), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--tundora: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--grey: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--silver: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--white: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--0), var(--panda-puss--global--colour--lightness--100), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--red: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--flush-orange: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--yellow: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--chartreuse: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--green: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--spring-green: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--cyan: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--azure-radiance: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--100), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--blue: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--electric-violet: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--magenta: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--rose: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--50), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--vivid-tangerine: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--macaroni-and-cheese: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--dolly: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--reef: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--mint-green: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--aquamarine: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--anakiwa: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--malibu-1: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--malibu-2: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--heliotrope: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--blush-pink: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--hot-pink: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--50), var(--panda-puss--global--colour--lightness--75), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--maroon: hsla(var(--panda-puss--global--colour--hue--0), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--cinnamon: hsla(var(--panda-puss--global--colour--hue--30), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--olive: hsla(var(--panda-puss--global--colour--hue--60), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--verdun-green: hsla(var(--panda-puss--global--colour--hue--90), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--japanese-laurel: hsla(var(--panda-puss--global--colour--hue--120), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--fun-green: hsla(var(--panda-puss--global--colour--hue--150), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--teal: hsla(var(--panda-puss--global--colour--hue--180), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--congress-blue: hsla(var(--panda-puss--global--colour--hue--210), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--navy-blue: hsla(var(--panda-puss--global--colour--hue--240), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--pigment-indigo: hsla(var(--panda-puss--global--colour--hue--270), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--fresh-aubergine: hsla(var(--panda-puss--global--colour--hue--300), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-  --panda-puss--global--colour--siren: hsla(var(--panda-puss--global--colour--hue--330), var(--panda-puss--global--colour--saturation--100), var(--panda-puss--global--colour--lightness--25), var(--panda-puss--global--colour--transparency--1-00));
-}
-
-:root {
   --panda-puss--global--font-family--serif: serif;
   --panda-puss--global--font-family--sans-serif: sans-serif;
   --panda-puss--global--font-family--cursive: cursive;
@@ -98,8 +27,8 @@
  * 4. Set the hyphenation.
  */
 body {
-  background-color: var(--panda-puss--global--colour--white);
-  color: var(--panda-puss--global--colour--tundora);
+  background-color: white;
+  color: #404040;
   font-family: var(--panda-puss--global--font-family--sans-serif) !important;
   font-size: var(--panda-puss--global--font-size--medium);
   line-height: 1.5;
@@ -502,95 +431,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --panda-puss--global--space--ver: calc(2.0 * var(--panda-puss--global--space));
 }
 
-:root {
-  --quotes--open-1: "‘";
-  --quotes--close-1: "’";
-  --quotes--open-2: "“";
-  --quotes--close-2: "”";
-  --quotes--open-3: "«";
-  --quotes--close-3: "»";
-  --quotes--open-4: "‹";
-  --quotes--close-4: "›";
-  --quotes--open-3a: "« ";
-  --quotes--close-3a: " »";
-  --quotes--open-4a: "‹ ";
-  --quotes--close-4a: " ›";
-  --quotes--open-5: "'";
-  --quotes--close-5: "'";
-  --quotes--open-6: '"';
-  --quotes--close-6: '"';
-  --quotes--open-7: '\\"';
-  --quotes--close-7: '\\"';
-  --quotes--open-8: "‚";
-  --quotes--open-8: "‛";
-  --quotes--open-9: "„";
-  --quotes--close-9: "‟";
-  --quotes-pattern-de:
-    var(--quotes--open-8)
-    var(--quotes--close-8)
-    var(--quotes--open-9)
-    var(--quotes--close-9)
-    var(--quotes--open-8)
-    var(--quotes--close-8)
-    var(--quotes--open-9)
-    var(--quotes--close-9);
-  --quotes--en-gb:
-    var(--quotes--open-1)
-    var(--quotes--close-1)
-    var(--quotes--open-2)
-    var(--quotes--close-2)
-    var(--quotes--open-1)
-    var(--quotes--close-1)
-    var(--quotes--open-2)
-    var(--quotes--close-2);
-  --quotes--en-us:
-    var(--quotes--open-2)
-    var(--quotes--close-2)
-    var(--quotes--open-1)
-    var(--quotes--close-1)
-    var(--quotes--open-2)
-    var(--quotes--close-2)
-    var(--quotes--open-1)
-    var(--quotes--close-1);
-  --quotes--eu:
-    var(--quotes--open-3)
-    var(--quotes--close-3)
-    var(--quotes--open-4)
-    var(--quotes--close-4)
-    var(--quotes--open-3)
-    var(--quotes--close-3)
-    var(--quotes--open-4)
-    var(--quotes--close-4);
-  --quotes--fr:
-    var(--quotes--open-3a)
-    var(--quotes--close-3a)
-    var(--quotes--open-4a)
-    var(--quotes--close-4a)
-    var(--quotes--open-3a)
-    var(--quotes--close-3a)
-    var(--quotes--open-4a)
-    var(--quotes--close-4a);
-  --quotes--json:
-    var(--quotes--open-6)
-    var(--quotes--close-6)
-    var(--quotes--open-7)
-    var(--quotes--close-7);
-  --quotes--default: var(--quotes--en-gb);
+:root q {
+  quotes: "‘" "’" "“" "”" "‘" "’" "“" "”";
+}
+:root [lang=de] q {
+  quotes: "‚" "‛" "„" "‟" "‚" "‛" "„" "‟";
 }
 :root [lang=en-gb] q {
-  quotes: var(--quotes--en-gb);
+  quotes: "‘" "’" "“" "”" "‘" "’" "“" "”";
 }
 :root [lang=en-us] q {
-  quotes: var(--quotes--en-us);
+  quotes: "“" "”" "‘" "’" "“" "”" "‘" "’";
 }
 :root [lang=es] q {
-  quotes: var(--quotes--eu);
+  quotes: "«" "»" "‹" "›" "«" "»" "‹" "›";
 }
 :root [lang=fr] q {
-  quotes: var(--quotes--fr);
-}
-:root q {
-  quotes: var(--quotes--default);
+  quotes: "« " " »" "‹ " " ›" "« " " »" "‹ " " ›";
 }
 
 .wp-site-blocks .wp-block-site-title {
@@ -605,23 +462,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .wp-site-blocks {
+  background-color: papayawhip;
   margin: auto;
-  width: 95%;
+  padding: calc(0 * var(--panda-puss--global--space--ver)) calc(5 * var(--panda-puss--global--space--hor));
+}
+.wp-site-blocks .pp-site .pp-main .pp-focus {
+  width: 100%;
 }
 .wp-site-blocks .wp-block-columns.pp-site {
   gap: calc(1 * var(--panda-puss--global--space--ver)) calc(2 * var(--panda-puss--global--space--hor));
   justify-content: flex-start;
 }
-.wp-site-blocks .wp-block-columns.pp-site .wp-block-column.pp-content {
+.wp-site-blocks .wp-block-columns.pp-site .wp-block-column.pp-main_content {
   flex: 2 1 auto;
 }
 .wp-site-blocks .wp-block-columns.pp-site .wp-block-column.pp-sidebar {
   margin-left: 0;
-  flex: 1 0 clamp(200px, 30vw, 500px);
+  flex: 1 0 clamp(150px, 25vw, 300px);
 }
 
 @media (min-width: 600px) and (max-width: 781px) {
-  .wp-block-columns.pp-site .wp-block-column.pp-content {
+  .wp-block-columns.pp-site .wp-block-column.pp-main_content {
     flex: 1 1 100% !important;
   }
   .wp-block-columns.pp-site .wp-block-column.pp-sidebar {
@@ -657,36 +518,42 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .pp-template .wp-block-post .pp-individual {
   grid-area: article;
+  margin: auto;
 }
 .pp-template .wp-block-post .pp-individual {
-  margin: auto;
-  width: 100%;
+  background-color: yellow;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "post-featured-image post-title" "post-featured-image pp-post-metadata" "post-featured-image post-excerpt";
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
+  column-gap: 0;
   row-gap: 0;
 }
-.pp-template .wp-block-post .pp-individual .pp-content img {
-  height: auto;
-  max-width: 100%;
-}
 .pp-template .wp-block-post .pp-individual .wp-block-post-title {
-  margin: unset;
+  background-color: green;
+  margin: inherit;
+  padding: inherit;
   grid-area: post-title;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata {
-  margin: unset;
+  background-color: cornflowerblue;
+  margin: inherit;
+  padding: inherit;
   grid-area: pp-post-metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: calc(5 * var(--panda-puss--global--space--hor));
+  column-gap: 0;
   row-gap: 0;
+  align-items: center;
+  justify-content: center;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-post-author {
-  margin: 0;
-  padding: 0;
+  background-color: darkkhaki;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
   display: grid;
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
   row-gap: 0;
@@ -695,7 +562,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-template-areas: "post-author-avatar post-author-content";
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-post-author .wp-block-post-author__avatar {
-  margin: unset;
+  margin: inherit;
+  padding: inherit;
   grid-area: post-author-avatar;
   place-self: center end;
 }
@@ -703,44 +571,72 @@ Use it to make something cool, have fun, and share what you've learned with othe
   vertical-align: bottom;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-post-author .wp-block-post-author__content {
+  margin: inherit;
+  padding: inherit;
   grid-area: post-author-content;
   place-self: center stretch;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-post-date {
-  place-self: center stretch;
+  background-color: purple;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms {
-  width: 100%;
+  background-color: palevioletred;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
   row-gap: 0;
   display: flex;
   flex-flow: row wrap;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms {
-  margin: unset;
+  margin: inherit;
+  padding: inherit;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms.taxonomy-category {
-  place-self: stretch;
+  background-color: rosybrown;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
+  place-self: center;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms.taxonomy-post_tag {
-  place-self: stretch;
+  background-color: mistyrose;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
+  place-self: center;
 }
-.pp-template .wp-block-post .pp-individual .wp-block-post-excerpt {
+.pp-template .wp-block-post .pp-individual .pp-article_content {
+  background-color: cyan;
+  margin: inherit;
+  padding: inherit;
+}
+.pp-template .wp-block-post .pp-individual .pp-article_content.wp-block-post-excerpt {
   grid-area: post-excerpt;
 }
-.pp-template .wp-block-post .pp-individual .wp-block-post-content {
+.pp-template .wp-block-post .pp-individual .pp-article_content.wp-block-post-content {
   grid-area: post-content;
 }
+.pp-template .wp-block-post .pp-individual .pp-article_content img {
+  height: auto;
+  max-width: 100%;
+}
 .pp-template .wp-block-post .pp-individual .wp-block-post-featured-image {
-  margin: unset;
+  margin: inherit;
+  padding: inherit;
   align-self: stretch;
   grid-area: post-featured-image;
 }
 .pp-template .wp-block-post .pp-individual.pp-focus {
-  margin: auto;
-  width: 100%;
+  background-color: maroon;
+  margin: inherit;
+  padding: inherit;
   display: grid;
-  grid-template-columns: minmax(10px, 1fr);
+  grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "post-title post-title" "post-featured-image post-featured-image" "pp-post-metadata pp-post-metadata" "post-excerpt post-excerpt";
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
@@ -751,16 +647,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part {
   grid-area: navigation_single;
+  display: grid;
+  gap: 0 0;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   grid-template-areas: "navigation_single-link-previous navigation_single-link-next";
-  display: grid;
 }
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-navigation-previous {
+  background-color: lightblue;
   grid-area: navigation_single-link-previous;
   place-self: center start;
 }
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-navigation-next {
+  background-color: lightgreen;
   grid-area: navigation_single-link-next;
   place-self: center end;
 }
@@ -809,41 +708,46 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .single .wp-block-group.pp-main .pp-individual,
 .page .wp-block-group.pp-main .pp-individual {
   grid-area: article;
+  margin: auto;
 }
 .single .wp-block-group.pp-main .pp-individual,
 .page .wp-block-group.pp-main .pp-individual {
-  margin: auto;
-  width: 100%;
+  background-color: yellow;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "post-featured-image post-title" "post-featured-image pp-post-metadata" "post-featured-image post-content" "post-nav-link-previous post-nav-link-next" "post-comments post-comments";
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
+  grid-template-areas: "post-featured-image post-title" "post-featured-image pp-post-metadata" "post-featured-image post-content" "post-comments post-comments";
+  column-gap: 0;
   row-gap: 0;
-}
-.single .wp-block-group.pp-main .pp-individual .pp-content img,
-.page .wp-block-group.pp-main .pp-individual .pp-content img {
-  height: auto;
-  max-width: 100%;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-post-title,
 .page .wp-block-group.pp-main .pp-individual .wp-block-post-title {
-  margin: unset;
+  background-color: green;
+  margin: inherit;
+  padding: inherit;
   grid-area: post-title;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata {
-  margin: unset;
+  background-color: cornflowerblue;
+  margin: inherit;
+  padding: inherit;
   grid-area: pp-post-metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: calc(5 * var(--panda-puss--global--space--hor));
+  column-gap: 0;
   row-gap: 0;
+  align-items: center;
+  justify-content: center;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author {
-  margin: 0;
-  padding: 0;
+  background-color: darkkhaki;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
   display: grid;
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
   row-gap: 0;
@@ -853,7 +757,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author .wp-block-post-author__avatar,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author .wp-block-post-author__avatar {
-  margin: unset;
+  margin: inherit;
+  padding: inherit;
   grid-area: post-author-avatar;
   place-self: center end;
 }
@@ -863,16 +768,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author .wp-block-post-author__content,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author .wp-block-post-author__content {
+  margin: inherit;
+  padding: inherit;
   grid-area: post-author-content;
   place-self: center stretch;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-date,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-date {
-  place-self: center stretch;
+  background-color: purple;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms {
-  width: 100%;
+  background-color: palevioletred;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
   row-gap: 0;
   display: flex;
@@ -880,36 +793,58 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms {
-  margin: unset;
+  margin: inherit;
+  padding: inherit;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms.taxonomy-category,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms.taxonomy-category {
-  place-self: stretch;
+  background-color: rosybrown;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
+  place-self: center;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms.taxonomy-post_tag,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-group.pp-terms .wp-block-post-terms.taxonomy-post_tag {
-  place-self: stretch;
+  background-color: mistyrose;
+  margin: inherit;
+  padding: inherit;
+  flex: 1 0 fit-content;
+  place-self: center;
 }
-.single .wp-block-group.pp-main .pp-individual .wp-block-post-excerpt,
-.page .wp-block-group.pp-main .pp-individual .wp-block-post-excerpt {
+.single .wp-block-group.pp-main .pp-individual .pp-article_content,
+.page .wp-block-group.pp-main .pp-individual .pp-article_content {
+  background-color: cyan;
+  margin: inherit;
+  padding: inherit;
+}
+.single .wp-block-group.pp-main .pp-individual .pp-article_content.wp-block-post-excerpt,
+.page .wp-block-group.pp-main .pp-individual .pp-article_content.wp-block-post-excerpt {
   grid-area: post-excerpt;
 }
-.single .wp-block-group.pp-main .pp-individual .wp-block-post-content,
-.page .wp-block-group.pp-main .pp-individual .wp-block-post-content {
+.single .wp-block-group.pp-main .pp-individual .pp-article_content.wp-block-post-content,
+.page .wp-block-group.pp-main .pp-individual .pp-article_content.wp-block-post-content {
   grid-area: post-content;
+}
+.single .wp-block-group.pp-main .pp-individual .pp-article_content img,
+.page .wp-block-group.pp-main .pp-individual .pp-article_content img {
+  height: auto;
+  max-width: 100%;
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-post-featured-image,
 .page .wp-block-group.pp-main .pp-individual .wp-block-post-featured-image {
-  margin: unset;
+  margin: inherit;
+  padding: inherit;
   align-self: stretch;
   grid-area: post-featured-image;
 }
 .single .wp-block-group.pp-main .pp-individual.pp-focus,
 .page .wp-block-group.pp-main .pp-individual.pp-focus {
-  margin: auto;
-  width: 100%;
+  background-color: maroon;
+  margin: inherit;
+  padding: inherit;
   display: grid;
-  grid-template-columns: minmax(10px, 1fr);
+  grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "post-title post-title" "post-featured-image post-featured-image" "pp-post-metadata pp-post-metadata" "post-content post-content" "post-nav-link-previous post-nav-link-next" "post-comments post-comments";
   column-gap: calc(2 * var(--panda-puss--global--space--hor));
@@ -922,18 +857,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .single .wp-block-group.pp-main .pp-navigation_single.wp-block-template-part,
 .page .wp-block-group.pp-main .pp-navigation_single.wp-block-template-part {
   grid-area: navigation_single;
+  display: grid;
+  gap: 0 0;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   grid-template-areas: "navigation_single-link-previous navigation_single-link-next";
-  display: grid;
 }
 .single .wp-block-group.pp-main .pp-navigation_single.wp-block-template-part .pp-navigation-previous,
 .page .wp-block-group.pp-main .pp-navigation_single.wp-block-template-part .pp-navigation-previous {
+  background-color: lightblue;
   grid-area: navigation_single-link-previous;
   place-self: center start;
 }
 .single .wp-block-group.pp-main .pp-navigation_single.wp-block-template-part .pp-navigation-next,
 .page .wp-block-group.pp-main .pp-navigation_single.wp-block-template-part .pp-navigation-next {
+  background-color: lightgreen;
   grid-area: navigation_single-link-next;
   place-self: center end;
 }
