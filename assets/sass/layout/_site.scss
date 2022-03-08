@@ -10,7 +10,7 @@
     justify-content: flex-start;
     // End of flex container
 
-    .wp-block-column.pp-content {
+    .wp-block-column.pp-main_content {
       // border: 1px solid green;
       // Flex item
       flex: 2 1 auto;
@@ -30,7 +30,7 @@
 
   // Override WordPress:
   .wp-block-columns.pp-site {
-    .wp-block-column.pp-content {
+    .wp-block-column.pp-main_content {
       // Flex item
       flex: 1 1 100% !important;
       // End of flex item

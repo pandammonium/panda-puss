@@ -140,18 +140,27 @@
       }
     }
 
-    .wp-block-post-excerpt {
-      // background-color: darkcyan;
-      // border: 1px solid darkcyan;
-      // Grid item
-      grid-area: post-excerpt;
-      // End of grid item
-    }
-    .wp-block-post-content {
-      // background-color: darkcyan;
-      // border: 1px solid darkcyan;
-      // Grid item
-      grid-area: post-content;
+    .pp-article_content {
+      background-color: cyan;
+      margin: inherit;
+      padding: inherit;
+      &.wp-block-post-excerpt {
+        // background-color: darkcyan;
+        // border: 1px solid darkcyan;
+        // Grid item
+        grid-area: post-excerpt;
+        // End of grid item
+      }
+      &.wp-block-post-content {
+        // background-color: darkcyan;
+        // border: 1px solid darkcyan;
+        // Grid item
+        grid-area: post-content;
+      }
+      img {
+        height: auto;
+        max-width: 100%;
+      }
     }
 
     .wp-block-post-featured-image {
