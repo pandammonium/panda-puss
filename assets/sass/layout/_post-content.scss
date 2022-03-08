@@ -3,7 +3,7 @@
 
 @mixin post-content($content-type) {
 
-  // @debug "Post content type: " + $content-type;
+  // @debug "content type: #{$content-type}";
 
   $article: "\"article\"";
 
@@ -16,9 +16,9 @@
   } @else {
     @error "Unknown post content type";
   }
-  // @debug "Post content grid: " + $grid-areas;
+  // @debug "grid: #{$grid-areas}";
 
-  // @debug "Post content parent: " + &;
+  // @debug "#{&}";
 
   & {
     // background-color: red;

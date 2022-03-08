@@ -2,11 +2,10 @@
 
 @mixin article($content-type) {
 
-  // @debug "Article type: " + $content-type;
-
-  // @debug "Article parent: " + &;
+  @debug "content type: #{$content-type}";
 
   & {
+    @debug "#{&}";
     $title: "\"post-featured-image post-title\"";
     $metadata: "\"post-featured-image pp-post-metadata\"";
     $content: "\"post-featured-image post-" + $content-type + "\"";
@@ -19,7 +18,7 @@
     } @else {
       @error "Unknown post content type";
     }
-    // @debug "Article grid: " + $grid-areas;
+    @debug "grid: #{$grid-areas}";
 
     // background-color: yellow;
     // border: 1px solid yellow;
@@ -176,6 +175,7 @@
   }
 
   &.pp-focus {
+    @debug "#{&}";
     $featured-image: "\"post-featured-image post-featured-image\"";
     $title: "\"post-title post-title\"";
     $metadata: "\"pp-post-metadata pp-post-metadata\"";
@@ -189,7 +189,7 @@
     } @else {
       @error "Unknown post content type";
     }
-    // @debug "Article grid (focus): " + $grid-areas;
+    @debug "grid (focus): #{$grid-areas}";
 
     // background-color: yellow;
     // border: 1px solid yellow;
