@@ -522,7 +522,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin: auto;
 }
 .pp-template .wp-block-post .pp-individual {
-  background-color: yellow;
   margin: 0;
   padding: 0;
   display: grid;
@@ -533,7 +532,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   row-gap: calc(1 * var(--panda-puss--global--space--ver));
 }
 .pp-template .wp-block-post .pp-individual .wp-block-post-title {
-  background-color: green;
   grid-area: post-title;
   place-self: start stretch;
   margin-top: 0;
@@ -603,7 +601,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   max-width: 100%;
 }
 .pp-template .wp-block-post .pp-individual .wp-block-post-featured-image {
-  background-color: gold;
   margin: inherit;
   padding: inherit;
   grid-area: post-featured_image;
@@ -676,7 +673,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .single .wp-block-group.pp-main .pp-individual,
 .page .wp-block-group.pp-main .pp-individual {
-  background-color: yellow;
   margin: 0;
   padding: 0;
   display: grid;
@@ -702,7 +698,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-post-title,
 .page .wp-block-group.pp-main .pp-individual .wp-block-post-title {
-  background-color: green;
   grid-area: post-title;
   place-self: start stretch;
   margin-top: 0;
@@ -786,7 +781,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-post-featured-image,
 .page .wp-block-group.pp-main .pp-individual .wp-block-post-featured-image {
-  background-color: gold;
   margin: inherit;
   padding: inherit;
   grid-area: post-featured_image;
