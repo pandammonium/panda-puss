@@ -128,7 +128,14 @@
   "customTemplates": [
     {
       "name":"page-with-sidebar",
-      "title":"Page + Sidebar",
+      "title":"Page plus Sidebar",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name":"page-with-sidebar-expt",
+      "title":"Page plus Sidebar | Experimental",
       "postTypes": [
         "page"
       ]
@@ -142,14 +149,21 @@
     },
     {
       "name":"single-with-sidebar",
-      "title":"Single Post + Sidebar",
+      "title":"Single Post plus Sidebar",
+      "postTypes": [
+        "post"
+      ]
+    },
+    {
+      "name":"single-with-sidebar-expt",
+      "title":"Single Post plus Sidebar | Experimental",
       "postTypes": [
         "post"
       ]
     },
     {
       "name":"single-no-featured-image",
-      "title":"Single Post/Page - Featured Image",
+      "title":"Single Post/Page minus Featured Image",
       "postTypes": [
         "page",
         "post"
