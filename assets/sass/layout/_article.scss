@@ -2,28 +2,24 @@
 
 @mixin article($content-type) {
 
-  @debug "content type: #{$content-type}";
+  @if $content-type != "content" and $content-type != 'excerpt' {
+    @error "Unknown post content type";
+  }
+  margin: auto;
+
+  // @debug "content type: #{$content-type}";
 
   & {
-    @debug "#{&}";
-    $title: "\"post-featured-image post-title\"";
-    $metadata: "\"post-featured-image pp-post-metadata\"";
-    $content: "\"post-featured-image post-" + $content-type + "\"";
+    // @debug "#{&}";
+    $title: "\"post-featured_image post-title\"";
+    $metadata: "\"post-featured_image pp-post-metadata\"";
+    $content: "\"post-featured_image post-" + $content-type + "\"";
     $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
-    @if $content-type == "content" {
-      $single-nav: "\"post-nav-link-previous post-nav-link-next\"";
-      $single-comments: "\"post-comments post-comments\"";
-      $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
-    } @else if $content-type == 'excerpt' {
-    } @else {
-      @error "Unknown post content type";
-    }
-    @debug "grid: #{$grid-areas}";
-
+    // @debug "grid: #{$grid-areas}";
     // background-color: yellow;
     // border: 1px solid yellow;
-    margin: auto;
-    width: 100%;
+    margin: 0;
+    padding: 0;
     // Grid container
     display: grid;
     grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
@@ -32,47 +28,87 @@
       #{$grid-areas}
     ;
     column-gap: calc(2 * var(--panda-puss--global--space--hor));
-    row-gap: 0;
+    row-gap: calc(1 * var(--panda-puss--global--space--ver));
     // End of grid container
-
-    .pp-content img {
-      height: auto;
-      max-width: 100%;
+  }
+  @if ($content-type == "content") {
+    &.pp-focus {
+      // @debug "#{&}";
+      $featured-image: "\"post-featured_image\"";
+      $title: "\"post-title\"";
+      $metadata: "\"pp-post-metadata\"";
+      $content: "\"post-" + $content-type + "\"";
+      $grid-areas: #{$title} + " " + #{$featured-image} + " " + #{$metadata} + " "  + #{$content};
+      // @debug "grid (focus): #{$grid-areas}";
+      // background-color: maroon;
+      // border: 1px solid maroon;
+      // Grid container
+      grid-template-columns: 100%;
+      grid-template-areas:
+        #{$grid-areas}
+      ;
+      column-gap: calc(0 * var(--panda-puss--global--space--hor));
+      row-gap: calc(1 * var(--panda-puss--global--space--ver));
+      // End of grid container
     }
+    &.pp-no-featured_image {
+      // @debug "#{&}";
+      $title: "\"post-title\"";
+      $metadata: "\"pp-post-metadata\"";
+      $content: "\"post-" + $content-type + "\"";
+      $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
+      // @debug "grid (focus): #{$grid-areas}";
+      // background-color: mediumaquamarine;
+      // border: 1px solid mediumaquamarine;
+      // Grid container
+      grid-template-columns: 100%;
+      grid-template-areas:
+        #{$grid-areas}
+      ;
+      column-gap: calc(0 * var(--panda-puss--global--space--hor));
+      row-gap: calc(1 * var(--panda-puss--global--space--ver));
+      // End of grid container
+      // .pp-featured_image {
+        // This doesn't seem to be needed:
+      //   display: none;
+      // }
+    }
+  }
 
+  & {
     .wp-block-post-title {
       // background-color: green;
       // border: 1px solid green;
-      margin: unset;
       // Grid item
       grid-area: post-title;
+      place-self: center stretch;
       // End of grid item
     }
 
     .wp-block-group.pp-metadata {
       // background-color: cornflowerblue;
       // border: 1px solid cornflowerblue;
-      // z-index: 999;
-      margin: unset;
-      // width: 100%;
       // Grid item
       grid-area: pp-post-metadata;
       // End of grid item
       // Flex container
       display: flex;
       flex-flow: row wrap;
-      column-gap: calc(5 * var(--panda-puss--global--space--hor));
+      column-gap: calc(2 * var(--panda-puss--global--space--hor));
       row-gap: 0;
       // End of flex container
 
       .wp-block-post-author {
-        // background-color: yellow;
+        // background-color: darkkhaki;
         // border: 1px solid darkkhaki;
-        margin: 0;
-        padding: 0;
+        // Flex item
+        // Safari doesn't support `fit-content`, so put `auto` before it to fall back on:
+        flex: 0 1 auto;
+        flex: 0 1 fit-content;
+        // End of flex item
         // Grid container
         display: grid;
-        column-gap: calc(2 * var(--panda-puss--global--space--hor));
+        column-gap: calc(1.5 * var(--panda-puss--global--space--hor));
         row-gap: 0;
         grid-template-columns: 48px minmax(5ch, 1fr);
         grid-template-rows: auto;
@@ -83,10 +119,10 @@
         .wp-block-post-author__avatar {
           // background-color: greenyellow;
           // border: 1px solid greenyellow;
-          margin: unset; // Needed to override an 'inline' setting.
+          // Need to override an 'inline' margin setting:
+          margin: inherit;
           // Grid item
           grid-area: post-author-avatar;
-          place-self: center end;
           // End of grid item
           .avatar {
             // border: 1px solid red;
@@ -98,7 +134,7 @@
           // border: 1px solid yellowgreen;
           // Grid item
           grid-area: post-author-content;
-          place-self: center stretch;
+          align-self: center;
           // End of grid item
           .wp-block-post-author__name {
             // border: 1px solid blue;
@@ -107,40 +143,52 @@
       }
 
       .wp-block-post-date {
-        // background-color: purple;
+        // background-color: mediumpurple;
         // border: 1px solid purple;
         // Flex item
-        place-self: center stretch;
+        flex: 0 1 auto;
+        flex: 0 1 fit-content;
+        align-self: center;
         // End of flex item
       }
 
       .wp-block-group.pp-terms {
         // background-color: palevioletred;
         // border: 1px solid palevioletred;
-        width: 100%;
-        column-gap: calc(2 * var(--panda-puss--global--space--hor));
+        // Flex item
+        flex: 0 1 auto;
+        flex: 0 1 fit-content;
+        align-self: center;
+        // End of flex item
+        // Flex container
+        column-gap: 0;
         row-gap: 0;
         display: flex;
         flex-flow: row wrap;
-
+        // End of flex container
         .wp-block-post-terms {
-          margin: unset;
         }
         .wp-block-post-terms.taxonomy-category {
+          // background-color: rosybrown;
+          // border: 1px solid rosybrown;
           // Flex item
-          place-self:  stretch;
+          flex: 0 1 auto;
+          flex: 0 1 fit-content;
           // End of flex item
         }
         .wp-block-post-terms.taxonomy-post_tag {
+          // background-color: mistyrose;
+          // border: 1px solid mistyrose;
           // Flex item
-          place-self: stretch;
+          flex: 0 1 auto;
+          flex: 0 1 fit-content;
           // End of flex item
         }
       }
     }
 
     .pp-article_content {
-      background-color: cyan;
+      // background-color: cyan;
       margin: inherit;
       padding: inherit;
       &.wp-block-post-excerpt {
@@ -157,6 +205,7 @@
         grid-area: post-content;
       }
       img {
+        // Make sure images don't stick off the edge of the page:
         height: auto;
         max-width: 100%;
       }
@@ -165,46 +214,13 @@
     .wp-block-post-featured-image {
       // background-color: gold;
       // border: 1px solid gold;
-      margin: unset;
-      // margin-right: calc(2 * var(--panda-puss--global--space--hor));
+      margin: inherit;
+      padding: inherit;
       // Grid item
-      align-self: stretch;
-      grid-area: post-featured-image;
+      grid-area: post-featured_image;
       // End of grid item
     }
   }
 
-  &.pp-focus {
-    @debug "#{&}";
-    $featured-image: "\"post-featured-image post-featured-image\"";
-    $title: "\"post-title post-title\"";
-    $metadata: "\"pp-post-metadata pp-post-metadata\"";
-    $content: "\"post-" + $content-type + " post-" + $content-type + "\"";
-    $grid-areas: #{$title} + " " + #{$featured-image} + " " + #{$metadata} + " "  + #{$content};
-    @if $content-type == "content" {
-      $single-nav: "\"post-nav-link-previous post-nav-link-next\"";
-      $single-comments: "\"post-comments post-comments\"";
-      $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
-    } @else if $content-type == 'excerpt' {
-    } @else {
-      @error "Unknown post content type";
-    }
-    @debug "grid (focus): #{$grid-areas}";
-
-    // background-color: yellow;
-    // border: 1px solid yellow;
-    margin: auto;
-    width: 100%;
-    // Grid container
-    display: grid;
-    grid-template-columns: minmax(10px, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      #{$grid-areas}
-    ;
-    column-gap: calc(2 * var(--panda-puss--global--space--hor));
-    row-gap: 0;
-    // End of grid container
-  }
 
 } // End of @mixin post-content

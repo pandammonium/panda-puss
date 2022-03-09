@@ -24,7 +24,6 @@
     // background-color: red;
     // border: 1px solid red;
     margin: auto;
-    // width: 90%;
     // Grid container
     display: grid;
     gap: 0;
@@ -32,7 +31,7 @@
     grid-template-rows: auto;
     grid-template-areas: #{$grid-areas};
     column-gap: calc(2 * var(--panda-puss--global--space--hor));
-    row-gap: 0;
+    row-gap: calc(1 * var(--panda-puss--global--space--ver));
     // End of grid container
 
     .pp-individual {
@@ -60,13 +59,14 @@
       // border: 1px solid deeppink;
       // Grid item
       grid-area: navigation_single;
+      // End of grid item
+      // Grid container
+      display: grid;
+      gap: 0 0;
       grid-template-columns: 50% 50%;
       grid-template-rows: auto;
       grid-template-areas:
         "navigation_single-link-previous navigation_single-link-next";
-      // End of grid item
-      // Grid container
-      display: grid;
       // End of grid container
       .pp-navigation-previous {
         // background-color: lightblue;

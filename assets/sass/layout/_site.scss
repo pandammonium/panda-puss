@@ -1,8 +1,32 @@
 .wp-site-blocks {
-  // border: 1px solid red;
+  // background-color: papayawhip;
+  // border: 1px solid papayawhip;
+  height: auto;
   margin: auto;
-  width: 95%;
+  padding: calc(0 * var(--panda-puss--global--space--ver)) calc(5 * var(--panda-puss--global--space--hor));
+  width: 90vw;
 
+  .pp-site {
+    .pp-main {
+      // @debug "#{&}";
+      // margin: 0;
+      // padding: 0;
+      // width: 100%;
+      & :not(.pp-focus) {
+        & {
+        // @debug "#{&}";
+//          // width: 95%;
+        }
+      }
+      & .pp-focus {
+        width: 100%;
+        & {
+          // @debug "#{&}";
+          // width: 100%;
+        }
+      }
+    }
+  }
   .wp-block-columns.pp-site {
     // border: 1px solid orange;
     // Flex container

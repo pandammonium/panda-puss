@@ -146,6 +146,14 @@
       "postTypes": [
         "post"
       ]
+    },
+    {
+      "name":"single-no-featured-image",
+      "title":"Single Post/Page - Featured Image",
+      "postTypes": [
+        "page",
+        "post"
+      ]
     }
   ],
   "templateParts": [
