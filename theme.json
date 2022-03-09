@@ -134,13 +134,6 @@
       ]
     },
     {
-      "name":"page-with-sidebar-expt",
-      "title":"Page plus Sidebar | Experimental",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
       "name":"page-focus",
       "title":"Focus Page",
       "postTypes": [
@@ -150,13 +143,6 @@
     {
       "name":"single-with-sidebar",
       "title":"Single Post plus Sidebar",
-      "postTypes": [
-        "post"
-      ]
-    },
-    {
-      "name":"single-with-sidebar-expt",
-      "title":"Single Post plus Sidebar | Experimental",
       "postTypes": [
         "post"
       ]
