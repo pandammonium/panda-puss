@@ -461,6 +461,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
   text-align: center;
 }
 
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+  height: unset;
+  width: unset;
+}
+
 .wp-site-blocks {
   height: auto;
   margin: auto;
