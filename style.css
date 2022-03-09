@@ -545,8 +545,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-area: pp-post-metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
-  row-gap: 0;
+  column-gap: calc(1 * var(--panda-puss--global--space--hor));
+  row-gap: calc(0 * var(--panda-puss--global--space--ver));
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-post-author {
   flex: 0 1 auto;
@@ -578,7 +578,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   align-self: center;
-  column-gap: 0;
+  column-gap: calc(1 * var(--panda-puss--global--space--hor));
   row-gap: 0;
   display: flex;
   flex-flow: row wrap;
@@ -712,8 +712,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-area: pp-post-metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
-  row-gap: 0;
+  column-gap: calc(1 * var(--panda-puss--global--space--hor));
+  row-gap: calc(0 * var(--panda-puss--global--space--ver));
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author {
@@ -751,7 +751,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   align-self: center;
-  column-gap: 0;
+  column-gap: calc(1 * var(--panda-puss--global--space--hor));
   row-gap: 0;
   display: flex;
   flex-flow: row wrap;

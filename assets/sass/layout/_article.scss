@@ -95,8 +95,8 @@
       // Flex container
       display: flex;
       flex-flow: row wrap;
-      column-gap: calc(2 * var(--panda-puss--global--space--hor));
-      row-gap: 0;
+      column-gap: calc(1 * var(--panda-puss--global--space--hor));
+      row-gap: calc(0 * var(--panda-puss--global--space--ver));;
       // End of flex container
 
       .wp-block-post-author {
@@ -162,7 +162,7 @@
         align-self: center;
         // End of flex item
         // Flex container
-        column-gap: 0;
+        column-gap: calc(1 * var(--panda-puss--global--space--hor));
         row-gap: 0;
         display: flex;
         flex-flow: row wrap;
