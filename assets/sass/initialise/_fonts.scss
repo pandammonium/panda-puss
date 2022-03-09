@@ -1,17 +1,15 @@
-:root {
-  --panda-puss--global--font-family--serif: serif;
-  --panda-puss--global--font-family--sans-serif: sans-serif;
-  --panda-puss--global--font-family--cursive: cursive;
-  --panda-puss--global--font-family--monospace: monospace;
+$pp--font-family--serif: serif;
+$pp--font-family--sans-serif: sans-serif;
+$pp--font-family--cursive: cursive;
+$pp--font-family--monospace: monospace;
 
-  --panda-puss--global--font-size--small: 0.6rem;
-  --panda-puss--global--font-size--medium: 16px;
-  --panda-puss--global--font-size--large: 1.4rem;
-  --panda-puss--global--font-size--huge: 1.8rem;
-}
+$pp--font-size--small: 0.6rem;
+$pp--font-size--medium: 16px;
+$pp--font-size--large: 1.4rem;
+$pp--font-size--huge: 1.8rem;
 
-$pp--primary-font-family: var(--panda-puss--global--font-family--sans-serif);
-$pp--secondary-font-family: var(--panda-puss--global--font-family--cursive);
+$pp--primary-font-family: $pp--font-family--sans-serif !default;
+$pp--secondary-font-family: $pp--font-family--cursive !default;
 
-$pp--primary-font-size: var(--panda-puss--global--font-size--medium);
-$pp--secondary-font-size: var(--panda-puss--global--font-size--huge);
+$pp--primary-font-size: $pp--font-size--medium !default;
+$pp--secondary-font-size: $pp--font-size--huge !default;

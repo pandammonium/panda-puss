@@ -1,94 +1,68 @@
-$pp--quotes--open-1: "‘";
-$pp--quotes--close-1: "’";
-$pp--quotes--open-2: "“";
-$pp--quotes--close-2: "”";
-$pp--quotes--open-3: "«";
-$pp--quotes--close-3: "»";
-$pp--quotes--open-4: "‹";
-$pp--quotes--close-4: "›";
-$pp--quotes--open-3a: "«\00A0"; // non-breaking space
-$pp--quotes--close-3a: "\00A0»";
-$pp--quotes--open-4a: "‹\00A0";
-$pp--quotes--close-4a: "\00A0›";
-$pp--quotes--open-5: "'";
-$pp--quotes--close-5: "'";
-$pp--quotes--open-6: '"';
-$pp--quotes--close-6: '"';
-$pp--quotes--open-7: '\\"';
-$pp--quotes--close-7: '\\"';
-$pp--quotes--open-8: '‚';
-$pp--quotes--close-8: '‛';
-$pp--quotes--open-9: '„';
-$pp--quotes--close-9: '‟';
+$-pp--quotes--open-1: "‘";
+$-pp--quotes--close-1: "’";
+$-pp--quotes--open-2: "“";
+$-pp--quotes--close-2: "”";
+$-pp--quotes--open-3: "«";
+$-pp--quotes--close-3: "»";
+$-pp--quotes--open-4: "‹";
+$-pp--quotes--close-4: "›";
+$-pp--quotes--open-3a: "«\00A0"; // non-breaking space
+$-pp--quotes--close-3a: "\00A0»";
+$-pp--quotes--open-4a: "‹\00A0";
+$-pp--quotes--close-4a: "\00A0›";
+$-pp--quotes--open-5: "'";
+$-pp--quotes--close-5: "'";
+$-pp--quotes--open-6: '"';
+$-pp--quotes--close-6: '"';
+$-pp--quotes--open-7: '\\"';
+$-pp--quotes--close-7: '\\"';
+$-pp--quotes--open-8: '‚';
+$-pp--quotes--close-8: '‛';
+$-pp--quotes--open-9: '„';
+$-pp--quotes--close-9: '‟';
 $pp--quotes--de:
-  $pp--quotes--open-8
-  $pp--quotes--close-8
-  $pp--quotes--open-9
-  $pp--quotes--close-9
-  $pp--quotes--open-8
-  $pp--quotes--close-8
-  $pp--quotes--open-9
-  $pp--quotes--close-9;
+  $-pp--quotes--open-8
+  $-pp--quotes--close-8
+  $-pp--quotes--open-9
+  $-pp--quotes--close-9
+  $-pp--quotes--open-8
+  $-pp--quotes--close-8
+  $-pp--quotes--open-9
+  $-pp--quotes--close-9;
 $pp--quotes--en-gb:
-  $pp--quotes--open-1
-  $pp--quotes--close-1
-  $pp--quotes--open-2
-  $pp--quotes--close-2
-  $pp--quotes--open-1
-  $pp--quotes--close-1
-  $pp--quotes--open-2
-  $pp--quotes--close-2;
+  $-pp--quotes--open-1
+  $-pp--quotes--close-1
+  $-pp--quotes--open-2
+  $-pp--quotes--close-2
+  $-pp--quotes--open-1
+  $-pp--quotes--close-1
+  $-pp--quotes--open-2
+  $-pp--quotes--close-2;
 $pp--quotes--en-us:
-  $pp--quotes--open-2
-  $pp--quotes--close-2
-  $pp--quotes--open-1
-  $pp--quotes--close-1
-  $pp--quotes--open-2
-  $pp--quotes--close-2
-  $pp--quotes--open-1
-  $pp--quotes--close-1;
+  $-pp--quotes--open-2
+  $-pp--quotes--close-2
+  $-pp--quotes--open-1
+  $-pp--quotes--close-1
+  $-pp--quotes--open-2
+  $-pp--quotes--close-2
+  $-pp--quotes--open-1
+  $-pp--quotes--close-1;
 $pp--quotes--eu:
-  $pp--quotes--open-3
-  $pp--quotes--close-3
-  $pp--quotes--open-4
-  $pp--quotes--close-4
-  $pp--quotes--open-3
-  $pp--quotes--close-3
-  $pp--quotes--open-4
-  $pp--quotes--close-4;
+  $-pp--quotes--open-3
+  $-pp--quotes--close-3
+  $-pp--quotes--open-4
+  $-pp--quotes--close-4
+  $-pp--quotes--open-3
+  $-pp--quotes--close-3
+  $-pp--quotes--open-4
+  $-pp--quotes--close-4;
 $pp--quotes--fr:
-  $pp--quotes--open-3a
-  $pp--quotes--close-3a
-  $pp--quotes--open-4a
-  $pp--quotes--close-4a
-  $pp--quotes--open-3a
-  $pp--quotes--close-3a
-  $pp--quotes--open-4a
-  $pp--quotes--close-4a;
-$pp--quotes--json:
-  $pp--quotes--open-6
-  $pp--quotes--close-6
-  $pp--quotes--open-7
-  $pp--quotes--close-7;
-$pp--quotes--default: $pp--quotes--en-gb;
-
-:root {
-  q {
-    quotes: $pp--quotes--default;
-  }
-  [lang="de"] q {
-    quotes: $pp--quotes--de;
-  }
-  [lang="en-gb"] q {
-    quotes: $pp--quotes--en-gb;
-  }
-  [lang="en-us"] q {
-    quotes: $pp--quotes--en-us;
-  }
-  [lang="es"] q {
-    quotes: $pp--quotes--eu;
-  }
-  [lang="fr"] q {
-    quotes: $pp--quotes--fr;
-  }
-}
+  $-pp--quotes--open-3a
+  $-pp--quotes--close-3a
+  $-pp--quotes--open-4a
+  $-pp--quotes--close-4a
+  $-pp--quotes--open-3a
+  $-pp--quotes--close-3a
+  $-pp--quotes--open-4a
+  $-pp--quotes--close-4a;
+$pp--quotes--default: $pp--quotes--en-gb !default;

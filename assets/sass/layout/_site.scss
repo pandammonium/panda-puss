@@ -3,7 +3,7 @@
   // border: 1px solid papayawhip;
   height: auto;
   margin: auto;
-  padding: calc(0 * var(--panda-puss--global--space--ver)) calc(5 * var(--panda-puss--global--space--hor));
+  padding: calc(0 * var(--pp--space--ver)) calc(5 * var(--pp--space--hor));
   width: 90vw;
 
   .pp-site {
@@ -30,7 +30,7 @@
   .wp-block-columns.pp-site {
     // border: 1px solid orange;
     // Flex container
-    gap: calc(1 * var(--panda-puss--global--space--ver)) calc(2 * var(--panda-puss--global--space--hor));
+    gap: calc(1 * var(--pp--space--ver)) calc(2 * var(--pp--space--hor));
     justify-content: flex-start;
     // End of flex container
 

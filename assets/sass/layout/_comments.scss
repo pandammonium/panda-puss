@@ -36,7 +36,7 @@
 
   .commentlist {
     // border: 1px solid green;
-    margin-top: calc(1 * var(--panda-puss--global--space--ver));
+    margin-top: calc(1 * var(--pp--space--ver));
     grid-area: comment-list;
     // Flex container
     display: flex;
@@ -53,11 +53,11 @@
       padding-left: 0;
 
       .children .comment {
-        margin-left: calc(3 * var(--panda-puss--global--space--ver));
+        margin-left: calc(3 * var(--pp--space--ver));
       }
 
       .comment-body {
-        margin-bottom: calc(1 * var(--panda-puss--global--space--ver));
+        margin-bottom: calc(1 * var(--pp--space--ver));
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -72,7 +72,7 @@
           margin-left: 0;
           grid-area: comment-meta;
           display: grid;
-          gap: calc(1 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
+          gap: calc(1 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
           grid-template-columns: max-content;
           grid-template-rows: auto;
           grid-template-areas:
@@ -81,7 +81,7 @@
 
           .comment-author {
             // border: 1px solid blue;
-            gap: calc(0 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
+            gap: calc(0 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
             grid-area: comment-meta-author;
             display: grid;
             grid-template-columns: 48px max-content 4ch;
@@ -111,7 +111,7 @@
             place-self: start end;
 
             display: grid;
-            gap: calc(0 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
+            gap: calc(0 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
             grid-template-columns: minmax(32px, max-content) 4ch;
             grid-template-rows: 48px;
             grid-template-areas:

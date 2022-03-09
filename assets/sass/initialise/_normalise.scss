@@ -1,5 +1,6 @@
 @use 'colours';
 @use 'fonts';
+@use 'quotation-marks';
 /**
  * -----------------------------------------------------------------------------
  * Normalise the CSS.
@@ -22,14 +23,15 @@
 body {
   background-color: colours.$pp--primary-bg;
   color: colours.$pp--primary-fg;
-  font-family: fonts.$pp--primary-font-family !important;
+  font-family: fonts.$pp--primary-font-family;
   font-size: fonts.$pp--primary-font-size;
   line-height: 1.5; /* 1 */
-  // -moz-text-size-adjust: 100%; /* 2 */
-  // -ms-text-size-adjust: 100%; /* 2 */
-  // -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
   text-size-adjust: 100%; /* 2 */
-/*   Hyphenation */ /* 4 */
+/*   Hyphenation */
+/* 4 */
 /*   From http://clagnut.com/blog/2395 */
   -webkit-hyphens: auto;
   -webkit-hyphenate-limit-before: 3;
@@ -79,7 +81,41 @@ body {
 body {
   box-sizing: border-box; /* 3 */
   margin: 0; /* 3 */
-  quotes: var(--quotes-pattern); /* 2 */
+  /* 2: */
+  quotes: quotation-marks.$pp--quotes--default;
+  q {
+    quotes: quotation-marks.$pp--quotes--default;
+  }
+  [lang="de"] q {
+    quotes: quotation-marks.$pp--quotes--de;
+  }
+  [lang="en-gb"] q {
+    quotes: quotation-marks.$pp--quotes--en-gb;
+  }
+  [lang="en-us"] q {
+    quotes: quotation-marks.$pp--quotes--en-us;
+  }
+  [lang="es"] q {
+    quotes: quotation-marks.$pp--quotes--eu;
+  }
+  [lang="fr"] q {
+    quotes: quotation-marks.$pp--quotes--fr;
+  }
+  q[lang="de"] {
+    quotes: quotation-marks.$pp--quotes--de;
+  }
+  q[lang="en-gb"] {
+    quotes: quotation-marks.$pp--quotes--en-gb;
+  }
+  q[lang="en-us"] {
+    quotes: quotation-marks.$pp--quotes--en-us;
+  }
+  q[lang="es"] {
+    quotes: quotation-marks.$pp--quotes--eu;
+  }
+  q[lang="fr"] {
+    quotes: quotation-marks.$pp--quotes--fr;
+  }
 }
 
 /**

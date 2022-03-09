@@ -4,7 +4,7 @@
     // border: 1px solid brown;
     // Grid container
     display: grid;
-    column-gap: calc(2 * var(--panda-puss--global--space--hor));
+    column-gap: calc(2 * var(--pp--space--hor));
     row-gap: 0;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;

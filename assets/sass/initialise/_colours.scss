@@ -1,85 +1,86 @@
 // ColorSlurp [https://colorslurp.com/] was used to develop the colour palette, and is the source of the colour names.
 
-$pp--colour--hue--0: 0;
-$pp--colour--hue--30: 30;
-$pp--colour--hue--60: 60;
-$pp--colour--hue--90: 90;
-$pp--colour--hue--120: 120;
-$pp--colour--hue--150: 150;
-$pp--colour--hue--180: 180;
-$pp--colour--hue--210: 210;
-$pp--colour--hue--240: 240;
-$pp--colour--hue--270: 270;
-$pp--colour--hue--300: 300;
-$pp--colour--hue--330: 330;
-// $pp--colour--hue--360: 360;
+$-pp--colour--hue--0: 0;
+$-pp--colour--hue--30: 30;
+$-pp--colour--hue--60: 60;
+$-pp--colour--hue--90: 90;
+$-pp--colour--hue--120: 120;
+$-pp--colour--hue--150: 150;
+$-pp--colour--hue--180: 180;
+$-pp--colour--hue--210: 210;
+$-pp--colour--hue--240: 240;
+$-pp--colour--hue--270: 270;
+$-pp--colour--hue--300: 300;
+$-pp--colour--hue--330: 330;
+// $-pp--colour--hue--360: 360;
 
-$pp--colour--saturation--0: 0%;
-$pp--colour--saturation--25: 25%;
-$pp--colour--saturation--50: 50%;
-$pp--colour--saturation--75: 75%;
-$pp--colour--saturation--100: 100%;
+$-pp--colour--saturation--0: 0%;
+$-pp--colour--saturation--25: 25%;
+$-pp--colour--saturation--50: 50%;
+$-pp--colour--saturation--75: 75%;
+$-pp--colour--saturation--100: 100%;
 
-$pp--colour--lightness--0: 0%;
-$pp--colour--lightness--25: 25%;
-$pp--colour--lightness--50: 50%;
-$pp--colour--lightness--75: 75%;
-$pp--colour--lightness--100: 100%;
+$-pp--colour--lightness--0: 0%;
+$-pp--colour--lightness--25: 25%;
+$-pp--colour--lightness--50: 50%;
+$-pp--colour--lightness--75: 75%;
+$-pp--colour--lightness--100: 100%;
 
-$pp--colour--transparency--0-00: 0.00;
-$pp--colour--transparency--0-25: 0.25;
-$pp--colour--transparency--0-50: 0.50;
-$pp--colour--transparency--0-75: 0.75;
-$pp--colour--transparency--1-00: 1.00;
+$-pp--colour--transparency--0-00: 0.00;
+$-pp--colour--transparency--0-25: 0.25;
+$-pp--colour--transparency--0-50: 0.50;
+$-pp--colour--transparency--0-75: 0.75;
+$-pp--colour--transparency--1-00: 1.00;
 
 // Greyscale
-$panda-puss--global--colour--black: hsla($pp--colour--hue--0, $pp--colour--saturation--0, $pp--colour--lightness--0, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--tundora: hsla($pp--colour--hue--0, $pp--colour--saturation--0, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--grey: hsla($pp--colour--hue--0, $pp--colour--saturation--0, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--silver: hsla($pp--colour--hue--0, $pp--colour--saturation--0, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--white: hsla($pp--colour--hue--0, $pp--colour--saturation--0, $pp--colour--lightness--100, $pp--colour--transparency--1-00);
+$pp--colour--black: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--0, $-pp--colour--transparency--1-00);
+$pp--colour--tundora: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--grey: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--silver: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--white: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--100, $-pp--colour--transparency--1-00);
 
 // Bright
-$panda-puss--global--colour--red: hsla($pp--colour--hue--0, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--flush-orange: hsla($pp--colour--hue--30, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--yellow: hsla($pp--colour--hue--60, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--chartreuse: hsla($pp--colour--hue--90, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--green: hsla($pp--colour--hue--120, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--spring-green: hsla($pp--colour--hue--150, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--cyan: hsla($pp--colour--hue--180, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--azure-radiance: hsla($pp--colour--hue--210, $pp--colour--saturation--100, $pp--colour--lightness--100, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--blue: hsla($pp--colour--hue--240, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--electric-violet: hsla($pp--colour--hue--270, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--magenta: hsla($pp--colour--hue--300, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--rose: hsla($pp--colour--hue--330, $pp--colour--saturation--100, $pp--colour--lightness--50, $pp--colour--transparency--1-00);
+$pp--colour--red: hsla($-pp--colour--hue--0, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--flush-orange: hsla($-pp--colour--hue--30, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--yellow: hsla($-pp--colour--hue--60, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--chartreuse: hsla($-pp--colour--hue--90, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--green: hsla($-pp--colour--hue--120, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--spring-green: hsla($-pp--colour--hue--150, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--cyan: hsla($-pp--colour--hue--180, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--azure-radiance: hsla($-pp--colour--hue--210, $-pp--colour--saturation--100, $-pp--colour--lightness--100, $-pp--colour--transparency--1-00);
+$pp--colour--blue: hsla($-pp--colour--hue--240, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--electric-violet: hsla($-pp--colour--hue--270, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--magenta: hsla($-pp--colour--hue--300, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
+$pp--colour--rose: hsla($-pp--colour--hue--330, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--transparency--1-00);
 
 // Light
-$panda-puss--global--colour--vivid-tangerine: hsla($pp--colour--hue--0, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--macaroni-and-cheese: hsla($pp--colour--hue--30, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--dolly: hsla($pp--colour--hue--60, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--reef: hsla($pp--colour--hue--90, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--mint-green: hsla($pp--colour--hue--120, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--aquamarine: hsla($pp--colour--hue--150, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--anakiwa: hsla($pp--colour--hue--180, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--malibu-1: hsla($pp--colour--hue--210, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--malibu-2: hsla($pp--colour--hue--240, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--heliotrope: hsla($pp--colour--hue--270, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--blush-pink: hsla($pp--colour--hue--300, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--hot-pink: hsla($pp--colour--hue--330, $pp--colour--saturation--50, $pp--colour--lightness--75, $pp--colour--transparency--1-00);
+$pp--colour--vivid-tangerine: hsla($-pp--colour--hue--0, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--macaroni-and-cheese: hsla($-pp--colour--hue--30, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--dolly: hsla($-pp--colour--hue--60, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--reef: hsla($-pp--colour--hue--90, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--mint-green: hsla($-pp--colour--hue--120, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--aquamarine: hsla($-pp--colour--hue--150, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--anakiwa: hsla($-pp--colour--hue--180, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--malibu-1: hsla($-pp--colour--hue--210, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--malibu-2: hsla($-pp--colour--hue--240, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--heliotrope: hsla($-pp--colour--hue--270, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--blush-pink: hsla($-pp--colour--hue--300, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
+$pp--colour--hot-pink: hsla($-pp--colour--hue--330, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--transparency--1-00);
 
 // Dark
-$panda-puss--global--colour--maroon: hsla($pp--colour--hue--0, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--cinnamon: hsla($pp--colour--hue--30, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--olive: hsla($pp--colour--hue--60, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--verdun-green: hsla($pp--colour--hue--90, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--japanese-laurel: hsla($pp--colour--hue--120, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--fun-green: hsla($pp--colour--hue--150, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--teal: hsla($pp--colour--hue--180, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--congress-blue: hsla($pp--colour--hue--210, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--navy-blue: hsla($pp--colour--hue--240, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--pigment-indigo: hsla($pp--colour--hue--270, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--fresh-aubergine: hsla($pp--colour--hue--300, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
-$panda-puss--global--colour--siren: hsla($pp--colour--hue--330, $pp--colour--saturation--100, $pp--colour--lightness--25, $pp--colour--transparency--1-00);
+$pp--colour--maroon: hsla($-pp--colour--hue--0, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--cinnamon: hsla($-pp--colour--hue--30, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--olive: hsla($-pp--colour--hue--60, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--verdun-green: hsla($-pp--colour--hue--90, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--japanese-laurel: hsla($-pp--colour--hue--120, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--fun-green: hsla($-pp--colour--hue--150, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--teal: hsla($-pp--colour--hue--180, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--congress-blue: hsla($-pp--colour--hue--210, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--navy-blue: hsla($-pp--colour--hue--240, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--pigment-indigo: hsla($-pp--colour--hue--270, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--fresh-aubergine: hsla($-pp--colour--hue--300, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
+$pp--colour--siren: hsla($-pp--colour--hue--330, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
 
-$pp--primary-fg: $panda-puss--global--colour--tundora;
-$pp--primary-bg: $panda-puss--global--colour--white;
+$pp--primary-fg: $pp--colour--tundora !default;
+$pp--primary-bg: $pp--colour--white !default;
+

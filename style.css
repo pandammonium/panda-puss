@@ -1,15 +1,22 @@
 @charset "UTF-8";
-:root {
-  --panda-puss--global--font-family--serif: serif;
-  --panda-puss--global--font-family--sans-serif: sans-serif;
-  --panda-puss--global--font-family--cursive: cursive;
-  --panda-puss--global--font-family--monospace: monospace;
-  --panda-puss--global--font-size--small: 0.6rem;
-  --panda-puss--global--font-size--medium: 16px;
-  --panda-puss--global--font-size--large: 1.4rem;
-  --panda-puss--global--font-size--huge: 1.8rem;
-}
+/*
+Theme Name: Panda-Puss
+Theme URI: https://pandammonium.org/wordpress/wordpress-dev/pandapuss/
+Author: pandammonium
+Author URI: https://pandammonium.org/
+Description:
+Tags: full-site-editing, blog, pandas
+Version: 0.0.3
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 8.1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: panda-puss
 
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
 /**
  * -----------------------------------------------------------------------------
  * Normalise the CSS.
@@ -29,10 +36,16 @@
 body {
   background-color: white;
   color: #404040;
-  font-family: var(--panda-puss--global--font-family--sans-serif) !important;
-  font-size: var(--panda-puss--global--font-size--medium);
+  font-family: sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   /* 1 */
+  -moz-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
   text-size-adjust: 100%;
   /* 2 */
   /*   Hyphenation */
@@ -81,8 +94,41 @@ body {
   /* 3 */
   margin: 0;
   /* 3 */
-  quotes: var(--quotes-pattern);
-  /* 2 */
+  /* 2: */
+  quotes: "‘" "’" "“" "”" "‘" "’" "“" "”";
+}
+body q {
+  quotes: "‘" "’" "“" "”" "‘" "’" "“" "”";
+}
+body [lang=de] q {
+  quotes: "‚" "‛" "„" "‟" "‚" "‛" "„" "‟";
+}
+body [lang=en-gb] q {
+  quotes: "‘" "’" "“" "”" "‘" "’" "“" "”";
+}
+body [lang=en-us] q {
+  quotes: "“" "”" "‘" "’" "“" "”" "‘" "’";
+}
+body [lang=es] q {
+  quotes: "«" "»" "‹" "›" "«" "»" "‹" "›";
+}
+body [lang=fr] q {
+  quotes: "« " " »" "‹ " " ›" "« " " »" "‹ " " ›";
+}
+body q[lang=de] {
+  quotes: "‚" "‛" "„" "‟" "‚" "‛" "„" "‟";
+}
+body q[lang=en-gb] {
+  quotes: "‘" "’" "“" "”" "‘" "’" "“" "”";
+}
+body q[lang=en-us] {
+  quotes: "“" "”" "‘" "’" "“" "”" "‘" "’";
+}
+body q[lang=es] {
+  quotes: "«" "»" "‹" "›" "«" "»" "‹" "›";
+}
+body q[lang=fr] {
+  quotes: "« " " »" "‹ " " ›" "« " " »" "‹ " " ›";
 }
 
 /**
@@ -407,47 +453,10 @@ template {
   display: none;
 }
 
-/*
-Theme Name: Panda-Puss
-Theme URI: https://pandammonium.org/wordpress/wordpress-dev/pandapuss/
-Author: pandammonium
-Author URI: https://pandammonium.org/
-Description:
-Tags: full-site-editing, blog, pandas
-Version: 0.0.3
-Requires at least: 5.9
-Tested up to: 5.9
-Requires PHP: 8.1.2
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: panda-puss
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
 :root {
-  --panda-puss--global--space: 1ch;
-  --panda-puss--global--space--hor: calc(0.5 * var(--panda-puss--global--space));
-  --panda-puss--global--space--ver: calc(2.0 * var(--panda-puss--global--space));
-}
-
-:root q {
-  quotes: "‘" "’" "“" "”" "‘" "’" "“" "”";
-}
-:root [lang=de] q {
-  quotes: "‚" "‛" "„" "‟" "‚" "‛" "„" "‟";
-}
-:root [lang=en-gb] q {
-  quotes: "‘" "’" "“" "”" "‘" "’" "“" "”";
-}
-:root [lang=en-us] q {
-  quotes: "“" "”" "‘" "’" "“" "”" "‘" "’";
-}
-:root [lang=es] q {
-  quotes: "«" "»" "‹" "›" "«" "»" "‹" "›";
-}
-:root [lang=fr] q {
-  quotes: "« " " »" "‹ " " ›" "« " " »" "‹ " " ›";
+  --pp--space: 1ch;
+  --pp--space--hor: calc(0.5 * var(--pp--space));
+  --pp--space--ver: calc(2.0 * var(--pp--space));
 }
 
 .wp-site-blocks .wp-block-site-title {
@@ -469,14 +478,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks {
   height: auto;
   margin: auto;
-  padding: calc(0 * var(--panda-puss--global--space--ver)) calc(5 * var(--panda-puss--global--space--hor));
+  padding: calc(0 * var(--pp--space--ver)) calc(5 * var(--pp--space--hor));
   width: 90vw;
 }
 .wp-site-blocks .pp-site .pp-main .pp-focus {
   width: 100%;
 }
 .wp-site-blocks .wp-block-columns.pp-site {
-  gap: calc(1 * var(--panda-puss--global--space--ver)) calc(2 * var(--panda-puss--global--space--hor));
+  gap: calc(1 * var(--pp--space--ver)) calc(2 * var(--pp--space--hor));
   justify-content: flex-start;
 }
 .wp-site-blocks .wp-block-columns.pp-site .wp-block-column.pp-main_content {
@@ -497,7 +506,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
 }
 .wp-block-navigation {
-  margin: calc(2 * var(--panda-puss--global--space--ver)) auto;
+  margin: calc(2 * var(--pp--space--ver)) auto;
 }
 
 .pp-template {
@@ -505,7 +514,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   align-items: safe flex-start;
   display: flex;
   flex-flow: column wrap;
-  gap: calc(5 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
+  gap: calc(5 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
   justify-content: safe flex-start;
 }
 .pp-template .wp-block-post {
@@ -519,8 +528,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "article";
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
-  row-gap: calc(1 * var(--panda-puss--global--space--ver));
+  column-gap: calc(2 * var(--pp--space--hor));
+  row-gap: calc(1 * var(--pp--space--ver));
 }
 .pp-template .wp-block-post .pp-individual {
   grid-area: article;
@@ -533,8 +542,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-featured_image post-excerpt";
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
-  row-gap: calc(1 * var(--panda-puss--global--space--ver));
+  column-gap: calc(2 * var(--pp--space--hor));
+  row-gap: calc(1 * var(--pp--space--ver));
 }
 .pp-template .wp-block-post .pp-individual .wp-block-post-title {
   grid-area: post-title;
@@ -545,14 +554,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-area: pp-post-metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: calc(1 * var(--panda-puss--global--space--hor));
-  row-gap: calc(0 * var(--panda-puss--global--space--ver));
+  column-gap: calc(1 * var(--pp--space--hor));
+  row-gap: calc(0 * var(--pp--space--ver));
 }
 .pp-template .wp-block-post .pp-individual .wp-block-group.pp-metadata .wp-block-post-author {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   display: grid;
-  column-gap: calc(1.5 * var(--panda-puss--global--space--hor));
+  column-gap: calc(1.5 * var(--pp--space--hor));
   row-gap: 0;
   grid-template-columns: 48px minmax(5ch, 1fr);
   grid-template-rows: auto;
@@ -578,7 +587,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   align-self: center;
-  column-gap: calc(1 * var(--panda-puss--global--space--hor));
+  column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
   display: flex;
   flex-flow: row wrap;
@@ -632,7 +641,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .wp-block-query-pagination {
   display: grid;
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
+  column-gap: calc(2 * var(--pp--space--hor));
   row-gap: 0;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -668,8 +677,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "article" "navigation_single" "post-comments";
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
-  row-gap: calc(1 * var(--panda-puss--global--space--ver));
+  column-gap: calc(2 * var(--pp--space--hor));
+  row-gap: calc(1 * var(--pp--space--ver));
 }
 .single .wp-block-group.pp-main .pp-individual,
 .page .wp-block-group.pp-main .pp-individual {
@@ -684,22 +693,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-featured_image post-content";
-  column-gap: calc(2 * var(--panda-puss--global--space--hor));
-  row-gap: calc(1 * var(--panda-puss--global--space--ver));
+  column-gap: calc(2 * var(--pp--space--hor));
+  row-gap: calc(1 * var(--pp--space--ver));
 }
 .single .wp-block-group.pp-main .pp-individual.pp-focus,
 .page .wp-block-group.pp-main .pp-individual.pp-focus {
   grid-template-columns: 100%;
   grid-template-areas: "post-title" "post-featured_image" "pp-post-metadata" "post-content";
-  column-gap: calc(0 * var(--panda-puss--global--space--hor));
-  row-gap: calc(1 * var(--panda-puss--global--space--ver));
+  column-gap: calc(0 * var(--pp--space--hor));
+  row-gap: calc(1 * var(--pp--space--ver));
 }
 .single .wp-block-group.pp-main .pp-individual.pp-no-featured_image,
 .page .wp-block-group.pp-main .pp-individual.pp-no-featured_image {
   grid-template-columns: 100%;
   grid-template-areas: "post-title" "pp-post-metadata" "post-content";
-  column-gap: calc(0 * var(--panda-puss--global--space--hor));
-  row-gap: calc(1 * var(--panda-puss--global--space--ver));
+  column-gap: calc(0 * var(--pp--space--hor));
+  row-gap: calc(1 * var(--pp--space--ver));
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-post-title,
 .page .wp-block-group.pp-main .pp-individual .wp-block-post-title {
@@ -712,15 +721,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-area: pp-post-metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: calc(1 * var(--panda-puss--global--space--hor));
-  row-gap: calc(0 * var(--panda-puss--global--space--ver));
+  column-gap: calc(1 * var(--pp--space--hor));
+  row-gap: calc(0 * var(--pp--space--ver));
 }
 .single .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author,
 .page .wp-block-group.pp-main .pp-individual .wp-block-group.pp-metadata .wp-block-post-author {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   display: grid;
-  column-gap: calc(1.5 * var(--panda-puss--global--space--hor));
+  column-gap: calc(1.5 * var(--pp--space--hor));
   row-gap: 0;
   grid-template-columns: 48px minmax(5ch, 1fr);
   grid-template-rows: auto;
@@ -751,7 +760,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   align-self: center;
-  column-gap: calc(1 * var(--panda-puss--global--space--hor));
+  column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
   display: flex;
   flex-flow: row wrap;
@@ -840,7 +849,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-area: comment-nav-top;
 }
 .wp-block-post-comments .commentlist {
-  margin-top: calc(1 * var(--panda-puss--global--space--ver));
+  margin-top: calc(1 * var(--pp--space--ver));
   grid-area: comment-list;
   display: flex;
   flex-flow: column wrap;
@@ -851,10 +860,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding-left: 0;
 }
 .wp-block-post-comments .commentlist .comment .children .comment {
-  margin-left: calc(3 * var(--panda-puss--global--space--ver));
+  margin-left: calc(3 * var(--pp--space--ver));
 }
 .wp-block-post-comments .commentlist .comment .comment-body {
-  margin-bottom: calc(1 * var(--panda-puss--global--space--ver));
+  margin-bottom: calc(1 * var(--pp--space--ver));
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -865,13 +874,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-left: 0;
   grid-area: comment-meta;
   display: grid;
-  gap: calc(1 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
+  gap: calc(1 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
   grid-template-columns: max-content;
   grid-template-rows: auto;
   grid-template-areas: "comment-meta-author comment-meta-metadata";
 }
 .wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author {
-  gap: calc(0 * var(--panda-puss--global--space--ver)) calc(1 * var(--panda-puss--global--space--hor));
+  gap: calc(0 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
   grid-area: comment-meta-author;
   display: grid;
   grid-template-columns: 48px max-content 4ch;
@@ -895,7 +904,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   grid-area: comment-meta-metadata;
   place-self: start end;
   display: grid;
-  gap: calc(0 * var(--panda-puss--global--space--ver)) calc(0 * var(--panda-puss--global--space--hor));
+  gap: calc(0 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
   grid-template-columns: minmax(32px, max-content) 4ch;
   grid-template-rows: 48px;
   grid-template-areas: "comment-meta-metadata-datetime comment-meta-metadata-edit-link";
@@ -933,7 +942,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .wp-block-navigation .has-child:where(:not(.open-on-click)) > .wp-block-navigation__submenu-container {
   border: inherit;
-  margin-left: calc(3 * var(--panda-puss--global--space--hor));
+  margin-left: calc(3 * var(--pp--space--hor));
 }
 
 main {

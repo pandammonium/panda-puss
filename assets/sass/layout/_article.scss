@@ -27,8 +27,8 @@
     grid-template-areas:
       #{$grid-areas}
     ;
-    column-gap: calc(2 * var(--panda-puss--global--space--hor));
-    row-gap: calc(1 * var(--panda-puss--global--space--ver));
+    column-gap: calc(2 * var(--pp--space--hor));
+    row-gap: calc(1 * var(--pp--space--ver));
     // End of grid container
   }
   @if ($content-type == "content") {
@@ -47,8 +47,8 @@
       grid-template-areas:
         #{$grid-areas}
       ;
-      column-gap: calc(0 * var(--panda-puss--global--space--hor));
-      row-gap: calc(1 * var(--panda-puss--global--space--ver));
+      column-gap: calc(0 * var(--pp--space--hor));
+      row-gap: calc(1 * var(--pp--space--ver));
       // End of grid container
     }
     &.pp-no-featured_image {
@@ -65,8 +65,8 @@
       grid-template-areas:
         #{$grid-areas}
       ;
-      column-gap: calc(0 * var(--panda-puss--global--space--hor));
-      row-gap: calc(1 * var(--panda-puss--global--space--ver));
+      column-gap: calc(0 * var(--pp--space--hor));
+      row-gap: calc(1 * var(--pp--space--ver));
       // End of grid container
       // .pp-featured_image {
         // This doesn't seem to be needed:
@@ -95,8 +95,8 @@
       // Flex container
       display: flex;
       flex-flow: row wrap;
-      column-gap: calc(1 * var(--panda-puss--global--space--hor));
-      row-gap: calc(0 * var(--panda-puss--global--space--ver));;
+      column-gap: calc(1 * var(--pp--space--hor));
+      row-gap: calc(0 * var(--pp--space--ver));;
       // End of flex container
 
       .wp-block-post-author {
@@ -109,7 +109,7 @@
         // End of flex item
         // Grid container
         display: grid;
-        column-gap: calc(1.5 * var(--panda-puss--global--space--hor));
+        column-gap: calc(1.5 * var(--pp--space--hor));
         row-gap: 0;
         grid-template-columns: 48px minmax(5ch, 1fr);
         grid-template-rows: auto;
@@ -162,7 +162,7 @@
         align-self: center;
         // End of flex item
         // Flex container
-        column-gap: calc(1 * var(--panda-puss--global--space--hor));
+        column-gap: calc(1 * var(--pp--space--hor));
         row-gap: 0;
         display: flex;
         flex-flow: row wrap;
