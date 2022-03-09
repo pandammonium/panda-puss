@@ -496,7 +496,7 @@ template {
   flex: 1 1 30vw;
 }
 
-@media (min-width: 600px) and (max-width: 781px) {
+@media (min-width: 600px) and (max-width: 782px) {
   .wp-block-columns.pp-site .wp-block-column.pp-main_content {
     flex: 1 1 100% !important;
   }
@@ -535,13 +535,22 @@ template {
   grid-area: article;
   margin: auto;
 }
+@media (min-width: 601px) {
+  .pp-template .wp-block-post .pp-individual {
+    grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-featured_image post-excerpt";
+  }
+}
+@media (max-width: 600px) {
+  .pp-template .wp-block-post .pp-individual {
+    grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-excerpt post-excerpt";
+  }
+}
 .pp-template .wp-block-post .pp-individual {
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-featured_image post-excerpt";
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
@@ -685,6 +694,18 @@ template {
   grid-area: article;
   margin: auto;
 }
+@media (min-width: 601px) {
+  .single .pp-main .pp-individual,
+.page .pp-main .pp-individual {
+    grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-featured_image post-content";
+  }
+}
+@media (max-width: 600px) {
+  .single .pp-main .pp-individual,
+.page .pp-main .pp-individual {
+    grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-content post-content";
+  }
+}
 .single .pp-main .pp-individual,
 .page .pp-main .pp-individual {
   margin: 0;
@@ -692,7 +713,6 @@ template {
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-featured_image post-content";
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }

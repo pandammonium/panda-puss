@@ -9,13 +9,36 @@
 
   // @debug "content type: #{$content-type}";
 
+  $grid-areas: "";
+  @media (min-width: 601px) {
+    & {
+      // @debug "larger screen";
+      // @debug "#{&}";
+      $title: "\"post-featured_image post-title\"";
+      $metadata: "\"post-featured_image pp-post-metadata\"";
+      $content: "\"post-featured_image post-" + $content-type + "\"";
+      $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
+      // @debug "grid: #{$grid-areas}";
+      grid-template-areas:
+        #{$grid-areas}
+      ;
+    }
+  }
+  @media (max-width: 600px) {
+    & {
+      // @debug "smaller screen";
+      // @debug "#{&}";
+      $title: "\"post-featured_image post-title\"";
+      $metadata: "\"post-featured_image pp-post-metadata\"";
+      $content: "\"post-" + $content-type + " post-" + $content-type + "\"";
+      $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
+      // @debug "grid: #{$grid-areas}";
+      grid-template-areas:
+        #{$grid-areas}
+      ;
+    }
+  }
   & {
-    // @debug "#{&}";
-    $title: "\"post-featured_image post-title\"";
-    $metadata: "\"post-featured_image pp-post-metadata\"";
-    $content: "\"post-featured_image post-" + $content-type + "\"";
-    $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
-    // @debug "grid: #{$grid-areas}";
     // background-color: yellow;
     // border: 1px solid yellow;
     margin: 0;
@@ -24,9 +47,6 @@
     display: grid;
     grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
     grid-template-rows: auto;
-    grid-template-areas:
-      #{$grid-areas}
-    ;
     column-gap: calc(2 * var(--pp--space--hor));
     row-gap: calc(1 * var(--pp--space--ver));
     // End of grid container
