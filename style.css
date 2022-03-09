@@ -790,6 +790,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: inherit;
   grid-area: post-featured_image;
 }
+.single .wp-block-group.pp-main .pp-individual.pp-focus .wp-block-post-featured-image,
+.page .wp-block-group.pp-main .pp-individual.pp-focus .wp-block-post-featured-image {
+  margin: auto;
+}
 .single .wp-block-group.pp-main .pp-comments,
 .page .wp-block-group.pp-main .pp-comments {
   grid-area: post-comments;

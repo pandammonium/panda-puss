@@ -221,6 +221,14 @@
       grid-area: post-featured_image;
       // End of grid item
     }
+    @if ($content-type == "content") {
+      &.pp-focus {
+        .wp-block-post-featured-image {
+          margin: auto;
+        }
+      }
+    }
+
   }
 
 
