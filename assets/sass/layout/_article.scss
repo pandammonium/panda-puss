@@ -16,7 +16,7 @@
     $content: "\"post-featured_image post-" + $content-type + "\"";
     $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
     // @debug "grid: #{$grid-areas}";
-    // background-color: yellow;
+    background-color: yellow;
     // border: 1px solid yellow;
     margin: 0;
     padding: 0;
@@ -77,12 +77,13 @@
 
   & {
     .wp-block-post-title {
-      // background-color: green;
+      background-color: green;
       // border: 1px solid green;
       // Grid item
       grid-area: post-title;
-      place-self: center stretch;
+      place-self: start stretch;
       // End of grid item
+      margin-top: 0;
     }
 
     .wp-block-group.pp-metadata {
@@ -212,7 +213,7 @@
     }
 
     .wp-block-post-featured-image {
-      // background-color: gold;
+      background-color: gold;
       // border: 1px solid gold;
       margin: inherit;
       padding: inherit;
