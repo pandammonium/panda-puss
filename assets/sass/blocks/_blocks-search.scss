@@ -1,2 +1,25 @@
 .wp-block-search {
+  .wp-block-search__input {
+    // Override WordPress:
+    padding: 0 !important;
+  }
+  & .wp-block-search__inside-wrapper {
+    // Override WordPress:
+    flex: unset;
+  }
+  & .wp-block-search__button {
+    // Override WordPress:
+    padding: 0;
+    margin: 0;
+  }
+  & .wp-block-search__input {
+  }
+}
+.pp-header,
+.pp-sidebar {
+  .wp-block-search {
+    .wp-block-search__label {
+      display: none;
+    }
+  }
 }

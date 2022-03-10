@@ -470,6 +470,21 @@ template {
   text-align: center;
 }
 
+.wp-block-search .wp-block-search__input {
+  padding: 0 !important;
+}
+.wp-block-search .wp-block-search__inside-wrapper {
+  flex: unset;
+}
+.wp-block-search .wp-block-search__button {
+  padding: 0;
+  margin: 0;
+}
+.pp-header .wp-block-search .wp-block-search__label,
+.pp-sidebar .wp-block-search .wp-block-search__label {
+  display: none;
+}
+
 .wp-block-navigation .wp-block-navigation__submenu-icon {
   height: unset;
   width: unset;
