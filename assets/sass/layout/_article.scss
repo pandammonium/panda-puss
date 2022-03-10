@@ -88,10 +88,9 @@
       column-gap: calc(0 * var(--pp--space--hor));
       row-gap: calc(1 * var(--pp--space--ver));
       // End of grid container
-      // .pp-featured_image {
-        // This doesn't seem to be needed:
-      //   display: none;
-      // }
+      .pp-featured_image {
+        display: none;
+      }
     }
   }
 
