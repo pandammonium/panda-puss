@@ -6,3 +6,11 @@
 main {
   outline: 1px solid red;
 }
+aside {
+  outline: 1px solid blue;
+}
+
+header,
+footer {
+  outline: 1px solid grey;
+}
