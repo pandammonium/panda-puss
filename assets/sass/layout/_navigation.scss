@@ -1,3 +1,31 @@
 .wp-block-navigation {
-  margin: calc(2 * var(--pp--space--ver)) auto;
+
+  &.pp-nav-sidebar {
+    .submenu-container,
+    .pp-nav-pages {
+      // background-color: lightslategrey;
+      // border: 1px solid lightslategrey;
+      & .wp-block-navigation__submenu-container {
+        // Override WordPress to make it easier to select submenu items without an annoying gap that makes hovering tricky:
+        margin: 0;
+      }
+      // Flex container
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: stretch;
+      align-items: stretch;
+      justify-content: stretch;
+      column-gap: 0;;
+      row-gap: calc(0.5 * var(--pp--space--ver));
+      // End of flex container
+
+      .wp-block-navigation-item,
+      .wp-block-navigation-item:hover {
+        // border: 1px solid lightsteelblue;
+        // background-color: lightsteelblue;
+        // flex item
+        // End of flex item
+      }
+    }
+  }
 }

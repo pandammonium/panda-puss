@@ -38,13 +38,26 @@
       // border: 1px solid green;
       // Flex item
       flex: 2 1 70vw;
+      order: 2;
       // End of flex item
     }
     .wp-block-column.pp-sidebar {
       // border: 1px solid blue;
-      margin-left: 0;
+      margin: 0;
       // Flex item
       flex: 1 1 30vw;
+      // End of flex item
+    }
+    .wp-block-column.pp-sidebar.pp-sidebar_rhs {
+      // border: 1px solid blue;
+      // Flex item
+      order: 3;
+      // End of flex item
+    }
+    .wp-block-column.pp-sidebar.pp-sidebar_lhs {
+      // border: 1px solid blue;
+      // Flex item
+      order: 1;
       // End of flex item
     }
   }

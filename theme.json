@@ -127,8 +127,29 @@
   },
   "customTemplates": [
     {
-      "name":"page-with-sidebar",
-      "title":"Page plus Sidebar",
+      "name":"page-with-sidebars_lhs_rhs",
+      "title":"Page plus Sidebars | RHS LHS",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name":"page-with-sidebars_lhs_rhs-no_feat_img",
+      "title":"Page plus Sidebars | RHS LHS minus Featured Image",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name":"page-with-sidebar_lhs",
+      "title":"Page plus Sidebar | LHS",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name":"page-with-sidebar_rhs",
+      "title":"Page plus Sidebar | RHS",
       "postTypes": [
         "page"
       ]
@@ -168,8 +189,13 @@
       "area": "footer"
     },
     {
-      "name": "sidebar",
-      "title": "Sidebar: RHS",
+      "name": "sidebar-rhs",
+      "title": "Sidebar | RHS",
+      "area": "sidebar"
+    },
+    {
+      "name": "sidebar-lhs",
+      "title": "Sidebar | LHS",
       "area": "sidebar"
     },
     {
