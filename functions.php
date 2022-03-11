@@ -71,12 +71,12 @@ if ( ! function_exists( 'panda_puss_theme_scripts' ) ) :
 endif;
 add_action( 'wp_enqueue_scripts', 'panda_puss_theme_scripts' );
 
+if ( ! function_exists( 'remove_wp_block_library_css' ) ) :
 /**
  * Disable Gutenberg block library in front end.
  *
- * @since 0.0.4
+ * @since 0.0.3
  */
-if ( ! function_exists( 'remove_wp_block_library_css' ) ) :
   function remove_wp_block_library_css(){
     wp_dequeue_style( 'wp-block-library' );
     wp_dequeue_style( 'wp-block-library-theme' );
