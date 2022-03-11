@@ -43,18 +43,18 @@ if ( ! function_exists( 'panda_puss_theme_setup' ) ) :
    */
   add_theme_support( 'wp-block-styles' );
 
-  /**
-   * Add support for navigation menus.
-   */
-    register_nav_menus(
-      array(
-        'header' => __('Header navigation', 'panda-puss'),
-        'sidebar' => __('Sidebar navigation', 'panda-puss'),
-        'footer' => __('Footer navigation', 'panda-puss'),
-        'social' => __('Social navigation', 'panda-puss')
-      )
-    );
-  }
+  // /**
+  //  * Add support for navigation menus.
+  //  */
+  // register_nav_menus(
+  //   array(
+  //     'header' => __('Header navigation', 'panda-puss'),
+  //     'sidebar' => __('Sidebar navigation', 'panda-puss'),
+  //     'footer' => __('Footer navigation', 'panda-puss'),
+  //     'social' => __('Social navigation', 'panda-puss')
+  //   )
+  // );
+}
 endif;
 add_action( 'after_setup_theme', 'panda_puss_theme_setup' );
 
