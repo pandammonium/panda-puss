@@ -477,9 +477,13 @@ template {
   flex: unset;
 }
 .wp-block-search .wp-block-search__button {
-  padding: 0;
-  margin: 0;
+  padding: 0 calc(2 * var(--pp--space--hor));
 }
+.wp-block-search.pp-search-404 {
+  margin: auto;
+  width: 75%;
+}
+
 .pp-header .wp-block-search .wp-block-search__label,
 .pp-sidebar .wp-block-search .wp-block-search__label {
   display: none;

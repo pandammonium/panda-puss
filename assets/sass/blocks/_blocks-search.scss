@@ -1,4 +1,6 @@
 .wp-block-search {
+  // margin: 0 0 calc(1 * var(--pp--space--ver)) 0;
+
   .wp-block-search__input {
     // Override WordPress:
     padding: 0 !important;
@@ -9,10 +11,13 @@
   }
   & .wp-block-search__button {
     // Override WordPress:
-    padding: 0;
-    margin: 0;
+    padding: 0 calc(2 * var(--pp--space--hor));
   }
   & .wp-block-search__input {
+  }
+  &.pp-search-404 {
+    margin: auto;
+    width: 75%;
   }
 }
 .pp-header,
