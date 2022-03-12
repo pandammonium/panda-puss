@@ -1047,31 +1047,31 @@ template {
 }
 
 .wp-block-code code {
-  color: #40bfab;
+  color: #bf5040;
 }
 .wp-block-code code.ada {
-  color: #bf4068;
+  color: #bf6040;
 }
 .wp-block-code code.algol {
-  color: #40bf83;
+  color: #bf7040;
 }
 .wp-block-code code.basic {
-  color: #bf4091;
+  color: #bf8040;
 }
 .wp-block-code code.c {
-  color: #40bf5a;
+  color: #bf8f40;
 }
 .wp-block-code code.c\+\+ {
-  color: #bf40b9;
+  color: #bf9f40;
 }
 .wp-block-code code.c-- {
-  color: #4ebf40;
+  color: #bfaf40;
 }
 .wp-block-code code.javascript, .wp-block-code code.js {
-  color: #9d40bf;
+  color: #bfbf40;
 }
 .wp-block-code code.php {
-  color: #76bf40;
+  color: #afbf40;
 }
 
 .wp-block-verse {
