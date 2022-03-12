@@ -91,4 +91,4 @@ add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
  * Add block patterns
  * @since 0.0.4
  */
-require get_template_directory() . '/inc/block-patterns.php';
+require get_template_directory() . '/inc/patterns.php';
