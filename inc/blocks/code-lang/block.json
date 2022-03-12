@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "panda-puss/code-lang",
+  "title": "Panda-Puss Code with Language Styling",
+  "category": "text",
+  "description": "Display code snippets with stylingbased on the code language",
+  "keywords": ["code", "programming languages","formatting"],
+  "icon":"dashicons-editor-code",
+  "textdomain": "panda-puss",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source":"html",
+      "selector":"code"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "__experimentalSelector": ".pp-block-code > code",
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalFontWeight": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalTextTransform": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": [ "top", "bottom" ],
+      "padding": true
+    },
+    "__experimentalBorder": {
+      "radius": true,
+      "color": true,
+      "width": true,
+      "style": true
+    },
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true
+    }
+  },
+  "style": "pp-block-code"
+}
