@@ -1,0 +1,56 @@
+.pp-header {
+  // background-color: burlywood;
+  // Grid container
+  display: grid;
+  $col-gap: calc(2 * var(--pp--space--hor));
+  gap: calc(1 * var(--pp--space--ver)) $col-gap;
+  grid-template-columns: clamp(150px, 30%, 300px) 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "site-logo site-title"
+    "site-logo site-tagline"
+    "site-search site-search"
+  ;
+  // End of grid container
+  margin: 0;
+  margin-block: 0;
+
+  .pp-header-site-title {
+    // background-color: complement(burlywood);
+    // Grid item
+    grid-area: site-title;
+    place-self: center;
+    // End of grid item
+    margin: 0;
+    margin-block: 0;
+  }
+
+  .pp-header-site-tagline {
+    // background-color: complement(peachpuff);
+    // Grid item
+    grid-area: site-tagline;
+    place-self: center;
+    // End of grid item
+    margin: 0;
+    margin-block: 0;
+  }
+
+  .pp-header-logo {
+    // background-color: peachpuff;
+    // Grid item
+    grid-area: site-logo;
+    place-self: center;
+    // End of grid item
+    margin: 0;
+    margin-block: 0;
+  }
+
+  .pp-header-search {
+    // Grid item
+    grid-area: site-search;
+    place-self: stretch;
+    // End of grid item
+    margin: 0;
+    margin-block: 0;
+  }
+}

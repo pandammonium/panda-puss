@@ -535,6 +535,40 @@ template {
   grid-area: footer;
 }
 
+.pp-header {
+  display: grid;
+  gap: calc(1 * var(--pp--space--ver)) calc(2 * var(--pp--space--hor));
+  grid-template-columns: clamp(150px, 30%, 300px) 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "site-logo site-title" "site-logo site-tagline" "site-search site-search";
+  margin: 0;
+  margin-block: 0;
+}
+.pp-header .pp-header-site-title {
+  grid-area: site-title;
+  place-self: center;
+  margin: 0;
+  margin-block: 0;
+}
+.pp-header .pp-header-site-tagline {
+  grid-area: site-tagline;
+  place-self: center;
+  margin: 0;
+  margin-block: 0;
+}
+.pp-header .pp-header-logo {
+  grid-area: site-logo;
+  place-self: center;
+  margin: 0;
+  margin-block: 0;
+}
+.pp-header .pp-header-search {
+  grid-area: site-search;
+  place-self: stretch;
+  margin: 0;
+  margin-block: 0;
+}
+
 .wp-block-navigation.pp-nav-sidebar .submenu-container,
 .wp-block-navigation.pp-nav-sidebar .pp-nav-pages {
   display: flex;
@@ -1004,17 +1038,10 @@ template {
   grid-area: comment-respond;
 }
 
-.wp-site-blocks .wp-block-site-title {
-  text-align: center;
-}
 .wp-site-blocks .wp-block-site-title a:any-link {
   color: currentColor;
   text-decoration: none;
 }
-.wp-site-blocks .wp-block-site-tagline {
-  text-align: center;
-}
-
 .wp-block-search .wp-block-search__input {
   padding: 0 !important;
 }
