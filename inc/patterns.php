@@ -5,7 +5,7 @@
  * @since Panda-Puss 0.0.4
  */
 
-if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
+if ( ! function_exists( 'panda_puss_register_block_patterns' ) ) :
 
   /**
    * Registers patterns and categories.
@@ -44,7 +44,7 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
     foreach ( $pattern_categories as $name => $properties ) {
 
       if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
-        register_pattern_category( $name, $properties );
+        register_block_pattern_category( $name, $properties );
       }
     }
 
@@ -64,7 +64,7 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
     foreach ( $patterns as $pattern ) {
       $pattern_file = get_theme_file_path( '/inc/patterns/' . $pattern . '.php' );
 
-      register_pattern(
+      register_block_pattern(
         'panda-puss/' . $pattern,
         require $pattern_file
       );
