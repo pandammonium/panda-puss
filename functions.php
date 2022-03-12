@@ -43,6 +43,16 @@ if ( ! function_exists( 'panda_puss_theme_setup' ) ) :
    */
   add_theme_support( 'wp-block-styles' );
 
+  /**
+   * Enable support for custom logo:
+   */
+  add_theme_support( 'custom-logo', array(
+    'height'   => 200,
+    'width'    => 200,
+    'flex-height' => true,
+    'flex-width'  => true,
+  ) );
+
   // /**
   //  * Add support for navigation menus.
   //  */
