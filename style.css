@@ -1070,8 +1070,11 @@ template {
 .wp-block-code code.javascript, .wp-block-code code.js {
   color: #bfbf40;
 }
-.wp-block-code code.php {
+.wp-block-code code.latex {
   color: #afbf40;
+}
+.wp-block-code code.php {
+  color: #9fbf40;
 }
 
 .wp-block-verse {
