@@ -67,7 +67,7 @@
       $code-hue: $code-hue + $hue-increment;
       color: hsla($code-hue, 50%, 50%, 100%);
     }
-    @debug $code-hue;
+    // @debug $code-hue;
   }
 }
 // Preformatted
