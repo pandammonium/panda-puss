@@ -1,6 +1,7 @@
 @use 'initialise/initialise.scss';
 @use 'layout/layout';
-@use 'blocks/blocks';
+@use 'overrides/overrides';
+@use 'elements';
 
 main {
   outline: 1px solid red;
@@ -13,3 +14,4 @@ header,
 footer {
   outline: 1px solid grey;
 }
+

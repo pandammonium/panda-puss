@@ -1,28 +1,5 @@
+@mixin code-lang {
 
-// Text
-
-// Paragraph
-// Heading
-// List, unordered (bulleted)
-// List, ordered (numbered)
-// Blockquote:
-  // Quotation
-  // Citation
-// Classic:
-  // Heading
-  // Paragraph
-  // Preformatted text
-  // 'Bold' (strong)
-  // 'Italics' (em)
-  // List, unordered (bulleted)
-  // List, ordered (numbered)
-  // Quotation
-  // Align left
-  // Align centre
-  // Align right
-  // Media, image
-// Code
-.wp-block-code {
   code {
     // List of programming languages:
     // https://en.wikipedia.org/wiki/List_of_programming_languages
@@ -69,14 +46,4 @@
     }
     // @debug $code-hue;
   }
-}
-// Preformatted
-// Pullquote:
-  // Quotation
-  // Citation
-// Table
-// Verse
-.wp-block-verse {
-  margin: auto;
-  width: fit-content;
 }
