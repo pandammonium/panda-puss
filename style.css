@@ -454,9 +454,8 @@ template {
 }
 
 :root {
-  --pp--space: 1ch;
-  --pp--space--hor: calc(0.5 * var(--pp--space));
-  --pp--space--ver: calc(2.0 * var(--pp--space));
+  --pp--space--hor: calc(0.5 * 1ch);
+  --pp--space--ver: calc(2.0 * 1ch);
 }
 
 .wp-site-blocks {
