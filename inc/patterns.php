@@ -5,7 +5,7 @@
  * @since Panda-Puss 0.0.4
  */
 
-if ( ! function_exists( 'panda_puss_register_block_patterns' ) ) :
+if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
 
   /**
    * Registers patterns and categories.
