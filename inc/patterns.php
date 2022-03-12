@@ -1,21 +1,21 @@
 <?php
 /**
- * Panda-Puss: Block Patterns
+ * Panda-Puss: Patterns
  *
  * @since Panda-Puss 0.0.4
  */
 
-if ( ! function_exists( 'panda_puss_register_block_patterns' ) ) :
+if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
 
   /**
-   * Registers block patterns and categories.
+   * Registers patterns and categories.
    *
    * @since Panda-Puss 0.0.4
    *
    * @return void
    */
-  function panda_puss_register_block_patterns() {
-    $block_pattern_categories = array(
+  function panda_puss_register_patterns() {
+    $pattern_categories = array(
       'panda-puss' => array( 'label' => __( 'Panda-Puss', 'panda-puss' ) ),
       'featured' => array( 'label' => __( 'Featured', 'panda-puss' ) ),
       'footer' => array( 'label' => __( 'Footers', 'panda-puss' ) ),
@@ -25,12 +25,12 @@ if ( ! function_exists( 'panda_puss_register_block_patterns' ) ) :
     );
 
     /**
-     * Filters the theme block pattern categories.
+     * Filters the theme pattern categories.
      *
      * @since Panda-Puss 0.0.4
      *
-     * @param array[] $block_pattern_categories {
-     *     An associative array of block pattern categories, keyed by category name.
+     * @param array[] $pattern_categories {
+     *     An associative array of pattern categories, keyed by category name.
      *
      *     @type array[] $properties {
      *         An array of block category properties.
@@ -39,33 +39,33 @@ if ( ! function_exists( 'panda_puss_register_block_patterns' ) ) :
      *     }
      * }
      */
-    $block_pattern_categories = apply_filters( 'panda_puss_block_pattern_categories', $block_pattern_categories );
+    $pattern_categories = apply_filters( 'panda_puss_pattern_categories', $pattern_categories );
 
-    foreach ( $block_pattern_categories as $name => $properties ) {
+    foreach ( $pattern_categories as $name => $properties ) {
 
       if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
-        register_block_pattern_category( $name, $properties );
+        register_pattern_category( $name, $properties );
       }
     }
 
-    $block_patterns = array(
+    $patterns = array(
       'hidden-404',
     );
 
     /**
-     * Filters the theme block patterns.
+     * Filters the theme patterns.
      *
      * @since Panda-Puss 0.0.4
      *
-     * @param array $block_patterns List of block patterns by name.
+     * @param array $patterns List of patterns by name.
      */
-    $block_patterns = apply_filters( 'panda_puss_block_patterns', $block_patterns );
+    $patterns = apply_filters( 'panda_puss_patterns', $patterns );
 
-    foreach ( $block_patterns as $block_pattern ) {
-      $pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
+    foreach ( $patterns as $pattern ) {
+      $pattern_file = get_theme_file_path( '/inc/patterns/' . $pattern . '.php' );
 
-      register_block_pattern(
-        'panda-puss/' . $block_pattern,
+      register_pattern(
+        'panda-puss/' . $pattern,
         require $pattern_file
       );
 
@@ -75,4 +75,4 @@ if ( ! function_exists( 'panda_puss_register_block_patterns' ) ) :
 
 endif;
 
-add_action( 'init', 'panda_puss_register_block_patterns', 9 );
+add_action( 'init', 'panda_puss_register_patterns', 9 );
