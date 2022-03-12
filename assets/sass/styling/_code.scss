@@ -1,0 +1,39 @@
+
+code {
+  $code-hue: 0;
+  $hue-factor: 7.5;
+  &.ada {
+    $code-hue: $code-hue + $hue-factor;
+    color: hsla($code-hue, 50%, 50%, 100%);
+  }
+  &.algol {
+    $code-hue: $code-hue + $hue-factor;
+    color: hsla($code-hue, 50%, 50%, 100%);
+  }
+  &.basic {
+    $code-hue: $code-hue + $hue-factor;
+    color: hsla($code-hue, 50%, 50%, 100%);
+  }
+  &.c {
+    $code-hue: $code-hue + $hue-factor;
+    color: hsla($code-hue, 50%, 50%, 100%);
+  }
+  &.c\+\+ {
+    $code-hue: $code-hue + $hue-factor;
+    color: hsla($code-hue, 50%, 50%, 100%);
+  }
+  &.c\-\- {
+    $code-hue: $code-hue + $hue-factor;
+    color: hsla($code-hue, 50%, 50%, 100%);
+  }
+  &.javascript,
+  &.js {
+    $code-hue: $code-hue + $hue-factor;
+    color: hsla($code-hue, 50%, 50%, 100%);
+  }
+  &.php {
+    $code-hue: $code-hue + $hue-factor;
+    color: hsla($code-hue, 50%, 50%, 100%);
+  }
+  @debug $code-hue;
+}

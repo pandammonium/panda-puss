@@ -493,6 +493,17 @@ template {
   height: unset;
   width: unset;
 }
+.wp-block-navigation .has-child:where(:not(.open-on-click)) > .wp-block-navigation__submenu-container,
+.wp-block-navigation .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  border: inherit;
+  color: inherit;
+  margin-left: calc(3 * var(--pp--space--hor));
+}
+
+.wp-block-verse {
+  margin: auto;
+  width: fit-content;
+}
 
 .wp-site-blocks {
   height: auto;
@@ -1045,6 +1056,31 @@ template {
   border: inherit;
   color: inherit;
   margin-left: calc(3 * var(--pp--space--hor));
+}
+
+code.ada {
+  color: #bf5040;
+}
+code.algol {
+  color: #bf6040;
+}
+code.basic {
+  color: #bf7040;
+}
+code.c {
+  color: #bf8040;
+}
+code.c\+\+ {
+  color: #bf8f40;
+}
+code.c-- {
+  color: #bf9f40;
+}
+code.javascript, code.js {
+  color: #bfaf40;
+}
+code.php {
+  color: #bfbf40;
 }
 
 main {
