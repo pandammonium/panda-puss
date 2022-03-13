@@ -540,7 +540,7 @@ template {
   gap: calc(1 * var(--pp--space--ver)) calc(2 * var(--pp--space--hor));
   grid-template-columns: clamp(150px, 30%, 300px) 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "site-logo site-title" "site-logo site-tagline" "site-search site-search";
+  grid-template-areas: "site-logo site-title" "site-logo site-tagline" "site-search site-search" "site-nav site-nav";
   margin: 0;
   margin-block: 0;
 }
@@ -565,6 +565,12 @@ template {
 .pp-header .pp-header-search {
   grid-area: site-search;
   place-self: stretch;
+  margin: 0;
+  margin-block: 0;
+}
+.pp-header .pp-header-nav {
+  grid-area: site-nav;
+  place-self: center;
   margin: 0;
   margin-block: 0;
 }
