@@ -102,3 +102,9 @@ add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
  * @since 0.0.4
  */
 require get_template_directory() . '/inc/patterns.php';
+
+/**
+ * Add shortcodes
+ * @since 0.0.4
+ */
+require get_template_directory() . '/inc/shortcodes.php';

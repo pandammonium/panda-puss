@@ -568,21 +568,29 @@ template {
   margin: 0;
   margin-block: 0;
 }
-.pp-header .pp-header-nav {
+.pp-header .pp-header-navigation {
   grid-area: site-nav;
   place-self: center;
   margin: 0;
   margin-block: 0;
 }
 
-.wp-block-navigation.pp-nav-sidebar .submenu-container,
-.wp-block-navigation.pp-nav-sidebar .pp-nav-pages {
+.pp-header-navigation {
+  display: flex;
+  column-gap: calc(4 * var(--pp--space--hor));
+}
+.pp-header-navigation .wp-block-navigation__container {
+  column-gap: calc(4 * var(--pp--space--hor));
+}
+
+.pp-block-navigation.pp-nav-sidebar .submenu-container,
+.pp-block-navigation.pp-nav-sidebar .pp-nav-pages {
   display: flex;
   flex-flow: column nowrap;
   align-content: stretch;
   align-items: stretch;
   justify-content: stretch;
-  column-gap: 0;
+  column-gap: calc(4 * var(--pp--space--hor));
   row-gap: calc(0.5 * var(--pp--space--ver));
 }
 .wp-block-navigation.pp-nav-sidebar .submenu-container .wp-block-navigation__submenu-container,

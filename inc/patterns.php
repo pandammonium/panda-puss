@@ -15,15 +15,6 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
    * @return void
    */
   function panda_puss_register_patterns() {
-    $pattern_categories = array(
-      'panda-puss' => array( 'label' => __( 'Panda-Puss', 'panda-puss' ) ),
-      'featured' => array( 'label' => __( 'Featured', 'panda-puss' ) ),
-      'footer' => array( 'label' => __( 'Footers', 'panda-puss' ) ),
-      'header' => array( 'label' => __( 'Headers', 'panda-puss' ) ),
-      'query'  => array( 'label' => __( 'Query', 'panda-puss' ) ),
-      'pages'  => array( 'label' => __( 'Pages', 'panda-puss' ) ),
-    );
-
     /**
      * Filters the theme pattern categories.
      *
@@ -39,6 +30,16 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
      *     }
      * }
      */
+    $pattern_categories = array(
+      'panda-puss' => array( 'label' => __( 'Panda-Puss', 'panda-puss' ) ),
+      'featured' => array( 'label' => __( 'Featured', 'panda-puss' ) ),
+      'footer' => array( 'label' => __( 'Footers', 'panda-puss' ) ),
+      'header' => array( 'label' => __( 'Headers', 'panda-puss' ) ),
+      'query'  => array( 'label' => __( 'Query', 'panda-puss' ) ),
+      'pages'  => array( 'label' => __( 'Pages', 'panda-puss' ) ),
+      'general'  => array( 'label' => __( 'General', 'panda-puss' ) ),
+      'buttons'  => array( 'label' => __( 'Buttons', 'panda-puss' ) ),
+    );
     $pattern_categories = apply_filters( 'panda_puss_pattern_categories', $pattern_categories );
 
     foreach ( $pattern_categories as $name => $properties ) {
@@ -48,10 +49,6 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
       }
     }
 
-    $patterns = array(
-      'hidden-404',
-    );
-
     /**
      * Filters the theme patterns.
      *
@@ -59,6 +56,11 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
      *
      * @param array $patterns List of patterns by name.
      */
+    $patterns = array(
+      'general-login',
+      'hidden-404',
+      'hidden-login-header',
+    );
     $patterns = apply_filters( 'panda_puss_patterns', $patterns );
 
     foreach ( $patterns as $pattern ) {

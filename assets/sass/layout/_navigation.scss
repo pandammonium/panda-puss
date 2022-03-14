@@ -1,4 +1,13 @@
-.wp-block-navigation {
+$column-gap: calc(4 * var(--pp--space--hor));
+
+.pp-header-navigation {
+  display: flex;
+  column-gap: $column-gap;
+  .wp-block-navigation__container {
+    // Ovveride WordPress:
+    column-gap: $column-gap;
+  }
+}
 
   &.pp-nav-sidebar {
     .submenu-container,

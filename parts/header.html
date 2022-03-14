@@ -5,7 +5,12 @@
 
 <!-- wp:search {"showLabel":false,"placeholder":"What are you looking for?","buttonUseIcon":true,"className":"pp-site-search pp-header-search"} /-->
 
-<!-- wp:navigation {"className":"pp-site-nav pp-header-nav"} -->
-  <!-- wp:navigation-link {"label":"Home","url":"/wordpress/","kind":"custom","isTopLevelLink":true,"className":"pp-site-nav-link pp-header-nav-link"} /-->
-  <!-- wp:navigation-link {"label":"Privacy Policy","url":"/wordpress/privacy-policy","kind":"custom","isTopLevelLink":true,"className":"pp-site-nav-link pp-header-nav-link"} /-->
-<!-- /wp:navigation -->
+<!-- wp:group {"className":"pp-header-navigation"} -->
+<div class="wp-block-group pp-header-navigation">
+  <!-- wp:navigation {"className":"pp-site-nav pp-header-nav"} -->
+    <!-- wp:navigation-link {"label":"Home","url":"/wordpress/","kind":"custom","isTopLevelLink":true,"className":"pp-site-nav-link pp-header-nav-link pp-block-navigation-item"} /-->
+    <!-- wp:navigation-link {"label":"Privacy Policy","url":"/wordpress/privacy-policy","kind":"custom","isTopLevelLink":true,"className":"pp-site-nav-link pp-header-nav-link pp-block-navigation-item"} /-->
+  <!-- /wp:navigation -->
+  <!-- wp:pattern {"slug":"panda-puss/hidden-login-header"} /-->
+</div>
+<!-- /wp:group -->
