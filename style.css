@@ -582,6 +582,10 @@ template {
 .pp-header-navigation .wp-block-navigation__container {
   column-gap: calc(4 * var(--pp--space--hor));
 }
+.pp-header-navigation p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 
 .pp-sidebar-navigation .wp-block-navigation-item__content {
   padding: 0;

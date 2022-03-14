@@ -7,6 +7,10 @@ $column-gap: calc(4 * var(--pp--space--hor));
     // Ovveride WordPress:
     column-gap: $column-gap;
   }
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
 }
 
 .pp-sidebar-navigation {
