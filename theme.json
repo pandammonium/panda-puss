@@ -162,17 +162,23 @@
       ]
     },
     {
-      "name":"single-with-sidebar",
+      "name":"single-w-sb",
       "title":"Single Post plus Sidebar",
       "postTypes": [
         "post"
       ]
     },
     {
-      "name":"single-no-featured-image",
+      "name":"single-no-sb-no-fi",
       "title":"Single Post/Page minus Featured Image",
       "postTypes": [
-        "page",
+        "post"
+      ]
+    },
+    {
+      "name":"single-no-sb",
+      "title":"Single Post minus Sidebar",
+      "postTypes": [
         "post"
       ]
     }
