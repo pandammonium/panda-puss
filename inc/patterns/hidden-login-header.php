@@ -16,7 +16,6 @@ if (is_user_logged_in()) {
   $log_in_out_text = esc_html_x( 'Log in', 'log-in text', 'panda-puss' );
   $log_in_out_class_in_out = $log_in_out_class .' pp-log-in';
 }
-debug_to_console('permalink: ' . get_permalink());
 
 $link = '<a class="' . $log_in_out_class_in_out . '" href="' . $log_in_out_link . '">' . $log_in_out_text . '</a>';
 
@@ -30,7 +29,7 @@ $content = '
   <!-- /wp:group -->';
 
 return array(
-      'title'      => __('Log in/out (header)', 'panda-puss'),
-      'inserter'   => false,
-      'content'    => $content,
+  'title'      => _x('Log in/out (header)', 'patternt title', 'panda-puss'),
+  'inserter'   => false,
+  'content'    => $content,
 );

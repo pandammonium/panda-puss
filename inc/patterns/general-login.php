@@ -29,7 +29,7 @@ $content = '
   <!-- /wp:group -->';
 
 return array(
-      'title'      => __('Log in/out', 'panda-puss'),
-      'categories' => array('panda-puss', 'buttons'),
-      'content'    => $content,
+  'title'      => _x('Log in/out', 'pattern-title', 'panda-puss'),
+  'categories' => array('panda-puss', 'buttons'),
+  'content'    => $content,
 );
