@@ -2,6 +2,12 @@
 /**
  * Functions to aid debugging.
  *
+ * Include in PHP files like this:
+ * if ( WP_DEBUG ) {
+ *   include '/Users/Caity/Sites/wordpress/wp-content/themes/panda-puss/inc/debugging.php';
+ * }
+ * otherwise a 'critical error' will occur.
+ *
  * @since 0.0.4
  */
 
