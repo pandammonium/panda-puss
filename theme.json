@@ -191,32 +191,32 @@
     {
       "name": "sidebar-rhs",
       "title": "Sidebar | RHS",
-      "area": "sidebar"
+      "area": "uncategorized"
     },
     {
       "name": "sidebar-lhs",
       "title": "Sidebar | LHS",
-      "area": "sidebar"
+      "area": "uncategorized"
     },
     {
       "name": "article-loop",
       "title": "Article in the Loop",
-      "area": "content"
+      "area": "uncategorized"
     },
     {
       "name": "article-single",
       "title": "Single article in a post/page",
-      "area": "content"
+      "area": "uncategorized"
     },
     {
       "name": "navigation-loop",
       "title": "Links to next and previous pages in the Loop",
-      "area": "nav"
+      "area": "uncategorized"
     },
     {
       "name": "navigation-single",
       "title": "Links to next and previous posts",
-      "area": "nav"
+      "area": "uncategorized"
     }
   ]
 }
