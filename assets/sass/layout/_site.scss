@@ -20,6 +20,10 @@
   // End of grid container
 
   .pp-header {
+    a:any-link {
+      color: currentColor;
+      text-decoration: none;
+    }
     // Grid item
     grid-area: header;
     // End of grid item

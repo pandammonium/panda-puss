@@ -9,57 +9,43 @@ $column-gap: calc(4 * var(--pp--space--hor));
   }
 }
 
-.pp-block-navigation {
+.pp-nav-sidebar {
 
-  .wp-block-navigation__submenu-icon {
-    // height: 0;
-    // width: 0;
-  }
   .wp-block-navigation-item__content {
+    // Ovveride WordPress:
     padding: 0;
-    .wp-block-navigation-item__content {
-    }
   }
-  .has-child:where(:not(.open-on-click)) > .wp-block-navigation__submenu-container,
-  .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  .has-child .submenu-container {
+    // Override WordPress:
     border: inherit;
     color: inherit;
   }
 
-  &.pp-nav-sidebar {
-    .submenu-container,
-    .pp-nav-pages {
-      // background-color: lightslategrey;
-      // border: 1px solid lightslategrey;
-      & .wp-block-navigation__submenu-container {
-        // Override WordPress to make it easier to select submenu items without an annoying gap that makes hovering tricky:
-        margin: 0;
-      }
-      // Flex container
-      display: flex;
-      flex-flow: column nowrap;
-      align-content: stretch;
-      align-items: stretch;
-      justify-content: stretch;
-      column-gap: $column-gap;
-      row-gap: calc(0.5 * var(--pp--space--ver));
-      // End of flex container
+  .submenu-container,
+  .pp-nav-pages {
+    // background-color: lightslategrey;
+    // border: 1px solid lightslategrey;
+    & .wp-block-navigation__submenu-container {
+      // Override WordPress to make it easier to select submenu items without an annoying gap that makes hovering tricky:
+      margin: 0;
+    }
+    // Flex container
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+    column-gap: $column-gap;
+    row-gap: calc(0.5 * var(--pp--space--ver));
+    // End of flex container
 
-      .wp-block-navigation-item,
-      .wp-block-navigation-item:hover,
-      .pp-block-navigation-item,
-      .pp-block-navigation-item:hover
-      {
-        // border: 1px solid lightsteelblue;
-        // background-color: lightsteelblue;
-        padding-right: calc(1 * var(--pp--space--hor));
-        // outline: 1px solid black;
-        // Flex item
-        // End of flex item
-        .wp-block-navigation__submenu-container {
-          margin-left: calc(3 * var(--pp--space--hor));
-        }
-      }
+    .wp-block-navigation-item,
+    .wp-block-navigation-item:hover {
+      // border: 1px solid lightsteelblue;
+      // background-color: lightsteelblue;
+      padding-right: calc(1 * var(--pp--space--hor));
+      // Flex item
+      // End of flex item
     }
   }
 }
