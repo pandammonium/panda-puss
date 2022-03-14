@@ -162,22 +162,29 @@
       ]
     },
     {
-      "name":"single-w-sb",
-      "title":"Single Post plus Sidebar",
-      "postTypes": [
-        "post"
-      ]
-    },
-    {
       "name":"single-no-sb-no-fi",
-      "title":"Single Post/Page minus Featured Image",
+      "title":"Single Post | no Sidebar | no Featured Image",
       "postTypes": [
         "post"
       ]
     },
     {
-      "name":"single-no-sb",
-      "title":"Single Post minus Sidebar",
+      "name":"single-no-sb-w-fi",
+      "title":"Single Post | no Sidebar | with Featured Image",
+      "postTypes": [
+        "post"
+      ]
+    },
+    {
+      "name":"single-w-sb-no-fi",
+      "title":"Single Post | with Sidebar | no Featured Image",
+      "postTypes": [
+        "post"
+      ]
+    },
+    {
+      "name":"single-focus",
+      "title":"Focus Post",
       "postTypes": [
         "post"
       ]
