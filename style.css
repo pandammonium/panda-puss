@@ -474,10 +474,6 @@ template {
 .wp-site-blocks .pp-header {
   grid-area: header;
 }
-.wp-site-blocks .pp-header a:any-link {
-  color: currentColor;
-  text-decoration: none;
-}
 .wp-site-blocks .pp-site {
   grid-area: content;
 }
@@ -587,15 +583,15 @@ template {
   column-gap: calc(4 * var(--pp--space--hor));
 }
 
-.pp-nav-sidebar .wp-block-navigation-item__content {
+.pp-sidebar-navigation .wp-block-navigation-item__content {
   padding: 0;
 }
-.pp-nav-sidebar .has-child .submenu-container {
+.pp-sidebar-navigation .has-child .submenu-container {
   border: inherit;
   color: inherit;
 }
-.pp-nav-sidebar .submenu-container,
-.pp-nav-sidebar .pp-nav-pages {
+.pp-sidebar-navigation .submenu-container,
+.pp-sidebar-navigation .pp-nav-pages {
   display: flex;
   flex-flow: column nowrap;
   align-content: stretch;
@@ -604,14 +600,14 @@ template {
   column-gap: calc(4 * var(--pp--space--hor));
   row-gap: calc(0.5 * var(--pp--space--ver));
 }
-.pp-nav-sidebar .submenu-container .wp-block-navigation__submenu-container,
-.pp-nav-sidebar .pp-nav-pages .wp-block-navigation__submenu-container {
+.pp-sidebar-navigation .submenu-container .wp-block-navigation__submenu-container,
+.pp-sidebar-navigation .pp-nav-pages .wp-block-navigation__submenu-container {
   margin: 0;
 }
-.pp-nav-sidebar .submenu-container .wp-block-navigation-item,
-.pp-nav-sidebar .submenu-container .wp-block-navigation-item:hover,
-.pp-nav-sidebar .pp-nav-pages .wp-block-navigation-item,
-.pp-nav-sidebar .pp-nav-pages .wp-block-navigation-item:hover {
+.pp-sidebar-navigation .submenu-container .wp-block-navigation-item,
+.pp-sidebar-navigation .submenu-container .wp-block-navigation-item:hover,
+.pp-sidebar-navigation .pp-nav-pages .wp-block-navigation-item,
+.pp-sidebar-navigation .pp-nav-pages .wp-block-navigation-item:hover {
   padding-right: calc(1 * var(--pp--space--hor));
 }
 
@@ -1123,6 +1119,11 @@ template {
 .wp-block-verse {
   margin: auto;
   width: fit-content;
+}
+
+.wp-site-blocks .pp-header a:any-link {
+  color: currentColor;
+  text-decoration: none;
 }
 
 main {
