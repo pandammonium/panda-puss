@@ -127,29 +127,29 @@
   },
   "customTemplates": [
     {
-      "name":"page-with-sidebars_lhs_rhs",
-      "title":"Page plus Sidebars | RHS LHS",
+      "name":"page-w-sb-lhs-rhs-w-fi",
+      "title":"Page | with Sidebar – LHS RHS | with Featured Image",
       "postTypes": [
         "page"
       ]
     },
     {
-      "name":"page-with-sidebars_lhs_rhs-no_feat_img",
-      "title":"Page plus Sidebars | RHS LHS minus Featured Image",
+      "name":"page-w-sb-lhs-rhs-no-fi",
+      "title":"Page | with Sidebar – LHS RHS | no Featured Image",
       "postTypes": [
         "page"
       ]
     },
     {
-      "name":"page-with-sidebar_lhs",
-      "title":"Page plus Sidebar | LHS",
+      "name":"page-no-sb-w-fi",
+      "title":"Page | no Sidebar | no Featured Image",
       "postTypes": [
         "page"
       ]
     },
     {
-      "name":"page-with-sidebar_rhs",
-      "title":"Page plus Sidebar | RHS",
+      "name":"page-w-sb-rhs-w-fi",
+      "title":"Page | with Sidebar – RHS | with Featured Image",
       "postTypes": [
         "page"
       ]
