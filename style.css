@@ -481,23 +481,16 @@ template {
   display: flex;
   flex-flow: row nowrap;
   gap: calc(1 * var(--pp--space--ver)) calc(2 * var(--pp--space--hor));
-  align-content: stretch;
-  justify-content: stretch;
-  align-items: stretch;
-  justify-items: stretch;
+  place-content: stretch;
+  place-items: stretch;
 }
 @media screen and (max-width: 782px) {
   .wp-site-blocks .pp-site.pp-columns {
     flex-flow: row wrap;
   }
 }
-@media screen and (max-width: 599px) {
-  .wp-site-blocks .pp-site.pp-columns {
-    flex-flow: row wrap;
-  }
-}
 .wp-site-blocks .pp-site.pp-columns .pp-column.pp-main_content {
-  flex: 2 1 70%;
+  flex: 2 1 75%;
   order: 2;
 }
 @media screen and (max-width: 782px) {
@@ -508,7 +501,7 @@ template {
 }
 .wp-site-blocks .pp-site.pp-columns .pp-column.pp-sidebar {
   margin: 0;
-  flex: 1 1 clamp(100px, 30%, 300px);
+  flex: 1 1 clamp(100px, 25%, 300px);
 }
 @media screen and (min-width: 600px) and (max-width: 782px) {
   .wp-site-blocks .pp-site.pp-columns .pp-column.pp-sidebar {
