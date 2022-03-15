@@ -155,6 +155,13 @@
       ]
     },
     {
+      "name":"page-no-sb-w-fi",
+      "title":"Page | no Sidebar | with Featured Image",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
       "name":"page-w-sb-rhs-w-fi",
       "title":"Page | with Sidebar – RHS | with Featured Image",
       "postTypes": [
