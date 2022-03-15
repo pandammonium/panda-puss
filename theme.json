@@ -198,7 +198,7 @@
     },
     {
       "name":"single-focus",
-      "title":"Focus Post",
+      "title":"Focus Single Post",
       "postTypes": [
         "post"
       ]
