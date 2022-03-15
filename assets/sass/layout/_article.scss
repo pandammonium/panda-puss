@@ -72,26 +72,26 @@ $grid-areas: 'fish';
       row-gap: calc(1 * var(--pp--space--ver));
       // End of grid container
     }
-    &.pp-no-featured_image {
-      // @debug "#{&}";
-      $title: "\"post-title\"";
-      $metadata: "\"pp-post-metadata\"";
-      $content: "\"post-" + $content-type + "\"";
-      $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
-      // @debug "grid (no feat. img.): #{$grid-areas}";
-      // background-color: mediumaquamarine;
-      // border: 1px solid mediumaquamarine;
-      // Grid container
-      grid-template-columns: 100%;
-      grid-template-areas:
-        #{$grid-areas}
-      ;
-      column-gap: calc(0 * var(--pp--space--hor));
-      row-gap: calc(1 * var(--pp--space--ver));
-      // End of grid container
-      .pp-article-featured_image {
-        display: none;
-      }
+  }
+  &.pp-no-featured_image {
+    // @debug "#{&}";
+    $title: "\"post-title\"";
+    $metadata: "\"pp-post-metadata\"";
+    $content: "\"post-" + $content-type + "\"";
+    $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
+    // @debug "grid (no feat. img.): #{$grid-areas}";
+    // background-color: mediumaquamarine;
+    // border: 1px solid mediumaquamarine;
+    // Grid container
+    grid-template-columns: 100%;
+    grid-template-areas:
+      #{$grid-areas}
+    ;
+    column-gap: calc(0 * var(--pp--space--hor));
+    row-gap: calc(1 * var(--pp--space--ver));
+    // End of grid container
+    .pp-article-featured_image {
+      display: none;
     }
   }
   & {

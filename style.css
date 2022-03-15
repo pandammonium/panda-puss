@@ -650,6 +650,15 @@ template {
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
+.pp-template .wp-block-post .pp-individual.pp-no-featured_image {
+  grid-template-columns: 100%;
+  grid-template-areas: "post-title" "pp-post-metadata" "post-excerpt";
+  column-gap: calc(0 * var(--pp--space--hor));
+  row-gap: calc(1 * var(--pp--space--ver));
+}
+.pp-template .wp-block-post .pp-individual.pp-no-featured_image .pp-article-featured_image {
+  display: none;
+}
 .pp-template .wp-block-post .pp-individual .pp-article-title {
   grid-area: post-title;
   place-self: start stretch;
