@@ -651,13 +651,11 @@ template {
   row-gap: calc(1 * var(--pp--space--ver));
 }
 .pp-template .wp-block-post .pp-individual .pp-article-title {
-  background-color: green;
   grid-area: post-title;
   place-self: start stretch;
   margin-top: 0;
 }
 .pp-template .wp-block-post .pp-individual .pp-article-metadata {
-  background-color: cornflowerblue;
   grid-area: pp-post-metadata;
   display: flex;
   flex-flow: row wrap;
@@ -708,16 +706,13 @@ template {
   flex: 0 1 fit-content;
 }
 .pp-template .wp-block-post .pp-individual .pp-article-content {
-  border: 1px solid darkcyan;
   margin: inherit;
   padding: inherit;
 }
 .pp-template .wp-block-post .pp-individual .pp-article-content.pp-article-content_excerpt {
-  background-color: lightcyan;
   grid-area: post-excerpt;
 }
 .pp-template .wp-block-post .pp-individual .pp-article-content.pp-article-content_full {
-  background-color: cyan;
   grid-area: post-content;
 }
 .pp-template .wp-block-post .pp-individual .pp-article-content img {
@@ -725,7 +720,6 @@ template {
   max-width: 100%;
 }
 .pp-template .wp-block-post .pp-individual .pp-article-featured_image {
-  background-color: gold;
   margin: inherit;
   padding: inherit;
   grid-area: post-featured_image;
@@ -837,14 +831,12 @@ template {
 }
 .single .pp-main .pp-individual .pp-article-title,
 .page .pp-main .pp-individual .pp-article-title {
-  background-color: green;
   grid-area: post-title;
   place-self: start stretch;
   margin-top: 0;
 }
 .single .pp-main .pp-individual .pp-article-metadata,
 .page .pp-main .pp-individual .pp-article-metadata {
-  background-color: cornflowerblue;
   grid-area: pp-post-metadata;
   display: flex;
   flex-flow: row wrap;
@@ -904,18 +896,15 @@ template {
 }
 .single .pp-main .pp-individual .pp-article-content,
 .page .pp-main .pp-individual .pp-article-content {
-  border: 1px solid darkcyan;
   margin: inherit;
   padding: inherit;
 }
 .single .pp-main .pp-individual .pp-article-content.pp-article-content_excerpt,
 .page .pp-main .pp-individual .pp-article-content.pp-article-content_excerpt {
-  background-color: lightcyan;
   grid-area: post-excerpt;
 }
 .single .pp-main .pp-individual .pp-article-content.pp-article-content_full,
 .page .pp-main .pp-individual .pp-article-content.pp-article-content_full {
-  background-color: cyan;
   grid-area: post-content;
 }
 .single .pp-main .pp-individual .pp-article-content img,
@@ -925,7 +914,6 @@ template {
 }
 .single .pp-main .pp-individual .pp-article-featured_image,
 .page .pp-main .pp-individual .pp-article-featured_image {
-  background-color: gold;
   margin: inherit;
   padding: inherit;
   grid-area: post-featured_image;

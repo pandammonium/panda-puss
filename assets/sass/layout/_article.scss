@@ -96,7 +96,7 @@ $grid-areas: 'fish';
   }
   & {
     .pp-article-title {
-      background-color: green;
+      // background-color: green;
       // border: 1px solid green;
       // Grid item
       grid-area: post-title;
@@ -106,7 +106,7 @@ $grid-areas: 'fish';
     }
 
     .pp-article-metadata {
-      background-color: cornflowerblue;
+      // background-color: cornflowerblue;
       // border: 1px solid cornflowerblue;
       // Grid item
       grid-area: pp-post-metadata;
@@ -209,18 +209,18 @@ $grid-areas: 'fish';
 
     .pp-article-content {
       // background-color: darkcyan;
-        border: 1px solid darkcyan;
+      // border: 1px solid darkcyan;
       margin: inherit;
       padding: inherit;
       &.pp-article-content_excerpt {
-        background-color: lightcyan;
+        // background-color: lightcyan;
         // border: 1px solid lightcyan;
         // Grid item
         grid-area: post-excerpt;
         // End of grid item
       }
       &.pp-article-content_full {
-        background-color: cyan;
+        // background-color: cyan;
         // border: 1px solid cyan;
         // Grid item
         grid-area: post-content;
@@ -233,7 +233,7 @@ $grid-areas: 'fish';
     }
 
     .pp-article-featured_image {
-      background-color: gold;
+      // background-color: gold;
       // border: 1px solid gold;
       margin: inherit;
       padding: inherit;
