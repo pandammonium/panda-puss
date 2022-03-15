@@ -148,7 +148,7 @@
       ]
     },
     {
-      "name":"page-no-sb-w-fi",
+      "name":"page-no-sb-n-fi",
       "title":"Page | no Sidebar | no Featured Image",
       "postTypes": [
         "page"
