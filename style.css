@@ -628,7 +628,6 @@ template {
   flex: 0 1 auto;
 }
 .pp-template .wp-block-post {
-  margin: auto;
   display: grid;
   gap: 0;
   grid-template-columns: 100%;
@@ -786,7 +785,6 @@ template {
 
 .single .pp-main,
 .page .pp-main {
-  margin: auto;
   display: grid;
   gap: 0;
   grid-template-columns: 100%;
