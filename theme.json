@@ -141,6 +141,13 @@
       ]
     },
     {
+      "name":"page-w-sb-lhs-no-fi",
+      "title":"Page | with Sidebar – LHS | no Featured Image",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
       "name":"page-no-sb-w-fi",
       "title":"Page | no Sidebar | no Featured Image",
       "postTypes": [
