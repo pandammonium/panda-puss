@@ -16,31 +16,10 @@ $column-gap: calc(4 * var(--pp--space--hor));
 // .pp-sidebar-navigation,
 .pp-block-navigation {
 
-  .wp-block-navigation__submenu-icon {
-    // Override WordPress because the icon doesn't display properly in Safari:
-    height: unset;
-    margin-left: 0.125ch;
-    width: unset;
-  }
-
-  .wp-block-navigation-item__content {
-    // Ovveride WordPress:
-    padding: 0;
-  }
-  .has-child .submenu-container {
-    // Override WordPress:
-    border: inherit;
-    color: inherit;
-  }
-
   .submenu-container,
   .pp-nav-pages {
     // background-color: lightslategrey;
     // border: 1px solid lightslategrey;
-    & .wp-block-navigation__submenu-container {
-      // Override WordPress to make it easier to select submenu items without an annoying gap that makes hovering tricky:
-      margin: 0;
-    }
     // Flex container
     display: flex;
     flex-flow: column nowrap;

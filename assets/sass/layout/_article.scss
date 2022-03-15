@@ -1,7 +1,5 @@
 @use 'sass:string';
 
-$grid-areas: 'fish';
-
 @mixin article($content-type) {
 
   @if $content-type != "content" and $content-type != 'excerpt' {
@@ -102,7 +100,7 @@ $grid-areas: 'fish';
       grid-area: post-title;
       place-self: start stretch;
       // End of grid item
-      margin-top: 0;
+      margin: 0;
     }
 
     .pp-article-metadata {

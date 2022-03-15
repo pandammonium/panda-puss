@@ -5,7 +5,6 @@
     // https://en.wikipedia.org/wiki/List_of_programming_languages
     $code-hue: 0;
     $hue-increment: 7.5;
-    $code-hue: $code-hue + $hue-increment;
     color: hsla($code-hue, 50%, 50%, 100%);
     &.ada {
       $code-hue: $code-hue + $hue-increment;

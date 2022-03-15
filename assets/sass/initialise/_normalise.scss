@@ -1,6 +1,12 @@
 @use 'colours';
 @use 'fonts';
 @use 'quotation-marks';
+@use 'wp-overrides';
+
+:root {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 /**
  * -----------------------------------------------------------------------------
  * Normalise the CSS.

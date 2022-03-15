@@ -18,6 +18,56 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 /**
+ * Override WordPress settings either because they don't work or they interfere
+ * with other styling/layout.
+ */
+.wp-site-blocks .pp-block-navigation .wp-block-navigation__submenu-icon {
+  height: unset;
+  margin-left: 0.125ch;
+  width: unset;
+}
+.wp-site-blocks .pp-block-navigation .wp-block-navigation-item__content {
+  padding: 0;
+}
+.wp-site-blocks .pp-block-navigation .has-child .submenu-container {
+  border: inherit;
+  color: inherit;
+}
+.wp-site-blocks .pp-block-navigation .submenu-container .wp-block-navigation__submenu-container,
+.wp-site-blocks .pp-block-navigation .pp-nav-pages .wp-block-navigation__submenu-container {
+  margin: 0;
+}
+.wp-site-blocks .wp-block-search .wp-block-search__input {
+  padding: 0 !important;
+}
+.wp-site-blocks .wp-block-search .wp-block-search__inside-wrapper {
+  flex: unset;
+}
+.wp-site-blocks .wp-block-search .wp-block-search__button {
+  padding: 0 calc(2 * var(--pp--space--hor));
+}
+.wp-site-blocks .wp-block-search.pp-search-404 {
+  margin: auto;
+  width: 75%;
+}
+.wp-site-blocks .pp-header .wp-block-search .wp-block-search__label,
+.wp-site-blocks .pp-sidebar .wp-block-search .wp-block-search__label {
+  display: none;
+}
+.wp-site-blocks .wp-block-verse {
+  margin: auto;
+  width: fit-content;
+}
+
+/**
+ * End of WordPress overrides
+ */
+:root {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/**
  * -----------------------------------------------------------------------------
  * Normalise the CSS.
  * -----------------------------------------------------------------------------
@@ -580,18 +630,6 @@ template {
   margin-block-end: 0;
 }
 
-.pp-block-navigation .wp-block-navigation__submenu-icon {
-  height: unset;
-  margin-left: 0.125ch;
-  width: unset;
-}
-.pp-block-navigation .wp-block-navigation-item__content {
-  padding: 0;
-}
-.pp-block-navigation .has-child .submenu-container {
-  border: inherit;
-  color: inherit;
-}
 .pp-block-navigation .submenu-container,
 .pp-block-navigation .pp-nav-pages {
   display: flex;
@@ -601,10 +639,6 @@ template {
   justify-content: stretch;
   column-gap: calc(4 * var(--pp--space--hor));
   row-gap: calc(0.5 * var(--pp--space--ver));
-}
-.pp-block-navigation .submenu-container .wp-block-navigation__submenu-container,
-.pp-block-navigation .pp-nav-pages .wp-block-navigation__submenu-container {
-  margin: 0;
 }
 .pp-template {
   align-content: safe flex-start;
@@ -662,7 +696,7 @@ template {
 .pp-template .wp-block-post .pp-individual .pp-article-title {
   grid-area: post-title;
   place-self: start stretch;
-  margin-top: 0;
+  margin: 0;
 }
 .pp-template .wp-block-post .pp-individual .pp-article-metadata {
   grid-area: pp-post-metadata;
@@ -842,7 +876,7 @@ template {
 .page .pp-main .pp-individual .pp-article-title {
   grid-area: post-title;
   place-self: start stretch;
-  margin-top: 0;
+  margin: 0;
 }
 .single .pp-main .pp-individual .pp-article-metadata,
 .page .pp-main .pp-individual .pp-article-metadata {
@@ -1068,64 +1102,40 @@ template {
   grid-area: comment-respond;
 }
 
-.wp-block-search .wp-block-search__input {
-  padding: 0 !important;
-}
-.wp-block-search .wp-block-search__inside-wrapper {
-  flex: unset;
-}
-.wp-block-search .wp-block-search__button {
-  padding: 0 calc(2 * var(--pp--space--hor));
-}
-.wp-block-search.pp-search-404 {
-  margin: auto;
-  width: 75%;
-}
-
-.pp-header .wp-block-search .wp-block-search__label,
-.pp-sidebar .wp-block-search .wp-block-search__label {
-  display: none;
-}
-
-.wp-block-code code {
-  color: #bf5040;
-}
-.wp-block-code code.ada {
-  color: #bf6040;
-}
-.wp-block-code code.algol {
-  color: #bf7040;
-}
-.wp-block-code code.basic {
-  color: #bf8040;
-}
-.wp-block-code code.c {
-  color: #bf8f40;
-}
-.wp-block-code code.c\+\+ {
-  color: #bf9f40;
-}
-.wp-block-code code.c-- {
-  color: #bfaf40;
-}
-.wp-block-code code.javascript, .wp-block-code code.js {
-  color: #bfbf40;
-}
-.wp-block-code code.latex {
-  color: #afbf40;
-}
-.wp-block-code code.php {
-  color: #9fbf40;
-}
-
-.wp-block-verse {
-  margin: auto;
-  width: fit-content;
-}
-
 .wp-site-blocks .pp-header a:any-link {
   color: currentColor;
   text-decoration: none;
+}
+
+.wp-block-code code {
+  color: #bf4040;
+}
+.wp-block-code code.ada {
+  color: #bf5040;
+}
+.wp-block-code code.algol {
+  color: #bf6040;
+}
+.wp-block-code code.basic {
+  color: #bf7040;
+}
+.wp-block-code code.c {
+  color: #bf8040;
+}
+.wp-block-code code.c\+\+ {
+  color: #bf8f40;
+}
+.wp-block-code code.c-- {
+  color: #bf9f40;
+}
+.wp-block-code code.javascript, .wp-block-code code.js {
+  color: #bfaf40;
+}
+.wp-block-code code.latex {
+  color: #bfbf40;
+}
+.wp-block-code code.php {
+  color: #afbf40;
 }
 
 main {

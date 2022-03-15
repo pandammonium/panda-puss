@@ -1,0 +1,68 @@
+/**
+ * Override WordPress settings either because they don't work or they interfere
+ * with other styling/layout.
+ */
+.wp-site-blocks {
+  .pp-block-navigation {
+    .wp-block-navigation__submenu-icon {
+      // Override WordPress because the icon doesn't display properly in Safari:
+      height: unset;
+      margin-left: 0.125ch;
+      width: unset;
+    }  .wp-block-navigation-item__content {
+      // Ovveride WordPress:
+      padding: 0;
+    }
+    .has-child .submenu-container {
+      // Override WordPress:
+      border: inherit;
+      color: inherit;
+    }
+    .submenu-container,
+    .pp-nav-pages {
+      // background-color: lightslategrey;
+      // border: 1px solid lightslategrey;
+      & .wp-block-navigation__submenu-container {
+        // Override WordPress to make it easier to select submenu items without an annoying gap that makes hovering tricky:
+        margin: 0;
+      }
+    }
+  }
+  .wp-block-search {
+    // margin: 0 0 calc(1 * var(--pp--space--ver)) 0;
+
+    .wp-block-search__input {
+      // Override WordPress:
+      padding: 0 !important;
+    }
+    & .wp-block-search__inside-wrapper {
+      // Override WordPress:
+      flex: unset;
+    }
+    & .wp-block-search__button {
+      // Override WordPress:
+      padding: 0 calc(2 * var(--pp--space--hor));
+    }
+    & .wp-block-search__input {
+    }
+    &.pp-search-404 {
+      margin: auto;
+      width: 75%;
+    }
+  }
+  .pp-header,
+  .pp-sidebar {
+    .wp-block-search {
+      .wp-block-search__label {
+        display: none;
+      }
+    }
+  }
+  .wp-block-verse {
+    margin: auto;
+    width: fit-content;
+  }
+}
+/**
+ * End of WordPress overrides
+ */
