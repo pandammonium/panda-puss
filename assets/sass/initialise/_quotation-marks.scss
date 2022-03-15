@@ -17,12 +17,10 @@ $-pp--quotes--close-6: '"';
 $-pp--quotes--open-7: '\\"';
 $-pp--quotes--close-7: '\\"';
 $-pp--quotes--open-8: '‚';
-$-pp--quotes--close-8: '‛';
+$-pp--quotes--close-8: '’';
 $-pp--quotes--open-9: '„';
-$-pp--quotes--close-9: '‟';
+$-pp--quotes--close-9: '“';
 $pp--quotes--de:
-  $-pp--quotes--open-8
-  $-pp--quotes--close-8
   $-pp--quotes--open-9
   $-pp--quotes--close-9
   $-pp--quotes--open-8
@@ -35,14 +33,17 @@ $pp--quotes--en-gb:
   $-pp--quotes--open-2
   $-pp--quotes--close-2
   $-pp--quotes--open-1
-  $-pp--quotes--close-1
-  $-pp--quotes--open-2
-  $-pp--quotes--close-2;
+  $-pp--quotes--close-1;
 $pp--quotes--en-us:
   $-pp--quotes--open-2
   $-pp--quotes--close-2
   $-pp--quotes--open-1
   $-pp--quotes--close-1
+  $-pp--quotes--open-2
+  $-pp--quotes--close-2;
+$pp--quotes--es:
+  $-pp--quotes--open-3
+  $-pp--quotes--close-3
   $-pp--quotes--open-2
   $-pp--quotes--close-2
   $-pp--quotes--open-1
@@ -53,16 +54,12 @@ $pp--quotes--eu:
   $-pp--quotes--open-4
   $-pp--quotes--close-4
   $-pp--quotes--open-3
-  $-pp--quotes--close-3
-  $-pp--quotes--open-4
-  $-pp--quotes--close-4;
+  $-pp--quotes--close-3;
 $pp--quotes--fr:
   $-pp--quotes--open-3a
   $-pp--quotes--close-3a
   $-pp--quotes--open-4a
   $-pp--quotes--close-4a
   $-pp--quotes--open-3a
-  $-pp--quotes--close-3a
-  $-pp--quotes--open-4a
-  $-pp--quotes--close-4a;
+  $-pp--quotes--close-3a;
 $pp--quotes--default: $pp--quotes--en-gb !default;
