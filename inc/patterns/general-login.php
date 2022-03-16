@@ -1,6 +1,7 @@
 <?php
 /** Shows log-in and log-out links.
  *
+ * @package Panda-Puss
  * @since 0.0.4
  */
 $log_in_out_link = '';

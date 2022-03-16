@@ -8,6 +8,7 @@
  * }
  * otherwise a 'critical error' will occur.
  *
+ * @package Panda-Puss
  * @since 0.0.4
  */
 

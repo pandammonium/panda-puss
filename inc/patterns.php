@@ -2,7 +2,8 @@
 /**
  * Panda-Puss: Patterns
  *
- * @since Panda-Puss 0.0.4
+ * @package Panda-Puss
+ * @since 0.0.4
  */
 
 if ( ! function_exists( 'panda_puss_register_patterns' ) ) :

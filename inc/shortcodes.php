@@ -1,4 +1,10 @@
 <?php
+/**
+ * Panda-Puss: Shortcodes
+ *
+ * @package Panda-Puss
+ * @since 0.0.4
+ */
 
 add_shortcode( 'login_logout', 'login_logout' );
 /**

@@ -1,6 +1,7 @@
 <?php
 /** 404 content.
  *
+ * @package Panda-Puss
  * @since 0.0.1
  * Moved to patterns in 0.0.4
  */
