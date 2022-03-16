@@ -3,30 +3,27 @@
 
 // Used by index, archives, etc.
 
-// .archive,
-// .blog,
-// .search-results {
-  .pp-template {
-    // border: 1px solid red;
-    // Flex container
-    align-content: safe flex-start;
-    align-items: safe flex-start;
-    display: flex;
-    flex-flow: column wrap;
-    gap: calc(5 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
-    justify-content: safe flex-start;
-    // End of flex container
-    .wp-block-post {
-      // background-color: palegreen;
-      // border: 1px solid palegreen;
-      width: 100%;
-      // Flex item
-      flex: 0 1 auto;
-      // End of flex item
-      // Grid container
-      @include post-content.post-content('excerpt');
-      // End of grid contaaner
-    }
+.pp-comment-list,
+.pp-template {
+  // border: 1px solid dimgrey;
+  // Flex container
+  align-content: safe flex-start;
+  align-items: safe flex-start;
+  display: flex;
+  flex-flow: column wrap;
+  gap: calc(5 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
+  justify-content: safe flex-start;
+  // End of flex container
+  .wp-block-post {
+    // background-color: palegreen;
+    // border: 1px solid palegreen;
+    width: 100%;
+    // Flex item
+    flex: 0 1 auto;
+    // End of flex item
+    // Grid container
+    @include post-content.post-content('excerpt');
+    // End of grid contaaner
   }
-  @include pagination.pagination;
-// }
+}
+@include pagination.pagination;

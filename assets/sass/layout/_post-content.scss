@@ -9,7 +9,7 @@
 
   $grid-areas: #{$article};
   @if $content-type == "content" {
-    $single-nav: "\"navigation_single\"";
+    $single-nav: "\"navigation\"";
     $single-comments: "\"post-comments\"";
     $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
   } @else if $content-type == 'excerpt' {
@@ -52,12 +52,13 @@
     }
     // End of single post/page comments
 
+    .pp-comments-pagination,
     // Single post/page navigation
     .pp-navigation_single.wp-block-template-part {
       // background-color: deeppink;
       // border: 1px solid deeppink;
       // Grid item
-      grid-area: navigation_single;
+      grid-area: navigation;
       // End of grid item
       // Grid container
       display: grid;
@@ -65,19 +66,21 @@
       grid-template-columns: 50% 50%;
       grid-template-rows: auto;
       grid-template-areas:
-        "navigation_single-link-previous navigation_single-link-next";
+        "navigation-link-previous navigation-link-next";
       // End of grid container
+      .pp-comments-pagination-previous,
       .pp-navigation-previous {
         // background-color: lightblue;
         // Grid item
-        grid-area: navigation_single-link-previous;
+        grid-area: navigation-link-previous;
         place-self: center start;
         // End of grid item
       }
+      .pp-comments-pagination-next,
       .pp-navigation-next {
         // background-color: lightgreen;
         // Grid item
-        grid-area: navigation_single-link-next;
+        grid-area: navigation-link-next;
         place-self: center end;
         // End of grid item
       }

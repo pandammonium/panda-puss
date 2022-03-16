@@ -640,6 +640,7 @@ template {
   column-gap: calc(4 * var(--pp--space--hor));
   row-gap: calc(0.5 * var(--pp--space--ver));
 }
+.pp-comment-list,
 .pp-template {
   align-content: safe flex-start;
   align-items: safe flex-start;
@@ -648,10 +649,12 @@ template {
   gap: calc(5 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
   justify-content: safe flex-start;
 }
+.pp-comment-list .wp-block-post,
 .pp-template .wp-block-post {
   width: 100%;
   flex: 0 1 auto;
 }
+.pp-comment-list .wp-block-post,
 .pp-template .wp-block-post {
   display: grid;
   gap: 0;
@@ -661,20 +664,24 @@ template {
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
+.pp-comment-list .wp-block-post .pp-individual,
 .pp-template .wp-block-post .pp-individual {
   grid-area: article;
   margin: auto;
 }
 @media (min-width: 601px) {
-  .pp-template .wp-block-post .pp-individual {
-    grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-featured_image post-excerpt";
+  .pp-comment-list .wp-block-post .pp-individual,
+.pp-template .wp-block-post .pp-individual {
+    grid-template-areas: "post-featured_image post-title" "post-featured_image metadata" "post-featured_image post-excerpt";
   }
 }
 @media (max-width: 600px) {
-  .pp-template .wp-block-post .pp-individual {
-    grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-excerpt post-excerpt";
+  .pp-comment-list .wp-block-post .pp-individual,
+.pp-template .wp-block-post .pp-individual {
+    grid-template-areas: "post-featured_image post-title" "post-featured_image metadata" "post-excerpt post-excerpt";
   }
 }
+.pp-comment-list .wp-block-post .pp-individual,
 .pp-template .wp-block-post .pp-individual {
   margin: 0;
   padding: 0;
@@ -684,53 +691,149 @@ template {
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
+.pp-comment-list .wp-block-post .pp-individual.pp-no-featured_image,
 .pp-template .wp-block-post .pp-individual.pp-no-featured_image {
   grid-template-columns: 100%;
-  grid-template-areas: "post-title" "pp-post-metadata" "post-excerpt";
+  grid-template-areas: "post-title" "metadata" "post-excerpt";
   column-gap: calc(0 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
+.pp-comment-list .wp-block-post .pp-individual.pp-no-featured_image .pp-article-featured_image,
 .pp-template .wp-block-post .pp-individual.pp-no-featured_image .pp-article-featured_image {
   display: none;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-article-title,
 .pp-template .wp-block-post .pp-individual .pp-article-title {
   grid-area: post-title;
   place-self: start stretch;
   margin: 0;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata,
 .pp-template .wp-block-post .pp-individual .pp-article-metadata {
-  grid-area: pp-post-metadata;
+  grid-area: metadata;
   display: flex;
   flex-flow: row wrap;
   column-gap: calc(1 * var(--pp--space--hor));
   row-gap: calc(0 * var(--pp--space--ver));
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author {
+  grid-template-columns: 32px minmax(5ch, 1fr);
+}
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author {
+  grid-template-columns: 48px minmax(5ch, 1fr);
+}
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author,
 .pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   display: grid;
   column-gap: calc(1.5 * var(--pp--space--hor));
   row-gap: 0;
-  grid-template-columns: 48px minmax(5ch, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "post-author-avatar post-author-content";
+  grid-template-areas: "author-avatar author-content";
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-avatar,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__avatar,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-avatar,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__avatar,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-avatar,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__avatar,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-avatar,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-avatar,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__avatar,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-avatar,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__avatar,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-avatar,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__avatar,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-avatar,
 .pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
   margin: inherit;
-  grid-area: post-author-avatar;
+  grid-area: author-avatar;
+  place-self: end;
 }
-.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar .avatar {
-  vertical-align: bottom;
-}
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content,
 .pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content {
-  grid-area: post-author-content;
+  grid-area: author-content;
   align-self: center;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name {
+  margin: 0;
+}
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-date,
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-date,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-comment-date,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-date,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-date,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-date,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-comment-date,
 .pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-date {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   align-self: center;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-terms,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-terms,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-terms,
 .pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-terms {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
@@ -740,50 +843,79 @@ template {
   display: flex;
   flex-flow: row wrap;
 }
-.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-terms .wp-block-post-terms .pp-article-terms-category {
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-category,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-terms .pp-article-terms-category,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-category,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-terms .pp-article-terms-category {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
 }
-.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-terms .wp-block-post-terms .pp-article-terms-post_tag {
+.pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-post_tag,
+.pp-comment-list .wp-block-post .pp-individual .pp-article-metadata .pp-article-terms .pp-article-terms-post_tag,
+.pp-template .wp-block-post .pp-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-post_tag,
+.pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-terms .pp-article-terms-post_tag {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-article-content,
 .pp-template .wp-block-post .pp-individual .pp-article-content {
   margin: inherit;
   padding: inherit;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-article-content.pp-article-content_excerpt,
 .pp-template .wp-block-post .pp-individual .pp-article-content.pp-article-content_excerpt {
   grid-area: post-excerpt;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-article-content.pp-article-content_full,
 .pp-template .wp-block-post .pp-individual .pp-article-content.pp-article-content_full {
   grid-area: post-content;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-article-content img,
 .pp-template .wp-block-post .pp-individual .pp-article-content img {
   height: auto;
   max-width: 100%;
 }
+.pp-comment-list .wp-block-post .pp-individual .pp-article-featured_image,
 .pp-template .wp-block-post .pp-individual .pp-article-featured_image {
   margin: inherit;
   padding: inherit;
   grid-area: post-featured_image;
 }
+.pp-comment-list .wp-block-post .pp-comments,
 .pp-template .wp-block-post .pp-comments {
   grid-area: post-comments;
 }
+.pp-comment-list .wp-block-post .pp-comments-pagination,
+.pp-comment-list .wp-block-post .pp-navigation_single.wp-block-template-part,
+.pp-template .wp-block-post .pp-comments-pagination,
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part {
-  grid-area: navigation_single;
+  grid-area: navigation;
   display: grid;
   gap: 0 0;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
-  grid-template-areas: "navigation_single-link-previous navigation_single-link-next";
+  grid-template-areas: "navigation-link-previous navigation-link-next";
 }
+.pp-comment-list .wp-block-post .pp-comments-pagination .pp-comments-pagination-previous,
+.pp-comment-list .wp-block-post .pp-comments-pagination .pp-navigation-previous,
+.pp-comment-list .wp-block-post .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
+.pp-comment-list .wp-block-post .pp-navigation_single.wp-block-template-part .pp-navigation-previous,
+.pp-template .wp-block-post .pp-comments-pagination .pp-comments-pagination-previous,
+.pp-template .wp-block-post .pp-comments-pagination .pp-navigation-previous,
+.pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-navigation-previous {
-  grid-area: navigation_single-link-previous;
+  grid-area: navigation-link-previous;
   place-self: center start;
 }
+.pp-comment-list .wp-block-post .pp-comments-pagination .pp-comments-pagination-next,
+.pp-comment-list .wp-block-post .pp-comments-pagination .pp-navigation-next,
+.pp-comment-list .wp-block-post .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
+.pp-comment-list .wp-block-post .pp-navigation_single.wp-block-template-part .pp-navigation-next,
+.pp-template .wp-block-post .pp-comments-pagination .pp-comments-pagination-next,
+.pp-template .wp-block-post .pp-comments-pagination .pp-navigation-next,
+.pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-navigation-next {
-  grid-area: navigation_single-link-next;
+  grid-area: navigation-link-next;
   place-self: center end;
 }
 
@@ -823,7 +955,7 @@ template {
   gap: 0;
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "article" "navigation_single" "post-comments";
+  grid-template-areas: "article" "navigation" "post-comments";
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
@@ -835,13 +967,13 @@ template {
 @media (min-width: 601px) {
   .single .pp-main .pp-individual,
 .page .pp-main .pp-individual {
-    grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-featured_image post-content";
+    grid-template-areas: "post-featured_image post-title" "post-featured_image metadata" "post-featured_image post-content";
   }
 }
 @media (max-width: 600px) {
   .single .pp-main .pp-individual,
 .page .pp-main .pp-individual {
-    grid-template-areas: "post-featured_image post-title" "post-featured_image pp-post-metadata" "post-content post-content";
+    grid-template-areas: "post-featured_image post-title" "post-featured_image metadata" "post-content post-content";
   }
 }
 .single .pp-main .pp-individual,
@@ -857,14 +989,14 @@ template {
 .single .pp-main .pp-individual.pp-focus,
 .page .pp-main .pp-individual.pp-focus {
   grid-template-columns: 100%;
-  grid-template-areas: "post-title" "post-featured_image" "pp-post-metadata" "post-content";
+  grid-template-areas: "post-title" "post-featured_image" "metadata" "post-content";
   column-gap: calc(0 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
 .single .pp-main .pp-individual.pp-no-featured_image,
 .page .pp-main .pp-individual.pp-no-featured_image {
   grid-template-columns: 100%;
-  grid-template-areas: "post-title" "pp-post-metadata" "post-content";
+  grid-template-areas: "post-title" "metadata" "post-content";
   column-gap: calc(0 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
@@ -878,46 +1010,132 @@ template {
   place-self: start stretch;
   margin: 0;
 }
+.single .pp-main .pp-individual .pp-comment-metadata,
 .single .pp-main .pp-individual .pp-article-metadata,
+.page .pp-main .pp-individual .pp-comment-metadata,
 .page .pp-main .pp-individual .pp-article-metadata {
-  grid-area: pp-post-metadata;
+  grid-area: metadata;
   display: flex;
   flex-flow: row wrap;
   column-gap: calc(1 * var(--pp--space--hor));
   row-gap: calc(0 * var(--pp--space--ver));
 }
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author {
+  grid-template-columns: 32px minmax(5ch, 1fr);
+}
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author,
 .single .pp-main .pp-individual .pp-article-metadata .pp-article-author,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-author {
+  grid-template-columns: 48px minmax(5ch, 1fr);
+}
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-author,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author,
 .page .pp-main .pp-individual .pp-article-metadata .pp-article-author {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   display: grid;
   column-gap: calc(1.5 * var(--pp--space--hor));
   row-gap: 0;
-  grid-template-columns: 48px minmax(5ch, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "post-author-avatar post-author-content";
+  grid-template-areas: "author-avatar author-content";
 }
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-avatar,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__avatar,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-avatar,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__avatar,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-avatar,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__avatar,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-avatar,
 .single .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-avatar,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__avatar,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-avatar,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__avatar,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-avatar,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__avatar,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-avatar,
 .page .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
   margin: inherit;
-  grid-area: post-author-avatar;
+  grid-area: author-avatar;
+  place-self: end;
 }
-.single .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar .avatar,
-.page .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar .avatar {
-  vertical-align: bottom;
-}
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content,
 .single .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content,
 .page .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content {
-  grid-area: post-author-content;
+  grid-area: author-content;
   align-self: center;
 }
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name {
+  margin: 0;
+}
+.single .pp-main .pp-individual .pp-comment-metadata .pp-comment-date,
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-date,
+.single .pp-main .pp-individual .pp-article-metadata .pp-comment-date,
 .single .pp-main .pp-individual .pp-article-metadata .pp-article-date,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-comment-date,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-date,
+.page .pp-main .pp-individual .pp-article-metadata .pp-comment-date,
 .page .pp-main .pp-individual .pp-article-metadata .pp-article-date {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
   align-self: center;
 }
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-terms,
 .single .pp-main .pp-individual .pp-article-metadata .pp-article-terms,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-terms,
 .page .pp-main .pp-individual .pp-article-metadata .pp-article-terms {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
@@ -927,13 +1145,17 @@ template {
   display: flex;
   flex-flow: row wrap;
 }
-.single .pp-main .pp-individual .pp-article-metadata .pp-article-terms .wp-block-post-terms .pp-article-terms-category,
-.page .pp-main .pp-individual .pp-article-metadata .pp-article-terms .wp-block-post-terms .pp-article-terms-category {
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-category,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-terms .pp-article-terms-category,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-category,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-terms .pp-article-terms-category {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
 }
-.single .pp-main .pp-individual .pp-article-metadata .pp-article-terms .wp-block-post-terms .pp-article-terms-post_tag,
-.page .pp-main .pp-individual .pp-article-metadata .pp-article-terms .wp-block-post-terms .pp-article-terms-post_tag {
+.single .pp-main .pp-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-post_tag,
+.single .pp-main .pp-individual .pp-article-metadata .pp-article-terms .pp-article-terms-post_tag,
+.page .pp-main .pp-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-post_tag,
+.page .pp-main .pp-individual .pp-article-metadata .pp-article-terms .pp-article-terms-post_tag {
   flex: 0 1 auto;
   flex: 0 1 fit-content;
 }
@@ -969,137 +1191,180 @@ template {
 .page .pp-main .pp-comments {
   grid-area: post-comments;
 }
+.single .pp-main .pp-comments-pagination,
 .single .pp-main .pp-navigation_single.wp-block-template-part,
+.page .pp-main .pp-comments-pagination,
 .page .pp-main .pp-navigation_single.wp-block-template-part {
-  grid-area: navigation_single;
+  grid-area: navigation;
   display: grid;
   gap: 0 0;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
-  grid-template-areas: "navigation_single-link-previous navigation_single-link-next";
+  grid-template-areas: "navigation-link-previous navigation-link-next";
 }
+.single .pp-main .pp-comments-pagination .pp-comments-pagination-previous,
+.single .pp-main .pp-comments-pagination .pp-navigation-previous,
+.single .pp-main .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
 .single .pp-main .pp-navigation_single.wp-block-template-part .pp-navigation-previous,
+.page .pp-main .pp-comments-pagination .pp-comments-pagination-previous,
+.page .pp-main .pp-comments-pagination .pp-navigation-previous,
+.page .pp-main .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
 .page .pp-main .pp-navigation_single.wp-block-template-part .pp-navigation-previous {
-  grid-area: navigation_single-link-previous;
+  grid-area: navigation-link-previous;
   place-self: center start;
 }
+.single .pp-main .pp-comments-pagination .pp-comments-pagination-next,
+.single .pp-main .pp-comments-pagination .pp-navigation-next,
+.single .pp-main .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
 .single .pp-main .pp-navigation_single.wp-block-template-part .pp-navigation-next,
+.page .pp-main .pp-comments-pagination .pp-comments-pagination-next,
+.page .pp-main .pp-comments-pagination .pp-navigation-next,
+.page .pp-main .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
 .page .pp-main .pp-navigation_single.wp-block-template-part .pp-navigation-next {
-  grid-area: navigation_single-link-next;
+  grid-area: navigation-link-next;
   place-self: center end;
 }
 
-.wp-block-post-comments {
+.pp-comment-list {
+  padding-inline-start: 0;
+}
+.pp-comment-list .children {
+  padding-inline-start: calc(7.5 * var(--pp--space--hor));
+}
+.pp-comment-list,
+.pp-comment-list .children {
+  list-style: none;
+  counter-reset: comments;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.pp-comment-list .pp-comment-item {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+}
+.pp-comment-list .pp-comment-item::before {
+  content: counters(comments, ".") " ";
+  counter-increment: comments;
+  float: left;
+  margin-right: calc(2 * var(--pp--space--hor));
+  position: relative;
+  top: 10px;
+}
+.pp-comment-list .pp-comment-individual {
   display: grid;
-  grid-template-columns: [left] auto [right];
+  gap: 0;
+  grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas: "comment-title" "comment-nav-top" "comment-list " "comment-nav" "comment-respond";
+  grid-template-areas: "metadata" "comment-content" "comment-reply";
 }
-.wp-block-post-comments #comments {
-  grid-area: comment-title;
-}
-.wp-block-post-comments .navigation {
-  grid-area: comment-nav;
-}
-.wp-block-post-comments .navigation .alignleft {
-  color: darkmagenta;
-}
-.wp-block-post-comments .navigation .alignright {
-  color: darkorange;
-}
-.wp-block-post-comments #comments + .navigation {
-  grid-area: comment-nav-top;
-}
-.wp-block-post-comments .commentlist {
-  margin-top: calc(1 * var(--pp--space--ver));
-  grid-area: comment-list;
+.pp-comment-list .pp-comment-individual .pp-comment-metadata,
+.pp-comment-list .pp-comment-individual .pp-article-metadata {
+  grid-area: metadata;
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  place-items: stretch;
+  flex-flow: row wrap;
+  column-gap: calc(1 * var(--pp--space--hor));
+  row-gap: calc(0 * var(--pp--space--ver));
 }
-.wp-block-post-comments .commentlist .comment {
-  padding-left: 0;
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author {
+  grid-template-columns: 32px minmax(5ch, 1fr);
 }
-.wp-block-post-comments .commentlist .comment .children .comment {
-  margin-left: calc(3 * var(--pp--space--ver));
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author {
+  grid-template-columns: 48px minmax(5ch, 1fr);
 }
-.wp-block-post-comments .commentlist .comment .comment-body {
-  margin-bottom: calc(1 * var(--pp--space--ver));
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author {
+  flex: 0 1 auto;
+  flex: 0 1 fit-content;
   display: grid;
-  grid-template-columns: 1fr;
+  column-gap: calc(1.5 * var(--pp--space--hor));
+  row-gap: 0;
   grid-template-rows: auto;
-  grid-template-areas: "comment-meta" "comment-content" "comment-reply";
+  grid-template-areas: "author-avatar author-content";
 }
-.wp-block-post-comments .commentlist .comment .comment-body .comment-meta {
-  line-height: initial;
-  margin-left: 0;
-  grid-area: comment-meta;
-  display: grid;
-  gap: calc(1 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
-  grid-template-columns: max-content;
-  grid-template-rows: auto;
-  grid-template-areas: "comment-meta-author comment-meta-metadata";
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-avatar,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__avatar,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author .pp-comment-author-avatar,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__avatar,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author .pp-comment-author-avatar,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__avatar,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .pp-comment-author-avatar,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
+  margin: inherit;
+  grid-area: author-avatar;
+  place-self: end;
 }
-.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author {
-  gap: calc(0 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
-  grid-area: comment-meta-author;
-  display: grid;
-  grid-template-columns: 48px max-content 4ch;
-  grid-template-rows: 48px;
-  grid-template-areas: "comment-meta-author-avatar comment-meta-author-name comment-meta-author-says";
-  place-self: start;
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .pp-comment-author-content,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content {
+  grid-area: author-content;
+  align-self: center;
 }
-.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author .avatar {
-  grid-area: comment-meta-author-avatar;
-  place-self: center;
-}
-.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author .fn {
-  grid-area: comment-meta-author-name;
-  place-self: center start;
-}
-.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-author .says {
-  grid-area: comment-meta-author-says;
-  place-self: center start;
-}
-.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-metadata {
-  grid-area: comment-meta-metadata;
-  place-self: start end;
-  display: grid;
-  gap: calc(0 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
-  grid-template-columns: minmax(32px, max-content) 4ch;
-  grid-template-rows: 48px;
-  grid-template-areas: "comment-meta-metadata-datetime comment-meta-metadata-edit-link";
-  place-self: center end;
-}
-.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-metadata a {
-  grid-area: comment-meta-metadata-datetime;
-  place-self: center end;
-}
-.wp-block-post-comments .commentlist .comment .comment-body .comment-meta .comment-metadata .edit-link {
-  grid-area: comment-meta-metadata-edit-link;
-  place-self: center end;
-}
-.wp-block-post-comments .commentlist .comment .comment-body .comment-content {
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .pp-comment-author-name,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-author .wp-block-post-author__content .wp-block-post-author__name,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .pp-comment-author-name,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .pp-comment-author-content .wp-block-post-author__name,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .pp-comment-author-name,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .wp-block-post-author__content .wp-block-post-author__name {
   margin: 0;
-  padding: 0;
+}
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-date,
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-date,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-comment-date,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-date {
+  flex: 0 1 auto;
+  flex: 0 1 fit-content;
+  align-self: center;
+}
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-terms,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-terms {
+  flex: 0 1 auto;
+  flex: 0 1 fit-content;
+  align-self: center;
+  column-gap: calc(1 * var(--pp--space--hor));
+  row-gap: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-category,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-terms .pp-article-terms-category {
+  flex: 0 1 auto;
+  flex: 0 1 fit-content;
+}
+.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-article-terms .pp-article-terms-post_tag,
+.pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-terms .pp-article-terms-post_tag {
+  flex: 0 1 auto;
+  flex: 0 1 fit-content;
+}
+.pp-comment-list .pp-comment-individual .pp-comment-content {
   grid-area: comment-content;
-  place-self: start;
 }
-.wp-block-post-comments .commentlist .comment .comment-body .reply {
-  font-size: initial;
+.pp-comment-list .pp-comment-individual .reply {
+  font-size: inherit;
   margin: 0;
-  padding: 0;
   grid-area: comment-reply;
-  place-self: start;
-}
-.wp-block-post-comments .commentlist .comment p {
-  font-size: initial;
-  line-height: initial;
-  margin: 0;
-}
-.wp-block-post-comments .comment-respond {
-  grid-area: comment-respond;
 }
 
 .wp-site-blocks .pp-header a:any-link {

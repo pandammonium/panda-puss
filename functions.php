@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package panda-puss
+ * @package Panda-Puss
  * @since 0.0.1
  */
 
@@ -108,3 +108,8 @@ require get_template_directory() . '/inc/patterns.php';
  * @since 0.0.4
  */
 require get_template_directory() . '/inc/shortcodes.php';
+
+/**
+ * Use Panda-Puss's extension of WP's Walker class(es)
+ */
+require get_template_directory() . '/class-pp-walker-comment.php';

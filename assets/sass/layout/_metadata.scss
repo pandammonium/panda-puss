@@ -1,0 +1,117 @@
+@mixin metadata {
+  & {
+    .pp-comment-metadata,
+    .pp-article-metadata {
+      // background-color: cornflowerblue;
+      // border: 1px solid cornflowerblue;
+      // Grid item
+      grid-area: metadata;
+      // End of grid item
+      // Flex container
+      display: flex;
+      flex-flow: row wrap;
+      column-gap: calc(1 * var(--pp--space--hor));
+      row-gap: calc(0 * var(--pp--space--ver));;
+      // End of flex container
+
+      .pp-comment-author {
+        grid-template-columns: 32px minmax(5ch, 1fr);
+      }
+      .pp-article-author {
+        grid-template-columns: 48px minmax(5ch, 1fr);
+      }
+      .pp-comment-author,
+      .pp-article-author {
+        // background-color: darkkhaki;
+        // border: 1px solid darkkhaki;
+        // Flex item
+        // Safari doesn't support `fit-content`, so put `auto` before it to fall back on:
+        flex: 0 1 auto;
+        flex: 0 1 fit-content;
+        // End of flex item
+        // Grid container
+        display: grid;
+        column-gap: calc(1.5 * var(--pp--space--hor));
+        row-gap: 0;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "author-avatar author-content"
+          ;
+        // End of grid container
+        .pp-comment-author-avatar,
+        .wp-block-post-author__avatar {
+          // background-color: greenyellow;
+          // border: 1px solid greenyellow;
+          // outline: 1px solid greenyellow;
+          // Need to override an 'inline' margin setting:
+          margin: inherit;
+          // Grid item
+          grid-area: author-avatar;
+          place-self: end;
+          // End of grid item
+          .avatar {
+            // border: 1px solid red;
+            // vertical-align: bottom;
+          }
+        }
+        .pp-comment-author-content,
+        .wp-block-post-author__content {
+          // background-color: yellowgreen;
+          // border: 1px solid yellowgreen;
+          // Grid item
+          grid-area: author-content;
+          align-self: center;
+          // End of grid item
+          .pp-comment-author-name,
+          .wp-block-post-author__name {
+            // border: 1px solid blue;
+            margin: 0;
+          }
+        }
+      }
+
+      .pp-comment-date,
+      .pp-article-date {
+        // background-color: mediumpurple;
+        // border: 1px solid purple;
+        // Flex item
+        flex: 0 1 auto;
+        flex: 0 1 fit-content;
+        align-self: center;
+        // End of flex item
+      }
+
+      .pp-article-terms {
+        // background-color: palevioletred;
+        // border: 1px solid palevioletred;
+        // Flex item
+        flex: 0 1 auto;
+        flex: 0 1 fit-content;
+        align-self: center;
+        // End of flex item
+        // Flex container
+        column-gap: calc(1 * var(--pp--space--hor));
+        row-gap: 0;
+        display: flex;
+        flex-flow: row wrap;
+        // End of flex container
+        .pp-article-terms-category {
+          // background-color: rosybrown;
+          // border: 1px solid rosybrown;
+          // Flex item
+          flex: 0 1 auto;
+          flex: 0 1 fit-content;
+          // End of flex item
+        }
+        .pp-article-terms-post_tag {
+          // background-color: mistyrose;
+          // border: 1px solid mistyrose;
+          // Flex item
+          flex: 0 1 auto;
+          flex: 0 1 fit-content;
+          // End of flex item
+        }
+      }
+    }
+  }
+}
