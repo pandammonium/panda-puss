@@ -2,11 +2,18 @@
 
 .pp-comment-list {
   padding-inline-start: 0;
+  row-gap: calc(0.5 * var(--pp--space--ver));
   .children {
     padding-inline-start: calc(7.5 * var(--pp--space--hor));
+    row-gap: calc(0 * var(--pp--space--ver));
   }
   &,
   .children {
+    // Flex container
+    display: flex;
+    flex-flow: column nowrap;
+    column-gap: 0;
+    // End of flex container
     list-style: none;
     counter-reset: comments;
     margin-block-start: 0;
@@ -21,8 +28,12 @@
     padding: 0;
     padding-block-start: 0;
     padding-block-end: 0;
+    // Flex item
+    flex: 1 1 100%;
+    // End of flex item
   }
   .pp-comment-item::before {
+    // background-color: palevioletred;
     content: counters(comments, ".") " ";
     counter-increment: comments;
     float: left;

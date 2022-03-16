@@ -62,11 +62,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /**
  * End of WordPress overrides
  */
-:root {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
 /**
  * -----------------------------------------------------------------------------
  * Normalise the CSS.
@@ -352,13 +347,6 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  appearance: button;
-}
-
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -1227,12 +1215,17 @@ template {
 
 .pp-comment-list {
   padding-inline-start: 0;
+  row-gap: calc(0.5 * var(--pp--space--ver));
 }
 .pp-comment-list .children {
   padding-inline-start: calc(7.5 * var(--pp--space--hor));
+  row-gap: calc(0 * var(--pp--space--ver));
 }
 .pp-comment-list,
 .pp-comment-list .children {
+  display: flex;
+  flex-flow: column nowrap;
+  column-gap: 0;
   list-style: none;
   counter-reset: comments;
   margin-block-start: 0;
@@ -1245,6 +1238,7 @@ template {
   padding: 0;
   padding-block-start: 0;
   padding-block-end: 0;
+  flex: 1 1 100%;
 }
 .pp-comment-list .pp-comment-item::before {
   content: counters(comments, ".") " ";

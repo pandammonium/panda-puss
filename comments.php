@@ -51,7 +51,72 @@ if ( post_password_required() ) {
   <p class="pp-no-comments"><?php esc_html_e( 'Comments are closed.', 'panda-puss' ); ?></p>
   </div>
 <?php else : ?>
-  <?php comment_form(); ?>
+<?php
+  $args = array(
+    'fields'               => $fields,
+    'comment_field'        => sprintf(
+      '<p class="comment-form-comment">%s %s</p>',
+      sprintf(
+        '<label for="comment">%s%s</label>',
+        _x( 'Comment', 'noun' ),
+        $required_indicator
+      ),
+      '<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525"' . $required_attribute . '></textarea>'
+    ),
+    'must_log_in'          => sprintf(
+      '<p class="must-log-in">%s</p>',
+      sprintf(
+        /* translators: %s: Login URL. */
+        __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+        /** This filter is documented in wp-includes/link-template.php */
+        wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
+      )
+    ),
+    'logged_in_as'         => sprintf(
+      '<p class="logged-in-as">%s%s</p>',
+      sprintf(
+        /* translators: 1: Edit user link, 2: Accessibility text, 3: User name, 4: Logout URL. */
+        __( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Log out?</a>' ),
+        get_edit_user_link(),
+        /* translators: %s: User name. */
+        esc_attr( sprintf( __( 'Logged in as %s. Edit your profile.' ), $user_identity ) ),
+        $user_identity,
+        /** This filter is documented in wp-includes/link-template.php */
+        wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
+      ),
+      $required_text
+    ),
+    'comment_notes_before' => sprintf(
+      '<p class="comment-notes">%s%s</p>',
+      sprintf(
+        '<span id="email-notes">%s</span>',
+        __( 'Your email address will not be published.' )
+      ),
+      $required_text
+    ),
+    'comment_notes_after'  => '',
+    'action'               => site_url( '/wp-comments-post.php' ),
+    'id_form'              => 'pp-commentform',
+    'id_submit'            => 'pp-submit',
+    'class_container'      => 'pp-comment-respond',
+    'class_form'           => 'pp-comment-form',
+    'class_submit'         => 'pp-submit',
+    'name_submit'          => 'submit',
+    'title_reply'          => __( 'What do you think?' ),
+    /* translators: %s: Author of the comment being replied to. */
+    'title_reply_to'       => __( 'Reply to %s' ),
+    'title_reply_before'   => '<h3 id="pp-reply-title" class="pp-comment-reply-title">',
+    'title_reply_after'    => '</h3>',
+    'cancel_reply_before'  => ' ',
+    'cancel_reply_after'   => '',
+    'cancel_reply_link'    => __( 'Cancel reply' ),
+    'label_submit'         => __( 'Post comment' ),
+    'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
+    'submit_field'         => '<p class="pp-form-submit">%1$s %2$s</p>',
+    'format'               => 'html',
+  );
+
+  comment_form($args); ?>
 <?php endif; ?>
 </div>
 
