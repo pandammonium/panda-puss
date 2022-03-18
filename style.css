@@ -21,6 +21,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Override WordPress settings either because they don't work or they interfere
  * with other styling/layout.
  */
+.wp-site-blocks .wp-block-embed {
+  margin: auto;
+}
+.wp-site-blocks .wp-block-embed__wrapper {
+  margin: auto;
+}
+.wp-site-blocks .wp-block-embed__wrapper .wp-embedded-content {
+  display: block;
+  margin: auto;
+  overflow: auto;
+  padding: 0;
+}
 .wp-site-blocks .wp-block-navigation__submenu-icon {
   height: unset;
   margin: 0;

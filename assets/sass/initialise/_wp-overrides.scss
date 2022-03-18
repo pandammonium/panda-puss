@@ -2,8 +2,22 @@
  * Override WordPress settings either because they don't work or they interfere
  * with other styling/layout.
  */
+
 .wp-site-blocks {
   .wp-block {
+    // There is no wp-block; it's used for convenince with suffixes to create the WP blocks:
+    &-embed {
+      margin: auto;
+      &__wrapper {
+        margin: auto;
+        .wp-embedded-content {
+          display:block;
+          margin: auto;
+          overflow: auto;
+          padding: 0;
+        }
+      }
+    }
     &-navigation {
       &__submenu {
         &-icon {
