@@ -102,20 +102,22 @@ body {
   [lang="fr"] q {
     quotes: quotation-marks.$pp--quotes--fr;
   }
-  q[lang="de"] {
-    quotes: quotation-marks.$pp--quotes--de;
-  }
-  q[lang="en-gb"] {
-    quotes: quotation-marks.$pp--quotes--en-gb;
-  }
-  q[lang="en-us"] {
-    quotes: quotation-marks.$pp--quotes--en-us;
-  }
-  q[lang="es"] {
-    quotes: quotation-marks.$pp--quotes--es;
-  }
-  q[lang="fr"] {
-    quotes: quotation-marks.$pp--quotes--fr;
+  q {
+    &[lang="de"] {
+      quotes: quotation-marks.$pp--quotes--de;
+    }
+    &[lang="en-gb"] {
+      quotes: quotation-marks.$pp--quotes--en-gb;
+    }
+    &[lang="en-us"] {
+      quotes: quotation-marks.$pp--quotes--en-us;
+    }
+    &[lang="es"] {
+      quotes: quotation-marks.$pp--quotes--es;
+    }
+    &[lang="fr"] {
+      quotes: quotation-marks.$pp--quotes--fr;
+    }
   }
 }
 
