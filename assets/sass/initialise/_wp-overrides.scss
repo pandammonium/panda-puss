@@ -7,7 +7,9 @@
     .wp-block-navigation__submenu-icon {
       // Override WordPress because the icon doesn't display properly in Safari:
       height: unset;
-      margin-left: 0.125ch;
+      margin: 0 {
+        left: 0.125ch;
+      }
       width: unset;
     }  .wp-block-navigation-item__content {
       // Ovveride WordPress:
