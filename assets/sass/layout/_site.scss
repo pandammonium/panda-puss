@@ -1,3 +1,5 @@
+$site-width: 1000px !default;
+
 .wp-site-blocks {
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
@@ -5,7 +7,7 @@
   margin: auto;
   padding: calc(0 * var(--pp--space--ver)) calc(5 * var(--pp--space--hor));
   width: 90vw;
-  max-width: 1200px;
+  max-width: $site-width;
   // Grid container
   display: grid;
   grid-template-columns: auto;

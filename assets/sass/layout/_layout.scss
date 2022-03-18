@@ -1,4 +1,6 @@
-@use 'site';
+@use 'site' with (
+  $site-width: 1200px
+);
 @use 'header';
 @use 'navigation';
 @use 'posts-loop';
