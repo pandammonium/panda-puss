@@ -788,7 +788,7 @@ template {
 .pp-template .wp-block-post .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
   margin: inherit;
   grid-area: author-avatar;
-  place-self: end;
+  place-self: center end;
 }
 .pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content,
 .pp-comment-list .wp-block-post .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content,
@@ -1090,7 +1090,7 @@ template {
 .page .pp-main .pp-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
   margin: inherit;
   grid-area: author-avatar;
-  place-self: end;
+  place-self: center end;
 }
 .single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content,
 .single .pp-main .pp-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content,
@@ -1329,7 +1329,7 @@ template {
 .pp-comment-list .pp-comment-individual .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
   margin: inherit;
   grid-area: author-avatar;
-  place-self: end;
+  place-self: center end;
 }
 .pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .pp-comment-author-content,
 .pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author .wp-block-post-author__content,
