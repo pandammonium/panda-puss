@@ -135,9 +135,27 @@ footer {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+$header-font-size: calc(2 * fonts.$pp--primary-font-size);
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: max(21px, calc(1.0 * $header-font-size));
+}
+h2 {
+  font-size: max(20px, calc(0.9 * $header-font-size));
+}
+h3 {
+  font-size: max(19px, calc(0.8 * $header-font-size));
+}
+h4 {
+  font-size: max(18px, calc(0.7 * $header-font-size));
+}
+h5 {
+  font-size: max(17px, calc(0.6 * $header-font-size));
+}
+h6 {
+  font-size: max(16px, calc(0.5 * $header-font-size));
 }
 
 /* Grouping content
