@@ -21,38 +21,38 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Override WordPress settings either because they don't work or they interfere
  * with other styling/layout.
  */
-.wp-site-blocks .pp-block-navigation .wp-block-navigation__submenu-icon {
+.wp-site-blocks .wp-block-navigation__submenu-icon {
   height: unset;
   margin: 0;
   margin-left: 0.125ch;
   width: unset;
 }
-.wp-site-blocks .pp-block-navigation .wp-block-navigation-item__content {
-  padding: 0;
+.wp-site-blocks .wp-block-navigation__submenu-container {
+  color: red;
 }
-.wp-site-blocks .pp-block-navigation .has-child .submenu-container {
-  border: inherit;
-  color: inherit;
-}
-.wp-site-blocks .pp-block-navigation .submenu-container .wp-block-navigation__submenu-container,
-.wp-site-blocks .pp-block-navigation .pp-nav-pages .wp-block-navigation__submenu-container {
+.wp-site-blocks .wp-block-navigation__submenu-container,
+.wp-site-blocks .wp-block-navigation__submenu .wp-block-page-list {
+  background-color: lightslategrey;
   margin: 0;
 }
-.wp-site-blocks .wp-block-search .wp-block-search__input {
+.wp-site-blocks .wp-block-navigation-item.has-child .wp-block-navigation__submenu-container {
+  border: inherit;
+  color: inherit;
+  color: blue;
+}
+.wp-site-blocks .wp-block-navigation-item__content {
+  padding: 0;
+}
+.wp-site-blocks .wp-block-search__input {
   padding: 0 !important;
 }
-.wp-site-blocks .wp-block-search .wp-block-search__inside-wrapper {
+.wp-site-blocks .wp-block-search__inside-wrapper {
   flex: unset;
 }
-.wp-site-blocks .wp-block-search .wp-block-search__button {
-  padding: 0 calc(2 * var(--pp--space--hor));
+.wp-site-blocks .wp-block-search__button {
+  padding: 0;
 }
-.wp-site-blocks .wp-block-search.pp-search-404 {
-  margin: auto;
-  width: 75%;
-}
-.wp-site-blocks .pp-header .wp-block-search .wp-block-search__label,
-.wp-site-blocks .pp-sidebar .wp-block-search .wp-block-search__label {
+.wp-site-blocks .wp-block-search__label {
   display: none;
 }
 .wp-site-blocks .wp-block-verse {
