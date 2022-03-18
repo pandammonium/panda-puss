@@ -57,7 +57,7 @@
       $featured-image: "\"post-featured_image\"";
       $title: "\"post-title\"";
       $metadata: "\"metadata\"";
-      $content: "\"post-" + $content-type + "\"";
+      $content: "\"post-#{$content-type}\"";
       $grid-areas: #{$title} + " " + #{$featured-image} + " " + #{$metadata} + " "  + #{$content};
       // @debug "grid (focus): #{$grid-areas}";
       // background-color: maroon;
@@ -76,7 +76,7 @@
     // @debug "#{&}";
     $title: "\"post-title\"";
     $metadata: "\"metadata\"";
-    $content: "\"post-" + $content-type + "\"";
+    $content: "\"post-#{$content-type}\"";
     $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
     // @debug "grid (no feat. img.): #{$grid-areas}";
     // background-color: mediumaquamarine;
