@@ -71,6 +71,26 @@
       row-gap: calc(1 * var(--pp--space--ver));
       // End of grid container
     }
+  } @else if ($content-type == "excerpt") {
+    &.pp-front_page {
+      // @debug "#{&}";
+      $featured-image: "\"post-featured_image\"";
+      $title: "\"post-title\"";
+      $metadata: "\"metadata\"";
+      $content: "\"post-#{$content-type}\"";
+      $grid-areas: #{$title} + " " + #{$featured-image} + " " + #{$metadata} + " "  + #{$content};
+      // @debug "grid (focus): #{$grid-areas}";
+      // background-color: maroon;
+      // border: 1px solid maroon;
+      // Grid container
+      grid-template-columns: 100%;
+      grid-template-areas:
+        #{$grid-areas}
+      ;
+      column-gap: calc(0 * var(--pp--space--hor));
+      row-gap: calc(1 * var(--pp--space--ver));
+      // End of grid container
+    }
   }
   &.pp-no-featured_image {
     // @debug "#{&}";

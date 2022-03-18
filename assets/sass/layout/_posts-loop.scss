@@ -1,10 +1,9 @@
 @use 'post-content';
 @use 'pagination';
-
-// Used by index, archives, etc.
+@use '../initialise/colours';
 
 .pp-comment-list,
-.pp-template {
+.pp-template:not(.pp-front_page) {
   // border: 1px solid dimgrey;
   // Flex container
   align-content: safe flex-start;
@@ -21,9 +20,36 @@
     // Flex item
     flex: 0 1 auto;
     // End of flex item
+  }
+}
+:not(pp-front_page) {
+  @include pagination.pagination;
+}
+
+.pp-template {
+  .wp-block-post {
     // Grid container
     @include post-content.post-content('excerpt');
     // End of grid contaaner
   }
 }
-@include pagination.pagination;
+
+.pp-template.pp-front_page {
+  display: grid;
+  gap: calc(0.5 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  @supports (grid-template-rows: masonry) {
+    grid-template-rows: masonry;
+  }
+  @supports not (grid-template-rows: masonry) {
+    // background-color: lawngreen;
+    grid-template-rows: auto;
+    place-items: stretch;
+    place-content: center;
+  }
+  .wp-block-post {
+    // background-color: firebrick;
+    border: 1px solid colours.$pp--primary-fg;
+    padding: calc(0 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));;
+  }
+}
