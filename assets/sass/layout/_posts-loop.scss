@@ -35,6 +35,7 @@
 }
 
 .pp-template.pp-front_page {
+  // Grid container
   display: grid;
   gap: calc(0.5 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
@@ -47,9 +48,10 @@
     place-items: stretch;
     place-content: center;
   }
+  // End of grid container
   .wp-block-post {
     // background-color: firebrick;
-    border: 1px solid colours.$pp--primary-fg;
+    // outline: 1px solid firebrick;
     padding: calc(0 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));;
   }
 }

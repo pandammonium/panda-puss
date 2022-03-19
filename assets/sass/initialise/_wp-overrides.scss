@@ -45,7 +45,7 @@
             // Override WordPress:
             border: inherit;
             color: inherit;
-            color: blue;
+            // color: blue;
           }
         }
         &__content {
@@ -55,10 +55,14 @@
       }
     }
     &-search {
-      // margin: 0 0 calc(1 * var(--pp--space--ver)) 0;
+      margin: 0 {
+        margin-block: 0;
+        margin-inline: 0;
+      };
       &__input {
         // Override WordPress:
-        padding: 0 !important;
+        padding: 0;
+        text-align: center;
       }
       &__inside-wrapper {
         // Override WordPress:
@@ -66,7 +70,7 @@
       }
       &__button {
         // Override WordPress:
-        padding: 0;// calc(2 * var(--pp--space--hor));
+        padding: 0 3%;//calc(10 * var(--pp--space--hor));
       }
       &__label {
         display: none;

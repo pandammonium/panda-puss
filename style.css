@@ -50,19 +50,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks .wp-block-navigation-item.has-child .wp-block-navigation__submenu-container {
   border: inherit;
   color: inherit;
-  color: blue;
 }
 .wp-site-blocks .wp-block-navigation-item__content {
   padding: 0;
 }
+.wp-site-blocks .wp-block-search {
+  margin: 0;
+  margin-margin-block: 0;
+  margin-margin-inline: 0;
+}
 .wp-site-blocks .wp-block-search__input {
-  padding: 0 !important;
+  padding: 0;
+  text-align: center;
 }
 .wp-site-blocks .wp-block-search__inside-wrapper {
   flex: unset;
 }
 .wp-site-blocks .wp-block-search__button {
-  padding: 0;
+  padding: 0 3%;
 }
 .wp-site-blocks .wp-block-search__label {
   display: none;
@@ -980,7 +985,6 @@ template {
   }
 }
 .pp-template.pp-front_page .wp-block-post {
-  border: 1px solid #404040;
   padding: calc(0 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
 }
 
