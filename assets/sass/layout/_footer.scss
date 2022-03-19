@@ -1,0 +1,61 @@
+.pp-footer {
+  font-size: smaller;
+  &-navigation {
+    .wp-block-navigation {
+      &__container {
+        // Flex container
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: flex-start;
+        // End of flex container
+      }
+      &-item {
+        // Flex item
+        // background-color: moccasin;
+        // End of flex item
+      }
+    }
+  }
+}
+.pp-footer-fancy {
+  // Grid container
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 25%));
+  grid-template-rows: auto;
+  grid-template-areas:
+    "item-1 item-2 item-3 item-4"
+    "credits credits credits credits"
+  ;
+  place-items: center stretch;
+  place-content: center stretch;
+  // End of grid container
+  .pp-footer-block {
+    &-1 {
+      // Grid item
+      grid-area: item-1;
+      // End of grid item
+    }
+    &-2 {
+      // Grid item
+      grid-area: item-2;
+      // End of grid item
+    }
+    &-3 {
+      // Grid item
+      grid-area: item-3;
+      // End of grid item
+    }
+    &-4 {
+      // Grid item
+      grid-area: item-4;
+      // End of grid item
+    }
+  }
+  .pp-footer-credits {
+    grid-area: credits;
+    place-self: center;
+  }
+}
