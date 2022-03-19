@@ -112,4 +112,4 @@ require get_template_directory() . '/inc/shortcodes.php';
 /**
  * Use Panda-Puss's extension of WP's Walker class(es)
  */
-require get_template_directory() . '/class-pp-walker-comment.php';
+require get_template_directory() . '/inc/classes/class-pp-walker-comment.php';
