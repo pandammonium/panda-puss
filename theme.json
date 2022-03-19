@@ -211,8 +211,23 @@
       "area": "header"
     },
     {
+      "name": "header-fancy",
+      "title": "Header | Fancy",
+      "area": "header"
+    },
+    {
+      "name": "header-no_search",
+      "title": "Header | no Search",
+      "area": "header"
+    },
+    {
       "name": "footer",
       "title": "Footer",
+      "area": "footer"
+    },
+    {
+      "name": "footer-fancy",
+      "title": "Footer | Fancy",
       "area": "footer"
     },
     {
@@ -227,22 +242,22 @@
     },
     {
       "name": "article-loop",
-      "title": "Article in the Loop",
+      "title": "Article | in the Loop",
       "area": "uncategorized"
     },
     {
       "name": "article-single",
-      "title": "Single article in a post/page",
+      "title": "Article | Post, Page",
       "area": "uncategorized"
     },
     {
       "name": "navigation-loop",
-      "title": "Links to next and previous pages in the Loop",
+      "title": "Links | Pages in the Loop",
       "area": "uncategorized"
     },
     {
       "name": "navigation-single",
-      "title": "Links to next and previous posts",
+      "title": "Links | Single Posts",
       "area": "uncategorized"
     }
   ]
