@@ -638,9 +638,6 @@ template {
 .pp-header-logo {
   grid-area: site-logo;
   place-self: center;
-  margin: 0;
-  margin-margin-block: 0;
-  margin-margin-inline: 0;
 }
 .pp-header-search {
   grid-area: site-search;
