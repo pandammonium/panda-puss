@@ -221,6 +221,11 @@
       "area": "header"
     },
     {
+      "name": "header-no_titles",
+      "title": "Header | no Titles",
+      "area": "header"
+    },
+    {
       "name": "footer",
       "title": "Footer",
       "area": "footer"
