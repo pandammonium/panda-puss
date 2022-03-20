@@ -76,6 +76,14 @@
         display: none;
       }
     }
+    &-site {
+      &-logo {
+        &.is-default-size .custom-logo {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
     &-verse {
       margin: auto;
       width: fit-content;

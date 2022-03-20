@@ -4,7 +4,7 @@
   display: grid;
   $col-gap: calc(2 * var(--pp--space--hor));
   gap: calc(1 * var(--pp--space--ver)) $col-gap;
-  grid-template-columns: clamp(150px, 30%, 300px) 1fr;
+  grid-template-columns: clamp(250px, 30%, 500px) 1fr;
   grid-template-rows: auto;
   grid-template-areas:
     "site-logo site-title"
@@ -99,9 +99,6 @@
   }
 
   .pp-header-logo {
-    .custom-logo {
-      width: 100%;
-    }
   }
 
   .pp-header-navigation {

@@ -72,6 +72,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks .wp-block-search__label {
   display: none;
 }
+.wp-site-blocks .wp-block-site-logo.is-default-size .custom-logo {
+  height: auto;
+  width: 100%;
+}
 .wp-site-blocks .wp-block-verse {
   margin: auto;
   width: fit-content;
@@ -610,7 +614,7 @@ template {
 .pp-header {
   display: grid;
   gap: calc(1 * var(--pp--space--ver)) calc(2 * var(--pp--space--hor));
-  grid-template-columns: clamp(150px, 30%, 300px) 1fr;
+  grid-template-columns: clamp(250px, 30%, 500px) 1fr;
   grid-template-rows: auto;
   grid-template-areas: "site-logo site-title" "site-logo site-tagline" "site-logo site-nav" "site-search site-search";
   margin: 0;
@@ -664,9 +668,6 @@ template {
 .pp-header-fancy .pp-header-site-tagline {
   font-size: 2.75rem;
   text-align: center;
-}
-.pp-header-fancy .pp-header-logo .custom-logo {
-  width: 100%;
 }
 .pp-header-fancy .pp-header-navigation {
   font-size: 2rem;
