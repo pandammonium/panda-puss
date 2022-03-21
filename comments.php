@@ -34,14 +34,12 @@ if ( post_password_required() ) {
     );?> so far.
   </p>
   <?php comments_pagination(); ?>
-  <ol class="pp-comment-list">
-    <?php
+  <ol class="pp-comment-list"><?php
     wp_list_comments(array(
         'walker' => new PP_Walker_Comment(),
         'style'  => 'ol',
       )
-    );
-    ?>
+    ); ?>
   </ol>
   <?php comments_pagination(); ?>
 <?php else : ?>
