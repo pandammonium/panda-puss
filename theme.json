@@ -176,13 +176,6 @@
       ]
     },
     {
-      "name":"grid-view",
-      "title":"Grid View (ex-front-page)",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
       "name":"single-no-sb-no-fi",
       "title":"Single Post | no Sidebar | no Featured Image",
       "postTypes": [
