@@ -9,9 +9,9 @@ return array (
   'title'      => __('404 content', 'panda-puss'),
   'inserter'   => false,
   'content'    => '
-    <!-- wp:header {"level":1} -->
+    <!-- wp:heading {"level":1} -->
       <h1>' . esc_html_x('Page not found', 'page title', 'panda-puss') . '</h1>
-    <!-- /wp:header -->
+    <!-- /wp:heading -->
     <!-- wp:paragraph -->
     <p>' . esc_html__('We\'ve looked in every cupboard and every room, but we can\'t seem to find that page anywhere.', 'panda-puss') . '</p>
     <!-- /wp:paragraph -->
