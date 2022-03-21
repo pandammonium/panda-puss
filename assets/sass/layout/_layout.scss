@@ -8,7 +8,11 @@
 @use 'comments';
 @use 'footer';
 
-
+.pp-comment-form-comment .pp-comment-textarea {
+  margin: auto;
+  padding: 0;
+  width: 100%;
+}
 .pp-search-404 {
   & .wp-block-search__label {
     display: inline-block;

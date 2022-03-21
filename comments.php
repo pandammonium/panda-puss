@@ -46,20 +46,20 @@ if ( post_password_required() ) {
   <p>There are no comments yet. Will you be the first to add one?</p>
 <?php endif; ?>
 <?php if ( ! comments_open() ) : ?>
-  <p class="pp-no-comments"><?php esc_html_e( 'Comments are closed.', 'panda-puss' ); ?></p>
+  <p class="pp-comments-closed"><?php esc_html_e( 'Comments are closed.', 'panda-puss' ); ?></p>
   </div>
 <?php else : ?>
 <?php
   $args = array(
     'fields'               => $fields,
     'comment_field'        => sprintf(
-      '<p class="comment-form-comment">%s %s</p>',
+      '<p class="pp-comment-form-comment">%s %s</p>',
       sprintf(
         '<label for="comment">%s%s</label>',
-        _x( 'Comment', 'noun' ),
+        _x( 'Add your comment:', 'noun' ),
         $required_indicator
       ),
-      '<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525"' . $required_attribute . '></textarea>'
+      '<textarea id="comment" name="comment" class="pp-comment-textarea" rows="8" maxlength="65525"' . $required_attribute . '></textarea>'
     ),
     'must_log_in'          => sprintf(
       '<p class="must-log-in">%s</p>',
