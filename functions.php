@@ -47,8 +47,8 @@ if ( ! function_exists( 'panda_puss_theme_setup' ) ) :
    * Enable support for custom logo:
    */
   add_theme_support( 'custom-logo', array(
-    'height'   => 150,
-    'width'    => 150,
+    // 'height'   => 150,
+    // 'width'    => 150,
     'flex-height' => true,
     'flex-width'  => true,
   ) );
