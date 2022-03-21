@@ -7,3 +7,10 @@
 @use 'post-single';
 @use 'comments';
 @use 'footer';
+
+
+.pp-search-404 {
+  & .wp-block-search__label {
+    display: block;
+  }
+}
