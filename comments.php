@@ -128,9 +128,9 @@ if ( post_password_required() ) {
  */
 function comments_pagination() {
   ?>
-  <section class="pp-comments-pagination">
+  <nav class="pp-comments-pagination">
     <div class="pp-comments-pagination-previous"><?php previous_comments_link('previous comments'); ?></div>
     <div class="pp-comments-pagination-next"><?php next_comments_link('next comments'); ?></div>
-  </section>
+  </nav>
   <?php
 }
