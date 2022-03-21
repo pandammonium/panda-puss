@@ -670,7 +670,7 @@ template {
   font-size: 2rem;
 }
 .pp-header-fancy .pp-header-search.pp-site-search .wp-block-search__inside-wrapper {
-  margin: calc(0.125 * var(--pp--space--ver)) 0;
+  margin: 0;
 }
 .pp-header-fancy .pp-header-search.pp-site-search .wp-block-search__input {
   font-size: 2rem;
@@ -697,7 +697,7 @@ template {
   font-size: 2rem;
 }
 .pp-header-no_titles .pp-header-search.pp-site-search .wp-block-search__inside-wrapper {
-  margin: calc(0.125 * var(--pp--space--ver)) 0;
+  margin: 0;
 }
 .pp-header-no_titles .pp-header-search.pp-site-search .wp-block-search__input {
   font-size: 1.75rem;

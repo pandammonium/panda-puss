@@ -104,7 +104,7 @@
   .pp-header-search.pp-site-search {
     & .wp-block-search {
       &__inside-wrapper {
-        margin: calc(0.125 * var(--pp--space--ver)) 0;
+        margin: 0;//calc(0.125 * var(--pp--space--ver)) 0;
       }
       &__input {
         font-size: 2rem;
@@ -147,7 +147,7 @@
   .pp-header-search.pp-site-search {
     & .wp-block-search {
       &__inside-wrapper {
-        margin: calc(0.125 * var(--pp--space--ver)) 0;
+        margin: 0;//calc(0.125 * var(--pp--space--ver)) 0;
       }
       &__input {
         font-size: 1.75rem;
