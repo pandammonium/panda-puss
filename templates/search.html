@@ -1,25 +1,19 @@
 <!-- wp:template-part {"area":"header","slug":"header","tagName":"header","className":"pp-header"} /-->
-<!-- wp:group {"tagName":"div","className":"pp-site"} -->
-<div class="pp-site">
-  <!-- wp:group {"tagName":"main","className":"pp-main"} -->
-  <main class="wp-block-group pp-main">
-    <!-- wp:query {"className":"pp-query pp-search-results pp-loop","query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true}}} -->
-    <div class="wp-block-query pp-query pp-search-results pp-loop">
-      <!-- wp:post-template {"className":"pp-template"} -->
-        <!-- wp:template-part {"slug":"article-loop","tagName":"article","className":"pp-individual pp-no-featured_image"} /-->
-      <!-- /wp:post-template -->
-      <!-- wp:query-pagination {"className":"pp-pagination"} -->
-        <!-- wp:query-pagination-previous {"className":"pp-pagination-previous","label":"previous results"} /-->
-        <!-- wp:query-pagination-numbers {"className":"pp-pagination-numbers"} /-->
-        <!-- wp:query-pagination-next {"className":"pp-pagination-next","label":"next results"} /-->
-      <!-- /wp:query-pagination -->
-    </div>
-    <!-- /wp:query -->
-  </main>
-  <!-- /wp:group -->
-</div>
-<!-- /wp:group -->
+
+<!-- wp:query {"className":"pp-site pp-main pp-query pp-search-results pp-loop","tagName":"main"} -->
+<main class="wp-block-query pp-site pp-main pp-query pp-search-results pp-loop">
   <!-- wp:heading {"level":1} -->
     <h1>Search results</h1>
   <!-- /wp:heading -->
+  <!-- wp:post-template {"className":"pp-template"} -->
+    <!-- wp:template-part {"slug":"article-loop","tagName":"article","className":"pp-individual"} /-->
+  <!-- /wp:post-template -->
+  <!-- wp:query-pagination {"className":"pp-pagination"} -->
+    <!-- wp:query-pagination-previous {"className":"pp-pagination-previous","label":"previous results"} /-->
+    <!-- wp:query-pagination-numbers {"className":"pp-pagination-numbers"} /-->
+    <!-- wp:query-pagination-next {"className":"pp-pagination-next","label":"next results"} /-->
+  <!-- /wp:query-pagination -->
+</main>
+<!-- /wp:query -->
+
 <!-- wp:template-part {"area":"footer","slug":"footer","tagName":"footer","className":"pp-footer"} /-->
