@@ -33,13 +33,15 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
      */
     $pattern_categories = array(
       'panda-puss' => array( 'label' => __( 'Panda-Puss', 'panda-puss' ) ),
+      'article'  => array( 'label' => __( 'Articles', 'panda-puss' ) ),
+      'button'  => array( 'label' => __( 'Buttons', 'panda-puss' ) ),
       'featured' => array( 'label' => __( 'Featured', 'panda-puss' ) ),
       'footer' => array( 'label' => __( 'Footers', 'panda-puss' ) ),
-      'header' => array( 'label' => __( 'Headers', 'panda-puss' ) ),
-      'query'  => array( 'label' => __( 'Query', 'panda-puss' ) ),
-      'pages'  => array( 'label' => __( 'Pages', 'panda-puss' ) ),
       'general'  => array( 'label' => __( 'General', 'panda-puss' ) ),
-      'buttons'  => array( 'label' => __( 'Buttons', 'panda-puss' ) ),
+      'header' => array( 'label' => __( 'Headers', 'panda-puss' ) ),
+      'image'  => array( 'label' => __( 'Images', 'panda-puss' ) ),
+      'page'  => array( 'label' => __( 'Pages', 'panda-puss' ) ),
+      'query'  => array( 'label' => __( 'Queries', 'panda-puss' ) ),
     );
     $pattern_categories = apply_filters( 'panda_puss_pattern_categories', $pattern_categories );
 

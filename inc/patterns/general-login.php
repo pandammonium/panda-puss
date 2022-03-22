@@ -31,6 +31,6 @@ $content = '
 
 return array(
   'title'      => _x('Log in/out', 'pattern-title', 'panda-puss'),
-  'categories' => array('panda-puss', 'buttons'),
+  'categories' => array('panda-puss', 'button'),
   'content'    => $content,
 );
