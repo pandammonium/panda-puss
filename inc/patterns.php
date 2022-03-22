@@ -63,7 +63,7 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
       'general-login',
       'hidden-404',
       'hidden-login-header',
-      'pagination',
+      // 'pagination',
     );
     $patterns = apply_filters( 'panda_puss_patterns', $patterns );
 
