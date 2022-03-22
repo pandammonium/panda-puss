@@ -1,7 +1,4 @@
 .pp-footer {
-  &-logo {
-    width: clamp(100px, 25%, 300px) !important;
-  }
   font-size: smaller;
   // Grid container
   display: grid;
@@ -51,8 +48,6 @@
 
 
 .pp-footer-fancy {
-
-
   grid-template-areas:
     "blocks"
     "credits"

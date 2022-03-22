@@ -1417,9 +1417,6 @@ template {
   grid-template-rows: auto;
   grid-template-areas: "credits";
 }
-.pp-footer-logo {
-  width: clamp(100px, 25%, 300px) !important;
-}
 .pp-footer-navigation .wp-block-navigation__container {
   display: flex;
   flex-flow: column nowrap;
