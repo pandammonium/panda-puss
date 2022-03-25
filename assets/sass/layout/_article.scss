@@ -22,12 +22,13 @@
     grid-template-rows: auto;
     column-gap: calc(2 * var(--pp--space--hor));
     row-gap: calc(1 * var(--pp--space--ver));
+    place-content: stretch;
+    place-items: stretch;
     // End of grid container
     // @debug "#{&}";
     &-header {
       // Grid item
       grid-area: article-header;
-      place-self: start stretch;
       // End of grid item
       // Grid container
       display: grid;
@@ -43,7 +44,6 @@
       // background-color: cornsilk;
       // Grid item
       grid-area: article-body;
-      place-self: start stretch;
       // End of grid item
       // Grid container
       display: grid;
@@ -58,7 +58,6 @@
     &-footer {
       // Grid item
       grid-area: article-footer;
-      place-self: start stretch;
       // End of grid item
       // Grid container
       display: grid;
@@ -86,7 +85,6 @@
       // border: 1px solid green;
       // Grid item
       grid-area: post-title;
-      place-self: start stretch;
       // End of grid item
       margin: 0;
     }

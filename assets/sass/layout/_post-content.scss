@@ -21,6 +21,7 @@
   // @debug "#{&}";
 
   & {
+    // @debug #{&};
     // background-color: red;
     // border: 1px solid red;
     // Grid container
@@ -29,7 +30,7 @@
     grid-template-rows: auto;
     grid-template-areas: #{$grid-areas};
     column-gap: calc(2 * var(--pp--space--hor));
-    row-gap: calc(0 * var(--pp--space--ver));
+    row-gap: calc(1 * var(--pp--space--ver));
     // End of grid container
 
     .pp-article {

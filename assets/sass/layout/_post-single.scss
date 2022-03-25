@@ -8,12 +8,16 @@
     // @debug #{&};
     // background-color: palegreen;
     // border: 1px solid palegreen;
-    // Grid container
-    @include post-content.post-content('content');
-    // End of grid container
+    &:not(.pp-front-page) {
+      // @debug #{&};
+      // Grid container
+      @include post-content.post-content('content');
+      // End of grid container
+    }
     &.pp-front-page {
       // Currently acts like it's in the loop, even though it's a page..
       // Grid container
+      // @debug #{&};
       @include post-content.post-content('excerpt');
       // End of grid container
       .pp-template.pp-front-page {
