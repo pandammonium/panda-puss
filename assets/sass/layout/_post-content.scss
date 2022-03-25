@@ -3,7 +3,7 @@
 
 @mixin post-content($content-type) {
 
-  // @debug "content type: #{$content-type}";
+  @debug "content type: #{$content-type}";
 
   $article: "\"article\"";
 
@@ -25,15 +25,14 @@
     // border: 1px solid red;
     // Grid container
     display: grid;
-    gap: 0;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas: #{$grid-areas};
     column-gap: calc(2 * var(--pp--space--hor));
-    row-gap: calc(1 * var(--pp--space--ver));
+    row-gap: calc(0 * var(--pp--space--ver));
     // End of grid container
 
-    .pp-individual {
+    .pp-article {
       // background-color: palegoldenrod;
       // border: 1px solid palegoldenrod;
       // Grid item

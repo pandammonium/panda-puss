@@ -1,7 +1,11 @@
-@mixin metadata {
+@mixin metadata($metadata-type) {
+  @if $metadata-type != "comment" and $metadata-type != 'article' {
+    @error "Unknown post metadata type";
+  }
   & {
-    .pp-comment-metadata,
-    .pp-article-metadata {
+    // .pp-#{$metadata-type}-metadata,
+    .pp-#{$metadata-type}-metadata {
+      // @debug #{&};
       // background-color: cornflowerblue;
       // border: 1px solid cornflowerblue;
       // Grid item
@@ -14,32 +18,46 @@
       row-gap: calc(0 * var(--pp--space--ver));;
       // End of flex container
 
-      .pp-comment-author {
-        grid-template-columns: 32px minmax(5ch, 1fr);
+      .pp-#{$metadata-type}-author,
+      .pp-#{$metadata-type}-date,
+      .pp-#{$metadata-type}-terms {
+        // Flex item
+        @supports not (flex-basis: fit-content) {
+          flex: 0 1 auto;
+        }
+        @supports (flex-basis: fit-content) {
+          flex: 0 1 fit-content;
+        }
+        // End of flex item
       }
-      .pp-article-author {
-        grid-template-columns: 48px minmax(5ch, 1fr);
-      }
-      .pp-comment-author,
-      .pp-article-author {
+
+      .pp-#{$metadata-type}-author {
         // background-color: darkkhaki;
         // border: 1px solid darkkhaki;
-        // Flex item
-        // Safari doesn't support `fit-content`, so put `auto` before it to fall back on:
-        flex: 0 1 auto;
-        flex: 0 1 fit-content;
-        // End of flex item
         // Grid container
         display: grid;
         column-gap: calc(1.5 * var(--pp--space--hor));
         row-gap: 0;
+        $avatar-width: 0;
+        @if $metadata-type == 'comment' {
+          $avatar-width: 32px;
+        } @else if $metadata-type == 'article' {
+          $avatar-width: 48px;
+        }
+        grid-template-columns: $avatar-width minmax(5ch, 1fr);
+        // @debug #{$avatar-width};
         grid-template-rows: auto;
         grid-template-areas:
           "author-avatar author-content"
           ;
         // End of grid container
-        .pp-comment-author-avatar,
-        .wp-block-post-author__avatar {
+        $avatar-class: "";
+        @if $metadata-type == 'comment' {
+          $avatar-class: "&-avatar";
+        } @else if $metadata-type == 'article' {
+        $avatar-class: ".wp-block-post-author__avatar";
+        }
+        #{$avatar-class} {
           // background-color: greenyellow;
           // border: 1px solid greenyellow;
           // outline: 1px solid greenyellow;
@@ -54,39 +72,44 @@
             // vertical-align: bottom;
           }
         }
-        .pp-comment-author-content,
-        .wp-block-post-author__content {
+        $content-class: "";
+        @if $metadata-type == 'comment' {
+          $content-class: "&-content";
+        } @else if $metadata-type == 'article' {
+        $content-class: ".wp-block-post-author__content";
+        }
+        #{$content-class} {
           // background-color: yellowgreen;
           // border: 1px solid yellowgreen;
           // Grid item
           grid-area: author-content;
           align-self: center;
           // End of grid item
-          .pp-comment-author-name,
-          .wp-block-post-author__name {
+          $name-class: "";
+          @if $metadata-type == 'comment' {
+            $name-class: "&-name";
+          } @else if $metadata-type == 'article' {
+          $name-class: ".wp-block-post-author__name";
+          }
+          #{$name-class} {
             // border: 1px solid blue;
             margin: 0;
           }
         }
       }
 
-      .pp-comment-date,
-      .pp-article-date {
+      .pp-#{$metadata-type}-date {
         // background-color: mediumpurple;
         // border: 1px solid purple;
         // Flex item
-        flex: 0 1 auto;
-        flex: 0 1 fit-content;
         align-self: center;
         // End of flex item
       }
 
-      .pp-article-terms {
+      .pp-#{$metadata-type}-terms {
         // background-color: palevioletred;
         // border: 1px solid palevioletred;
         // Flex item
-        flex: 0 1 auto;
-        flex: 0 1 fit-content;
         align-self: center;
         // End of flex item
         // Flex container
@@ -95,20 +118,28 @@
         display: flex;
         flex-flow: row wrap;
         // End of flex container
-        .pp-article-terms-category {
+        &-category {
           // background-color: rosybrown;
           // border: 1px solid rosybrown;
           // Flex item
+        @supports not (flex-basis: fit-content) {
           flex: 0 1 auto;
+        }
+        @supports (flex-basis: fit-content) {
           flex: 0 1 fit-content;
+        }
           // End of flex item
         }
-        .pp-article-terms-post_tag {
+        &-post_tag {
           // background-color: mistyrose;
           // border: 1px solid mistyrose;
           // Flex item
+        @supports not (flex-basis: fit-content) {
           flex: 0 1 auto;
+        }
+        @supports (flex-basis: fit-content) {
           flex: 0 1 fit-content;
+        }
           // End of flex item
         }
       }

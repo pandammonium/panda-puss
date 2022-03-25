@@ -58,7 +58,7 @@
     ;
     // End of grid container
 
-    @include metadata.metadata;
+    @include metadata.metadata('comment');
 
     .pp-comment-content {
       // Grid item

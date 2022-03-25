@@ -2,56 +2,35 @@
 @use 'pagination';
 @use '../initialise/colours';
 
-.pp-comment-list,
-.pp-template:not(.pp-front_page) {
-  // border: 1px solid dimgrey;
-  // Flex container
-  align-content: safe flex-start;
-  align-items: safe flex-start;
-  display: flex;
-  flex-flow: column wrap;
-  gap: calc(5 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
-  justify-content: safe flex-start;
-  // End of flex container
-  .wp-block-post {
-    // background-color: palegreen;
-    // border: 1px solid palegreen;
-    width: 100%;
-    // Flex item
-    flex: 0 1 auto;
-    // End of flex item
+.pp-loop {
+  .pp-comment-list {
+    background-color: pink;
+    // border: 1px solid pink;
+    // Flex container
+    align-content: safe flex-start;
+    align-items: safe flex-start;
+    display: flex;
+    flex-flow: column wrap;
+    gap: calc(5 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
+    justify-content: safe flex-start;
+    // End of flex container
+    .pp-comment-item {
+      // background-color: palegreen;
+      // border: 1px solid palegreen;
+      width: 100%;
+      // Flex item
+      flex: 0 1 auto;
+      // End of flex item
+    }
   }
-}
-:not(pp-front_page) {
   @include pagination.pagination;
-}
-
-.pp-template {
-  .wp-block-post {
-    // Grid container
-    @include post-content.post-content('excerpt');
-    // End of grid contaaner
+  .pp-template {
+    // background-color: palegreen;
+    .wp-block-post {
+      // Grid container
+      @include post-content.post-content('excerpt');
+      // End of grid contaaner
+    }
   }
 }
 
-.pp-template.pp-front_page {
-  // Grid container
-  display: grid;
-  gap: calc(0.5 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  @supports (grid-template-rows: masonry) {
-    grid-template-rows: masonry;
-  }
-  @supports not (grid-template-rows: masonry) {
-    // background-color: lawngreen;
-    grid-template-rows: auto;
-    place-items: stretch;
-    place-content: center;
-  }
-  // End of grid container
-  .wp-block-post {
-    // background-color: firebrick;
-    // outline: 1px solid firebrick;
-    padding: calc(0 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));;
-  }
-}

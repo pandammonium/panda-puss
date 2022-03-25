@@ -1,5 +1,5 @@
 @mixin pagination {
-  .wp-block-query-pagination {
+  .pp-pagination {
     // background-color: burlywood;
     // border: 1px solid brown;
     // Grid container
@@ -12,7 +12,7 @@
       "query-pagination-previous query-pagination-numbers query-pagination-next"
     ;
     // End of grid container
-    .wp-block-query-pagination-previous {
+    &-previous {
       // border: 1px solid orange;
       margin: 0;
       // Grid item
@@ -22,7 +22,7 @@
       place-self: stretch start;
       // End of grid item
     }
-    .wp-block-query-pagination-numbers {
+    &-numbers {
       // background-color: purple;
       // border: 1px solid purple;
       margin: 0;
@@ -33,7 +33,7 @@
       place-self: stretch center;
       // End of grid item
     }
-    .wp-block-query-pagination-next {
+    &-next {
       // border: 1px solid green;
       margin: 0;
       // Grid item

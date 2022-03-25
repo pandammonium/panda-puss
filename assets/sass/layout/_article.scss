@@ -7,37 +7,10 @@
     @error "Unknown post content type";
   }
   margin: auto;
+  $grid-areas: "";
 
-  // @debug "content type: #{$content-type}";
+  @debug "content type: #{$content-type}";
 
-  @media (min-width: 601px) {
-    & {
-      // @debug "larger screen";
-      // @debug "#{&}";
-      $title: "\"post-featured_image post-title\"";
-      $metadata: "\"post-featured_image metadata\"";
-      $content: "\"post-featured_image post-" + $content-type + "\"";
-      $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
-      // @debug "grid (larger-screen): #{$grid-areas}";
-      grid-template-areas:
-        #{$grid-areas}
-      ;
-    }
-  }
-  @media (max-width: 600px) {
-    & {
-      // @debug "smaller screen";
-      // @debug "#{&}";
-      $title: "\"post-featured_image post-title\"";
-      $metadata: "\"post-featured_image metadata\"";
-      $content: "\"post-" + $content-type + " post-" + $content-type + "\"";
-      $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
-      // @debug "grid (smaller-screen): #{$grid-areas}";
-      grid-template-areas:
-        #{$grid-areas}
-      ;
-    }
-  }
   & {
     // background-color: yellow;
     // border: 1px solid yellow;
@@ -50,15 +23,116 @@
     column-gap: calc(2 * var(--pp--space--hor));
     row-gap: calc(1 * var(--pp--space--ver));
     // End of grid container
+    @debug "#{&}";
+    &-header {
+      // Grid item
+      grid-area: article-header;
+      place-self: start stretch;
+      // End of grid item
+      // Grid container
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "post-title"
+      ;
+      // End of grid container
+      margin: 0;
+    }
+    &-body {
+      // background-color: cornsilk;
+      // Grid item
+      grid-area: article-body;
+      place-self: start stretch;
+      // End of grid item
+      // Grid container
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "post-#{$content-type}"
+      ;
+      // End of grid container
+      margin: 0;
+    }
+    &-footer {
+      // Grid item
+      grid-area: article-footer;
+      place-self: start stretch;
+      // End of grid item
+      // Grid container
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "metadata"
+      ;
+      // End of grid container
+      margin: 0;
+      @include metadata.metadata('article');
+    }
+    &-featured_image {
+      // background-color: gold;
+      // border: 1px solid gold;
+      margin: inherit;
+      padding: inherit;
+      // Grid item
+      grid-area: article-featured_image;
+      // End of grid item
+    }
+
+    &-title {
+      // background-color: green;
+      // border: 1px solid green;
+      // Grid item
+      grid-area: post-title;
+      place-self: start stretch;
+      // End of grid item
+      margin: 0;
+    }
+
+    &-body {
+      // background-color: darkcyan;
+      // border: 1px solid darkcyan;
+      margin: inherit;
+      padding: inherit;
+      &_excerpt {
+        // background-color: lightcyan;
+        // border: 1px solid lightcyan;
+        // Grid item
+        grid-area: post-excerpt;
+        // End of grid item
+      }
+      &_full {
+        // background-color: cyan;
+        // border: 1px solid cyan;
+        // Grid item
+        grid-area: post-content;
+        // End of grid item
+      }
+      img {
+        // Make sure images don't stick off the edge of the page:
+        height: auto;
+        max-width: 100%;
+      }
+    }
+    @if ($content-type == "content") {
+      &.pp-focus {
+        .pp-article-featured_image {
+          margin: auto;
+        }
+      }
+    }
   }
+
   @if ($content-type == "content") {
     &.pp-focus {
       // @debug "#{&}";
-      $featured-image: "\"post-featured_image\"";
-      $title: "\"post-title\"";
-      $metadata: "\"metadata\"";
-      $content: "\"post-#{$content-type}\"";
-      $grid-areas: #{$title} + " " + #{$featured-image} + " " + #{$metadata} + " "  + #{$content};
+      $image: "\"article-featured_image\"";
+      $header: "\"article-header\"";
+      $footer: "\"article-footer\"";
+      $body: "\"article-body\"";
+      $grid-areas: #{$header} + " " + #{$image} + " " + #{$body} + " "  + #{$footer};
       // @debug "grid (focus): #{$grid-areas}";
       // background-color: maroon;
       // border: 1px solid maroon;
@@ -73,17 +147,22 @@
     }
   } @else if ($content-type == "excerpt") {
     &.pp-front_page {
-      // @debug "#{&}";
-      $featured-image: "\"post-featured_image\"";
-      $title: "\"post-title\"";
-      $metadata: "\"metadata\"";
-      $content: "\"post-#{$content-type}\"";
-      $grid-areas: #{$title} + " " + #{$featured-image} + " " + #{$metadata} + " "  + #{$content};
+      // background-color: darkorchid;
+      border: 1px solid darkorchid;
+      @debug "#{&}";
+      grid-template-columns: 100%;
+      $image: "\"article-featured_image\"";
+      $header: "\"article-header\"";
+      $body: "\"article-body\"";
+      $footer: "\"article-footer\"";
+      $grid-areas: #{$header} + " " + #{$image} + " " + #{$body} + " "  + #{$footer};
+      @debug "grid (front page): #{$grid-areas}";
+
       // @debug "grid (focus): #{$grid-areas}";
       // background-color: maroon;
       // border: 1px solid maroon;
       // Grid container
-      grid-template-columns: 100%;
+      // grid-template-columns: 100%;
       grid-template-areas:
         #{$grid-areas}
       ;
@@ -94,81 +173,52 @@
   }
   &.pp-no-featured_image {
     // @debug "#{&}";
-    $title: "\"post-title\"";
-    $metadata: "\"metadata\"";
-    $content: "\"post-#{$content-type}\"";
-    $grid-areas: #{$title} + " " + #{$metadata} + " "  + #{$content};
+    grid-template-columns: 100%;
+    $header: "\"article-header\"";
+    $footer: "\"article-footer\"";
+    $body: "\"article-body\"";
+    $grid-areas: #{$header} + " " + #{$body} + " "  + #{$footer};
     // @debug "grid (no feat. img.): #{$grid-areas}";
     // background-color: mediumaquamarine;
     // border: 1px solid mediumaquamarine;
     // Grid container
-    grid-template-columns: 100%;
     grid-template-areas:
       #{$grid-areas}
     ;
-    column-gap: calc(0 * var(--pp--space--hor));
-    row-gap: calc(1 * var(--pp--space--ver));
     // End of grid container
     .pp-article-featured_image {
       display: none;
     }
   }
-  & {
-    .pp-article-title {
-      // background-color: green;
-      // border: 1px solid green;
-      // Grid item
-      grid-area: post-title;
-      place-self: start stretch;
-      // End of grid item
-      margin: 0;
+  @media (min-width: 601px) {
+    & {
+      // @debug "larger screen";
+      // @debug "#{&}";
+      $header: "\"article-featured_image article-header\"";
+      $body: "\"article-featured_image article-body\"";
+      $footer: "\"article-featured_image article-footer\"";
+      $grid-areas: #{$header} + " " + #{$body} + " "  + #{$footer};
+      // @debug "grid (larger-screen): #{$grid-areas}";
+      grid-template-areas:
+        #{$grid-areas}
+      ;
     }
-
-    @include metadata.metadata;
-
-    .pp-article-content {
-      // background-color: darkcyan;
-      // border: 1px solid darkcyan;
-      margin: inherit;
-      padding: inherit;
-      &.pp-article-content_excerpt {
-        // background-color: lightcyan;
-        // border: 1px solid lightcyan;
-        // Grid item
-        grid-area: post-excerpt;
-        // End of grid item
-      }
-      &.pp-article-content_full {
-        // background-color: cyan;
-        // border: 1px solid cyan;
-        // Grid item
-        grid-area: post-content;
-      }
-      img {
-        // Make sure images don't stick off the edge of the page:
-        height: auto;
-        max-width: 100%;
-      }
-    }
-
-    .pp-article-featured_image {
-      // background-color: gold;
-      // border: 1px solid gold;
-      margin: inherit;
-      padding: inherit;
-      // Grid item
-      grid-area: post-featured_image;
-      // End of grid item
-    }
-    @if ($content-type == "content") {
-      &.pp-focus {
-        .pp-article-featured_image {
-          margin: auto;
-        }
-      }
-    }
-
   }
-
-
+  @media (max-width: 600px) {
+    & {
+      // @debug "smaller screen";
+      // @debug "#{&}";
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      $image: "\"article-featured_image\"";
+      $header: "\"article-header\"";
+      $footer: "\"article-footer\"";
+      $body: "\"article-body\"";
+      $grid-areas: #{$image} + " " + #{$header} + " " + #{$body} + " "  + #{$footer};
+      ;
+      grid-template-areas:
+        #{$grid-areas}
+      ;
+    }
+  }
 } // End of @mixin post-content
