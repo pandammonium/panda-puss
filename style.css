@@ -1457,15 +1457,10 @@ template {
     grid-template-columns: repeat(auto-fill, minmax(300px, auto));
     grid-template-rows: masonry;
   }
-  .single .pp-main.pp-front-page .pp-template.pp-front-page .wp-block-post,
-.page .pp-main.pp-front-page .pp-template.pp-front-page .wp-block-post {
-    background-color: mintcream;
-  }
 }
 @supports not (grid-template-rows: masonry) {
   .single .pp-main.pp-front-page .pp-template.pp-front-page,
 .page .pp-main.pp-front-page .pp-template.pp-front-page {
-    background-color: lawngreen;
     display: flex;
     flex-flow: row wrap;
     align-content: stretch;
@@ -1474,7 +1469,6 @@ template {
   }
   .single .pp-main.pp-front-page .pp-template.pp-front-page .wp-block-post,
 .page .pp-main.pp-front-page .pp-template.pp-front-page .wp-block-post {
-    background-color: cornsilk;
     flex: 1 1 calc(33.3333333333% - 3 * 1 * var(--pp--space--hor));
   }
   @media screen and (max-width: 782px) {
