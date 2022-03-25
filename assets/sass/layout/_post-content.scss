@@ -3,7 +3,7 @@
 
 @mixin post-content($content-type) {
 
-  @debug "content type: #{$content-type}";
+  // @debug "content type: #{$content-type}";
 
   $article: "\"article\"";
 

@@ -768,7 +768,6 @@ template {
   place-self: stretch end;
 }
 .pp-loop .pp-template .wp-block-post {
-  background-color: red;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -965,7 +964,6 @@ template {
 
 .single .pp-main,
 .page .pp-main {
-  background-color: red;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -1209,7 +1207,6 @@ template {
 }
 .single .pp-main.pp-front-page,
 .page .pp-main.pp-front-page {
-  background-color: red;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;

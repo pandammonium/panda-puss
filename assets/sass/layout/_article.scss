@@ -9,7 +9,7 @@
   margin: auto;
   $grid-areas: "";
 
-  @debug "content type: #{$content-type}";
+  // @debug "content type: #{$content-type}";
 
   & {
     // background-color: yellow;
@@ -23,7 +23,7 @@
     column-gap: calc(2 * var(--pp--space--hor));
     row-gap: calc(1 * var(--pp--space--ver));
     // End of grid container
-    @debug "#{&}";
+    // @debug "#{&}";
     &-header {
       // Grid item
       grid-area: article-header;
@@ -148,15 +148,15 @@
   } @else if ($content-type == "excerpt") {
     &.pp-front_page {
       // background-color: darkorchid;
-      border: 1px solid darkorchid;
-      @debug "#{&}";
+      // border: 1px solid darkorchid;
+      // @debug "#{&}";
       grid-template-columns: 100%;
       $image: "\"article-featured_image\"";
       $header: "\"article-header\"";
       $body: "\"article-body\"";
       $footer: "\"article-footer\"";
       $grid-areas: #{$header} + " " + #{$image} + " " + #{$body} + " "  + #{$footer};
-      @debug "grid (front page): #{$grid-areas}";
+      // @debug "grid (front page): #{$grid-areas}";
 
       // @debug "grid (focus): #{$grid-areas}";
       // background-color: maroon;
