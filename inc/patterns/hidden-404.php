@@ -6,7 +6,7 @@
  * Moved to patterns in 0.0.4
  */
 return array (
-  'title'      => __('404 content', 'panda-puss'),
+  'title'      => _x('404 content', 'Block pattern title', 'panda-puss'),
   'inserter'   => false,
   'content'    => '
     <!-- wp:heading {"level":1} -->

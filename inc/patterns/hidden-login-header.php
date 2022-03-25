@@ -30,7 +30,7 @@ $content = '
   <!-- /wp:group -->';
 
 return array(
-  'title'      => _x('Log in/out (header)', 'pattern title', 'panda-puss'),
+  'title'      => _x('Log in/out (header)', 'Block pattern title', 'panda-puss'),
   'inserter'   => false,
   'content'    => $content,
 );
