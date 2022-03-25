@@ -6,3 +6,15 @@
 @use 'fonts';
 @use 'spacing';
 @use 'quotation-marks';
+
+ul, menu, dir,
+p, dl, multicol,
+blockquote, figure,
+h1,h2,h3,h4,h5,h6,
+:is(article, aside, nav, section) h1,
+:root {
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
