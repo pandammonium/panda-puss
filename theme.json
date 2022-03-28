@@ -211,13 +211,13 @@
       "area": "header"
     },
     {
-      "name": "header-fancy",
-      "title": "Header | Fancy",
+      "name": "header-cover",
+      "title": "Header | with Cover",
       "area": "header"
     },
     {
-      "name": "header-minimal",
-      "title": "Header | Minimal Design",
+      "name": "header-fancy",
+      "title": "Header | Fancy",
       "area": "header"
     },
     {

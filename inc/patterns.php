@@ -61,6 +61,7 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
      */
     $patterns = array(
       'general-login',
+      'title-image',
       'hidden-404',
       'hidden-login-header',
       // 'pagination',
