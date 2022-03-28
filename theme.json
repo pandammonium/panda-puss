@@ -221,6 +221,11 @@
       "area": "header"
     },
     {
+      "name": "header-minimal",
+      "title": "Header | Minimal",
+      "area": "header"
+    },
+    {
       "name": "header-no_search",
       "title": "Header | no Search",
       "area": "header"
