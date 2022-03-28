@@ -53,8 +53,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .wp-site-blocks .wp-block-search {
   margin: 0;
-  margin-margin-block: 0;
-  margin-margin-inline: 0;
+  margin-block: 0;
+  margin-inline: 0;
 }
 .wp-site-blocks .wp-block-search__input {
   padding: 0;

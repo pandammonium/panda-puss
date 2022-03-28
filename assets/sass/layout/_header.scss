@@ -14,8 +14,8 @@
   ;
   // End of grid container
   margin: 0 {
-    margin-block: 0;
-    margin-inline: 0;
+    block: 0;
+    inline: 0;
   };
 
   &-site-title {
@@ -25,8 +25,8 @@
     place-self: center;
     // End of grid item
     margin: 0 {
-      margin-block: 0;
-      margin-inline: 0;
+      block: 0;
+      inline: 0;
     };
   }
 
@@ -37,8 +37,8 @@
     place-self: center;
     // End of grid item
     margin: 0 {
-      margin-block: 0;
-      margin-inline: 0;
+      block: 0;
+      inline: 0;
     };
   }
 
@@ -64,8 +64,8 @@
     place-self: center;
     // End of grid item
     margin: 0 {
-      margin-block: 0;
-      margin-inline: 0;
+      block: 0;
+      inline: 0;
     };
   }
 }
