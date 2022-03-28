@@ -1,6 +1,8 @@
 $column-gap: calc(4 * var(--pp--space--hor));
 
 .pp-header-navigation {
+    // background-color: rosybrown;
+    // border: 1px solid rosybrown;
   display: flex;
   column-gap: $column-gap;
   .wp-block-navigation__container {
