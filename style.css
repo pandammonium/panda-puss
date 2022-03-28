@@ -1492,13 +1492,7 @@ ol, ul, dl {
   }
 }
 
-.pp-comment-list {
-  padding-inline-start: 0;
-  row-gap: calc(0.5 * var(--pp--space--ver));
-}
 .pp-comment-list .children {
-  padding-inline-start: calc(7.5 * var(--pp--space--hor));
-  row-gap: calc(0 * var(--pp--space--ver));
   margin-bottom: 1ch;
   margin-top: 1ch;
 }
@@ -1511,12 +1505,6 @@ ol, ul, dl {
   counter-reset: comments;
 }
 .pp-comment-list .pp-comment-item {
-  margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding: 0;
-  padding-block-start: 0;
-  padding-block-end: 0;
   flex: 1 1 100%;
 }
 .pp-comment-list .pp-comment-item::before {
@@ -1532,7 +1520,7 @@ ol, ul, dl {
   gap: 0;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas: "metadata" "comment-content" "comment-reply";
+  grid-template-areas: "comment-header" "comment-body" "comment-footer";
 }
 .pp-comment-list .pp-comment-individual .pp-comment-metadata {
   grid-area: metadata;
@@ -1605,13 +1593,15 @@ ol, ul, dl {
     flex: 0 1 fit-content;
   }
 }
-.pp-comment-list .pp-comment-individual .pp-comment-body {
-  grid-area: comment-content;
+.pp-comment-list .pp-comment-individual .pp-comment-header {
+  grid-area: comment-header;
 }
-.pp-comment-list .pp-comment-individual .reply {
+.pp-comment-list .pp-comment-individual .pp-comment-body {
+  grid-area: comment-body;
+}
+.pp-comment-list .pp-comment-individual .pp-comment-footer {
   font-size: inherit;
-  margin: 0;
-  grid-area: comment-reply;
+  grid-area: comment-footer;
 }
 
 .pp-footer {

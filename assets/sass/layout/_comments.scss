@@ -23,16 +23,16 @@
     // Flex item
     flex: 1 1 100%;
     // End of flex item
-  }
-  .pp-comment-item::before {
-    // background-color: palevioletred;
-    content: counters(comments, ".") " ";
-    counter-increment: comments;
-    float: left;
-    // font-size: 32px;
-    margin-right: calc(2 * var(--pp--space--hor));
-    position: relative;
-    top: 10px;
+    &::before {
+      // background-color: palevioletred;
+      content: counters(comments, ".") " ";
+      counter-increment: comments;
+      float: left;
+      // font-size: 32px;
+      margin-right: calc(2 * var(--pp--space--hor));
+      position: relative;
+      top: 10px;
+    }
   }
 
   .pp-comment-individual {
@@ -44,24 +44,28 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-      "metadata"
-      "comment-content"
-      "comment-reply"
+      "comment-header"
+      "comment-body"
+      "comment-footer"
     ;
     // End of grid container
 
     @include metadata.metadata('comment');
 
-    .pp-comment-content {
+    .pp-comment-header {
       // Grid item
-      grid-area: comment-content;
+      grid-area: comment-header;
       // End of grid item
     }
-
-    .reply {
+    .pp-comment-body {
+      // Grid item
+      grid-area: comment-body;
+      // End of grid item
+    }
+    .pp-comment-footer {
       font-size: inherit;
       // Grid item
-      grid-area: comment-reply;
+      grid-area: comment-footer;
       // End of grid item
     }
   }

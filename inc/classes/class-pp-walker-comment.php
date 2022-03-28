@@ -40,7 +40,7 @@ class PP_Walker_Comment extends Walker_Comment {
     ?>
     <<?php echo $tag; ?> id="pp-comment-<?php comment_ID(); ?>" <?php comment_class(($this->has_children ? 'parent' : 'childfree') . ' pp-comment-item', $comment ); ?>>
       <div id="div-comment-<?php comment_ID(); ?>" class="pp-comment-individual">
-        <div class="pp-comment-metadata">
+        <header class="pp-comment-header pp-comment-metadata">
           <div class="pp-comment-author vcard">
             <?php
             if ( 0 != $args['avatar_size'] ) {
@@ -89,28 +89,30 @@ class PP_Walker_Comment extends Walker_Comment {
           <?php if ( '0' == $comment->comment_approved ) : ?>
           <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
           <?php endif; ?>
-        </div>
+        </header>
 
-        <div class="pp-comment-content">
+        <div class="pp-comment-body">
           <?php comment_text(); ?>
         </div>
 
-        <?php
-        if ( '1' == $comment->comment_approved || $show_pending_links ) {
-          comment_reply_link(
-            array_merge(
-              $args,
-              array(
-                'add_below' => 'div-comment',
-                'depth'     => $depth,
-                'max_depth' => $args['max_depth'],
-                'before'    => '<div class="reply">',
-                'after'     => '</div>',
+        <footer class="pp-comment-footer">
+          <?php
+          if ( '1' == $comment->comment_approved || $show_pending_links ) {
+            comment_reply_link(
+              array_merge(
+                $args,
+                array(
+                  'add_below' => 'div-comment',
+                  'depth'     => $depth,
+                  'max_depth' => $args['max_depth'],
+                  'before'    => '<div class="pp-comment-reply">',
+                  'after'     => '</div>',
+                )
               )
-            )
-          );
-        }
-        ?>
+            );
+          }
+          ?>
+        </footer>
       </div>
     <?php
   }
