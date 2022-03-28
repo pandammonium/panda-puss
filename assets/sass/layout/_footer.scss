@@ -64,20 +64,13 @@
     align-items: stretch;
     justify-content: flex-start;
     // End of flex container
-    .wp-block-block {
-      // &:nth-child(odd) {
-      //   background-color: palegreen;
-      // }
-      // &:nth-child(even) {
-      //   background-color: complement(palegreen);
-      // }
-      margin: 0;
-      padding: 0;
-      // Flex item
-      // flex: 1 1 calc(100% / $number-of-columns);
-      // @include lay_out-footer-blocks(1, 1, 1, 6);
-      // End of flex item
-    }
+    // .pp-footer-block {
+    //   &:nth-child(odd) {
+    //     background-color: palegreen;
+    //   }
+    //   &:nth-child(even) {
+    //     background-color: complement(palegreen);
+    //   }
   }
 }
 

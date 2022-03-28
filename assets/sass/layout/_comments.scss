@@ -1,11 +1,11 @@
 @use 'metadata';
 
 .pp-comment-list {
-  padding-inline-start: 0;
-  row-gap: calc(0.5 * var(--pp--space--ver));
   .children {
-    padding-inline-start: calc(7.5 * var(--pp--space--hor));
-    row-gap: calc(0 * var(--pp--space--ver));
+    margin: {
+      bottom: 1ch;
+      top: 1ch;
+    };
   }
   &,
   .children {
@@ -16,18 +16,10 @@
     // End of flex container
     list-style: none;
     counter-reset: comments;
-    margin-block-start: 0;
-    margin-block-end: 0;
   }
   .pp-comment-item {
     // background-color: lavenderblush;
     // display: block;
-    margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding: 0;
-    padding-block-start: 0;
-    padding-block-end: 0;
     // Flex item
     flex: 1 1 100%;
     // End of flex item
@@ -68,7 +60,6 @@
 
     .reply {
       font-size: inherit;
-      margin: 0;
       // Grid item
       grid-area: comment-reply;
       // End of grid item
