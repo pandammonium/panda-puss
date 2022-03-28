@@ -216,6 +216,11 @@
       "area": "header"
     },
     {
+      "name": "header-minimal",
+      "title": "Header | Minimal Design",
+      "area": "header"
+    },
+    {
       "name": "header-no_search",
       "title": "Header | no Search",
       "area": "header"
@@ -263,6 +268,11 @@
     {
       "name": "navigation-single",
       "title": "Links | Single Posts",
+      "area": "uncategorized"
+    },
+    {
+      "name": "navigation-site",
+      "title": "Links | Site",
       "area": "uncategorized"
     }
   ]
