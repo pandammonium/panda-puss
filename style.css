@@ -536,10 +536,15 @@ p, dl, multicol,
 blockquote, figure,
 h1, h2, h3, h4, h5, h6,
 :is(article, aside, nav, section) h1,
+input,
+.wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent,
+button, ::file-selector-button, input:is([type=reset], [type=button], [type=submit]),
+.wp-block-post-comments input:not([type=submit]):not([type=checkbox]), .wp-block-post-comments textarea,
 :root {
   margin: 0;
   margin-block: 0;
   margin-inline: 0;
+  padding: 0;
   padding-block: 0;
   padding-inline: 0;
 }
@@ -1511,7 +1516,7 @@ ol, ul, dl {
   content: counters(comments, ".") " ";
   counter-increment: comments;
   float: left;
-  margin-right: calc(2 * var(--pp--space--hor));
+  margin-right: calc(2 * var(--pp--space---hor));
   position: relative;
   top: 10px;
 }
@@ -1604,6 +1609,65 @@ ol, ul, dl {
   grid-area: comment-footer;
 }
 
+.pp-comment-form {
+  display: grid;
+  column-gap: 0;
+  row-gap: calc(0.5 * var(--pp--space--ver));
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "comment-form-author" "comment-form-notes" "comment-form-email" "comment-form-url" "comment-form-comment" "comment-form-cookies" "comment-form-submit";
+  place-content: center stretch;
+  place-items: center stretch;
+}
+.pp-comment-form-author {
+  grid-area: comment-form-author;
+}
+.pp-comment-form-email {
+  grid-area: comment-form-email;
+}
+.pp-comment-form-url {
+  grid-area: comment-form-url;
+}
+.pp-comment-form-comment {
+  grid-area: comment-form-comment;
+}
+.pp-comment-form-notice-notes {
+  grid-area: comment-form-notes;
+}
+.pp-comment-form-cookies_consent {
+  grid-area: comment-form-cookies;
+}
+.pp-comment-form-submit {
+  grid-area: comment-form-submit;
+}
+.pp-comment-form-author label, .pp-comment-form-email label, .pp-comment-form-url label, .pp-comment-form-comment label, .pp-comment-form-cookies_consent label {
+  grid-area: label;
+}
+.pp-comment-form-author input, .pp-comment-form-email input, .pp-comment-form-url input, .pp-comment-form-comment input, .pp-comment-form-cookies_consent input {
+  grid-area: input;
+}
+.pp-comment-form-cookies_consent input {
+  place-self: center end;
+}
+.pp-comment-form-comment textarea {
+  grid-area: input;
+}
+.pp-comment-form-author, .pp-comment-form-email, .pp-comment-form-url, .pp-comment-form-comment, .pp-comment-form-cookies_consent {
+  display: grid;
+  grid-template-columns: clamp(5%, 25ch, 10%) 1fr;
+  grid-template-rows: auto;
+  column-gap: calc(1.5 * var(--pp--space--hor));
+  row-gap: 0;
+  place-content: center stretch;
+  place-items: start stretch;
+}
+.pp-comment-form-author, .pp-comment-form-email, .pp-comment-form-url, .pp-comment-form-comment {
+  grid-template-areas: "label input";
+}
+.pp-comment-form-cookies_consent {
+  grid-template-areas: "input label";
+}
+
 .pp-footer {
   font-size: smaller;
   display: grid;
@@ -1663,12 +1727,6 @@ ol, ul, dl {
 .pp-footer-block:first-child:nth-last-child(6), .pp-footer-block:first-child:nth-last-child(6) ~ .pp-footer-block {
   /* 6 item(s) */
   flex: 1 1 16.6666666667%;
-}
-
-.pp-comment-form-comment .pp-comment-textarea {
-  margin: auto;
-  padding: 0;
-  width: 100%;
 }
 
 .pp-search-404 .wp-block-search__label {
