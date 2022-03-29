@@ -47,11 +47,11 @@ class PP_Walker_Comment extends Walker_Comment {
               echo '<div class="pp-comment-author-avatar">' . get_avatar(
                 $comment,
                 $args['avatar_size'],
-                // $args['avatar_default'],
-                // '',
-                // array(
-                //   'class' => 'pp-comment-author-avatar',
-                // )
+                $args['avatar_default'],
+                '',
+                array(
+                  'class' => 'pp-comment-author-avatar',
+                )
               ) . '</div>';
             }
             ?>
