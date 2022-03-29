@@ -1615,7 +1615,7 @@ ol, ul, dl {
   row-gap: calc(0.5 * var(--pp--space--ver));
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "comment-form-author" "comment-form-notes" "comment-form-email" "comment-form-url" "comment-form-comment" "comment-form-cookies" "comment-form-submit";
+  grid-template-areas: "comment-form-comment" "comment-form-author" "comment-form-notes" "comment-form-email" "comment-form-url" "comment-form-cookies" "comment-form-submit";
   place-content: center stretch;
   place-items: center stretch;
 }
