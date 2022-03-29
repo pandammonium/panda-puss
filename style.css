@@ -1640,6 +1640,9 @@ ol, ul, dl {
 .pp-comment-form-submit {
   grid-area: comment-form-submit;
 }
+.pp-comment-form label {
+  place-self: center stretch;
+}
 .pp-comment-form-author label, .pp-comment-form-email label, .pp-comment-form-url label, .pp-comment-form-comment label, .pp-comment-form-cookies_consent label {
   grid-area: label;
 }
@@ -1654,7 +1657,7 @@ ol, ul, dl {
 }
 .pp-comment-form-author, .pp-comment-form-email, .pp-comment-form-url, .pp-comment-form-comment, .pp-comment-form-cookies_consent {
   display: grid;
-  grid-template-columns: clamp(5%, 25ch, 10%) 1fr;
+  grid-template-columns: clamp(10%, 18ch, 25%) 1fr;
   grid-template-rows: auto;
   column-gap: calc(1.5 * var(--pp--space--hor));
   row-gap: 0;

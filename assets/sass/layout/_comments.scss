@@ -118,6 +118,9 @@
   &-submit {
     grid-area: comment-form-submit;
   }
+  label {
+    place-self: center stretch;
+  }
   &-author,
   &-email,
   &-url,
@@ -131,7 +134,7 @@
     }
   }
   &-cookies_consent {
-    input {
+    & input {
       place-self: center end;
     }
   }
@@ -146,7 +149,7 @@
   &-comment,
   &-cookies_consent {
     display: grid;
-    grid-template-columns: clamp(5%, 25ch, 10%) 1fr;
+    grid-template-columns: clamp(10%, 18ch, 25%) 1fr;
     grid-template-rows: auto;
     column-gap: calc(1.5 * var(--pp--space--hor));
     row-gap: 0;
