@@ -12,6 +12,10 @@ p, dl, multicol,
 blockquote, figure,
 h1,h2,h3,h4,h5,h6,
 :is(article, aside, nav, section) h1,
+input,
+.wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent,
+button, ::file-selector-button, input:is([type="reset"], [type="button"], [type="submit"]),
+.wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]), .wp-block-post-comments textarea,
 :root {
   margin: 0 {
     block: 0;

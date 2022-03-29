@@ -16,24 +16,25 @@ if ( post_password_required() ) {
   return;
 }
 ?>
+<div id="pp-comments" class="pp-comments-area <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
+
+<h3 class="pp-comments-title">Comments</h3>
+
 <?php
   $pp_comment_count = get_comments_number();
 ?>
-<div id="pp-comments" class="pp-comments-area <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
-<h2 class="pp-comments-title">Comments</h2>
 
 <?php if (have_comments()) : ?>
-  <p>There
-    <?php printf(
-      esc_html( /* translators: 1: number of comments */
-        _nx('is %1$s response', 'are %1$s responses', $pp_comment_count,
-          'Comments title', 'panda-puss')
-      ),
-      esc_html( number_format_i18n( get_comments_number() ) )
-    );?> so far.
+
+  <p class="pp-comments-notice-count">
+    There <?php printf(esc_html( /* translators: 1: number of comments */
+        _nx('is %1$s comment', 'are %1$s comments', $pp_comment_count,
+          'Comments count', 'panda-puss')
+      ), esc_html( number_format_i18n( get_comments_number())));?> so far.
   </p>
-  <?php comments_pagination(); ?>
+
+  <?php comments_pagination('above'); ?>
   <ol class="pp-comment-list"><?php
     wp_list_comments(array(
         'walker' => new PP_Walker_Comment(),
@@ -41,15 +42,70 @@ if ( post_password_required() ) {
       )
     ); ?>
   </ol>
-  <?php comments_pagination(); ?>
+  <?php comments_pagination('below'); ?>
+
 <?php else : ?>
-  <p>There are no comments yet. Will you be the first to add one?</p>
+  <p class="pp-comments-notice-none"><?php esc_html_e( 'There are no comments – yet.', 'panda-puss' ); ?></p>
+
 <?php endif; ?>
+
 <?php if ( ! comments_open() ) : ?>
-  <p class="pp-comments-closed"><?php esc_html_e( 'Comments are closed.', 'panda-puss' ); ?></p>
-  </div>
+  <p class="pp-comments-notice-closed"><?php esc_html_e( 'Comments are closed.', 'panda-puss' ); ?></p>
 <?php else : ?>
 <?php
+  $fields = array(
+    'author' => sprintf(
+      '<p class="pp-comment-form-author">%s %s</p>',
+      sprintf(
+        '<label for="author">%s%s</label>',
+        __( 'Name' ),
+        ( $req ? $required_indicator : '' )
+      ),
+      sprintf(
+        '<input id="author" name="author" type="text" value="%s" size="30" maxlength="245"%s />',
+        esc_attr( $commenter['comment_author'] ),
+        ( $req ? $required_attribute : '' )
+      )
+    ),
+    'email'  => sprintf(
+      '<p class="pp-comment-form-email">%s %s</p>',
+      sprintf(
+        '<label for="email">%s%s</label>',
+        __( 'Email' ),
+        ( $req ? $required_indicator : '' )
+      ),
+      sprintf(
+        '<input id="email" name="email" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes"%s />',
+        ( $html5 ? 'type="email"' : 'type="text"' ),
+        esc_attr( $commenter['comment_author_email'] ),
+        ( $req ? $required_attribute : '' )
+      )
+    ),
+    'url'    => sprintf(
+      '<p class="pp-comment-form-url">%s %s</p>',
+      sprintf(
+        '<label for="url">%s</label>',
+        __( 'Website' )
+      ),
+      sprintf(
+        '<input id="url" name="url" %s value="%s" size="30" maxlength="200" />',
+        ( $html5 ? 'type="url"' : 'type="text"' ),
+        esc_attr( $commenter['comment_author_url'] )
+      )
+    ),
+    'cookies' => sprintf(
+      '<p class="pp-comment-form-cookies_consent">%s %s</p>',
+      sprintf(
+        '<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"%s />',
+        $consent
+      ),
+      sprintf(
+        '<label for="wp-comment-cookies-consent">%s</label>',
+        __( 'Save my name, email, and website in this browser for the next time I comment.' )
+      )
+    ),
+  );
+
   $args = array(
     'fields'               => $fields,
     'comment_field'        => sprintf(
@@ -59,7 +115,7 @@ if ( post_password_required() ) {
         _x( 'Add your comment:', 'noun' ),
         $required_indicator
       ),
-      '<textarea id="comment" name="comment" class="pp-comment-textarea" rows="8" maxlength="65525"' . $required_attribute . '></textarea>'
+      '<textarea id="comment" name="comment" class="pp-comment-form-textarea" rows="8" maxlength="65525"' . $required_attribute . '></textarea>'
     ),
     'must_log_in'          => sprintf(
       '<p class="must-log-in">%s</p>',
@@ -71,7 +127,7 @@ if ( post_password_required() ) {
       )
     ),
     'logged_in_as'         => sprintf(
-      '<p class="logged-in-as">%s%s</p>',
+      '<p class="pp-comment-logged-in-as">%s%s</p>',
       sprintf(
         /* translators: 1: Edit user link, 2: Accessibility text, 3: User name, 4: Logout URL. */
         __( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Log out?</a>' ),
@@ -85,7 +141,7 @@ if ( post_password_required() ) {
       $required_text
     ),
     'comment_notes_before' => sprintf(
-      '<p class="comment-notes">%s%s</p>',
+      '<p class="pp-comment-form-notice-notes">%s%s</p>',
       sprintf(
         '<span id="email-notes">%s</span>',
         __( 'Your email address will not be published.' )
@@ -94,24 +150,24 @@ if ( post_password_required() ) {
     ),
     'comment_notes_after'  => '',
     'action'               => site_url( '/wp-comments-post.php' ),
-    'id_form'              => 'pp-commentform',
-    'id_submit'            => 'pp-submit',
+    'id_form'              => 'pp-comment-form',
+    'id_submit'            => 'pp-comment-form-submit',
     'class_container'      => 'pp-comment-respond',
     'class_form'           => 'pp-comment-form',
-    'class_submit'         => 'pp-submit',
+    'class_submit'         => 'pp-comment-form-submit',
     'name_submit'          => 'submit',
     'title_reply'          => __( 'What do you think?' ),
     /* translators: %s: Author of the comment being replied to. */
-    'title_reply_to'       => __( 'Reply to %s' ),
-    'title_reply_before'   => '<h3 id="pp-reply-title" class="pp-comment-reply-title">',
-    'title_reply_after'    => '</h3>',
+    'title_reply_to'       => __( 'Replying to %s' ),
+    'title_reply_before'   => '<h4 id="pp-comment-reply-title" class="pp-comment-reply-title">',
+    'title_reply_after'    => '</h4>',
     'cancel_reply_before'  => ' ',
     'cancel_reply_after'   => '',
     'cancel_reply_link'    => __( 'Cancel reply' ),
     'label_submit'         => __( 'Post comment' ),
     'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
-    'submit_field'         => '<p class="pp-form-submit">%1$s %2$s</p>',
-    'format'               => 'html',
+    'submit_field'         => '<p class="pp-comment-form-submit">%1$s %2$s</p>',
+    'format'               => 'html5',
   );
 
   comment_form($args); ?>
@@ -124,9 +180,13 @@ if ( post_password_required() ) {
  *
  * @since 0.0.4
  */
-function comments_pagination() {
+function comments_pagination($position = '') {
+  $nav_class = 'pp-comments-navigation';
+  if ($position !== '') {
+    $nav_class .= ' pp-comments-navigation-' . $position;
+  }
   ?>
-  <nav class="pp-comments-pagination">
+  <nav class="<?php echo $nav_class; ?>">
     <div class="pp-comments-pagination-previous"><?php previous_comments_link('previous comments'); ?></div>
     <div class="pp-comments-pagination-next"><?php next_comments_link('next comments'); ?></div>
   </nav>
