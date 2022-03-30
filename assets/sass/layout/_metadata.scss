@@ -1,5 +1,5 @@
 @mixin metadata($metadata-type) {
-  @if $metadata-type != "comment" and $metadata-type != 'article' {
+  @if $metadata-type != 'comment' and $metadata-type != 'article' {
     @error "Unknown post metadata type";
   }
   & {
@@ -18,9 +18,12 @@
       row-gap: calc(0 * var(--pp--space--ver));;
       // End of flex container
 
-      .pp-#{$metadata-type}-author,
-      .pp-#{$metadata-type}-date,
-      .pp-#{$metadata-type}-terms {
+      $metadata-text: '.pp-#{$metadata-type}-author, .pp-#{$metadata-type}-date';
+      @if ($metadata-type != 'comment') {
+        $metadata-text: #{$metadata-text} + ', .pp-#{$metadata-type}-terms',
+      }
+      @debug #{$metadata-text};
+      #{$metadata-text} {
         // Flex item
         @supports not (flex-basis: fit-content) {
           flex: 0 1 auto;
@@ -106,41 +109,43 @@
         // End of flex item
       }
 
-      .pp-#{$metadata-type}-terms {
-        // background-color: palevioletred;
-        // border: 1px solid palevioletred;
-        // Flex item
-        align-self: center;
-        // End of flex item
-        // Flex container
-        column-gap: calc(1 * var(--pp--space--hor));
-        row-gap: 0;
-        display: flex;
-        flex-flow: row wrap;
-        // End of flex container
-        &-category {
-          // background-color: rosybrown;
-          // border: 1px solid rosybrown;
+      @if ($metadata-type != 'comment') {
+        .pp-#{$metadata-type}-terms {
+          // background-color: palevioletred;
+          // border: 1px solid palevioletred;
           // Flex item
-        @supports not (flex-basis: fit-content) {
-          flex: 0 1 auto;
-        }
-        @supports (flex-basis: fit-content) {
-          flex: 0 1 fit-content;
-        }
+          align-self: center;
           // End of flex item
-        }
-        &-post_tag {
-          // background-color: mistyrose;
-          // border: 1px solid mistyrose;
-          // Flex item
-        @supports not (flex-basis: fit-content) {
-          flex: 0 1 auto;
-        }
-        @supports (flex-basis: fit-content) {
-          flex: 0 1 fit-content;
-        }
-          // End of flex item
+          // Flex container
+          column-gap: calc(1 * var(--pp--space--hor));
+          row-gap: 0;
+          display: flex;
+          flex-flow: row wrap;
+          // End of flex container
+          &-category {
+            // background-color: rosybrown;
+            // border: 1px solid rosybrown;
+            // Flex item
+          @supports not (flex-basis: fit-content) {
+            flex: 0 1 auto;
+          }
+          @supports (flex-basis: fit-content) {
+            flex: 0 1 fit-content;
+          }
+            // End of flex item
+          }
+          &-post_tag {
+            // background-color: mistyrose;
+            // border: 1px solid mistyrose;
+            // Flex item
+          @supports not (flex-basis: fit-content) {
+            flex: 0 1 auto;
+          }
+          @supports (flex-basis: fit-content) {
+            flex: 0 1 fit-content;
+          }
+            // End of flex item
+          }
         }
       }
     }

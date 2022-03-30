@@ -842,16 +842,12 @@ ol, ul, dl {
   row-gap: calc(0 * var(--pp--space--ver));
 }
 @supports not (flex-basis: fit-content) {
-  .pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author,
-.pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-date,
-.pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-terms {
+  .pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author, .pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-date, .pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-terms {
     flex: 0 1 auto;
   }
 }
 @supports (flex-basis: fit-content) {
-  .pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author,
-.pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-date,
-.pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-terms {
+  .pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author, .pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-date, .pp-loop .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-terms {
     flex: 0 1 fit-content;
   }
 }
@@ -1042,9 +1038,7 @@ ol, ul, dl {
   row-gap: calc(0 * var(--pp--space--ver));
 }
 @supports not (flex-basis: fit-content) {
-  .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author,
-.single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-date,
-.single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-terms,
+  .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author, .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-date, .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-terms,
 .page .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author,
 .page .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-date,
 .page .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-terms {
@@ -1052,9 +1046,7 @@ ol, ul, dl {
   }
 }
 @supports (flex-basis: fit-content) {
-  .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author,
-.single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-date,
-.single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-terms,
+  .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author, .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-date, .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-terms,
 .page .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author,
 .page .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-date,
 .page .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-terms {
@@ -1283,9 +1275,7 @@ ol, ul, dl {
   row-gap: calc(0 * var(--pp--space--ver));
 }
 @supports not (flex-basis: fit-content) {
-  .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author,
-.single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-date,
-.single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-terms,
+  .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author, .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-date, .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-terms,
 .page .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author,
 .page .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-date,
 .page .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-terms {
@@ -1293,9 +1283,7 @@ ol, ul, dl {
   }
 }
 @supports (flex-basis: fit-content) {
-  .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author,
-.single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-date,
-.single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-terms,
+  .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author, .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-date, .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-terms,
 .page .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author,
 .page .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-date,
 .page .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-terms {
@@ -1520,14 +1508,14 @@ ol, ul, dl {
   position: relative;
   top: 10px;
 }
-.pp-comment-list .pp-comment-individual {
+.pp-comment-list .pp-comment-item .pp-comment-individual {
   display: grid;
   gap: 0;
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas: "comment-header" "comment-body" "comment-footer";
 }
-.pp-comment-list .pp-comment-individual .pp-comment-metadata {
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata {
   grid-area: metadata;
   display: flex;
   flex-flow: row wrap;
@@ -1535,20 +1523,16 @@ ol, ul, dl {
   row-gap: calc(0 * var(--pp--space--ver));
 }
 @supports not (flex-basis: fit-content) {
-  .pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author,
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-date,
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-terms {
+  .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author, .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-date {
     flex: 0 1 auto;
   }
 }
 @supports (flex-basis: fit-content) {
-  .pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author,
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-date,
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-terms {
+  .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author, .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-date {
     flex: 0 1 fit-content;
   }
 }
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author {
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author {
   display: grid;
   column-gap: calc(1.5 * var(--pp--space--hor));
   row-gap: 0;
@@ -1556,59 +1540,32 @@ ol, ul, dl {
   grid-template-rows: auto;
   grid-template-areas: "author-avatar author-content";
 }
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author-avatar {
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author-avatar {
   margin: inherit;
   grid-area: author-avatar;
   place-self: center end;
 }
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author-content {
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author-content {
   grid-area: author-content;
   align-self: center;
 }
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-author-content-name {
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author-content-name {
   margin: 0;
 }
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-date {
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-date {
   align-self: center;
 }
-.pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-terms {
-  align-self: center;
-  column-gap: calc(1 * var(--pp--space--hor));
-  row-gap: 0;
-  display: flex;
-  flex-flow: row wrap;
-}
-@supports not (flex-basis: fit-content) {
-  .pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-terms-category {
-    flex: 0 1 auto;
-  }
-}
-@supports (flex-basis: fit-content) {
-  .pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-terms-category {
-    flex: 0 1 fit-content;
-  }
-}
-@supports not (flex-basis: fit-content) {
-  .pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-terms-post_tag {
-    flex: 0 1 auto;
-  }
-}
-@supports (flex-basis: fit-content) {
-  .pp-comment-list .pp-comment-individual .pp-comment-metadata .pp-comment-terms-post_tag {
-    flex: 0 1 fit-content;
-  }
-}
-.pp-comment-list .pp-comment-individual .pp-comment-header {
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-header {
   grid-area: comment-header;
 }
-.pp-comment-list .pp-comment-individual .pp-comment-body {
 .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-header .pp-comment-notice-awaiting_moderation {
   font-weight: bolder;
   flex-basis: 100%;
 }
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-body {
   grid-area: comment-body;
 }
-.pp-comment-list .pp-comment-individual .pp-comment-footer {
+.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-footer {
   font-size: inherit;
   grid-area: comment-footer;
 }
