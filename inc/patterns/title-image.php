@@ -4,7 +4,7 @@
  * @package Panda-Puss
  * @since 0.0.4
  */
-$image = get_stylesheet_directory_uri() . '/assets/images/beach.jpg';
+$image = get_stylesheet_directory_uri() . '/assets/images/pandas.jpg';
 $content = '
 <!-- wp:cover {"url":"' . $image . '","dimRatio":50,"className":"pp-cover"}  -->
 <div class="wp-block-cover pp-cover">
