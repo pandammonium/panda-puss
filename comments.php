@@ -181,14 +181,14 @@ if ( post_password_required() ) {
  * @since 0.0.4
  */
 function comments_pagination($position = '') {
-  $nav_class = 'pp-comments-navigation';
+  $nav_class = 'pp-pagination';
   if ($position !== '') {
     $nav_class .= ' pp-comments-navigation-' . $position;
   }
   ?>
   <nav class="<?php echo $nav_class; ?>">
-    <div class="pp-comments-pagination-previous"><?php previous_comments_link('previous comments'); ?></div>
-    <div class="pp-comments-pagination-next"><?php next_comments_link('next comments'); ?></div>
+    <div class="pp-pagination-previous"><?php previous_comments_link('previous comments'); ?></div>
+    <div class="pp-pagination-next"><?php next_comments_link('next comments'); ?></div>
   </nav>
   <?php
 }

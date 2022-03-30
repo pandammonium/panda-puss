@@ -2,39 +2,37 @@
 @use 'pagination';
 @use '../initialise/colours';
 
-.pp-loop {
+.pp-template,
+.pp-comment-list {
   // @debug #{&};
-  .pp-template,
-  .pp-comment-list {
-    // background-color: pink;
-    // border: 1px solid pink;
-    // Flex container
-    align-content: stretch;
-    align-items: stretch;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: calc(1 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
-    justify-content: stretch;
-    // End of flex container
-    .pp-comment-item {
-      // background-color: palegreen;
-      // border: 1px solid palegreen;
-      width: 100%;
-      // Flex item
-      flex: 0 1 auto;
-      // End of flex item
-    }
-  }
-  @include pagination.pagination;
-  .pp-template {
-    // @debug #{&};
+  // background-color: pink;
+  // border: 1px solid pink;
+  // Flex container
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: calc(1 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
+  justify-content: stretch;
+  // End of flex container
+  .pp-comment-item {
     // background-color: palegreen;
-    .wp-block-post {
-      // @debug #{&};
-      // Grid container
-      @include post-content.post-content('excerpt');
-      // End of grid contaaner
-    }
+    // border: 1px solid palegreen;
+    width: 100%;
+    // Flex item
+    flex: 0 1 auto;
+    // End of flex item
+  }
+}
+@include pagination.pagination;
+.pp-template {
+  // @debug #{&};
+  // background-color: palegreen;
+  .wp-block-post {
+    // @debug #{&};
+    // Grid container
+    @include post-content.post-content('excerpt');
+    // End of grid contaaner
   }
 }
 
