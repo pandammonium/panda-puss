@@ -87,7 +87,7 @@ class PP_Walker_Comment extends Walker_Comment {
           </div>
 
           <?php if ( '0' == $comment->comment_approved ) : ?>
-          <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
+          <p class="pp-comment-notice-awaiting_moderation"><?php echo $moderation_note; ?></p>
           <?php endif; ?>
         </header>
 
