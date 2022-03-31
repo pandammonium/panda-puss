@@ -19,7 +19,7 @@
     // Grid container
     display: grid;
     grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: repeat(3, min-content);
     column-gap: calc(2 * var(--pp--space--hor));
     row-gap: calc(1 * var(--pp--space--ver));
     place-content: stretch;

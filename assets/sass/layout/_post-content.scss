@@ -6,6 +6,7 @@
   // @debug "content type: #{$content-type}";
 
   $article: "\"article\"";
+  $num-rows: 0;
 
   $grid-areas: #{$article};
   @if $content-type == "content" {
@@ -13,8 +14,10 @@
     @if ($include-comments == true) {
       $single-comments: "\"post-comments\"";
       $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
+      $num-rows: 3;
     } @else {
       $grid-areas: #{$grid-areas} + " "  + #{$single-nav};
+      $num-rows: 2;
     }
   } @else if $content-type == 'excerpt' {
   } @else {
@@ -31,10 +34,10 @@
     // Grid container
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto;
+    grid-template-rows: repeat($num-rows, min-content);;
     grid-template-areas: #{$grid-areas};
     column-gap: calc(2 * var(--pp--space--hor));
-    row-gap: calc(1 * var(--pp--space--ver));
+    row-gap: calc(0.5 * var(--pp--space--ver));
     // End of grid container
 
     .pp-article {

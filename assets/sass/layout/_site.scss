@@ -1,6 +1,7 @@
 $site-width: 1000px !default;
 
 .wp-site-blocks {
+  $row-gap: calc(1 * var(--pp--space--ver));
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
   height: auto;
@@ -8,17 +9,19 @@ $site-width: 1000px !default;
   padding: calc(0 * var(--pp--space--ver)) calc(5 * var(--pp--space--hor));
   width: 90vw;
   max-width: $site-width;
+  min-height: calc(100vh - (2 * $row-gap));
+
   // Grid container
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: min-content 1fr min-content;
   grid-template-areas:
     "header"
     "content"
     "footer"
   ;
   column-gap: 0;
-  row-gap: calc(1 * var(--pp--space--ver));
+  row-gap: $row-gap;
   // End of grid container
 
   .pp-header {

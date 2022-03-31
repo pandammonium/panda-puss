@@ -127,7 +127,7 @@ if ( post_password_required() ) {
       )
     ),
     'logged_in_as'         => sprintf(
-      '<p class="pp-comment-logged-in-as">%s%s</p>',
+      '<p class="pp-comment-form-logged-in-as">%s%s</p>',
       sprintf(
         /* translators: 1: Edit user link, 2: Accessibility text, 3: User name, 4: Logout URL. */
         __( 'Logged in as <a href="%1$s" aria-label="%2$s">%3$s</a>. <a href="%4$s">Log out?</a>' ),
@@ -153,7 +153,7 @@ if ( post_password_required() ) {
     'id_form'              => 'pp-comment-form',
     'id_submit'            => 'pp-comment-form-submit',
     'class_container'      => 'pp-comment-respond',
-    'class_form'           => 'pp-comment-form',
+    'class_form'           => 'pp-comment-form ' . (is_user_logged_in() ? 'pp-user_is_logged_in' : 'pp-user_is_not_logged_in'),
     'class_submit'         => 'pp-comment-form-submit',
     'name_submit'          => 'submit',
     'title_reply'          => __( 'What do you think?' ),

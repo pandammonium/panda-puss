@@ -557,9 +557,10 @@ ol, ul, dl {
   padding: calc(0 * var(--pp--space--ver)) calc(5 * var(--pp--space--hor));
   width: 90vw;
   max-width: 1200px;
+  min-height: calc(100vh - 2 * 1 * var(--pp--space--ver));
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: min-content 1fr min-content;
   grid-template-areas: "header" "content" "footer";
   column-gap: 0;
   row-gap: calc(1 * var(--pp--space--ver));
@@ -789,10 +790,10 @@ ol, ul, dl {
 .pp-template .wp-block-post {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(0, min-content);
   grid-template-areas: "article";
   column-gap: calc(2 * var(--pp--space--hor));
-  row-gap: calc(1 * var(--pp--space--ver));
+  row-gap: calc(0.5 * var(--pp--space--ver));
 }
 .pp-template .wp-block-post .pp-article {
   grid-area: article;
@@ -803,7 +804,7 @@ ol, ul, dl {
   padding: 0;
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(3, min-content);
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
   place-content: stretch;
@@ -973,10 +974,10 @@ ol, ul, dl {
 .block-editor-block-list__layout .pp-main:not(.pp-front-page) {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(3, min-content);
   grid-template-areas: "article" "navigation" "post-comments";
   column-gap: calc(2 * var(--pp--space--hor));
-  row-gap: calc(1 * var(--pp--space--ver));
+  row-gap: calc(0.5 * var(--pp--space--ver));
 }
 .single .pp-main:not(.pp-front-page) .pp-article,
 .page .pp-main:not(.pp-front-page) .pp-article,
@@ -991,7 +992,7 @@ ol, ul, dl {
   padding: 0;
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(3, min-content);
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
   place-content: stretch;
@@ -1249,10 +1250,10 @@ ol, ul, dl {
 .block-editor-block-list__layout .pp-main.pp-front-page {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(0, min-content);
   grid-template-areas: "article";
   column-gap: calc(2 * var(--pp--space--hor));
-  row-gap: calc(1 * var(--pp--space--ver));
+  row-gap: calc(0.5 * var(--pp--space--ver));
 }
 .single .pp-main.pp-front-page .pp-article,
 .page .pp-main.pp-front-page .pp-article,
@@ -1267,7 +1268,7 @@ ol, ul, dl {
   padding: 0;
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(3, min-content);
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
   place-content: stretch;
@@ -1587,7 +1588,7 @@ ol, ul, dl {
   display: grid;
   gap: 0;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(3, min-content);
   grid-template-areas: "comment-header" "comment-body" "comment-footer";
 }
 .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata {
@@ -1650,10 +1651,15 @@ ol, ul, dl {
   column-gap: 0;
   row-gap: calc(0.5 * var(--pp--space--ver));
   grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas: "comment-form-comment" "comment-form-author" "comment-form-notes" "comment-form-email" "comment-form-url" "comment-form-cookies" "comment-form-submit";
+  grid-template-rows: repeat(3, min-content);
   place-content: center stretch;
   place-items: center stretch;
+}
+.pp-comment-form.pp-user_is_not_logged_in {
+  grid-template-areas: "comment-form-comment" "comment-form-author" "comment-form-notes" "comment-form-email" "comment-form-url" "comment-form-cookies" "comment-form-submit";
+}
+.pp-comment-form.pp-user_is_logged_in {
+  grid-template-areas: "comment-form-comment" "comment-form-notes" "comment-form-submit";
 }
 .pp-comment-form-author {
   grid-area: comment-form-author;
@@ -1667,7 +1673,7 @@ ol, ul, dl {
 .pp-comment-form-comment {
   grid-area: comment-form-comment;
 }
-.pp-comment-form-notice-notes {
+.pp-comment-form-logged-in-as, .pp-comment-form-notice-notes {
   grid-area: comment-form-notes;
 }
 .pp-comment-form-cookies_consent {
