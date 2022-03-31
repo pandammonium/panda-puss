@@ -18,6 +18,18 @@
         }
       }
     }
+    &-image {
+      &.is-style-circle-mask {
+        img {
+          border-radius: 500px;
+        }
+      }
+      &.is-style-rounded {
+        img {
+          border-radius: 100px;
+        }
+      }
+    }
     &-navigation {
       &__submenu {
         &-icon {
