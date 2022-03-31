@@ -22,7 +22,7 @@
       @if ($metadata-type != 'comment') {
         $metadata-text: #{$metadata-text} + ', .pp-#{$metadata-type}-terms',
       }
-      @debug #{$metadata-text};
+      // @debug #{$metadata-text};
       #{$metadata-text} {
         // Flex item
         @supports not (flex-basis: fit-content) {
