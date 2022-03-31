@@ -5,7 +5,8 @@ $include-comments: true !default;
 // Used by single post, page, etc.
 
 .single,
-.page {
+.page,
+.block-editor-block-list__layout {
   .pp-main {
     // @debug #{&};
     // background-color: palegreen;
@@ -19,7 +20,7 @@ $include-comments: true !default;
     &.pp-front-page {
       // Currently acts like it's in the loop, even though it's a page.
       // Grid container
-      // @debug #{&};
+      @debug #{&};
       @include post-content.post-content('excerpt', $include-comments);
       // End of grid container
       .pp-template.pp-front-page {
