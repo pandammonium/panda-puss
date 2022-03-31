@@ -537,15 +537,7 @@ template {
   --pp--space--ver: calc(2.0 * 1ch);
 }
 
-ol, ul, menu, dir,
-p, dl, multicol,
-blockquote, figure,
-h1, h2, h3, h4, h5, h6,
-:is(article, aside, nav, section) h1,
-input,
-.wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent,
-button, ::file-selector-button, input:is([type=reset], [type=button], [type=submit]),
-.wp-block-post-comments input:not([type=submit]):not([type=checkbox]), .wp-block-post-comments textarea,
+ol, ul, menu, dir, p, dl, multicol, blockquote, figure, h1, h2, h3, h4, h5, h6, :is(article, aside, nav, section) h1, input,
 :root {
   margin: 0;
   margin-block: 0;
@@ -750,19 +742,13 @@ ol, ul, dl {
   column-gap: calc(4 * var(--pp--space--hor));
   row-gap: calc(0.5 * var(--pp--space--ver));
 }
-.pp-template,
-.pp-comment-list {
+.pp-template {
   align-content: stretch;
   align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
   gap: calc(1 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
   justify-content: stretch;
-}
-.pp-template .pp-comment-item,
-.pp-comment-list .pp-comment-item {
-  width: 100%;
-  flex: 0 1 auto;
 }
 
 .pp-pagination {
@@ -957,10 +943,6 @@ ol, ul, dl {
     grid-template-areas: "article-featured_image" "article-header" "article-body" "article-footer";
   }
 }
-.pp-template .wp-block-post .pp-comments {
-  grid-area: post-comments;
-}
-.pp-template .wp-block-post .pp-comments-pagination,
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part {
   grid-area: navigation;
   display: grid;
@@ -969,16 +951,10 @@ ol, ul, dl {
   grid-template-rows: auto;
   grid-template-areas: "navigation-link-previous navigation-link-next";
 }
-.pp-template .wp-block-post .pp-comments-pagination .pp-comments-pagination-previous,
-.pp-template .wp-block-post .pp-comments-pagination .pp-navigation-previous,
-.pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-navigation-previous {
   grid-area: navigation-link-previous;
   place-self: center start;
 }
-.pp-template .wp-block-post .pp-comments-pagination .pp-comments-pagination-next,
-.pp-template .wp-block-post .pp-comments-pagination .pp-navigation-next,
-.pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
 .pp-template .wp-block-post .pp-navigation_single.wp-block-template-part .pp-navigation-next {
   grid-area: navigation-link-next;
   place-self: center end;
@@ -989,7 +965,7 @@ ol, ul, dl {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "article" "navigation" "post-comments";
+  grid-template-areas: "article" "navigation";
   column-gap: calc(2 * var(--pp--space--hor));
   row-gap: calc(1 * var(--pp--space--ver));
 }
@@ -1184,13 +1160,7 @@ ol, ul, dl {
     grid-template-areas: "article-featured_image" "article-header" "article-body" "article-footer";
   }
 }
-.single .pp-main:not(.pp-front-page) .pp-comments,
-.page .pp-main:not(.pp-front-page) .pp-comments {
-  grid-area: post-comments;
-}
-.single .pp-main:not(.pp-front-page) .pp-comments-pagination,
 .single .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part,
-.page .pp-main:not(.pp-front-page) .pp-comments-pagination,
 .page .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part {
   grid-area: navigation;
   display: grid;
@@ -1199,24 +1169,12 @@ ol, ul, dl {
   grid-template-rows: auto;
   grid-template-areas: "navigation-link-previous navigation-link-next";
 }
-.single .pp-main:not(.pp-front-page) .pp-comments-pagination .pp-comments-pagination-previous,
-.single .pp-main:not(.pp-front-page) .pp-comments-pagination .pp-navigation-previous,
-.single .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
 .single .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part .pp-navigation-previous,
-.page .pp-main:not(.pp-front-page) .pp-comments-pagination .pp-comments-pagination-previous,
-.page .pp-main:not(.pp-front-page) .pp-comments-pagination .pp-navigation-previous,
-.page .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
 .page .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part .pp-navigation-previous {
   grid-area: navigation-link-previous;
   place-self: center start;
 }
-.single .pp-main:not(.pp-front-page) .pp-comments-pagination .pp-comments-pagination-next,
-.single .pp-main:not(.pp-front-page) .pp-comments-pagination .pp-navigation-next,
-.single .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
 .single .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part .pp-navigation-next,
-.page .pp-main:not(.pp-front-page) .pp-comments-pagination .pp-comments-pagination-next,
-.page .pp-main:not(.pp-front-page) .pp-comments-pagination .pp-navigation-next,
-.page .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
 .page .pp-main:not(.pp-front-page) .pp-navigation_single.wp-block-template-part .pp-navigation-next {
   grid-area: navigation-link-next;
   place-self: center end;
@@ -1417,13 +1375,7 @@ ol, ul, dl {
     grid-template-areas: "article-featured_image" "article-header" "article-body" "article-footer";
   }
 }
-.single .pp-main.pp-front-page .pp-comments,
-.page .pp-main.pp-front-page .pp-comments {
-  grid-area: post-comments;
-}
-.single .pp-main.pp-front-page .pp-comments-pagination,
 .single .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part,
-.page .pp-main.pp-front-page .pp-comments-pagination,
 .page .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part {
   grid-area: navigation;
   display: grid;
@@ -1432,24 +1384,12 @@ ol, ul, dl {
   grid-template-rows: auto;
   grid-template-areas: "navigation-link-previous navigation-link-next";
 }
-.single .pp-main.pp-front-page .pp-comments-pagination .pp-comments-pagination-previous,
-.single .pp-main.pp-front-page .pp-comments-pagination .pp-navigation-previous,
-.single .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
 .single .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part .pp-navigation-previous,
-.page .pp-main.pp-front-page .pp-comments-pagination .pp-comments-pagination-previous,
-.page .pp-main.pp-front-page .pp-comments-pagination .pp-navigation-previous,
-.page .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part .pp-comments-pagination-previous,
 .page .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part .pp-navigation-previous {
   grid-area: navigation-link-previous;
   place-self: center start;
 }
-.single .pp-main.pp-front-page .pp-comments-pagination .pp-comments-pagination-next,
-.single .pp-main.pp-front-page .pp-comments-pagination .pp-navigation-next,
-.single .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
 .single .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part .pp-navigation-next,
-.page .pp-main.pp-front-page .pp-comments-pagination .pp-comments-pagination-next,
-.page .pp-main.pp-front-page .pp-comments-pagination .pp-navigation-next,
-.page .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part .pp-comments-pagination-next,
 .page .pp-main.pp-front-page .pp-navigation_single.wp-block-template-part .pp-navigation-next {
   grid-area: navigation-link-next;
   place-self: center end;
@@ -1491,153 +1431,6 @@ ol, ul, dl {
       flex: 1 1 calc(100% - 3 * 1 * var(--pp--space--hor));
     }
   }
-}
-
-.pp-comment-list .children {
-  margin-bottom: 1ch;
-  margin-top: 1ch;
-}
-.pp-comment-list,
-.pp-comment-list .children {
-  display: flex;
-  flex-flow: column nowrap;
-  column-gap: 0;
-  list-style: none;
-  counter-reset: comments;
-}
-.pp-comment-list .pp-comment-item {
-  flex: 1 1 100%;
-}
-.pp-comment-list .pp-comment-item::before {
-  content: counters(comments, ".") " ";
-  counter-increment: comments;
-  float: left;
-  margin-right: calc(2 * var(--pp--space---hor));
-  position: relative;
-  top: 10px;
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual {
-  display: grid;
-  gap: 0;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: "comment-header" "comment-body" "comment-footer";
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata {
-  grid-area: metadata;
-  display: flex;
-  flex-flow: row wrap;
-  column-gap: calc(1 * var(--pp--space--hor));
-  row-gap: calc(0 * var(--pp--space--ver));
-}
-@supports not (flex-basis: fit-content) {
-  .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author, .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-date {
-    flex: 0 1 auto;
-  }
-}
-@supports (flex-basis: fit-content) {
-  .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author, .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-date {
-    flex: 0 1 fit-content;
-  }
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author {
-  display: grid;
-  column-gap: calc(1.5 * var(--pp--space--hor));
-  row-gap: 0;
-  grid-template-columns: 32px minmax(5ch, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "author-avatar author-content";
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author-avatar {
-  margin: inherit;
-  grid-area: author-avatar;
-  place-self: center end;
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author-content {
-  grid-area: author-content;
-  align-self: center;
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author-content-name {
-  margin: 0;
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-date {
-  align-self: center;
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-header {
-  grid-area: comment-header;
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-header .pp-comment-notice-awaiting_moderation {
-  font-weight: bolder;
-  flex-basis: 100%;
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-body {
-  grid-area: comment-body;
-}
-.pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-footer {
-  font-size: inherit;
-  grid-area: comment-footer;
-}
-
-.pp-comment-form {
-  display: grid;
-  column-gap: 0;
-  row-gap: calc(0.5 * var(--pp--space--ver));
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas: "comment-form-comment" "comment-form-author" "comment-form-notes" "comment-form-email" "comment-form-url" "comment-form-cookies" "comment-form-submit";
-  place-content: center stretch;
-  place-items: center stretch;
-}
-.pp-comment-form-author {
-  grid-area: comment-form-author;
-}
-.pp-comment-form-email {
-  grid-area: comment-form-email;
-}
-.pp-comment-form-url {
-  grid-area: comment-form-url;
-}
-.pp-comment-form-comment {
-  grid-area: comment-form-comment;
-}
-.pp-comment-form-notice-notes {
-  grid-area: comment-form-notes;
-}
-.pp-comment-form-cookies_consent {
-  grid-area: comment-form-cookies;
-}
-.pp-comment-form-submit {
-  grid-area: comment-form-submit;
-}
-.pp-comment-form label {
-  place-self: center stretch;
-}
-.pp-comment-form-author label, .pp-comment-form-email label, .pp-comment-form-url label, .pp-comment-form-comment label, .pp-comment-form-cookies_consent label {
-  grid-area: label;
-}
-.pp-comment-form-author input, .pp-comment-form-email input, .pp-comment-form-url input, .pp-comment-form-comment input, .pp-comment-form-cookies_consent input {
-  grid-area: input;
-}
-.pp-comment-form-cookies_consent input {
-  place-self: center end;
-}
-.pp-comment-form-comment textarea {
-  grid-area: input;
-}
-.pp-comment-form-author, .pp-comment-form-email, .pp-comment-form-url, .pp-comment-form-comment, .pp-comment-form-cookies_consent {
-  display: grid;
-  grid-template-columns: clamp(10%, 18ch, 25%) 1fr;
-  grid-template-rows: auto;
-  column-gap: calc(1.5 * var(--pp--space--hor));
-  row-gap: 0;
-  place-content: center stretch;
-  place-items: start stretch;
-}
-.pp-comment-form-author, .pp-comment-form-email, .pp-comment-form-url, .pp-comment-form-comment {
-  grid-template-areas: "label input";
-}
-.pp-comment-form-cookies_consent {
-  grid-template-areas: "input label";
 }
 
 .pp-footer {

@@ -1,17 +1,26 @@
-@use 'initialise/initialise.scss';
+$include-comments: true;
+
+@use 'initialise/initialise' with (
+  $include-comments: $include-comments
+);
 @use 'elements';
-@use 'layout/layout';
+@use 'layout/layout' with (
+  $include-comments: $include-comments
+);
 @use 'styling/styling';
 
 main {
+  // temporary
   outline: 1px solid red;
 }
 aside {
+  // temporary
   outline: 1px solid blue;
 }
 
 header,
 footer {
+  // temporary
   outline: 1px solid grey;
 }
 

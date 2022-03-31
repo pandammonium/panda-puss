@@ -1,7 +1,7 @@
 @use 'sass:string';
 @use 'article';
 
-@mixin post-content($content-type) {
+@mixin post-content($content-type, $include-comments) {
 
   // @debug "content type: #{$content-type}";
 
@@ -10,8 +10,12 @@
   $grid-areas: #{$article};
   @if $content-type == "content" {
     $single-nav: "\"navigation\"";
-    $single-comments: "\"post-comments\"";
-    $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
+    @if ($include-comments == true) {
+      $single-comments: "\"post-comments\"";
+      $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
+    } @else {
+      $grid-areas: #{$grid-areas} + " "  + #{$single-nav};
+    }
   } @else if $content-type == 'excerpt' {
   } @else {
     @error "Unknown post content type";
@@ -42,19 +46,24 @@
       @include article.article($content-type);
     }
 
-    // Single post/page comments
-    .pp-comments {
-      // background-color: darkmagenta;
-      // border: 1px solid darkmagenta;
-      // Grid item
-      grid-area: post-comments;
-      // End of grid item
+    @if ($include-comments == true) {
+      // Single post/page comments
+      .pp-comments {
+        // background-color: darkmagenta;
+        // border: 1px solid darkmagenta;
+        // Grid item
+        grid-area: post-comments;
+        // End of grid item
+      }
     }
     // End of single post/page comments
 
-    .pp-comments-pagination,
     // Single post/page navigation
-    .pp-navigation_single.wp-block-template-part {
+    $nav-classes: '.pp-navigation_single.wp-block-template-part';
+    @if ($include-comments == true) {
+      $nav-classes: #{$nav-classes} + ', .pp-comments-pagination';
+    }
+    #{$nav-classes} {
       // background-color: deeppink;
       // border: 1px solid deeppink;
       // Grid item
@@ -68,16 +77,23 @@
       grid-template-areas:
         "navigation-link-previous navigation-link-next";
       // End of grid container
-      .pp-comments-pagination-previous,
-      .pp-navigation-previous {
+      $previous: '.pp-navigation-previous';
+      @if ($include-comments == true) {
+        $previous: #{$previous} + ', .pp-comments-pagination-previous';
+      }
+      #{$previous} {
         // background-color: lightblue;
         // Grid item
         grid-area: navigation-link-previous;
         place-self: center start;
         // End of grid item
       }
-      .pp-comments-pagination-next,
-      .pp-navigation-next {
+
+      $next: '.pp-navigation-next';
+      @if ($include-comments == true) {
+        $next: #{$next} + ', .pp-comments-pagination-next';
+      }
+      #{$next} {
         // background-color: lightgreen;
         // Grid item
         grid-area: navigation-link-next;

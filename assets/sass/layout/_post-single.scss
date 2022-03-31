@@ -1,3 +1,5 @@
+$include-comments: true !default;
+
 @use 'post-content';
 
 // Used by single post, page, etc.
@@ -11,14 +13,14 @@
     &:not(.pp-front-page) {
       // @debug #{&};
       // Grid container
-      @include post-content.post-content('content');
+      @include post-content.post-content('content', $include-comments);
       // End of grid container
     }
     &.pp-front-page {
       // Currently acts like it's in the loop, even though it's a page..
       // Grid container
       // @debug #{&};
-      @include post-content.post-content('excerpt');
+      @include post-content.post-content('excerpt', $include-comments);
       // End of grid container
       .pp-template.pp-front-page {
         $col-gap: calc(1 * var(--pp--space--hor));

@@ -1,177 +1,182 @@
 @use '../initialise/colours';
 @use 'metadata';
 
-.pp-comment-list {
-  .children {
-    margin: {
-      bottom: 1ch;
-      top: 1ch;
-    };
-  }
-  &,
-  .children {
-    // Flex container
-    display: flex;
-    flex-flow: column nowrap;
-    column-gap: 0;
-    // End of flex container
-    list-style: none;
-    counter-reset: comments;
-  }
-  .pp-comment-item {
-    // background-color: lavenderblush;
-    // display: block;
-    // Flex item
-    flex: 1 1 100%;
-    // End of flex item
-    &::before {
-      // background-color: palevioletred;
-      content: counters(comments, ".") " ";
-      counter-increment: comments;
-      float: left;
-      // font-size: 32px;
-      margin-right: calc(2 * var(--pp--space---hor));
-      position: relative;
-      top: 10px;
+$include-comments: false !default;
+
+@if ($include-comments == true) {
+  .pp-comment-list {
+    .children {
+      margin: {
+        bottom: 1ch;
+        top: 1ch;
+      };
     }
-    .pp-comment-individual {
-      // background-color: bisque;
-      // border: 1px solid bisque;
-      // Grid container
-      display: grid;
-      gap: 0;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      grid-template-areas:
-        "comment-header"
-        "comment-body"
-        "comment-footer"
-      ;
-      // End of grid container
+    &,
+    .children {
+      // Flex container
+      display: flex;
+      flex-flow: column nowrap;
+      column-gap: 0;
+      // End of flex container
+      list-style: none;
+      counter-reset: comments;
+    }
+    .pp-comment-item {
+      // background-color: lavenderblush;
+      // display: block;
+      // Flex item
+      flex: 1 1 100%;
+      // End of flex item
+      &::before {
+        // background-color: palevioletred;
+        content: counters(comments, ".") " ";
+        counter-increment: comments;
+        float: left;
+        // font-size: 32px;
+        margin-right: calc(2 * var(--pp--space---hor));
+        position: relative;
+        top: 10px;
+      }
+      .pp-comment-individual {
+        // background-color: bisque;
+        // border: 1px solid bisque;
+        // Grid container
+        display: grid;
+        gap: 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "comment-header"
+          "comment-body"
+          "comment-footer"
+        ;
+        // End of grid container
 
-      @include metadata.metadata('comment');
+        @include metadata.metadata('comment');
 
-      .pp-comment-header {
-        // Grid item
-        grid-area: comment-header;
-        // End of grid item
-        .pp-comment-notice-awaiting_moderation {
-          font-weight: bolder;
-          // Flex item (metadata)
-          flex-basis: 100%;
-          // End of flex item
+        .pp-comment-header {
+          // Grid item
+          grid-area: comment-header;
+          // End of grid item
+          .pp-comment-notice-awaiting_moderation {
+            // Flex item (metadata)
+            // Force it to be on its own line:
+            clear: both;
+            flex-basis: 100%;
+            // End of flex item
+          }
+        }
+        .pp-comment-body {
+          // Grid item
+          grid-area: comment-body;
+          // End of grid item
+        }
+        .pp-comment-footer {
+          font-size: inherit;
+          // Grid item
+          grid-area: comment-footer;
+          // End of grid item
         }
       }
-      .pp-comment-body {
-        // Grid item
-        grid-area: comment-body;
-        // End of grid item
-      }
-      .pp-comment-footer {
-        font-size: inherit;
-        // Grid item
-        grid-area: comment-footer;
-        // End of grid item
-      }
     }
   }
-}
 
-.pp-comment-form {
-  // background-color: moccasin;
-  display: grid;
-  column-gap: 0;
-  row-gap: calc(0.5 * var(--pp--space--ver));
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "comment-form-comment"
-    "comment-form-author"
-    "comment-form-notes"
-    "comment-form-email"
-    "comment-form-url"
-    "comment-form-cookies"
-    "comment-form-submit"
-  ;
-  place-content: center stretch;
-  place-items: center stretch;
-  // & :nth-child(n) {
-  //   background-color: indianred;
-  //   & :nth-child(2) {
-  //     background-color: colours.$pp--primary-bg;
-  //   }
-  // }
-
-  &-author {
-    grid-area: comment-form-author;
-  }
-  &-email {
-    grid-area: comment-form-email;
-  }
-  &-url {
-    grid-area: comment-form-url;
-  }
-  &-comment {
-    grid-area: comment-form-comment;
-  }
-  &-notice-notes {
-    grid-area: comment-form-notes;
-  }
-  &-cookies_consent {
-    grid-area: comment-form-cookies;
-  }
-  &-submit {
-    grid-area: comment-form-submit;
-  }
-  label {
-    place-self: center stretch;
-  }
-  &-author,
-  &-email,
-  &-url,
-  &-comment,
-  &-cookies_consent {
-    label {
-      grid-area: label;
-    }
-    input {
-      grid-area: input;
-    }
-  }
-  &-cookies_consent {
-    & input {
-      place-self: center end;
-    }
-  }
-  &-comment {
-    textarea {
-      grid-area: input;
-    }
-  }
-  &-author,
-  &-email,
-  &-url,
-  &-comment,
-  &-cookies_consent {
+  .pp-comment-form {
+    // background-color: moccasin;
     display: grid;
-    grid-template-columns: clamp(10%, 18ch, 25%) 1fr;
+    column-gap: 0;
+    row-gap: calc(0.5 * var(--pp--space--ver));
+    grid-template-columns: 100%;
     grid-template-rows: auto;
-    column-gap: calc(1.5 * var(--pp--space--hor));
-    row-gap: 0;
+    grid-template-areas:
+      "comment-form-comment"
+      "comment-form-author"
+      "comment-form-notes"
+      "comment-form-email"
+      "comment-form-url"
+      "comment-form-cookies"
+      "comment-form-submit"
+    ;
     place-content: center stretch;
-    place-items: start stretch;
-  }
-  &-author,
-  &-email,
-  &-url,
-  &-comment {
-    grid-template-areas:
-      "label input"
-    ;
-  }
-  &-cookies_consent {
-    grid-template-areas:
-      "input label"
-    ;
+    place-items: center stretch;
+    // & :nth-child(n) {
+    //   background-color: indianred;
+    //   & :nth-child(2) {
+    //     background-color: colours.$pp--primary-bg;
+    //   }
+    // }
+
+    &-author {
+      grid-area: comment-form-author;
+    }
+    &-email {
+      grid-area: comment-form-email;
+    }
+    &-url {
+      grid-area: comment-form-url;
+    }
+    &-comment {
+      grid-area: comment-form-comment;
+    }
+    &-notice-notes {
+      grid-area: comment-form-notes;
+    }
+    &-cookies_consent {
+      grid-area: comment-form-cookies;
+    }
+    &-submit {
+      grid-area: comment-form-submit;
+    }
+    label {
+      place-self: center stretch;
+    }
+    &-author,
+    &-email,
+    &-url,
+    &-comment,
+    &-cookies_consent {
+      label {
+        grid-area: label;
+      }
+      input {
+        grid-area: input;
+      }
+    }
+    &-cookies_consent {
+      & input {
+        place-self: center end;
+      }
+    }
+    &-comment {
+      textarea {
+        grid-area: input;
+      }
+    }
+    &-author,
+    &-email,
+    &-url,
+    &-comment,
+    &-cookies_consent {
+      display: grid;
+      grid-template-columns: clamp(10%, 18ch, 25%) 1fr;
+      grid-template-rows: auto;
+      column-gap: calc(1.5 * var(--pp--space--hor));
+      row-gap: 0;
+      place-content: center stretch;
+      place-items: start stretch;
+    }
+    &-author,
+    &-email,
+    &-url,
+    &-comment {
+      grid-template-areas:
+        "label input"
+      ;
+    }
+    &-cookies_consent {
+      grid-template-areas:
+        "input label"
+      ;
+    }
   }
 }
