@@ -36,7 +36,7 @@ if ( ! function_exists( 'panda_puss_theme_setup' ) ) :
    * Enable support for editor styles.
    */
   add_theme_support( 'editor-styles' );
-  // add_editor_style( 'assets/css/editor.css' );
+  add_editor_style( get_stylesheet_directory_uri() . '/editor.css' );
 
   /**
    * Enable support for block styles.
