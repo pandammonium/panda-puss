@@ -17,7 +17,7 @@ $include-comments: true !default;
       // End of grid container
     }
     &.pp-front-page {
-      // Currently acts like it's in the loop, even though it's a page..
+      // Currently acts like it's in the loop, even though it's a page.
       // Grid container
       // @debug #{&};
       @include post-content.post-content('excerpt', $include-comments);
