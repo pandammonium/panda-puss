@@ -9,7 +9,7 @@
 if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
 
   /**
-   * Registers patterns and categories.
+   * Registers patterns and their categories.
    *
    * @since Panda-Puss 0.0.4
    *
