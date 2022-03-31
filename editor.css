@@ -684,6 +684,7 @@ ol, ul, dl {
   display: none;
 }
 .pp-header-no_titles .pp-header-logo .custom-logo {
+  height: auto;
   width: 100%;
 }
 .pp-header-no_titles .pp-header-navigation {
