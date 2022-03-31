@@ -81,5 +81,6 @@ $-pp--colour--pigment-indigo: hsla($-pp--colour--hue--270, $-pp--colour--saturat
 $-pp--colour--fresh-aubergine: hsla($-pp--colour--hue--300, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
 $-pp--colour--siren: hsla($-pp--colour--hue--330, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--transparency--1-00);
 
-$pp--primary-fg: $-pp--colour--tundora !default;
-$pp--primary-bg: $-pp--colour--white !default;
+// If the round brackets are absent, Sass doesn't recognise the !default flag; presumably because the value is a variable:
+$pp--primary-fg: ($-pp--colour--tundora) !default;
+$pp--primary-bg: ($-pp--colour--white) !default;
