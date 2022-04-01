@@ -14,8 +14,8 @@
       // Flex container
       display: flex;
       flex-flow: row wrap;
-      column-gap: calc(1 * var(--pp--space--hor));
-      row-gap: calc(0 * var(--pp--space--ver));;
+      column-gap: 0;//calc(1 * var(--pp--space--hor));
+      row-gap: 0;//calc(0 * var(--pp--space--ver));;
       // End of flex container
 
       $metadata-text: '.pp-#{$metadata-type}-author, .pp-#{$metadata-type}-date';
@@ -39,7 +39,7 @@
         // border: 1px solid darkkhaki;
         // Grid container
         display: grid;
-        column-gap: calc(1.5 * var(--pp--space--hor));
+        column-gap: 0;//calc(1.5 * var(--pp--space--hor));
         row-gap: 0;
         $avatar-width: 0;
         @if $metadata-type == 'comment' {
@@ -118,7 +118,7 @@
           align-self: center;
           // End of flex item
           // Flex container
-          column-gap: calc(1 * var(--pp--space--hor));
+          column-gap: 0;//calc(1 * var(--pp--space--hor));
           row-gap: 0;
           display: flex;
           flex-flow: row wrap;
