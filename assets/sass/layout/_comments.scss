@@ -29,7 +29,7 @@ $include-comments: false !default;
       // End of flex item
       &::before {
         // background-color: palevioletred;
-        content: counters(comments, ".") " ";
+        content: counters(comments, ".") "\00A0";
         counter-increment: comments;
         float: left;
         // font-size: 32px;
