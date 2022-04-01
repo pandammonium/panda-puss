@@ -134,9 +134,10 @@ footer {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-}
+// h1,h2,h3,h4,h5,h6 {
+  // Already set in initialise module:
+//   margin: 0;
+// }
 $header-font-size: calc(2 * fonts.$pp--primary-font-size);
 h1 {
   font-size: max(21px, calc(1.0 * $header-font-size));

@@ -94,10 +94,10 @@
           } @else if $metadata-type == 'article' {
           $name-class: ".wp-block-post-author__name";
           }
-          #{$name-class} {
-            // border: 1px solid blue;
-            margin: 0;
-          }
+          // #{$name-class} {
+          //   // border: 1px solid blue;
+          //   margin: 0;
+          // }
         }
       }
 

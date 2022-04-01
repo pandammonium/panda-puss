@@ -7,12 +7,17 @@
   .wp-block {
     // There is no wp-block; it's used for convenince with suffixes to create the WP blocks:
     &-embed {
-      margin: auto;
+      margin: 0 {
+        left: auto;
+        right: auto;
+      };
       &__wrapper {
-        margin: auto;
         .wp-embedded-content {
           display: block;
-          margin: auto;
+          margin: 0 {
+            left: auto;
+            right: auto;
+          };
           overflow: auto;
           padding: 0;
         }

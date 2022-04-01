@@ -4,9 +4,11 @@ $site-width: 1000px !default;
   $row-gap: calc(1 * var(--pp--space--ver));
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
-  height: auto;
-  margin: auto;
-  padding: calc(0 * var(--pp--space--ver)) calc(5 * var(--pp--space--hor));
+  margin: {
+    // Centre the site content:
+    left: auto;
+    right: auto;
+  };
   width: 90vw;
   max-width: $site-width;
   min-height: calc(100vh - (2 * $row-gap));
