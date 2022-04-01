@@ -30,3 +30,7 @@ $reset-margin: 'ol,ul, menu, dir,p, dl, multicol,blockquote, figure,h1,h2,h3,h4,
 ol,ul,dl {
   padding-inline-start: 1.5ch;
 }
+
+img {
+  background: colours.$pp--primary-bg;
+}

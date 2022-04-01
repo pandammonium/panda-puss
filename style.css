@@ -551,6 +551,10 @@ ol, ul, dl {
   padding-inline-start: 1.5ch;
 }
 
+img {
+  background: white;
+}
+
 .wp-site-blocks {
   height: auto;
   margin: auto;
