@@ -89,6 +89,7 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  overflow-wrap: break-word;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -120,6 +121,7 @@ body {
   hyphenate-limit-lines: 2;
   hyphenate-limit-last: always;
   hyphenate-limit-zone: 8%;
+  word-break: normal;
 }
 
 body {
