@@ -863,6 +863,7 @@ svg {
   grid-template-areas: "author-avatar author-content";
 }
 .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
+  height: 48px;
   grid-area: author-avatar;
   place-self: center end;
 }
@@ -1058,6 +1059,7 @@ svg {
 .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__avatar,
 .page .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__avatar,
 .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
+  height: 48px;
   grid-area: author-avatar;
   place-self: center end;
 }
@@ -1308,6 +1310,7 @@ svg {
 .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__avatar,
 .page .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__avatar,
 .block-editor-block-list__layout .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__avatar {
+  height: 48px;
   grid-area: author-avatar;
   place-self: center end;
 }
@@ -1562,6 +1565,7 @@ svg {
   grid-template-areas: "author-avatar author-content";
 }
 .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author-avatar {
+  height: 32px;
   grid-area: author-avatar;
   place-self: center end;
 }

@@ -41,10 +41,13 @@
         display: grid;
         column-gap: 0;//calc(1.5 * var(--pp--space--hor));
         row-gap: 0;
+        $avatar-height: 0;
         $avatar-width: 0;
         @if $metadata-type == 'comment' {
+          $avatar-height: 32px;
           $avatar-width: 32px;
         } @else if $metadata-type == 'article' {
+          $avatar-height: 48px;
           $avatar-width: 48px;
         }
         grid-template-columns: $avatar-width minmax(5ch, 1fr);
@@ -59,22 +62,20 @@
         @if $metadata-type == 'comment' {
           $avatar-class: "&-avatar";
         } @else if $metadata-type == 'article' {
-        $avatar-class: ".wp-block-post-author__avatar";
+          $avatar-class: ".wp-block-post-author__avatar";
         }
         #{$avatar-class} {
           // background-color: greenyellow;
           // border: 1px solid greenyellow;
           // outline: 1px solid greenyellow;
-          // Need to override an 'inline' margin setting:
-          margin: inherit;
+          height: $avatar-height;
           // Grid item
           grid-area: author-avatar;
           place-self: center end;
           // End of grid item
-          .avatar {
-            // border: 1px solid red;
-            // vertical-align: bottom;
-          }
+          // .avatar {
+          //   // border: 1px solid red;
+          // }
         }
         $content-class: "";
         @if $metadata-type == 'comment' {
