@@ -3,7 +3,7 @@
   // Grid container
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: min-content;
   grid-template-areas:
     "credits"
   ;

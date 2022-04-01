@@ -7,7 +7,7 @@
     column-gap: calc(2 * var(--pp--space--hor));
     row-gap: 0;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: min-content;
     grid-template-areas:
       "query-pagination-previous query-pagination-numbers query-pagination-next"
     ;

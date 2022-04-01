@@ -49,7 +49,8 @@
         }
         grid-template-columns: $avatar-width minmax(5ch, 1fr);
         // @debug #{$avatar-width};
-        grid-template-rows: auto;
+        grid-template-rows: min-content;
+        // grid-template-rows: clamp(30px, $avatar-height, 60px);
         grid-template-areas:
           "author-avatar author-content"
           ;
