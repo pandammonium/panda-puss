@@ -1512,7 +1512,7 @@ img {
   flex: 1 1 100%;
 }
 .pp-comment-list .pp-comment-item::before {
-  content: counters(comments, ".") " ";
+  content: counters(comments, ".") " ";
   counter-increment: comments;
   float: left;
   margin-right: calc(2 * var(--pp--space---hor));
