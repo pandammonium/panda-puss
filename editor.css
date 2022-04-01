@@ -537,7 +537,7 @@ template {
   --pp--space--ver: calc(2.0 * 1ch);
 }
 
-ol, ul, menu, dir, p, dl, multicol, blockquote, figure, h1, h2, h3, h4, h5, h6, :is(article, aside, nav, section) h1, input,
+ol, ul, menu, dir, p, dl, multicol, blockquote, figure, h1, h2, h3, h4, h5, h6, :is(article, aside, nav, section) h1, input, .wp-block-post-author__bio,
 :root {
   margin: 0;
   margin-block: 0;

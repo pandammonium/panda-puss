@@ -9,10 +9,10 @@
 
 $include-comments: false !default;
 
-$reset-margin: 'ol,ul, menu, dir,p, dl, multicol,blockquote, figure,h1,h2,h3,h4,h5,h6, :is(article, aside, nav, section) h1, input';
+$reset-margin: 'ol,ul, menu, dir,p, dl, multicol,blockquote, figure,h1,h2,h3,h4,h5,h6, :is(article, aside, nav, section) h1, input, .wp-block-post-author__bio';
 
 @if ($include-comments == true) {
-  $reset-margin: #{$reset-margin} + '.wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type="reset"], [type="button"], [type="submit"]), .wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]), .wp-block-post-comments textarea';
+  $reset-margin: #{$reset-margin} + ', .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type="reset"], [type="button"], [type="submit"]), .wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]), .wp-block-post-comments textarea';
 }
 
 #{$reset-margin},
