@@ -1,4 +1,6 @@
+@use 'sass:color';
 @use 'sass:string';
+@use '../initialise/colours';
 @use 'metadata';
 
 @mixin article($content-type) {
@@ -108,17 +110,39 @@
 
   @if ($content-type == "content") {
     &.pp-focus {
-      // @debug "#{&}";
-      $image: "\"article-featured_image\"";
+      // @debug #{&};
+      .pp-article-header {
+        // Display title on overlaid on featured image:
+        position: relative;
+        text-align: center;
+        .pp-article-featured_image {
+        }
+        .pp-article-title {
+          background: radial-gradient(colours.$pp--primary-bg--alpha-075, colours.$pp--primary-bg--alpha-025);
+          font-size: 3rem;
+          left: 50%;
+          position: absolute;
+          text-shadow: 0 0 10px colours.$pp--primary-bg;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        align-content: center;
+        justify-content: center;
+      }
       $header: "\"article-header\"";
       $footer: "\"article-footer\"";
       $body: "\"article-body\"";
-      $grid-areas: #{$header} + " " + #{$image} + " " + #{$body} + " "  + #{$footer};
+      $grid-areas: #{$header} + " " + #{$body} + " "  + #{$footer};
       // @debug "grid (focus): #{$grid-areas}";
       // background-color: maroon;
       // border: 1px solid maroon;
       // Grid container
       grid-template-columns: 100%;
+      grid-template-rows: repeat(3, min-content);
       grid-template-areas:
         #{$grid-areas}
       ;
