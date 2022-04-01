@@ -837,7 +837,7 @@ svg {
   grid-area: metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: 0;
+  column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
 }
 @supports not (flex-basis: fit-content) {
@@ -1014,7 +1014,7 @@ svg {
   grid-area: metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: 0;
+  column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
 }
 @supports not (flex-basis: fit-content) {
@@ -1246,7 +1246,7 @@ svg {
   grid-area: metadata;
   display: flex;
   flex-flow: row wrap;
-  column-gap: 0;
+  column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
 }
 @supports not (flex-basis: fit-content) {

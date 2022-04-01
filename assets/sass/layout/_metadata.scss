@@ -14,7 +14,7 @@
       // Flex container
       display: flex;
       flex-flow: row wrap;
-      column-gap: 0;//calc(1 * var(--pp--space--hor));
+      column-gap: calc(1 * var(--pp--space--hor));
       row-gap: 0;//calc(0 * var(--pp--space--ver));;
       // End of flex container
 
