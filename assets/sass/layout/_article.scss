@@ -3,7 +3,7 @@
 @use '../initialise/colours';
 @use 'metadata';
 
-@mixin article($content-type) {
+@mixin article($content-type, $is-front_end) {
 
   @if $content-type != "content" and $content-type != 'excerpt' {
     @error "Unknown post content type";
@@ -111,27 +111,31 @@
   @if ($content-type == "content") {
     &.pp-focus {
       // @debug #{&};
-      .pp-article-header {
-        // Display title on overlaid on featured image:
-        position: relative;
-        text-align: center;
-        .pp-article-featured_image {
+      @if ($is-front_end == true) {
+        .pp-article-header {
+          // Display title on overlaid on featured image:
+          position: relative;
+          text-align: center;
+          // .pp-article-featured_image {
+          // }
+          .pp-article-title {
+            background:
+              radial-gradient(colours.$pp--primary-bg--alpha-075, colours.$pp--primary-bg--alpha-025)
+              ;
+            font-size: 3rem;
+            left: 50%;
+            position: absolute;
+            text-shadow: 0 0 10px colours.$pp--primary-bg;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+          }
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: stretch;
+          align-content: center;
+          justify-content: center;
         }
-        .pp-article-title {
-          background: radial-gradient(colours.$pp--primary-bg--alpha-075, colours.$pp--primary-bg--alpha-025);
-          font-size: 3rem;
-          left: 50%;
-          position: absolute;
-          text-shadow: 0 0 10px colours.$pp--primary-bg;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-        }
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: stretch;
-        align-content: center;
-        justify-content: center;
       }
       $header: "\"article-header\"";
       $footer: "\"article-footer\"";

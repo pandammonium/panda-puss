@@ -48,7 +48,7 @@
       // Grid item
       grid-area: article;
       // End of grid item
-      @include article.article($content-type);
+      @include article.article($content-type, $include-comments);
     }
 
     @if ($include-comments == true) {

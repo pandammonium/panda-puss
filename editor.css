@@ -959,29 +959,6 @@ svg {
   column-gap: 0;
   row-gap: 0;
 }
-.single .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header,
-.page .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header,
-.block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header {
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: stretch;
-  align-content: center;
-  justify-content: center;
-}
-.single .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title,
-.page .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title,
-.block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title {
-  background: radial-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));
-  font-size: 3rem;
-  left: 50%;
-  position: absolute;
-  text-shadow: 0 0 10px white;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
 .single .pp-main:not(.pp-front-page) .pp-article.pp-no-featured_image,
 .page .pp-main:not(.pp-front-page) .pp-article.pp-no-featured_image,
 .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article.pp-no-featured_image {
