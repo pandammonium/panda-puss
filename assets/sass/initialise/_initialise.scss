@@ -44,3 +44,13 @@ ol,ul,dl {
 img {
   background: colours.$pp--primary-bg;
 }
+
+.wp-block-search__button,
+.wp-block-post-comments input[type="submit"],
+input,
+button,
+svg {
+  background: colours.$pp--primary-bg;
+  border: none;
+  color: colours.$pp--primary-fg;
+}
