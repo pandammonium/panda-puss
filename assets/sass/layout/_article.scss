@@ -60,7 +60,7 @@
       // Grid container
       display: grid;
       grid-template-columns: 100%;
-      grid-template-rows: min-content;
+      grid-template-rows: fit-content;
       grid-template-areas:
         "metadata"
       ;

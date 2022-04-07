@@ -648,7 +648,7 @@ svg {
   grid-area: article-footer;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content;
+  grid-template-rows: fit-content;
   grid-template-areas: "metadata";
 }
 .pp-template .wp-block-post .pp-article-footer .pp-article-metadata {
@@ -657,6 +657,7 @@ svg {
   flex-flow: row wrap;
   column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
+  place-self: end start;
 }
 @supports not (flex-basis: fit-content) {
   .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author, .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-date, .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-terms {
@@ -846,7 +847,7 @@ svg {
   grid-area: article-footer;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content;
+  grid-template-rows: fit-content;
   grid-template-areas: "metadata";
 }
 .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata,
@@ -857,6 +858,7 @@ svg {
   flex-flow: row wrap;
   column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
+  place-self: end start;
 }
 @supports not (flex-basis: fit-content) {
   .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author, .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-date, .single .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-terms,
@@ -1152,7 +1154,7 @@ svg {
   grid-area: article-footer;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content;
+  grid-template-rows: fit-content;
   grid-template-areas: "metadata";
 }
 .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata,
@@ -1163,6 +1165,7 @@ svg {
   flex-flow: row wrap;
   column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
+  place-self: end start;
 }
 @supports not (flex-basis: fit-content) {
   .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author, .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-date, .single .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-terms,
@@ -1462,6 +1465,7 @@ svg {
   flex-flow: row wrap;
   column-gap: calc(1 * var(--pp--space--hor));
   row-gap: 0;
+  place-self: end start;
 }
 @supports not (flex-basis: fit-content) {
   .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-author, .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata .pp-comment-date {

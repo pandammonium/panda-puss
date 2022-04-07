@@ -23,7 +23,8 @@
         display: flex;
         flex-flow: row wrap;
         column-gap: $col-gap;
-        row-gap: 0;//calc(0 * var(--pp--space--ver));;
+        row-gap: 0;//calc(0 * var(--pp--space--ver));
+        place-self: end start;
         // End of flex container
 
         $metadata-text: '.pp-#{$metadata-type}-author, .pp-#{$metadata-type}-date';

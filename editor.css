@@ -644,7 +644,7 @@ svg {
   grid-area: article-footer;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content;
+  grid-template-rows: fit-content;
   grid-template-areas: "metadata";
 }
 .pp-template .wp-block-post .pp-article-featured_image {
@@ -755,7 +755,7 @@ svg {
   grid-area: article-footer;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content;
+  grid-template-rows: fit-content;
   grid-template-areas: "metadata";
 }
 .single .pp-main:not(.pp-front-page) .pp-article-featured_image,
@@ -892,7 +892,7 @@ svg {
   grid-area: article-footer;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content;
+  grid-template-rows: fit-content;
   grid-template-areas: "metadata";
 }
 .single .pp-main.pp-front-page .pp-article-featured_image,
