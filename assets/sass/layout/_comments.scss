@@ -52,7 +52,7 @@ $include-comments: false !default;
         ;
         // End of grid container
 
-        @include metadata.metadata('comment');
+        @include metadata.metadata('comment', $include-comments);
 
         .pp-comment-header {
           // Grid item

@@ -65,7 +65,7 @@
         "metadata"
       ;
       // End of grid container
-      @include metadata.metadata('article');
+      @include metadata.metadata('article', $is-front_end);
     }
     &-featured_image {
       // background-color: gold;
