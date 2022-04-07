@@ -75,6 +75,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin: auto;
   width: fit-content;
 }
+.wp-site-blocks .wp-block-query-pagination {
+  align-items: stretch;
+  column-gap: 0;
+  display: grid;
+  row-gap: 0;
+}
 
 body {
   background-color: white;
@@ -348,7 +354,7 @@ template {
   --pp--space--ver: calc(2.0 * 1ch);
 }
 
-:root, body, header, footer, div, ol, ul, menu, dir, p, dl, img, time, multicol, blockquote, figure, h1, h2, h3, h4, h5, h6, :is(article, aside, nav, section) h1, input, .wp-block, .wp-site-blocks, .wp-block-post-author__bio, .wp-block-post-template, .wp-block-search__button, .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article, .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article, .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article {
+:root, body, header, footer, div, ol, ul, menu, dir, p, dl, img, time, multicol, blockquote, figure, h1, h2, h3, h4, h5, h6, :is(article, aside, nav, section) h1, input, .wp-block, .wp-site-blocks, .wp-block-post-author__bio, .wp-block-post-template, .wp-block-search__button, .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article, .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article, .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article, .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous {
   margin: 0;
   margin-block: 0;
   margin-inline: 0;
@@ -578,9 +584,9 @@ svg {
 
 .pp-pagination {
   display: grid;
-  column-gap: calc(2 * var(--pp--space--hor));
+  column-gap: 0;
   row-gap: 0;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 33.3333333333%);
   grid-template-rows: min-content;
   grid-template-areas: "query-pagination-previous query-pagination-numbers query-pagination-next";
 }

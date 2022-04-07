@@ -102,6 +102,12 @@
       width: fit-content;
     }
   }
+  .wp-block-query-pagination {
+    align-items: stretch;
+    column-gap: 0;
+    display: grid;
+    row-gap: 0;
+  }
 }
 //
 // End of WordPress overrides

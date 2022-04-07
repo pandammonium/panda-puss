@@ -19,7 +19,8 @@ input,\
 .wp-block, .wp-site-blocks, .wp-block-post-author__bio, .wp-block-post-template, .wp-block-search__button,\
 .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article,\
 .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article,\
-.single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article';
+.single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article,\
+.wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous';
 
 @if ($include-comments == true) {
   $reset-margin: #{$reset-margin} + ', .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type="reset"], [type="button"], [type="submit"]), .wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]), .wp-block-post-comments textarea, .wp-block-post-author__avatar, .wp-block-post-author__content, .wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio';
