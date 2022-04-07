@@ -2,6 +2,7 @@
   @if $metadata-type != 'comment' and $metadata-type != 'article' {
     @error "Unknown post metadata type";
   }
+  $col-gap: calc(1 * var(--pp--space--hor));
   & {
     // .pp-#{$metadata-type}-metadata,
     .pp-#{$metadata-type}-metadata {
@@ -14,7 +15,7 @@
       // Flex container
       display: flex;
       flex-flow: row wrap;
-      column-gap: calc(1 * var(--pp--space--hor));
+      column-gap: $col-gap;
       row-gap: 0;//calc(0 * var(--pp--space--ver));;
       // End of flex container
 
@@ -39,7 +40,7 @@
         // border: 1px solid darkkhaki;
         // Grid container
         display: grid;
-        column-gap: 0;//calc(1.5 * var(--pp--space--hor));
+        column-gap: $col-gap;
         row-gap: 0;
         $avatar-height: 0;
         $avatar-width: 0;
@@ -52,8 +53,7 @@
         }
         grid-template-columns: $avatar-width minmax(5ch, 1fr);
         // @debug #{$avatar-width};
-        grid-template-rows: min-content;
-        // grid-template-rows: clamp(30px, $avatar-height, 60px);
+        grid-template-rows: minmax($avatar-height, min-content);
         grid-template-areas:
           "author-avatar author-content"
           ;
@@ -81,7 +81,29 @@
         @if $metadata-type == 'comment' {
           $content-class: "&-content";
         } @else if $metadata-type == 'article' {
-        $content-class: ".wp-block-post-author__content";
+          $content-class: ".wp-block-post-author__content";
+          #{$content-class} {
+            display: flex;
+            flex-flow: row wrap;
+            column-gap: $col-gap;
+            align-content: center;
+            align-items: center;
+            justify-content: flex-start;
+            > .wp-block-post-author__byline {
+              flex: 0 1 max-content;
+              // Override WordPress:
+              font-size: unset;
+              width: unset;
+            }
+            > .wp-block-post-author__name {
+              flex: 0 1 max-content;
+            }
+            > .wp-block-post-author__bio {
+              flex: 0 1 max-content;
+              // Override WordPress:
+              font-size: unset;
+            }
+          }
         }
         #{$content-class} {
           // background-color: yellowgreen;
@@ -119,7 +141,7 @@
           align-self: center;
           // End of flex item
           // Flex container
-          column-gap: 0;//calc(1 * var(--pp--space--hor));
+          column-gap: 0;//$col-gap;
           row-gap: 0;
           display: flex;
           flex-flow: row wrap;
