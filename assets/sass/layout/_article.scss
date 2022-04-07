@@ -116,9 +116,9 @@
           // Display title on overlaid on featured image:
           position: relative;
           text-align: center;
-          // .pp-article-featured_image {
-          // }
-          .pp-article-title {
+          // Only overlay the title over the featured image if there is a featured image:
+          .pp-article-title + .pp-article-featured_image,
+          .pp-article-featured_image + .pp-article-title {
             background:
               radial-gradient(colours.$pp--primary-bg--alpha-075, colours.$pp--primary-bg--alpha-025)
               ;

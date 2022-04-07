@@ -978,9 +978,12 @@ svg {
   align-content: center;
   justify-content: center;
 }
-.single .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title,
-.page .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title,
-.block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title {
+.single .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title + .pp-article-featured_image,
+.single .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-featured_image + .pp-article-title,
+.page .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title + .pp-article-featured_image,
+.page .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-featured_image + .pp-article-title,
+.block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-title + .pp-article-featured_image,
+.block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-featured_image + .pp-article-title {
   background: radial-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
   font-size: 3rem;
   left: 50%;
