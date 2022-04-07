@@ -588,14 +588,14 @@ svg {
   row-gap: 0;
   grid-template-columns: repeat(3, 33.3333333333%);
   grid-template-rows: min-content;
-  grid-template-areas: "query-pagination-previous query-pagination-numbers query-pagination-next";
+  grid-template-areas: "query-pagination-next query-pagination-numbers query-pagination-previous";
 }
 .pp-pagination-previous {
   margin: 0;
   grid-area: query-pagination-previous;
   align-self: stretch;
-  justify-self: start;
-  place-self: stretch start;
+  justify-self: end;
+  place-self: stretch end;
 }
 .pp-pagination-numbers {
   margin: 0;
@@ -608,8 +608,8 @@ svg {
   margin: 0;
   grid-area: query-pagination-next;
   align-self: stretch;
-  justify-self: end;
-  place-self: stretch end;
+  justify-self: start;
+  place-self: stretch start;
 }
 
 .pp-template .wp-block-post {

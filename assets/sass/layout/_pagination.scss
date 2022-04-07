@@ -11,7 +11,7 @@
     grid-template-columns: repeat(3, #{$col-width});
     grid-template-rows: min-content;
     grid-template-areas:
-      "query-pagination-previous query-pagination-numbers query-pagination-next"
+      "query-pagination-next query-pagination-numbers query-pagination-previous"
     ;
     // End of grid container
     &-previous {
@@ -20,8 +20,8 @@
       // Grid item
       grid-area: query-pagination-previous;
       align-self: stretch;
-      justify-self: start;
-      place-self: stretch start;
+      justify-self: end;
+      place-self: stretch end;
       // End of grid item
     }
     &-numbers {
@@ -41,8 +41,8 @@
       // Grid item
       grid-area: query-pagination-next;
       align-self: stretch;
-      justify-self: end;
-      place-self: stretch end;
+      justify-self: start;
+      place-self: stretch start;
       // End of grid item
     }
   }
