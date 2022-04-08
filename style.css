@@ -968,7 +968,6 @@ button {
   font-size: 3rem;
   left: 50%;
   position: absolute;
-  text-shadow: 0 0 10px white;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -1459,6 +1458,7 @@ button {
 .wp-site-blocks .pp-focus .pp-article-featured_image + .pp-article-title {
   background: radial-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
   font-size: 3rem;
+  text-shadow: 0 0 10px white;
 }
 .wp-site-blocks .wp-block-code code {
   color: #bf4040;

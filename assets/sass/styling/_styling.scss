@@ -21,6 +21,7 @@
         radial-gradient(map.get(colours.$pp--colours--primary, "pp--primary--bg--alpha-075"), map.get(colours.$pp--colours--primary, "pp--primary--bg--alpha-025"))
         ;
       font-size: 3rem;
+      text-shadow: 0 0 10px colours.$pp--colour--bg;
     }
   }
   .wp-block-code {
