@@ -605,6 +605,7 @@ button {
   place-self: stretch end;
 }
 .pp-pagination-numbers {
+  direction: rtl;
   margin: 0;
   grid-area: query-pagination-numbers;
   align-self: stretch;
