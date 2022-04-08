@@ -764,6 +764,9 @@ button {
   grid-template-areas: "metadata";
 }
 .pp-main:not(.pp-front-page) .pp-article-featured_image {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   grid-area: article-featured_image;
 }
 .pp-main:not(.pp-front-page) .pp-article-title {
