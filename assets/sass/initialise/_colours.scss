@@ -106,10 +106,10 @@ $-pp--colours--dark: (
 // @debug map.keys($-pp--colours--dark);
 
 $pp--colours--primary: (
-  "pp--primary--fg": (map.get($-pp--colours--greyscale, pp--colour--tundora)),
-  "pp--primary--bg": (map.get($-pp--colours--greyscale, pp--colour--white)),
-  "pp--primary--fg--alpha": (map.get($-pp--colours--greyscale, pp--colour--tundora--alpha)),
-  "pp--primary--bg--alpha-025": (map.get($-pp--colours--greyscale, pp--colour--white--alpha-025)),
-  "pp--primary--bg--alpha-075": (map.get($-pp--colours--greyscale, pp--colour--white--alpha-075)),
+  "pp--primary--fg": map.get($-pp--colours--greyscale, pp--colour--tundora),
+  "pp--primary--bg": map.get($-pp--colours--greyscale, pp--colour--white),
+  "pp--primary--fg--alpha": map.get($-pp--colours--greyscale, pp--colour--tundora--alpha),
+  "pp--primary--bg--alpha-025": map.get($-pp--colours--greyscale, pp--colour--white--alpha-025),
+  "pp--primary--bg--alpha-075": map.get($-pp--colours--greyscale, pp--colour--white--alpha-075),
 );
 // @debug map.keys($pp--colours--primary);
