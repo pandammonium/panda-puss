@@ -751,6 +751,9 @@ button {
   }
 }
 .pp-template .wp-block-post .pp-article-featured_image {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   grid-area: article-featured_image;
 }
 .pp-template .wp-block-post .pp-article-title {
@@ -770,7 +773,7 @@ button {
   grid-template-columns: 100%;
   grid-template-areas: "article-header" "article-featured_image" "article-body" "article-footer";
   column-gap: 0;
-  row-gap: 0;
+  row-gap: calc(0.5 * var(--pp--space--ver));
 }
 .pp-template .wp-block-post .pp-article.pp-no-featured_image {
   grid-template-columns: 100%;
@@ -938,6 +941,9 @@ button {
   }
 }
 .pp-main:not(.pp-front-page) .pp-article-featured_image {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   grid-area: article-featured_image;
 }
 .pp-main:not(.pp-front-page) .pp-article-title {
@@ -1141,6 +1147,9 @@ button {
   }
 }
 .pp-main.pp-front-page .pp-article-featured_image {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   grid-area: article-featured_image;
 }
 .pp-main.pp-front-page .pp-article-title {
@@ -1160,7 +1169,7 @@ button {
   grid-template-columns: 100%;
   grid-template-areas: "article-header" "article-featured_image" "article-body" "article-footer";
   column-gap: 0;
-  row-gap: 0;
+  row-gap: calc(0.5 * var(--pp--space--ver));
 }
 .pp-main.pp-front-page .pp-article.pp-no-featured_image {
   grid-template-columns: 100%;

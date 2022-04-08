@@ -71,6 +71,10 @@
     &-featured_image {
       // background-color: gold;
       // border: 1px solid gold;
+      margin: 0 {
+        left: auto;
+        right: auto;
+      };
       // Grid item
       grid-area: article-featured_image;
       // End of grid item
@@ -171,7 +175,7 @@
         #{$grid-areas}
       ;
       column-gap: 0;//calc(0 * var(--pp--space--hor));
-      row-gap: 0;//calc(1 * var(--pp--space--ver));
+      row-gap: calc(0.5 * var(--pp--space--ver));
       // End of grid container
     }
   }
