@@ -4,7 +4,6 @@
     "appearanceTools": false,
     "border": {
       "color": false,
-      "customRadius": false,
       "radius": false,
       "style": false,
       "width": false
