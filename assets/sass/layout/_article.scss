@@ -118,7 +118,6 @@
           position: relative;
           text-align: center;
           // Only overlay the title over the featured image if there is a featured image:
-          .pp-article-title + .pp-article-featured_image,
           .pp-article-featured_image + .pp-article-title {
             background:
               radial-gradient(map.get(colours.$pp--colours--primary, "pp--primary--bg--alpha-075"), map.get(colours.$pp--colours--primary, "pp--primary--bg--alpha-025"))
