@@ -53,6 +53,11 @@ input,
 button,
 svg {
   background: map.get(colours.$pp--colours--primary, "pp--primary--bg");
-  border: none;
   color: map.get(colours.$pp--colours--primary, "pp--primary--fg");
+}
+.wp-block-search__button,
+.wp-block-post-comments input[type="submit"],
+input,
+button {
+  border: 1px solid map.get(colours.$pp--colours--primary, "pp--primary--fg");
 }

@@ -377,8 +377,14 @@ input,
 button,
 svg {
   background: white;
-  border: none;
   color: #404040;
+}
+
+.wp-block-search__button,
+.wp-block-post-comments input[type=submit],
+input,
+button {
+  border: 1px solid #404040;
 }
 
 .wp-site-blocks {
