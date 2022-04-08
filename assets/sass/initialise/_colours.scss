@@ -1,92 +1,115 @@
+@use 'sass:map';
+
 // ColorSlurp [https://colorslurp.com/] was used to develop the colour palette, and is the source of the colour names.
+$-pp--colours: (
+  "hues": (
+    "pp--colour--hue--0": 0,
+    "pp--colour--hue--30": 30,
+    "pp--colour--hue--60": 60,
+    "pp--colour--hue--90": 90,
+    "pp--colour--hue--120": 120,
+    "pp--colour--hue--150": 150,
+    "pp--colour--hue--180": 180,
+    "pp--colour--hue--210": 210,
+    "pp--colour--hue--240": 240,
+    "pp--colour--hue--270": 270,
+    "pp--colour--hue--300": 300,
+    "pp--colour--hue--330": 330,
+    "pp--colour--hue--360": 360,
+  ),
+  "saturations": (
+    "pp--colour--saturation--0": 0%,
+    "pp--colour--saturation--25": 25%,
+    "pp--colour--saturation--50": 50%,
+    "pp--colour--saturation--75": 75%,
+    "pp--colour--saturation--100": 100%,
+  ),
+  "lightnesses": (
+    "pp--colour--lightness--0": 0%,
+    "pp--colour--lightness--25": 25%,
+    "pp--colour--lightness--50": 50%,
+    "pp--colour--lightness--75": 75%,
+    "pp--colour--lightness--100": 100%,
+  ),
+  "alphas": (
+    "pp--colour--alpha--0-00": 0.00,
+    "pp--colour--alpha--0-25": 0.25,
+    "pp--colour--alpha--0-50": 0.50,
+    "pp--colour--alpha--0-75": 0.75,
+    "pp--colour--alpha--1-00": 1.00,
+  ),
+);
+// @debug map.keys($-pp--colours);
+// @debug map.get($-pp--colours, "hues");
+// @debug map.get($-pp--colours, "saturations");
+// @debug map.get($-pp--colours, "lightnesses");
+// @debug map.get($-pp--colours, "alphas");
 
-$-pp--colour--hue--0: 0;
-$-pp--colour--hue--30: 30;
-$-pp--colour--hue--60: 60;
-$-pp--colour--hue--90: 90;
-$-pp--colour--hue--120: 120;
-$-pp--colour--hue--150: 150;
-$-pp--colour--hue--180: 180;
-$-pp--colour--hue--210: 210;
-$-pp--colour--hue--240: 240;
-$-pp--colour--hue--270: 270;
-$-pp--colour--hue--300: 300;
-$-pp--colour--hue--330: 330;
-// $-pp--colour--hue--360: 360;
+$-pp--colours--greyscale: (
+  "pp--colour--black": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--0"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--0"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--tundora": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--0"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--tundora--alpha": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--0"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--0-25")),
+  "pp--colour--grey": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--0"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--silver": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--0"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--white": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--0"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--100"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--white--alpha-025": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--0"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--100"), map.get($-pp--colours, "alphas", "pp--colour--alpha--0-25")),
+  "pp--colour--white--alpha-075": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--0"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--100"), map.get($-pp--colours, "alphas", "pp--colour--alpha--0-75")),
+);
+// @debug map.keys($-pp--colours--greyscale);
 
-$-pp--colour--saturation--0: 0%;
-$-pp--colour--saturation--25: 25%;
-$-pp--colour--saturation--50: 50%;
-$-pp--colour--saturation--75: 75%;
-$-pp--colour--saturation--100: 100%;
+$-pp--colours--bright: (
+  "pp--colour--red": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--flush-orange": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--30"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--yellow": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--60"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--chartreuse": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--90"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--green": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--120"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--spring-green": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--150"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--cyan": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--180"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--azure-radiance": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--210"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--100"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--blue": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--240"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--electric-violet": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--270"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--magenta": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--300"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--rose": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--330"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--50"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+);
+// @debug map.keys($-pp--colours--bright);
 
-$-pp--colour--lightness--0: 0%;
-$-pp--colour--lightness--25: 25%;
-$-pp--colour--lightness--50: 50%;
-$-pp--colour--lightness--75: 75%;
-$-pp--colour--lightness--100: 100%;
+$-pp--colours--light: (
+  "pp--colour--vivid-tangerine": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--macaroni-and-cheese": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--30"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--dolly": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--60"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--reef": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--90"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--mint-green": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--120"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--aquamarine": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--150"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--anakiwa": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--180"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--malibu-1": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--210"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--malibu-2": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--240"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--heliotrope": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--270"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--blush-pink": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--300"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--hot-pink": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--330"), map.get($-pp--colours, "saturations", "pp--colour--saturation--50"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--75"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+);
+// @debug map.keys($-pp--colours--light);
 
-$-pp--colour--alpha--0-00: 0.00;
-$-pp--colour--alpha--0-25: 0.25;
-$-pp--colour--alpha--0-50: 0.50;
-$-pp--colour--alpha--0-75: 0.75;
-$-pp--colour--alpha--1-00: 1.00;
+$-pp--colours--dark: (
+  "pp--colour--maroon": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--0"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--cinnamon": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--30"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--olive": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--60"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--verdun-green": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--90"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--japanese-laurel": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--120"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--fun-green": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--150"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--teal": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--180"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--congress-blue": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--210"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--navy-blue": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--240"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--pigment-indigo": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--270"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--fresh-aubergine": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--300"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+  "pp--colour--siren": hsla(map.get($-pp--colours, "hues", "pp--colour--hue--330"), map.get($-pp--colours, "saturations", "pp--colour--saturation--100"), map.get($-pp--colours, "lightnesses", "pp--colour--lightness--25"), map.get($-pp--colours, "alphas", "pp--colour--alpha--1-00")),
+);
+// @debug map.keys($-pp--colours--dark);
 
-// Greyscale
-$-pp--colour--black: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--0, $-pp--colour--alpha--1-00);
-$-pp--colour--tundora: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--tundora--alpha: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--25, $-pp--colour--alpha--0-25);
-$-pp--colour--grey: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--silver: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--white: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--100, $-pp--colour--alpha--1-00);
-$-pp--colour--white--alpha-025: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--100, $-pp--colour--alpha--0-25);
-$-pp--colour--white--alpha-075: hsla($-pp--colour--hue--0, $-pp--colour--saturation--0, $-pp--colour--lightness--100, $-pp--colour--alpha--0-75);
-
-// Bright
-$-pp--colour--red: hsla($-pp--colour--hue--0, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--flush-orange: hsla($-pp--colour--hue--30, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--yellow: hsla($-pp--colour--hue--60, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--chartreuse: hsla($-pp--colour--hue--90, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--green: hsla($-pp--colour--hue--120, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--spring-green: hsla($-pp--colour--hue--150, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--cyan: hsla($-pp--colour--hue--180, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--azure-radiance: hsla($-pp--colour--hue--210, $-pp--colour--saturation--100, $-pp--colour--lightness--100, $-pp--colour--alpha--1-00);
-$-pp--colour--blue: hsla($-pp--colour--hue--240, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--electric-violet: hsla($-pp--colour--hue--270, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--magenta: hsla($-pp--colour--hue--300, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-$-pp--colour--rose: hsla($-pp--colour--hue--330, $-pp--colour--saturation--100, $-pp--colour--lightness--50, $-pp--colour--alpha--1-00);
-
-// Light
-$-pp--colour--vivid-tangerine: hsla($-pp--colour--hue--0, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--macaroni-and-cheese: hsla($-pp--colour--hue--30, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--dolly: hsla($-pp--colour--hue--60, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--reef: hsla($-pp--colour--hue--90, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--mint-green: hsla($-pp--colour--hue--120, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--aquamarine: hsla($-pp--colour--hue--150, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--anakiwa: hsla($-pp--colour--hue--180, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--malibu-1: hsla($-pp--colour--hue--210, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--malibu-2: hsla($-pp--colour--hue--240, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--heliotrope: hsla($-pp--colour--hue--270, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--blush-pink: hsla($-pp--colour--hue--300, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-$-pp--colour--hot-pink: hsla($-pp--colour--hue--330, $-pp--colour--saturation--50, $-pp--colour--lightness--75, $-pp--colour--alpha--1-00);
-
-// Dark
-$-pp--colour--maroon: hsla($-pp--colour--hue--0, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--cinnamon: hsla($-pp--colour--hue--30, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--olive: hsla($-pp--colour--hue--60, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--verdun-green: hsla($-pp--colour--hue--90, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--japanese-laurel: hsla($-pp--colour--hue--120, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--fun-green: hsla($-pp--colour--hue--150, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--teal: hsla($-pp--colour--hue--180, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--congress-blue: hsla($-pp--colour--hue--210, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--navy-blue: hsla($-pp--colour--hue--240, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--pigment-indigo: hsla($-pp--colour--hue--270, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--fresh-aubergine: hsla($-pp--colour--hue--300, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-$-pp--colour--siren: hsla($-pp--colour--hue--330, $-pp--colour--saturation--100, $-pp--colour--lightness--25, $-pp--colour--alpha--1-00);
-
-// If the round brackets are absent, Sass doesn't recognise the !default flag; presumably because the value is a variable:
-$pp--primary-fg: ($-pp--colour--tundora) !default;
-$pp--primary-bg: ($-pp--colour--white) !default;
-$pp--primary-fg--alpha: ($-pp--colour--tundora--alpha) !default;
-$pp--primary-bg--alpha-025: ($-pp--colour--white--alpha-025) !default;
-$pp--primary-bg--alpha-075: ($-pp--colour--white--alpha-075) !default;
+$pp--colours--primary: (
+  "pp--primary--fg": (map.get($-pp--colours--greyscale, pp--colour--tundora)),
+  "pp--primary--bg": (map.get($-pp--colours--greyscale, pp--colour--white)),
+  "pp--primary--fg--alpha": (map.get($-pp--colours--greyscale, pp--colour--tundora--alpha)),
+  "pp--primary--bg--alpha-025": (map.get($-pp--colours--greyscale, pp--colour--white--alpha-025)),
+  "pp--primary--bg--alpha-075": (map.get($-pp--colours--greyscale, pp--colour--white--alpha-075)),
+);
+// @debug map.keys($pp--colours--primary);

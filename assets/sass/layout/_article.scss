@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use 'sass:string';
+@use 'sass:map';
 @use '../initialise/colours';
 @use 'metadata';
 
@@ -120,12 +121,12 @@
           .pp-article-title + .pp-article-featured_image,
           .pp-article-featured_image + .pp-article-title {
             background:
-              radial-gradient(colours.$pp--primary-bg--alpha-075, colours.$pp--primary-bg--alpha-025)
+              radial-gradient(map.get(colours.$pp--colours--primary, "pp--primary--bg--alpha-075"), map.get(colours.$pp--colours--primary, "pp--primary--bg--alpha-025"))
               ;
             font-size: 3rem;
             left: 50%;
             position: absolute;
-            text-shadow: 0 0 10px colours.$pp--primary-bg;
+            text-shadow: 0 0 10px map.get(colours.$pp--colours--primary, "pp--primary--bg");
             top: 50%;
             transform: translate(-50%, -50%);
             width: 100%;

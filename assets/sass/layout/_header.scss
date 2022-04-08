@@ -1,4 +1,5 @@
 @use '../initialise/colours';
+@use 'sass:map';
 
 .pp-header {
   // background-color: burlywood;
@@ -184,7 +185,7 @@
         // End of grid container
         .pp-header-site-title,
         .pp-header-site-tagline {
-          text-shadow: 0 0 1ch colours.$pp--primary-fg;
+          text-shadow: 0 0 1ch map.get(colours.$pp--colours--primary, "pp--primary--fg");
         }
       }
     }

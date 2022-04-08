@@ -6,6 +6,7 @@
 @use 'fonts';
 @use 'spacing';
 @use 'quotation-marks';
+@use 'sass:map';
 
 $include-comments: false !default;
 
@@ -43,7 +44,7 @@ ol,ul,dl {
 }
 
 img {
-  background: colours.$pp--primary-bg;
+  background: map.get(colours.$pp--colours--primary, "pp--primary--bg");
 }
 
 .wp-block-search__button,
@@ -51,7 +52,7 @@ img {
 input,
 button,
 svg {
-  background: colours.$pp--primary-bg;
+  background: map.get(colours.$pp--colours--primary, "pp--primary--bg");
   border: none;
-  color: colours.$pp--primary-fg;
+  color: map.get(colours.$pp--colours--primary, "pp--primary--bg");
 }
