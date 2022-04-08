@@ -11,7 +11,7 @@ $site-width: 1000px !default;
   };
   width: 90vw;
   max-width: $site-width;
-  min-height: calc(100vh - (2 * $row-gap));
+  min-height: calc(100vh - (3 * $row-gap));
 
   // Grid container
   display: grid;
