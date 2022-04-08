@@ -54,5 +54,5 @@ button,
 svg {
   background: map.get(colours.$pp--colours--primary, "pp--primary--bg");
   border: none;
-  color: map.get(colours.$pp--colours--primary, "pp--primary--bg");
+  color: map.get(colours.$pp--colours--primary, "pp--primary--fg");
 }
