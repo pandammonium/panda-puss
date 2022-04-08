@@ -2,7 +2,6 @@
 @use 'fonts';
 @use 'quotation-marks';
 @use 'wp-overrides';
-@use 'sass:map';
 
 //
 // -----------------------------------------------------------------------------
@@ -24,8 +23,8 @@
 //
 
 body {
-  background-color: map.get(colours.$pp--colours--primary, "pp--primary--bg");
-  color: map.get(colours.$pp--colours--primary, "pp--primary--fg");
+  background-color: colours.$pp--colour--bg;
+  color: colours.$pp--colour--fg;
   font-family: fonts.$pp--primary-font-family;
   font-size: fonts.$pp--primary-font-size;
   line-height: 1.5; // 1

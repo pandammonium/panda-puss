@@ -964,8 +964,6 @@ button {
   justify-content: center;
 }
 .pp-main:not(.pp-front-page) .pp-article.pp-focus .pp-article-header .pp-article-featured_image + .pp-article-title {
-  background: radial-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
-  font-size: 3rem;
   left: 50%;
   position: absolute;
   top: 50%;
@@ -1456,7 +1454,7 @@ button {
   text-shadow: 0 0 1ch #404040;
 }
 .wp-site-blocks .pp-focus .pp-article-featured_image + .pp-article-title {
-  background: radial-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+  background: radial-gradient(white, rgba(255, 255, 255, 0.25));
   font-size: 3rem;
   text-shadow: 0 0 10px white;
 }

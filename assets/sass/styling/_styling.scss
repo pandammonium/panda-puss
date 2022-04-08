@@ -12,14 +12,14 @@
   .pp-cover {
     .pp-header-site-title,
     .pp-header-site-tagline {
-      text-shadow: 0 0 1ch map.get(colours.$pp--colours--primary, "pp--primary--fg");
+      text-shadow: 0 0 1ch colours.$pp--colour--fg;
     }
   }
   .pp-focus {
     .pp-article-featured_image + .pp-article-title {
       background:
-        radial-gradient(map.get(colours.$pp--colours--primary, "pp--primary--bg--alpha-075"), map.get(colours.$pp--colours--primary, "pp--primary--bg--alpha-025"))
-        ;
+        radial-gradient(colours.$pp--colour--bg, colours.$pp--colour--bg--secondary)
+      ;
       font-size: 3rem;
       text-shadow: 0 0 10px colours.$pp--colour--bg;
     }
