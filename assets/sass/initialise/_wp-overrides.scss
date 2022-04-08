@@ -1,8 +1,8 @@
+@use 'colours';
 //
 // Override WordPress settings either because they don't work or they interfere
 // with other styling/layout.
 //
-
 .wp-site-blocks {
   .wp-block {
     // There is no wp-block; it's used for convenince with suffixes to create the WP blocks:
@@ -38,52 +38,52 @@
     &-navigation {
       &__submenu {
         &-icon {
-          // Override WordPress because the icon doesn't display properly in Safari:
+          // Make the icon display properly in Safari:
           height: unset;
           margin: 0 {
             left: 0.125ch;
           }
           width: unset;
         }
-        &-container {
-          // color: red;
-        }
+        // &-container {
+        //   // color: red;
+        // }
         &-container,
         .wp-block-page-list {
-          background-color: lightslategrey;
+          // background-color: lightslategrey;
           // border: 1px solid lightslategrey;
-          // Override WordPress to make it easier to select submenu items without an annoying gap that makes hovering tricky:
+          // Make it easier to select submenu items without an annoying gap that makes hovering tricky:
           margin: 0;
         }
       }
       &-item {
         &.has-child {
           .wp-block-navigation__submenu-container {
-            // Override WordPress:
             border: inherit;
             color: inherit;
-            // color: blue;
           }
         }
         &__content {
-          // Ovveride WordPress:
           padding: 0;
         }
       }
     }
     &-search {
       &__input {
-        // Override WordPress:
         padding: 0;
+        flex-grow: 1;
+        min-width: 1ch;
+        // border: none;
+        font-size: unset;
+        font-family: unset;
+        line-height: unset;
         text-align: center;
       }
       &__inside-wrapper {
-        // Override WordPress:
         flex: unset;
       }
       &__button {
-        // Override WordPress:
-        padding: 0 3%;//calc(10 * var(--pp--space--hor));
+        padding: 0 clamp(1ch, calc(10 * var(--pp--space--hor)), 3%);
       }
       &__label {
         display: none;

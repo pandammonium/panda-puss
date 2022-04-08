@@ -44,7 +44,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .wp-site-blocks .wp-block-navigation__submenu-container,
 .wp-site-blocks .wp-block-navigation__submenu .wp-block-page-list {
-  background-color: lightslategrey;
   margin: 0;
 }
 .wp-site-blocks .wp-block-navigation-item.has-child .wp-block-navigation__submenu-container {
@@ -56,13 +55,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .wp-site-blocks .wp-block-search__input {
   padding: 0;
+  flex-grow: 1;
+  min-width: 1ch;
+  font-size: unset;
+  font-family: unset;
+  line-height: unset;
   text-align: center;
 }
 .wp-site-blocks .wp-block-search__inside-wrapper {
   flex: unset;
 }
 .wp-site-blocks .wp-block-search__button {
-  padding: 0 3%;
+  padding: 0 clamp(1ch, 10 * var(--pp--space--hor), 3%);
 }
 .wp-site-blocks .wp-block-search__label {
   display: none;
@@ -381,10 +385,11 @@ svg {
 }
 
 .wp-block-search__button,
+.wp-block-search__input,
 .wp-block-post-comments input[type=submit],
 input,
 button {
-  border: 1px solid #404040;
+  border: 1px solid rgba(64, 64, 64, 0.25);
 }
 
 .wp-site-blocks {
