@@ -13,6 +13,7 @@
       "custom": false,
       "customDuotone": false,
       "customGradient": false,
+      "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
       "duotone": [],
@@ -21,8 +22,10 @@
       "palette": [],
       "text": false
     },
-    "custom": {},
-    "layout": {},
+    "layout": {
+      "contentSize": "",
+      "wideSize": ""
+    },
     "spacing": {
       "blockGap": null,
       "customMargin": false,
@@ -33,22 +36,17 @@
     },
     "typography": {
       "customFontSize": false,
-      "customLineHeight": false,
-      "dropCap": false,
-      "fontFamilies": [],
-      "fontSizes": [],
       "fontStyle": false,
       "fontWeight": false,
       "letterSpacing": false,
       "lineHeight": false,
       "textDecoration": false,
-      "textTransform": false
+      "textTransform": false,
+      "dropCap": false,
+      "fontSizes": [],
+      "fontFamilies": []
     },
-    "blocks": {
-      "core/button": {},
-      "core/group": {},
-      "core/paragraph": {}
-    }
+    "custom": {},
   },
   "styles": {
     "border": {
@@ -61,9 +59,6 @@
       "background": "value",
       "gradient": "value",
       "text": "value"
-    },
-    "filter": {
-        "duotone": "value"
     },
     "spacing": {
       "blockGap": "value",
@@ -89,39 +84,6 @@
       "lineHeight": "value",
       "textDecoration": "value",
       "textTransform": "value"
-    },
-    "elements": {
-      "link": {
-        "background": {},
-        "border": {},
-        "color": {},
-        "spacing": {},
-        "typography": {}
-      },
-      "h1": {},
-      "h2": {},
-      "h3": {},
-      "h4": {},
-      "h5": {},
-      "h6": {}
-    },
-    "blocks": {
-      "core/group": {
-        "border": {},
-        "color": {},
-        "spacing": {},
-        "typography": {},
-        "elements": {
-          "link": {},
-          "h1": {},
-          "h2": {},
-          "h3": {},
-          "h4": {},
-          "h5": {},
-          "h6": {}
-        }
-      },
-      "etc": {}
     }
   },
   "customTemplates": [
