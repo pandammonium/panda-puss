@@ -84,6 +84,41 @@
       "lineHeight": "value",
       "textDecoration": "value",
       "textTransform": "value"
+    },
+    "elements": {
+      "link": {
+        "background": {},
+        "border": {},
+        "color": {},
+        "spacing": {},
+        "typography": {}
+      },
+      "h1": {},
+      "h2": {},
+      "h3": {},
+      "h4": {},
+      "h5": {},
+      "h6": {}
+    },
+    "blocks": {
+      "core/button": {},
+      "core/paragraph": {},
+      "core/group": {
+        "border": {},
+        "color": {},
+        "spacing": {},
+        "typography": {},
+        "elements": {
+          "link": {},
+          "h1": {},
+          "h2": {},
+          "h3": {},
+          "h4": {},
+          "h5": {},
+          "h6": {}
+        }
+      },
+      "etc": {}
     }
   },
   "customTemplates": [
