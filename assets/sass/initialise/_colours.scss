@@ -106,44 +106,44 @@ $-pp--colours--dark: (
 // @debug map.keys($-pp--colours--dark);
 
 $-pp--colours--primary: (
-  "-pp--colours--primary--fg": map.get($-pp--colours--greyscale, pp--colour--tundora),
-  "-pp--colours--primary--bg": map.get($-pp--colours--greyscale, pp--colour--white),
+  "pp--colours--primary-fg": map.get($-pp--colours--greyscale, "pp--colour--tundora"),
+  "pp--colours--primary-bg": map.get($-pp--colours--greyscale, "pp--colour--white"),
 );
 // @debug map.keys($-pp--colours--primary);
 $-pp--colours--secondary: (
-  "-pp--colours--secondary--fg": map.get($-pp--colours--greyscale, pp--colour--tundora--alpha-025),
-  "-pp--colours--secondary--bg": map.get($-pp--colours--greyscale, pp--colour--white--alpha-025),
+  "pp--colours--secondary-fg": map.get($-pp--colours--greyscale, pp--colour--black),
+  "pp--colours--secondary-bg": map.get($-pp--colours--greyscale, pp--colour--silver),
 );
 // @debug map.keys($-pp--colours--secondary);
 $-pp--colours--tertiary: (
-  "-pp--colours--tertiary--fg": map.get($-pp--colours--greyscale, pp--colour--tundora--alpha-075),
-  "-pp--colours--tertiary--bg": map.get($-pp--colours--greyscale, pp--colour--white--alpha-075),
+  "pp--colours--tertiary-fg": map.get($-pp--colours--bright, "pp--colour--chartreuse"),
+  "pp--colours--tertiary-bg": map.get($-pp--colours--bright, "pp--colour--rose"),
 );
 // @debug map.keys($-pp--colours--tertiary);
 
 // Use this format if it's important that overrideable defaults can be declared:
-$pp--colour--fg: map.get($-pp--colours--primary, "-pp--colours--primary--fg") !default;
-$pp--colour--bg: map.get($-pp--colours--primary, "-pp--colours--primary--bg") !default;
+$-pp--colour--fg-primary: map.get($-pp--colours--primary, "pp--colours--primary-fg") !default;
+$-pp--colour--bg-primary: map.get($-pp--colours--primary, "pp--colours--primary-bg") !default;
 
-$pp--colour--fg--secondary: map.get($-pp--colours--secondary, "-pp--colours--secondary--fg") !default;
-$pp--colour--bg--secondary: map.get($-pp--colours--secondary, "-pp--colours--secondary--bg") !default;
+$-pp--colour--fg-secondary: map.get($-pp--colours--secondary, "pp--colours--secondary-fg") !default;
+$-pp--colour--bg-secondary: map.get($-pp--colours--secondary, "pp--colours--secondary-bg") !default;
 
-$pp--colour--fg--tertiary: map.get($-pp--colours--tertiary, "-pp--colours--tertiary--fg") !default;
-$pp--colour--bg--tertiary: map.get($-pp--colours--tertiary, "-pp--colours--tertiary--bg") !default;
+$-pp--colour--fg--tertiary: map.get($-pp--colours--tertiary, "pp--colours--tertiary-fg") !default;
+$-pp--colour--bg--tertiary: map.get($-pp--colours--tertiary, "pp--colours--tertiary-bg") !default;
 
 // // Use this format if it's important that the colours are structured:
 // $pp--theme--colour: (
 //   "pp--theme--colour--primary": (
-//     "pp--colour--fg": map.get($-pp--colours--primary, "-pp--colours--primary--fg"),
-//     "pp--colour--bg": map.get($-pp--colours--primary, "-pp--colours--primary--bg"),
+//     "pp--colour--fg": map.get($-pp--colours--primary, "pp--colours--primary-fg"),
+//     "pp--colour--bg": map.get($-pp--colours--primary, "pp--colours--primary-bg"),
 //   ),
 //   "pp--theme--colour--secondary" :(
-//     "pp--colour--fg--secondary": map.get($-pp--colours--secondary, "-pp--colours--secondary--fg"),
-//     "pp--colour--bg--secondary": map.get($-pp--colours--secondary, "-pp--colours--secondary--bg"),
+//     "pp--colour--fg-secondary": map.get($-pp--colours--secondary, "pp--colours--secondary-fg"),
+//     "pp--colour--bg-secondary": map.get($-pp--colours--secondary, "pp--colours--secondary-bg"),
 //   ),
 //   "pp--theme--colour--tertiary": (
-//     "pp--colour--fg--tertiary": map.get($-pp--colours--tertiary, "-pp--colours--tertiary--fg"),
-//     "pp--colour--bg--tertiary": map.get($-pp--colours--tertiary, "-pp--colours--tertiary--bg"),
+//     "pp--colour--fg--tertiary": map.get($-pp--colours--tertiary, "pp--colours--tertiary-fg"),
+//     "pp--colour--bg--tertiary": map.get($-pp--colours--tertiary, "pp--colours--tertiary-bg"),
 //   ),
 // );
 // @debug map.keys($pp--theme--colour);
