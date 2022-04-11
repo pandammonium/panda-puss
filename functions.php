@@ -91,13 +91,14 @@ if ( ! function_exists( 'remove_wp_block_library_css' ) ) :
  * Disable Gutenberg block library in front end.
  *
  * @since 0.0.3
+ * @since 0.0.4 Allows theme.json to load
  */
   function remove_wp_block_library_css(){
     wp_dequeue_style( 'wp-block-library' );
     wp_dequeue_style( 'wp-block-library-theme' );
     wp_dequeue_style( 'wc-block-style' ); // Remove Woocommerce block css
     wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
-    wp_dequeue_style( 'global-styles' ); // Remove theme.json
+    // wp_dequeue_style( 'global-styles' ); // Remove theme.json from front end (not editor)
   }
 endif;
 add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
