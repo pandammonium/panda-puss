@@ -68,12 +68,15 @@
         }
       }
     }
-    &-post-author {
-      &__bio,
-      &__byline,
-      &__name {
-        font-size: inherit;
-        width: unset;
+    &-post {
+      &-author {
+        &__bio,
+        &__byline,
+        &__name {
+          font-size: inherit;
+          width: unset;
+        }
+      }
       }
     }
     &-search {

@@ -55,6 +55,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .wp-site-blocks .wp-block-post-author__bio, .wp-site-blocks .wp-block-post-author__byline, .wp-site-blocks .wp-block-post-author__name {
   font-size: inherit;
+  width: unset;
 }
 .wp-site-blocks .wp-block-search__input {
   padding: 0;
