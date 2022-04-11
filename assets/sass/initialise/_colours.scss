@@ -122,14 +122,14 @@ $-pp--colours--tertiary: (
 // @debug map.keys($-pp--colours--tertiary);
 
 // Use this format if it's important that overrideable defaults can be declared:
-$-pp--colour--fg-primary: map.get($-pp--colours--primary, "pp--colours--primary-fg") !default;
-$-pp--colour--bg-primary: map.get($-pp--colours--primary, "pp--colours--primary-bg") !default;
+$pp--colour--fg-primary: map.get($-pp--colours--primary, "pp--colours--primary-fg") !default;
+$pp--colour--bg-primary: map.get($-pp--colours--primary, "pp--colours--primary-bg") !default;
 
-$-pp--colour--fg-secondary: map.get($-pp--colours--secondary, "pp--colours--secondary-fg") !default;
-$-pp--colour--bg-secondary: map.get($-pp--colours--secondary, "pp--colours--secondary-bg") !default;
+$pp--colour--fg-secondary: map.get($-pp--colours--secondary, "pp--colours--secondary-fg") !default;
+$pp--colour--bg-secondary: map.get($-pp--colours--secondary, "pp--colours--secondary-bg") !default;
 
-$-pp--colour--fg--tertiary: map.get($-pp--colours--tertiary, "pp--colours--tertiary-fg") !default;
-$-pp--colour--bg--tertiary: map.get($-pp--colours--tertiary, "pp--colours--tertiary-bg") !default;
+$pp--colour--fg--tertiary: map.get($-pp--colours--tertiary, "pp--colours--tertiary-fg") !default;
+$pp--colour--bg--tertiary: map.get($-pp--colours--tertiary, "pp--colours--tertiary-bg") !default;
 
 // // Use this format if it's important that the colours are structured:
 // $pp--theme--colour: (
@@ -148,16 +148,16 @@ $-pp--colour--bg--tertiary: map.get($-pp--colours--tertiary, "pp--colours--terti
 // );
 // @debug map.keys($pp--theme--colour);
 
-// Use this if using with theme.json:
-//   This is currently using the format with overrideable defaults.
-:root {
-  --pp--colour--fg-primary: #{$-pp--colour--fg-primary};
-  --pp--colour--bg-primary: #{$-pp--colour--bg-primary};
+// // Use this if using with theme.json:
+// //   This is currently using the format with overrideable defaults.
+// :root {
+//   --pp--colour--fg-primary: #{$-pp--colour--fg-primary};
+//   --pp--colour--bg-primary: #{$-pp--colour--bg-primary};
 
-  --pp--colour--fg-secondary: #{$-pp--colour--fg-secondary};
-  --pp--colour--bg-secondary: #{$-pp--colour--bg-secondary};
+//   --pp--colour--fg-secondary: #{$-pp--colour--fg-secondary};
+//   --pp--colour--bg-secondary: #{$-pp--colour--bg-secondary};
 
-  --pp--colour--fg-tertiary: #{$-pp--colour--fg--tertiary};
-  --pp--colour--bg-tertiary: #{$-pp--colour--bg--tertiary};
-}
+//   --pp--colour--fg-tertiary: #{$-pp--colour--fg--tertiary};
+//   --pp--colour--bg-tertiary: #{$-pp--colour--bg--tertiary};
+// }
 
