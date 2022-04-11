@@ -46,7 +46,7 @@
       "fontSizes": [],
       "fontFamilies": []
     },
-    "custom": {},
+    "custom": {}
   },
   "styles": {
     "border": {
@@ -169,7 +169,7 @@
       "core/text-columns": {},
       "core/verse": {},
       "core/video": {},
-      "core/widget-group": {},
+      "core/widget-group": {}
     }
   },
   "customTemplates": [
