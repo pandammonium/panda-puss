@@ -22,6 +22,7 @@ if ( post_password_required() ) {
 
 <?php
   $pp_comment_count = get_comments_number();
+  $post_id = get_the_ID();
 ?>
 
 
@@ -53,6 +54,17 @@ if ( post_password_required() ) {
   <p class="pp-comments-notice-closed"><?php esc_html_e( 'Comments are closed.', 'panda-puss' ); ?></p>
 <?php else : ?>
 <?php
+  $req   = get_option( 'require_name_email' );
+  $html5 = true;
+  // Define attributes in HTML5 or XHTML syntax.
+  $required_attribute = ( $html5 ? ' required' : ' required="required"' );
+  $checked_attribute  = ( $html5 ? ' checked' : ' checked="checked"' );
+  $consent = empty( $commenter['comment_author_email'] ) ? '' : $checked_attribute;
+
+  // Identify required fields visually.
+  $required_indicator = ' <span class="required" aria-hidden="true">*</span>';
+
+
   $fields = array(
     'author' => sprintf(
       '<p class="pp-comment-form-author">%s %s</p>',
@@ -72,13 +84,14 @@ if ( post_password_required() ) {
       sprintf(
         '<label for="email">%s%s</label>',
         __( 'Email' ),
-        ( $req ? $required_indicator : '' )
+        '' //( $req ? $required_indicator : '' )
       ),
       sprintf(
         '<input id="email" name="email" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes"%s />',
-        ( $html5 ? 'type="email"' : 'type="text"' ),
+        // ( $html5 ? 'type="email"' : 'type="text"' ),
+        'type="email"',
         esc_attr( $commenter['comment_author_email'] ),
-        ( $req ? $required_attribute : '' )
+        ' required' //( $req ? $required_attribute : '' )
       )
     ),
     'url'    => sprintf(
@@ -89,7 +102,8 @@ if ( post_password_required() ) {
       ),
       sprintf(
         '<input id="url" name="url" %s value="%s" size="30" maxlength="200" />',
-        ( $html5 ? 'type="url"' : 'type="text"' ),
+        // ( $html5 ? 'type="url"' : 'type="text"' ),
+        'type="email"',
         esc_attr( $commenter['comment_author_url'] )
       )
     ),
@@ -113,9 +127,9 @@ if ( post_password_required() ) {
       sprintf(
         '<label for="comment">%s%s</label>',
         _x( 'Add your comment:', 'noun' ),
-        $required_indicator
+        '' //$required_indicator
       ),
-      '<textarea id="comment" name="comment" class="pp-comment-form-textarea" rows="8" maxlength="65525"' . $required_attribute . '></textarea>'
+      '<textarea id="comment" name="comment" class="pp-comment-form-textarea" rows="8" maxlength="65525"' . ' required' . '></textarea>'
     ),
     'must_log_in'          => sprintf(
       '<p class="pp-comment-must-log-in">%s</p>',
@@ -138,7 +152,7 @@ if ( post_password_required() ) {
         /** This filter is documented in wp-includes/link-template.php */
         wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
       ),
-      $required_text
+      '' //$required_text
     ),
     'comment_notes_before' => sprintf(
       '<p class="pp-comment-form-notice-notes">%s%s</p>',
@@ -146,7 +160,7 @@ if ( post_password_required() ) {
         '<span id="email-notes">%s</span>',
         __( 'Your email address will not be published.' )
       ),
-      $required_text
+      '' //$required_text
     ),
     'comment_notes_after'  => '',
     'action'               => site_url( '/wp-comments-post.php' ),
@@ -167,10 +181,10 @@ if ( post_password_required() ) {
     'label_submit'         => __( 'Post comment' ),
     'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
     'submit_field'         => '<p class="pp-comment-form-submit">%1$s %2$s</p>',
-    'format'               => 'html5',
+    'format'               => $html5 ? 'html5' : 'xhtml',
   );
 
-  comment_form($args); ?>
+  comment_form($args, $post_id); ?>
 <?php endif; ?>
 </div>
 

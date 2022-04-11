@@ -53,6 +53,11 @@ if ( ! function_exists( 'panda_puss_theme_setup' ) ) :
     'flex-width'  => true,
   ) );
 
+  /**
+   * Enable support for HTML5:
+   */
+  add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
+
   // /**
   //  * Add support for navigation menus.
   //  */
