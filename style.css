@@ -956,6 +956,13 @@ button {
   height: auto;
   max-width: 100%;
 }
+.pp-main:not(.pp-front-page) .pp-article.pp-alt {
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-areas: "article-header" "article-featured_image" "article-body" "article-footer";
+  column-gap: 0;
+  row-gap: 0;
+}
 .pp-main:not(.pp-front-page) .pp-article.pp-focus {
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, min-content);

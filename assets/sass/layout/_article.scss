@@ -114,6 +114,25 @@
   }
 
   @if ($content-type == "content") {
+    &.pp-alt {
+      $header: "\"article-header\"";
+      $image: "\"article-featured_image\"";
+      $footer: "\"article-footer\"";
+      $body: "\"article-body\"";
+      $grid-areas: #{$header} + " " + #{$image} + " " + #{$body} + " "  + #{$footer};
+      // @debug "grid (focus): #{$grid-areas}";
+      // background-color: maroon;
+      // border: 1px solid maroon;
+      // Grid container
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, min-content);
+      grid-template-areas:
+        #{$grid-areas}
+      ;
+      column-gap: 0;//calc(0 * var(--pp--space--hor));
+      row-gap: 0;//calc(1 * var(--pp--space--ver));
+      // End of grid container
+    }
     &.pp-focus {
       // @debug #{&};
       @if ($is-front_end == true) {
