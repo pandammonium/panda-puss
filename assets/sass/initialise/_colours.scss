@@ -147,3 +147,17 @@ $-pp--colour--bg--tertiary: map.get($-pp--colours--tertiary, "pp--colours--terti
 //   ),
 // );
 // @debug map.keys($pp--theme--colour);
+
+// Use this if using with theme.json:
+//   This is currently using the format with overrideable defaults.
+:root {
+  --pp--colour--fg-primary: #{$-pp--colour--fg-primary};
+  --pp--colour--bg-primary: #{$-pp--colour--bg-primary};
+
+  --pp--colour--fg-secondary: #{$-pp--colour--fg-secondary};
+  --pp--colour--bg-secondary: #{$-pp--colour--bg-secondary};
+
+  --pp--colour--fg-tertiary: #{$-pp--colour--fg--tertiary};
+  --pp--colour--bg-tertiary: #{$-pp--colour--bg--tertiary};
+}
+
