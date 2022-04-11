@@ -53,6 +53,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks .wp-block-navigation-item__content {
   padding: 0;
 }
+.wp-site-blocks .wp-block-post-author__bio, .wp-site-blocks .wp-block-post-author__byline, .wp-site-blocks .wp-block-post-author__name {
+  font-size: inherit;
+}
 .wp-site-blocks .wp-block-search__input {
   padding: 0;
   flex-grow: 1;
@@ -706,15 +709,12 @@ button {
 }
 .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__byline {
   flex: 0 1 max-content;
-  font-size: unset;
-  width: unset;
 }
 .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__name {
   flex: 0 1 max-content;
 }
 .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__bio {
   flex: 0 1 max-content;
-  font-size: unset;
 }
 .pp-template .wp-block-post .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content {
   grid-area: author-content;
@@ -896,15 +896,12 @@ button {
 }
 .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__byline {
   flex: 0 1 max-content;
-  font-size: unset;
-  width: unset;
 }
 .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__name {
   flex: 0 1 max-content;
 }
 .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__bio {
   flex: 0 1 max-content;
-  font-size: unset;
 }
 .pp-main:not(.pp-front-page) .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content {
   grid-area: author-content;
@@ -1102,15 +1099,12 @@ button {
 }
 .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__byline {
   flex: 0 1 max-content;
-  font-size: unset;
-  width: unset;
 }
 .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__name {
   flex: 0 1 max-content;
 }
 .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content > .wp-block-post-author__bio {
   flex: 0 1 max-content;
-  font-size: unset;
 }
 .pp-main.pp-front-page .pp-article-footer .pp-article-metadata .pp-article-author .wp-block-post-author__content {
   grid-area: author-content;

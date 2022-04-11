@@ -68,6 +68,13 @@
         }
       }
     }
+    &-post-author {
+      &__bio,
+      &__byline,
+      &__name {
+        font-size: inherit;
+      }
+    }
     &-search {
       &__input {
         padding: 0;

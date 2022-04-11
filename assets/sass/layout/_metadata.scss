@@ -102,17 +102,12 @@
               justify-content: flex-start;
               > .wp-block-post-author__byline {
                 flex: 0 1 max-content;
-                // Override WordPress:
-                font-size: unset;
-                width: unset;
               }
               > .wp-block-post-author__name {
                 flex: 0 1 max-content;
               }
               > .wp-block-post-author__bio {
                 flex: 0 1 max-content;
-                // Override WordPress:
-                font-size: unset;
               }
             }
           }
