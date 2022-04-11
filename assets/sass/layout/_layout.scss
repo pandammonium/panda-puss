@@ -1,7 +1,9 @@
 $include-comments: true !default;
 
+$site-width: 1200px !default;
+
 @use 'site' with (
-  $site-width: 1200px
+  $site-width: $site-width,
 );
 @use 'header';
 @use 'navigation';
