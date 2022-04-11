@@ -3,13 +3,21 @@ $pp--font-family--sans-serif: sans-serif;
 $pp--font-family--cursive: cursive;
 $pp--font-family--monospace: monospace;
 
-$pp--font-size--small: 0.6rem;
-$pp--font-size--medium: 16px;
-$pp--font-size--large: 1.4rem;
-$pp--font-size--huge: 1.8rem;
-
 $pp--primary-font-family: $pp--font-family--sans-serif !default;
 $pp--secondary-font-family: $pp--font-family--cursive !default;
 
+$-pp--font-size--base: 16px;
+
+$pp--font-size--small: 0.6rem;
+$pp--font-size--medium: $-pp--font-size--base;
+$pp--font-size--large: 1.4rem;
+$pp--font-size--huge: 1.8rem;
+
+$pp--font-size--sub: -0.25rem;
+$pp--font-size--sup: -0.5rem;
+
+
 $pp--primary-font-size: $pp--font-size--medium !default;
 $pp--secondary-font-size: $pp--font-size--huge !default;
+
+$pp--line-height: 1.5;

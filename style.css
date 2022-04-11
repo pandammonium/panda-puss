@@ -206,7 +206,7 @@ hr {
 
 pre {
   font-family: monospace;
-  font-size: 1em;
+  font-size: 16px;
   tab-size: 2;
 }
 
@@ -231,27 +231,27 @@ code,
 kbd,
 samp {
   font-family: monospace;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 small {
-  font-size: 80%;
+  font-size: 0.6rem;
 }
 
 sub,
 sup {
-  font-size: 75%;
+  font-size: 12px;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -0.25rem;
 }
 
 sup {
-  top: -0.5em;
+  top: -0.5rem;
 }
 
 img {
@@ -264,8 +264,8 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
+  font-size: 16px;
+  line-height: 1.5;
   margin: 0;
 }
 
