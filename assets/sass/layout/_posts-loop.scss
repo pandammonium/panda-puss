@@ -1,11 +1,11 @@
-$include-comments: true !default;
+$is-front_end: true !default;
 
 @use 'post-content';
 @use 'pagination';
 @use '../initialise/colours';
 
 $list: '.pp-template';
-@if ($include-comments == true) {
+@if ($is-front_end == true) {
   $list: #{$list} + ', .pp-comment-list';
 }
 #{$list}
@@ -21,7 +21,7 @@ $list: '.pp-template';
   gap: calc(1 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
   justify-content: stretch;
   // End of flex container
-  @if ($include-comments == true) {
+  @if ($is-front_end == true) {
     .pp-comment-item {
       // background-color: palegreen;
       // border: 1px solid palegreen;
@@ -39,7 +39,7 @@ $list: '.pp-template';
   .wp-block-post {
     // @debug #{&};
     // Grid container
-    @include post-content.post-content('excerpt', $include-comments);
+    @include post-content.post-content('excerpt', $is-front_end);
     // End of grid contaaner
   }
 }

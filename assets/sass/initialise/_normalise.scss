@@ -1,10 +1,10 @@
-$include-comments: true !default;
+$is-front_end: true !default;
 
 @use 'colours';
 @use 'fonts';
 @use 'quotation-marks';
 @use 'wp-overrides' with (
-  $include-comments: $include-comments
+  $is-front_end: $is-front_end
 );
 
 //
