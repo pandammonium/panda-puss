@@ -61,9 +61,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks .wp-block-post-comments input[type=submit],
 .wp-site-blocks .wp-block-post-comments textarea {
   background-color: inherit;
+  border: 1px solid currentColor;
   color: inherit;
 }
 .wp-site-blocks .wp-block-search__input {
+  border: 1px solid;
   color: inherit;
   padding: 0;
   flex-grow: 1;
@@ -78,6 +80,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .wp-site-blocks .wp-block-search__button {
   background: inherit;
+  border: 1px solid;
   color: inherit;
   padding: 0 clamp(1ch, 10 * var(--pp--space--hor), 3%);
 }
@@ -1518,17 +1521,4 @@ svg {
 }
 .wp-site-blocks .wp-block-code code.php {
   color: #afbf40;
-}
-
-main {
-  outline: 1px solid red;
-}
-
-aside {
-  outline: 1px solid green;
-}
-
-header,
-footer {
-  outline: 1px solid grey;
 }
