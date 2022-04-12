@@ -183,7 +183,7 @@ $include-comments: false !default;
     &-cookies_consent {
       display: grid;
       grid-template-columns: clamp(10%, 18ch, 25%) 1fr;
-      //grid-template-rows: min-content;
+      grid-template-rows: min-content;
       column-gap: calc(1.5 * var(--pp--space--hor));
       row-gap: 0;
       place-content: center stretch;
