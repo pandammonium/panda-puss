@@ -27,7 +27,7 @@
     @error 'There should be more than #{$num-rows} rows for grid #{$grid-areas}';
   }
 
-  // @debug "#{&}";
+  // @debug '#{&}';
 
   & {
     // @debug #{&};
@@ -37,6 +37,7 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat($num-rows, min-content);
+    // @debug 'num rows: ' + $num-rows;
     grid-template-areas: #{$grid-areas};
     column-gap: calc(2 * var(--pp--space--hor));
     row-gap: calc(0.5 * var(--pp--space--ver));

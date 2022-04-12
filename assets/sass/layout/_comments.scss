@@ -4,6 +4,8 @@
 $include-comments: false !default;
 
 @if ($include-comments == true) {
+
+  // Display of comments
   .pp-comment-list {
     .children {
       margin: {
@@ -43,8 +45,8 @@ $include-comments: false !default;
         // Grid container
         display: grid;
         gap: 0;
-        grid-template-columns: auto;
         grid-template-rows: repeat(3, min-content);
+        grid-template-columns: 100%;
         grid-template-areas:
           "comment-header"
           "comment-body"
@@ -81,15 +83,15 @@ $include-comments: false !default;
     }
   }
 
+  // Display comment form
   .pp-comment-form {
     // background-color: moccasin;
     display: grid;
     column-gap: 0;
     row-gap: calc(0.5 * var(--pp--space--ver));
     grid-template-columns: 100%;
-    $num-rows: 0;
     &.pp-user_is_not_logged_in {
-      $num-rows: 7;
+      // background-color: skyblue;
       grid-template-areas:
         "comment-form-comment"
         "comment-form-author"
@@ -99,16 +101,17 @@ $include-comments: false !default;
         "comment-form-cookies"
         "comment-form-submit"
       ;
+      grid-template-rows: repeat(7, min-content);
     }
     &.pp-user_is_logged_in {
-      $num-rows: 3;
+      // background-color: seagreen;
       grid-template-areas:
         "comment-form-comment"
         "comment-form-notes"
         "comment-form-submit"
       ;
+      grid-template-rows: repeat(3, min-content);
     }
-    grid-template-rows: repeat($num-rows, min-content);
     place-content: center stretch;
     place-items: center stretch;
     // & :nth-child(n) {
@@ -180,7 +183,7 @@ $include-comments: false !default;
     &-cookies_consent {
       display: grid;
       grid-template-columns: clamp(10%, 18ch, 25%) 1fr;
-      grid-template-rows: min-content;
+      //grid-template-rows: min-content;
       column-gap: calc(1.5 * var(--pp--space--hor));
       row-gap: 0;
       place-content: center stretch;

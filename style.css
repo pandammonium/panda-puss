@@ -1227,7 +1227,7 @@ button {
 @supports (grid-template-rows: masonry) {
   .pp-main.pp-front-page .pp-template.pp-front-page {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(auto, minmax(300px, auto));
     grid-template-rows: masonry;
   }
 }
@@ -1345,15 +1345,16 @@ button {
   column-gap: 0;
   row-gap: calc(0.5 * var(--pp--space--ver));
   grid-template-columns: 100%;
-  grid-template-rows: repeat(3, min-content);
   place-content: center stretch;
   place-items: center stretch;
 }
 .pp-comment-form.pp-user_is_not_logged_in {
   grid-template-areas: "comment-form-comment" "comment-form-author" "comment-form-notes" "comment-form-email" "comment-form-url" "comment-form-cookies" "comment-form-submit";
+  grid-template-rows: repeat(7, min-content);
 }
 .pp-comment-form.pp-user_is_logged_in {
   grid-template-areas: "comment-form-comment" "comment-form-notes" "comment-form-submit";
+  grid-template-rows: repeat(3, min-content);
 }
 .pp-comment-form-author {
   grid-area: comment-form-author;
