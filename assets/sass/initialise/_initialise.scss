@@ -44,21 +44,18 @@ ol,ul,dl {
 }
 
 img {
-  background: colours.$pp--colour--bg;
+  background: inherit;
 }
 
-.wp-block-search__button,
-.wp-block-post-comments input[type="submit"],
+textarea,
 input,
 button,
 svg {
-  background: colours.$pp--colour--bg;
-  color: colours.$pp--colour--fg;
+  background: inherit;
+  color: inherit;
 }
-.wp-block-search__button,
-.wp-block-search__input,
-.wp-block-post-comments input[type="submit"],
+textarea,
 input,
 button {
-  border: 1px solid colours.$pp--colour--fg--secondary;
+  // border: 1px solid currentColor;
 }

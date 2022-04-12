@@ -23,8 +23,8 @@
 //
 
 body {
-  background-color: colours.$pp--colour--bg;
-  color: colours.$pp--colour--fg;
+  background-color: colours.$pp--colour--bg-primary;
+  color: colours.$pp--colour--fg-primary;
   font-family: fonts.$pp--primary-font-family;
   font-size: fonts.$pp--primary-font-size;
   line-height: fonts.$pp--line-height; // 1
@@ -193,7 +193,7 @@ pre {
 //
 
 a {
-  background-color: transparent;
+  background-color: inherit;
 }
 
 //

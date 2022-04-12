@@ -57,7 +57,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
   font-size: inherit;
   width: unset;
 }
+.wp-site-blocks .wp-block-post-comments input:not([type=submit]),
+.wp-site-blocks .wp-block-post-comments input[type=submit],
+.wp-site-blocks .wp-block-post-comments textarea {
+  background-color: inherit;
+  color: inherit;
+}
 .wp-site-blocks .wp-block-search__input {
+  color: inherit;
   padding: 0;
   flex-grow: 1;
   min-width: 1ch;
@@ -70,6 +77,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   flex: unset;
 }
 .wp-site-blocks .wp-block-search__button {
+  background: inherit;
+  color: inherit;
   padding: 0 clamp(1ch, 10 * var(--pp--space--hor), 3%);
 }
 .wp-site-blocks .wp-block-search__label {
@@ -212,7 +221,7 @@ pre {
 }
 
 a {
-  background-color: transparent;
+  background-color: inherit;
 }
 
 abbr[title] {
@@ -386,24 +395,15 @@ ol, ul, dl {
 }
 
 img {
-  background: white;
+  background: inherit;
 }
 
-.wp-block-search__button,
-.wp-block-post-comments input[type=submit],
+textarea,
 input,
 button,
 svg {
-  background: white;
-  color: #404040;
-}
-
-.wp-block-search__button,
-.wp-block-search__input,
-.wp-block-post-comments input[type=submit],
-input,
-button {
-  border: 1px solid rgba(64, 64, 64, 0.25);
+  background: inherit;
+  color: inherit;
 }
 
 .wp-site-blocks {
@@ -1280,8 +1280,8 @@ button {
 .pp-comment-list .pp-comment-item .pp-comment-individual {
   display: grid;
   gap: 0;
-  grid-template-columns: auto;
   grid-template-rows: repeat(3, min-content);
+  grid-template-columns: 100%;
   grid-template-areas: "comment-header" "comment-body" "comment-footer";
 }
 .pp-comment-list .pp-comment-item .pp-comment-individual .pp-comment-metadata {
@@ -1389,6 +1389,9 @@ button {
 .pp-comment-form-cookies_consent input {
   place-self: center end;
 }
+.pp-comment-form-textarea {
+  border: 1px solid currentColor;
+}
 .pp-comment-form-comment textarea {
   grid-area: input;
 }
@@ -1471,7 +1474,8 @@ button {
 }
 
 .wp-site-blocks .pp-header a:any-link {
-  color: currentColor;
+  background-color: inherit;
+  color: inherit;
   text-decoration: none;
 }
 .wp-site-blocks .pp-cover .pp-header-site-title,
@@ -1479,7 +1483,7 @@ button {
   text-shadow: 0 0 1ch #404040;
 }
 .wp-site-blocks .pp-focus .pp-article-featured_image + .pp-article-title {
-  background: radial-gradient(white, rgba(255, 255, 255, 0.25));
+  background: radial-gradient(white, #bfbfbf);
   font-size: 3rem;
   text-shadow: 0 0 10px white;
 }

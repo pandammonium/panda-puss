@@ -5,23 +5,24 @@
 .wp-site-blocks {
   .pp-header {
     a:any-link {
-      color: currentColor;
+      background-color: inherit;
+      color: inherit;
       text-decoration: none;
     }
   }
   .pp-cover {
     .pp-header-site-title,
     .pp-header-site-tagline {
-      text-shadow: 0 0 1ch colours.$pp--colour--fg;
+      text-shadow: 0 0 1ch colours.$pp--colour--fg-primary;
     }
   }
   .pp-focus {
     .pp-article-featured_image + .pp-article-title {
       background:
-        radial-gradient(colours.$pp--colour--bg, colours.$pp--colour--bg--secondary)
+        radial-gradient(colours.$pp--colour--bg-primary, colours.$pp--colour--bg-secondary)
       ;
       font-size: 3rem;
-      text-shadow: 0 0 10px colours.$pp--colour--bg;
+      text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
     }
   }
   .wp-block-code {
