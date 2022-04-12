@@ -1,7 +1,11 @@
+$include-comments: true !default;
+
 @use 'colours';
 @use 'fonts';
 @use 'quotation-marks';
-@use 'wp-overrides';
+@use 'wp-overrides' with (
+  $include-comments: $include-comments
+);
 
 //
 // -----------------------------------------------------------------------------

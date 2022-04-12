@@ -1,14 +1,18 @@
 @charset "UTF-8";
 
+$include-comments: false !default;
+
 @use 'fileheader';
-@use 'normalise';
+@use 'normalise' with (
+  $include-comments: $include-comments
+);
 @use 'colours';
 @use 'fonts';
 @use 'spacing';
 @use 'quotation-marks';
 @use 'wp-theme-settings';
 
-$include-comments: false !default;
+@debug #{$include-comments};
 
 $reset-margin: ':root, body,\
 header, footer, div,\

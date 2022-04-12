@@ -59,9 +59,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .wp-site-blocks .wp-block-post-comments input:not([type=submit]),
 .wp-site-blocks .wp-block-post-comments input[type=submit],
-.wp-site-blocks .wp-block-post-comments textarea {
+.wp-site-blocks .wp-block-post-comments textarea#comment {
   background-color: inherit;
-  border: 1px solid currentColor;
+  border: 1px solid;
   color: inherit;
 }
 .wp-site-blocks .wp-block-search__input {
@@ -1394,9 +1394,6 @@ svg {
 }
 .pp-comment-form-cookies_consent input {
   place-self: center end;
-}
-.pp-comment-form-textarea {
-  border: 1px solid currentColor;
 }
 .pp-comment-form-comment textarea {
   grid-area: input;

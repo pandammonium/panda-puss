@@ -57,13 +57,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   font-size: inherit;
   width: unset;
 }
-.wp-site-blocks .wp-block-post-comments input:not([type=submit]),
-.wp-site-blocks .wp-block-post-comments input[type=submit],
-.wp-site-blocks .wp-block-post-comments textarea {
-  background-color: inherit;
-  color: inherit;
-}
 .wp-site-blocks .wp-block-search__input {
+  border: 1px solid;
   color: inherit;
   padding: 0;
   flex-grow: 1;
@@ -403,7 +398,6 @@ textarea,
 input,
 button,
 svg {
-  border: 1px solid rgba(64, 64, 64, 0.25);
   background: inherit;
   color: inherit;
 }

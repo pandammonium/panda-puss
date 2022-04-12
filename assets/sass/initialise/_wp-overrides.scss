@@ -1,3 +1,5 @@
+$include-comments: true !default;
+@debug #{$include-comments};
 //
 // Override WordPress settings either because they don't work or they interfere
 // with other styling/layout.
@@ -76,17 +78,22 @@
           width: unset;
         }
       }
-      &-comments {
-        input:not([type=submit]),
-        input[type="submit"],
-        textarea {
-          background-color: inherit;
-          color: inherit;
+      @if ($include-comments == true) {
+        &-comments {
+          // @debug #{&};
+          input:not([type=submit]),
+          input[type="submit"],
+          textarea#comment {
+            background-color: inherit;
+            border: 1px solid;
+            color: inherit;
+          }
         }
       }
     }
     &-search {
       &__input {
+        border: 1px solid;
         color: inherit;
         padding: 0;
         flex-grow: 1;
@@ -102,6 +109,7 @@
       }
       &__button {
         background: inherit;
+        border: 1px solid;
         color: inherit;
         padding: 0 clamp(1ch, calc(10 * var(--pp--space--hor)), 3%);
       }
