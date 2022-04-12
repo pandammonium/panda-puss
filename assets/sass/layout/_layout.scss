@@ -18,6 +18,7 @@ $site-width: 1200px !default;
 );
 @use 'footer';
 
+// @debug #{$site-width};
 .pp-search-404 {
   & .wp-block-search__label {
     display: inline-block;
