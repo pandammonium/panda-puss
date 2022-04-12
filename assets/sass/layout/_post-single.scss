@@ -44,7 +44,7 @@ $include-comments: true !default;
           justify-content: center;
           .wp-block-post {
             // background-color: cornsilk;
-            // The flex-basis values are very much dependent on the value of "perPage" in the WP Query object in front-page.html. IT's a shame this value can't be passed down to here (easily).
+            // The flex-basis values are very much dependent on the value of "perPage" in the WP Query object in front-page.html. It's a shame this value can't be passed down to here (easily).
             flex: 1 1 calc((1/3*100%) - (3*$col-gap));
             @media screen and (max-width: 782px) {
               flex: 1 1 calc((1/2*100%) - (3*$col-gap));
