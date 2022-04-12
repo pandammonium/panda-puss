@@ -23,8 +23,6 @@
     grid-template-rows: repeat(3, min-content);
     column-gap: calc(2 * var(--pp--space--hor));
     row-gap: 0;//calc(1 * var(--pp--space--ver));
-    place-content: stretch;
-    place-items: stretch;
     // End of grid container
     // @debug "#{&}";
     &-header {
@@ -38,6 +36,7 @@
       grid-template-areas:
         "post-title"
       ;
+      place-self: start stretch;
       // End of grid container
     }
     &-body {
@@ -52,6 +51,7 @@
       grid-template-areas:
         "post-#{$content-type}"
       ;
+      place-self: center stretch;
       // End of grid container
     }
     &-footer {
@@ -61,10 +61,11 @@
       // Grid container
       display: grid;
       grid-template-columns: 100%;
-      grid-template-rows: fit-content;
+      grid-template-rows: min-content;
       grid-template-areas:
         "metadata"
       ;
+      place-self: end stretch;
       // End of grid container
       @include metadata.metadata('article', $is-front_end);
     }
