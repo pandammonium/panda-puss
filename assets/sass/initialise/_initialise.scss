@@ -10,9 +10,8 @@ $include-comments: false !default;
 @use 'fonts';
 @use 'spacing';
 @use 'quotation-marks';
-@use 'wp-theme-settings';
 
-@debug #{$include-comments};
+// @debug #{$include-comments};
 
 $reset-margin: ':root, body,\
 header, footer, div,\

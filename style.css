@@ -374,16 +374,6 @@ template {
   --pp--space--ver: calc(2.0 * 1ch);
 }
 
-:root {
-  --wp--custom--color--fg-primary: colours.$pp--colour--fg-primary;
-  --wp--custom--color--bg-primary: colours.$pp--colour--bg-primary;
-  --wp--custom--color--fg-secondary: colours.$pp--colour--fg-secondary;
-  --wp--custom--color--bg-secondary: colours.$pp--colour--bg-secondary;
-  --wp--custom--color--fg-tertiary: colours.$pp--colour--fg-tertiary;
-  --wp--custom--color--bg-tertiary: colours.$pp--colour--bg-tertiary;
-  --wp--custom--line-height--normal: fonts.$pp--line-height;
-}
-
 :root, body, header, footer, div, ol, ul, menu, dir, p, dl, img, time, multicol, blockquote, figure, h1, h2, h3, h4, h5, h6, :is(article, aside, nav, section) h1, input, optgroup, .wp-block, .wp-site-blocks, .wp-block-post-author__bio, .wp-block-post-template, .wp-block-search__button, .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article, .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article, .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article, .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous, .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type=reset], [type=button], [type=submit]), .wp-block-post-comments input:not([type=submit]):not([type=checkbox]), .wp-block-post-comments textarea, .wp-block-post-author__avatar, .wp-block-post-author__content, .wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio {
   margin: 0;
   margin-block: 0;
@@ -1474,6 +1464,16 @@ svg {
 
 .pp-search-404 .wp-block-search__label {
   display: inline-block;
+}
+
+:root {
+  --wp--custom--color--fg-primary: colours.$pp--colour--fg-primary;
+  --wp--custom--color--bg-primary: colours.$pp--colour--bg-primary;
+  --wp--custom--color--fg-secondary: colours.$pp--colour--fg-secondary;
+  --wp--custom--color--bg-secondary: colours.$pp--colour--bg-secondary;
+  --wp--custom--color--fg-tertiary: colours.$pp--colour--fg-tertiary;
+  --wp--custom--color--bg-tertiary: colours.$pp--colour--bg-tertiary;
+  --wp--custom--line-height--normal: fonts.$pp--line-height;
 }
 
 .wp-site-blocks .pp-header a:any-link {
