@@ -1,4 +1,4 @@
-$include-comments: true !default;
+$is-front_end: true !default;
 
 $site-width: 1200px !default;
 
@@ -8,13 +8,13 @@ $site-width: 1200px !default;
 @use 'header';
 @use 'navigation';
 @use 'posts-loop'with (
-  $include-comments: $include-comments
+  $is-front_end: $is-front_end
 );
 @use 'post-single'with (
-  $include-comments: $include-comments
+  $is-front_end: $is-front_end
 );
 @use 'comments' with (
-  $include-comments: $include-comments
+  $is-front_end: $is-front_end
 );
 @use 'footer';
 

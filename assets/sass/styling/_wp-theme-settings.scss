@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use 'colours';
-@use 'fonts';
+@use '../initialise/colours';
+@use '../initialise/fonts';
 
 :root {
   --wp--custom--color--fg-primary: colours.$pp--colour--fg-primary;

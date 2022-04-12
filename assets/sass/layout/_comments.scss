@@ -1,9 +1,9 @@
 @use '../initialise/colours';
 @use 'metadata';
 
-$include-comments: false !default;
+$is-front_end: false !default;
 
-@if ($include-comments == true) {
+@if ($is-front_end == true) {
 
   // Display of comments
   .pp-comment-list {
@@ -54,7 +54,7 @@ $include-comments: false !default;
         ;
         // End of grid container
 
-        @include metadata.metadata('comment', $include-comments);
+        @include metadata.metadata('comment', $is-front_end);
 
         .pp-comment-header {
           // Grid item

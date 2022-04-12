@@ -1,11 +1,11 @@
-$include-comments: true;
+$is-front_end: true;
 
 @use 'initialise/initialise' with (
-  $include-comments: $include-comments
+  $is-front_end: $is-front_end
 );
 @use 'elements';
 @use 'layout/layout' with (
-  $include-comments: $include-comments
+  $is-front_end: $is-front_end
 );
 @use 'styling/styling';
 

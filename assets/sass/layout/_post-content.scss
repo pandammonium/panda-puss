@@ -1,7 +1,7 @@
 @use 'sass:string';
 @use 'article';
 
-@mixin post-content($content-type, $include-comments) {
+@mixin post-content($content-type, $is-front_end) {
 
   // @debug "content type: #{$content-type}";
 
@@ -10,7 +10,7 @@
   $grid-areas: #{$article};
   @if $content-type == "content" {
     $single-nav: "\"navigation\"";
-    @if ($include-comments == true) {
+    @if ($is-front_end == true) {
       $single-comments: "\"post-comments\"";
       $grid-areas: #{$grid-areas} + " "  + #{$single-nav} + " "  + #{$single-comments};
       $num-rows: 3;
@@ -49,10 +49,10 @@
       // Grid item
       grid-area: article;
       // End of grid item
-      @include article.article($content-type, $include-comments);
+      @include article.article($content-type, $is-front_end);
     }
 
-    @if ($include-comments == true) {
+    @if ($is-front_end == true) {
       // Single post/page comments
       .pp-comments {
         // background-color: darkmagenta;
@@ -66,7 +66,7 @@
 
     // Single post/page navigation
     $nav-classes: '.pp-navigation_single.wp-block-template-part';
-    @if ($include-comments == true) {
+    @if ($is-front_end == true) {
       $nav-classes: #{$nav-classes} + ', .pp-comments-pagination';
     }
     #{$nav-classes} {
@@ -84,7 +84,7 @@
         "navigation-link-previous navigation-link-next";
       // End of grid container
       $previous: '.pp-navigation-previous';
-      @if ($include-comments == true) {
+      @if ($is-front_end == true) {
         $previous: #{$previous} + ', .pp-comments-pagination-previous';
       }
       #{$previous} {
@@ -96,7 +96,7 @@
       }
 
       $next: '.pp-navigation-next';
-      @if ($include-comments == true) {
+      @if ($is-front_end == true) {
         $next: #{$next} + ', .pp-comments-pagination-next';
       }
       #{$next} {

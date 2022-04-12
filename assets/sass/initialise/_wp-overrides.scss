@@ -1,5 +1,5 @@
-$include-comments: true !default;
-@debug #{$include-comments};
+$is-front_end: true !default;
+// @debug #{$is-front_end};
 //
 // Override WordPress settings either because they don't work or they interfere
 // with other styling/layout.
@@ -78,7 +78,7 @@ $include-comments: true !default;
           width: unset;
         }
       }
-      @if ($include-comments == true) {
+      @if ($is-front_end == true) {
         &-comments {
           // @debug #{&};
           input:not([type=submit]),

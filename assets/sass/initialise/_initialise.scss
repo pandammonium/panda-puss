@@ -1,18 +1,17 @@
 @charset "UTF-8";
 
-$include-comments: false !default;
+$is-front_end: false !default;
 
 @use 'fileheader';
 @use 'normalise' with (
-  $include-comments: $include-comments
+  $is-front_end: $is-front_end
 );
 @use 'colours';
 @use 'fonts';
 @use 'spacing';
 @use 'quotation-marks';
-@use 'wp-theme-settings';
 
-@debug #{$include-comments};
+// @debug #{$is-front_end};
 
 $reset-margin: ':root, body,\
 header, footer, div,\
@@ -27,12 +26,12 @@ input, optgroup,\
 .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article,\
 .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous';
 
-@if ($include-comments == true) {
+@if ($is-front_end == true) {
   $reset-margin: #{$reset-margin} + ', .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type="reset"], [type="button"], [type="submit"]), .wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]), .wp-block-post-comments textarea, .wp-block-post-author__avatar, .wp-block-post-author__content, .wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio';
 }
 
 #{$reset-margin} {
-  // @debug #{$include-comments} – #{&};
+  // @debug #{$is-front_end} – #{&};
   margin: 0 {
     block: 0;
     inline: 0;

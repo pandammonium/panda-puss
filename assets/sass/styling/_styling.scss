@@ -1,6 +1,7 @@
+@use 'sass:map';
 @use '../elements';
 @use '../initialise/colours';
-@use 'sass:map';
+@use 'wp-theme-settings';
 
 .wp-site-blocks {
   .pp-header {
