@@ -264,6 +264,7 @@ sup {
 }
 
 img {
+  background: inherit;
   border-style: none;
 }
 
@@ -272,6 +273,8 @@ input,
 optgroup,
 select,
 textarea {
+  background: inherit;
+  color: inherit;
   font-family: inherit;
   font-size: 16px;
   line-height: 1.5;
@@ -374,6 +377,11 @@ template {
   display: none;
 }
 
+svg {
+  background: inherit;
+  color: inherit;
+}
+
 :root {
   --pp--space--hor: calc(0.5 * 1ch);
   --pp--space--ver: calc(2.0 * 1ch);
@@ -390,18 +398,6 @@ template {
 
 ol, ul, dl {
   padding-inline-start: 1.5ch;
-}
-
-img {
-  background: inherit;
-}
-
-textarea,
-input,
-button,
-svg {
-  background: inherit;
-  color: inherit;
 }
 
 .wp-site-blocks {

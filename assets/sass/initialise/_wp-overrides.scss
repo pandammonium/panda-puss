@@ -8,6 +8,7 @@ $is-front_end: true !default;
 // with other styling/layout.
 //
 .wp-site-blocks {
+  // background-color: saddlebrown;
   .wp-block {
     // There is no wp-block; it's used for convenience with suffixes to create the WP blocks:
     &-embed {
@@ -109,7 +110,7 @@ $is-front_end: true !default;
         background: inherit;
         @include mixins.ui-element;
         @include mixins.ui-button;
-        color: inherit;
+        // color: inherit;
         padding: 0 clamp(1ch, calc(10 * var(--pp--space--hor)), 3%);
       }
       &__label {
@@ -117,6 +118,7 @@ $is-front_end: true !default;
       }
     }
     &-site {
+      // Do not use &-site without suffixation.
       &-logo {
         &.is-default-size .custom-logo {
           height: auto;

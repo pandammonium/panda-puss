@@ -257,10 +257,11 @@ sup {
 // ========================================================================= //
 
 //
+// Add a background in case the image isn't displayed.
 // Remove the border on images inside links in IE 10.
 //
-
 img {
+  background: inherit;
   border-style: none;
 }
 
@@ -269,14 +270,14 @@ img {
 
 //
 // 1. Change the font styles in all browsers.
-// 2. Remove the margin in Firefox and Safari.
 //
-
 button,
 input,
 optgroup,
 select,
 textarea {
+  background: inherit;
+  color: inherit;
   font-family: inherit; // 1
   font-size: fonts.$pp--primary-font-size; // 1
   line-height: fonts.$pp--line-height; // 1

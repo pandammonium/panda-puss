@@ -48,20 +48,3 @@ button, input, optgroup, select, textarea, legend, fieldset,\
 ol,ul,dl {
   padding-inline-start: 1.5ch;
 }
-
-img {
-  background: inherit;
-}
-
-textarea,
-input,
-button,
-svg {
-  background: inherit;
-  color: inherit;
-}
-textarea,
-input,
-button {
-  // border: 1px solid currentColor;
-}
