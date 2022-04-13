@@ -1,2 +1,2 @@
 # panda-puss
-WordPress block theme
+A WordPress block theme by pandammonium.
