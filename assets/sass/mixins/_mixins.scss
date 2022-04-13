@@ -3,31 +3,31 @@
 
 @mixin ui-element {
   border-color: currentColor;
-  border-style: solid;
+  // border-style: solid;
   border-width: 1px;
 }
-// This palaver fakes inset and outset so it looks better in Firefox. However, the colour must be hard-coded: 'currentColor' can't be used because at preprocessing time (i.e. when Sass sees it), it hasn't been defined: it's only defined once the page is rendered.
-// @see https://stackoverflow.com/a/70990728
-// This will be a problem if a different colour is used.
-$current-colour: colours.$pp--colour--fg-primary;
-$change-by: 80%;
-$darker: color.scale($current-colour, $lightness: (-1 * $change-by));
-$lighter: color.scale($current-colour, $lightness: $change-by);
-// @debug $current-colour + ' Lx ' + (-1 * $change-by) + ' => ' + $darker;
-// @debug $current-colour + ' Lx  ' + $change-by + ' => ' + $lighter;
+// // This palaver fakes inset and outset so it looks better in Firefox. However, the colour must be hard-coded: 'currentColor' can't be used because at preprocessing time (i.e. when Sass sees it), it hasn't been defined: it's only defined once the page is rendered.
+// // @see https://stackoverflow.com/a/70990728
+// // This will be a problem if a different colour is used.
+// $current-colour: colours.$pp--colour--fg-primary;
+// $change-by: 80%;
+// $darker: color.scale($current-colour, $lightness: (-1 * $change-by));
+// $lighter: color.scale($current-colour, $lightness: $change-by);
+// // @debug $current-colour + ' Lx ' + (-1 * $change-by) + ' => ' + $darker;
+// // @debug $current-colour + ' Lx  ' + $change-by + ' => ' + $lighter;
 @mixin ui-field {
-  border-bottom-color: $lighter;
-  border-left-color: $darker;
-  border-right-color: $lighter;
-  border-top-color: $darker;
-  // border-style: inset;
+  // border-bottom-color: $lighter;
+  // border-left-color: $darker;
+  // border-right-color: $lighter;
+  // border-top-color: $darker;
+  border-style: inset;
 }
 @mixin ui-button {
-  border-bottom-color: $darker;
-  border-left-color: $lighter;
-  border-right-color: $darker;
-  border-top-color: $lighter;
-  // border-style: outset;
+  // border-bottom-color: $darker;
+  // border-left-color: $lighter;
+  // border-right-color: $darker;
+  // border-top-color: $lighter;
+  border-style: outset;
 }
 @mixin ui-element-border {
   textarea,

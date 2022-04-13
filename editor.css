@@ -59,12 +59,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .wp-site-blocks .wp-block-search__input {
   border-color: currentColor;
-  border-style: solid;
   border-width: 1px;
-  border-bottom-color: #d9d9d9;
-  border-left-color: #0d0d0d;
-  border-right-color: #d9d9d9;
-  border-top-color: #0d0d0d;
+  border-style: inset;
   color: inherit;
   padding: 0;
   flex-grow: 1;
@@ -80,12 +76,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks .wp-block-search__button {
   background: inherit;
   border-color: currentColor;
-  border-style: solid;
   border-width: 1px;
-  border-bottom-color: #0d0d0d;
-  border-left-color: #d9d9d9;
-  border-right-color: #0d0d0d;
-  border-top-color: #d9d9d9;
+  border-style: outset;
   padding: 0 clamp(1ch, 10 * var(--pp--space--hor), 3%);
 }
 .wp-site-blocks .wp-block-search__label {
@@ -295,17 +287,11 @@ button {
 
 input:not([type=submit]),
 textarea {
-  border-bottom-color: #d9d9d9;
-  border-left-color: #0d0d0d;
-  border-right-color: #d9d9d9;
-  border-top-color: #0d0d0d;
+  border-style: inset;
 }
 
 input[type=submit] {
-  border-bottom-color: #0d0d0d;
-  border-left-color: #d9d9d9;
-  border-right-color: #0d0d0d;
-  border-top-color: #d9d9d9;
+  border-style: outset;
 }
 
 button,
