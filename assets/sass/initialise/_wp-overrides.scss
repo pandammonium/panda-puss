@@ -93,7 +93,6 @@ $is-front_end: true !default;
         @include mixins.ui-element;
         @include mixins.ui-field;
         color: inherit;
-        padding: 0;
         flex-grow: 1;
         min-width: 1ch;
         // border: none;
@@ -141,3 +140,4 @@ $is-front_end: true !default;
 //
 // End of WordPress overrides
 //
+

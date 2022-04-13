@@ -79,7 +79,6 @@ body {
 // 2. Set the quotes style.
 // 3. Remove the margin in all browsers.
 //
-
 body {
   box-sizing: border-box; // 3
   margin: 0; // 3
@@ -125,7 +124,6 @@ body {
 // Render the `main` element consistently in IE.
 // Also the header and footer.
 //
-
 main,
 header,
 footer {
@@ -133,14 +131,9 @@ footer {
 }
 
 //
-// Correct the font size and margin on `h1` elements within `section` and
+// Correct the font size on `h1` elements within `section` and
 // `article` contexts in Chrome, Firefox, and Safari.
 //
-
-// h1,h2,h3,h4,h5,h6 {
-  // Already set in initialise module:
-//   margin: 0;
-// }
 $header-font-size: calc(2 * fonts.$pp--primary-font-size);
 h1 {
   font-size: max(21px, calc(1.0 * $header-font-size));
@@ -287,7 +280,6 @@ textarea {
   font-family: inherit; // 1
   font-size: fonts.$pp--primary-font-size; // 1
   line-height: fonts.$pp--line-height; // 1
-  margin: 0; // 2
 }
 
 //
@@ -299,7 +291,6 @@ textarea {
 // Show the overflow in IE.
 // 1. Show the overflow in Edge.
 //
-
 button,
 input { // 1
   overflow: visible;
@@ -309,7 +300,6 @@ input { // 1
 // Remove the inheritance of text transform in Edge, Firefox, and IE.
 // 1. Remove the inheritance of text transform in Firefox.
 //
-
 button,
 select { // 1
   text-transform: none;
@@ -318,7 +308,6 @@ select { // 1
 //
 // Correct the inability to style clickable types in iOS and Safari.
 //
-
 // button,
 // [type="button"],
 // [type="reset"],
@@ -331,13 +320,12 @@ select { // 1
 //
 // Remove the inner border and padding in Firefox.
 //
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0;
+  // padding: 0;
 }
 
 //
@@ -354,31 +342,25 @@ button:-moz-focusring,
 //
 // Correct the padding in Firefox.
 //
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
+// fieldset {
+//   padding: 0.35em 0.75em 0.625em;
+// }
 
 //
 // 1. Correct the text wrapping in Edge and IE.
 // 2. Correct the color inheritance from `fieldset` elements in IE.
-// 3. Remove the padding so developers are not caught out when they zero out
-//    `fieldset` elements in all browsers.
 //
-
 legend {
   box-sizing: border-box; // 1
   color: inherit; // 2
   display: table; // 1
   max-width: 100%; // 1
-  padding: 0; // 3
   white-space: normal; // 1
 }
 
 //
 // Add the correct vertical alignment in Chrome, Firefox, and Opera.
 //
-
 progress {
   vertical-align: baseline;
 }
@@ -386,7 +368,6 @@ progress {
 //
 // Remove the default vertical scrollbar in IE 10+.
 //
-
 textarea {
   overflow: auto;
 }
@@ -395,7 +376,6 @@ textarea {
 // 1. Add the correct box sizing in IE 10.
 // 2. Remove the padding in IE 10.
 //
-
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box; // 1
@@ -405,7 +385,6 @@ textarea {
 //
 // Correct the cursor style of increment and decrement buttons in Chrome.
 //
-
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -415,7 +394,6 @@ textarea {
 // 1. Correct the odd appearance in Chrome and Safari.
 // 2. Correct the outline style in Safari.
 //
-
 [type="search"] {
   -webkit-appearance: textfield; // 1
   outline-offset: -2px; // 2
@@ -424,7 +402,6 @@ textarea {
 //
 // Remove the inner padding in Chrome and Safari on macOS.
 //
-
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -433,7 +410,6 @@ textarea {
 // 1. Correct the inability to style clickable types in iOS and Safari.
 // 2. Change font properties to `inherit` in Safari.
 //
-
 ::-webkit-file-upload-button {
   -webkit-appearance: button; // 1
   font: inherit; // 2
@@ -445,7 +421,6 @@ textarea {
 //
 // Add the correct display in Edge, IE 10+, and Firefox.
 //
-
 details {
   display: block;
 }
@@ -453,7 +428,6 @@ details {
 //
 // Add the correct display in all browsers.
 //
-
 summary {
   display: list-item;
 }
@@ -464,7 +438,6 @@ summary {
 //
 // Add the correct display in IE 10+.
 //
-
 template {
   display: none;
 }
@@ -472,7 +445,14 @@ template {
 //
 // Add the correct display in IE 10.
 //
-
 [hidden] {
   display: none;
+}
+
+//
+// Set the colours of SVGs to match the containing element.
+//
+svg {
+  background: inherit;
+  color: inherit;
 }
