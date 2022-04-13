@@ -1,0 +1,15 @@
+@mixin ui-border {
+  textarea,
+  input,
+  button {
+    border-color: currentColor;
+    border-width: 1px;
+  }
+  input:not([type=submit]),
+  textarea {
+    border-style: inset;
+  }
+  input[type="submit"] {
+    border-style: outset;
+  }
+}
