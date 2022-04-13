@@ -13,3 +13,51 @@
     border-style: outset;
   }
 }
+
+@mixin code-lang {
+  code {
+    // List of programming languages:
+    // https://en.wikipedia.org/wiki/List_of_programming_languages
+    $code-hue: 0;
+    $hue-increment: 7.5;
+    color: hsla($code-hue, 50%, 50%, 100%);
+    &.ada {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    &.algol {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    &.basic {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    &.c {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    &.c\+\+ {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    &.c\-\- {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    &.javascript,
+    &.js {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    &.latex {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    &.php {
+      $code-hue: $code-hue + $hue-increment;
+      color: hsla($code-hue, 50%, 50%, 100%);
+    }
+    // @debug $code-hue;
+  }
+}

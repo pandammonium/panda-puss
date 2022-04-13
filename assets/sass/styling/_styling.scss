@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../elements';
+@use '../mixins/mixins';
 @use '../initialise/colours';
 @use 'wp-theme-settings';
 
@@ -27,6 +27,6 @@
     }
   }
   .wp-block-code {
-    @include elements.code-lang;
+    @include mixins.code-lang;
   }
 }

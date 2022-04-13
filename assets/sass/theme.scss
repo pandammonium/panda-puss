@@ -3,7 +3,6 @@ $is-front_end: true;
 @use 'initialise/initialise' with (
   $is-front_end: $is-front_end
 );
-@use 'elements';
 @use 'layout/layout' with (
   $is-front_end: $is-front_end
 );
