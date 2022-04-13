@@ -161,7 +161,6 @@ h6 {
 // 1. Add the correct box sizing in Firefox.
 // 2. Show the overflow in Edge and IE.
 //
-
 hr {
   box-sizing: content-box; // 1
   height: 0; // 1
@@ -172,7 +171,6 @@ hr {
 // 1. Correct the inheritance and scaling of font size in all browsers.
 // 2. Correct the odd `em` font sizing in all browsers.
 //
-
 pre {
   font-family: monospace; // 1
   font-size: fonts.$pp--primary-font-size; // 2
@@ -185,7 +183,6 @@ pre {
 //
 // Remove the gray background on active links in IE 10.
 //
-
 a {
   background-color: inherit;
 }
@@ -194,7 +191,6 @@ a {
 // 1. Remove the bottom border in Chrome 57-
 // 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
 //
-
 abbr[title] {
   border-bottom: none; // 1
   text-decoration: underline; // 2
@@ -206,7 +202,6 @@ abbr[title] {
 //
 // Add the correct font weight in Chrome, Edge, and Safari.
 //
-
 b,
 strong {
   font-weight: bolder;
@@ -216,18 +211,16 @@ strong {
 // 1. Correct the inheritance and scaling of font size in all browsers.
 // 2. Correct the odd `em` font sizing in all browsers.
 //
-
 code,
 kbd,
 samp {
-  font-family: monospace; // 1
+  font-family: fonts.$pp--font-family--monospace; // 1
   font-size: fonts.$pp--primary-font-size; // 2
 }
 
 //
 // Add the correct font size in all browsers.
 //
-
 small {
   font-size: fonts.$pp--font-size--small;
 }
@@ -236,7 +229,6 @@ small {
 // Prevent `sub` and `sup` elements from affecting the line height in
 // all browsers.
 //
-
 sub,
 sup {
   font-size: calc(0.75 * fonts.$pp--primary-font-size);
@@ -244,11 +236,9 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
-
 sub {
   bottom: fonts.$pp--font-size--sub;
 }
-
 sup {
   top: fonts.$pp--font-size--sup;
 }
