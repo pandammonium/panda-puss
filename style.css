@@ -61,19 +61,30 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks .wp-block-post-comments input,
 .wp-site-blocks .wp-block-post-comments button {
   border-color: currentColor;
+  border-style: solid;
   border-width: 1px;
 }
 .wp-site-blocks .wp-block-post-comments input:not([type=submit]),
 .wp-site-blocks .wp-block-post-comments textarea {
-  border-style: inset;
+  border-bottom-color: #d9d9d9;
+  border-left-color: #0d0d0d;
+  border-right-color: #d9d9d9;
+  border-top-color: #0d0d0d;
 }
 .wp-site-blocks .wp-block-post-comments input[type=submit] {
-  border-style: outset;
+  border-bottom-color: #0d0d0d;
+  border-left-color: #d9d9d9;
+  border-right-color: #0d0d0d;
+  border-top-color: #d9d9d9;
 }
 .wp-site-blocks .wp-block-search__input {
   border-color: currentColor;
+  border-style: solid;
   border-width: 1px;
-  border-style: inset;
+  border-bottom-color: #d9d9d9;
+  border-left-color: #0d0d0d;
+  border-right-color: #d9d9d9;
+  border-top-color: #0d0d0d;
   color: inherit;
   padding: 0;
   flex-grow: 1;
@@ -89,9 +100,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks .wp-block-search__button {
   background: inherit;
   border-color: currentColor;
+  border-style: solid;
   border-width: 1px;
-  border-style: outset;
-  color: inherit;
+  border-bottom-color: #0d0d0d;
+  border-left-color: #d9d9d9;
+  border-right-color: #0d0d0d;
+  border-top-color: #d9d9d9;
   padding: 0 clamp(1ch, 10 * var(--pp--space--hor), 3%);
 }
 .wp-site-blocks .wp-block-search__label {
