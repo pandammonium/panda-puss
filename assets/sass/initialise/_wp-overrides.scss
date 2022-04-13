@@ -103,6 +103,7 @@ $is-front_end: true !default;
         text-align: center;
       }
       &__inside-wrapper {
+        column-gap: calc(1 * var(--pp--space--hor));
         flex: unset;
       }
       &__button {
