@@ -70,6 +70,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   text-align: center;
 }
 .wp-site-blocks .wp-block-search__inside-wrapper {
+  column-gap: calc(1 * var(--pp--space--hor));
   flex: unset;
 }
 .wp-site-blocks .wp-block-search__button {
