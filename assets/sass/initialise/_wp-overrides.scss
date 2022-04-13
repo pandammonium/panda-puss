@@ -1,5 +1,8 @@
 $is-front_end: true !default;
 // @debug #{$is-front_end};
+
+@use '../mixins/mixins';
+
 //
 // Override WordPress settings either because they don't work or they interfere
 // with other styling/layout.
@@ -80,20 +83,15 @@ $is-front_end: true !default;
       }
       @if ($is-front_end == true) {
         &-comments {
-          // @debug #{&};
-          input:not([type=submit]),
-          input[type="submit"],
-          textarea#comment {
-            background-color: inherit;
-            border: 1px solid;
-            color: inherit;
-          }
+          // background-color: honeydew;
+          @include mixins.ui-element-border;
         }
       }
     }
     &-search {
       &__input {
-        border: 1px solid;
+        @include mixins.ui-element;
+        @include mixins.ui-field;
         color: inherit;
         padding: 0;
         flex-grow: 1;
@@ -109,7 +107,8 @@ $is-front_end: true !default;
       }
       &__button {
         background: inherit;
-        border: 1px solid;
+        @include mixins.ui-element;
+        @include mixins.ui-button;
         color: inherit;
         padding: 0 clamp(1ch, calc(10 * var(--pp--space--hor)), 3%);
       }

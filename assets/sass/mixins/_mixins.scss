@@ -1,16 +1,25 @@
-@mixin ui-border {
+@mixin ui-element {
+  border-color: currentColor;
+  border-width: 1px;
+}
+@mixin ui-field {
+  border-style: inset;
+}
+@mixin ui-button {
+  border-style: outset;
+}
+@mixin ui-element-border {
   textarea,
   input,
   button {
-    border-color: currentColor;
-    border-width: 1px;
+    @include ui-element;
   }
   input:not([type=submit]),
   textarea {
-    border-style: inset;
+    @include ui-field;
   }
   input[type="submit"] {
-    border-style: outset;
+    @include ui-button;
   }
 }
 

@@ -2,10 +2,8 @@ $is-front_end: true !default;
 
 @use 'colours';
 @use 'fonts';
+@use '../mixins/mixins';
 @use 'quotation-marks';
-@use 'wp-overrides' with (
-  $is-front_end: $is-front_end
-);
 
 //
 // -----------------------------------------------------------------------------
@@ -292,6 +290,11 @@ textarea {
   line-height: fonts.$pp--line-height; // 1
   margin: 0; // 2
 }
+
+//
+// Set the border for user interface elements.
+//
+@include mixins.ui-element-border;
 
 //
 // Show the overflow in IE.

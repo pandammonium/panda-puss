@@ -58,7 +58,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
   width: unset;
 }
 .wp-site-blocks .wp-block-search__input {
-  border: 1px solid;
+  border-color: currentColor;
+  border-width: 1px;
+  border-style: inset;
   color: inherit;
   padding: 0;
   flex-grow: 1;
@@ -73,7 +75,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .wp-site-blocks .wp-block-search__button {
   background: inherit;
-  border: 1px solid;
+  border-color: currentColor;
+  border-width: 1px;
+  border-style: outset;
   color: inherit;
   padding: 0 clamp(1ch, 10 * var(--pp--space--hor), 3%);
 }
@@ -275,6 +279,22 @@ textarea {
   margin: 0;
 }
 
+textarea,
+input,
+button {
+  border-color: currentColor;
+  border-width: 1px;
+}
+
+input:not([type=submit]),
+textarea {
+  border-style: inset;
+}
+
+input[type=submit] {
+  border-style: outset;
+}
+
 button,
 input {
   overflow: visible;
@@ -297,11 +317,11 @@ button:-moz-focusring,
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
 }
 
 fieldset {
   padding: 0.35em 0.75em 0.625em;
+  outline: 1px solid currentColor;
 }
 
 legend {

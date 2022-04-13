@@ -3,6 +3,9 @@
 $is-front_end: false !default;
 
 @use 'fileheader';
+@use 'wp-overrides' with (
+  $is-front_end: $is-front_end
+);
 @use 'normalise' with (
   $is-front_end: $is-front_end
 );
