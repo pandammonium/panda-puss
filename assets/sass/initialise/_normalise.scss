@@ -17,17 +17,16 @@ $is-front_end: true !default;
 // ========================================================================= //
 
 //
-// 0. Set the font for all browsers to sans-serif.
+// 0. Set the font for all browsers.
 // 1. Correct the line height in all browsers.
 // 2. Prevent adjustments of font size (after orientation changes in iOS).
 // 3. Correct the box-sizing.
 // 4. Set the hyphenation.
 //
-
 body {
   background-color: colours.$pp--colour--bg-primary;
   color: colours.$pp--colour--fg-primary;
-  font-family: fonts.$pp--primary-font-family;
+  font-family: fonts.$pp--font-family--primary; // 0
   font-size: fonts.$pp--primary-font-size;
   line-height: fonts.$pp--line-height; // 1
   overflow-wrap: break-word;

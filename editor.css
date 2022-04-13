@@ -1050,13 +1050,14 @@ svg {
 }
 
 :root {
-  --wp--custom--color--fg-primary: colours.$pp--colour--fg-primary;
-  --wp--custom--color--bg-primary: colours.$pp--colour--bg-primary;
-  --wp--custom--color--fg-secondary: colours.$pp--colour--fg-secondary;
-  --wp--custom--color--bg-secondary: colours.$pp--colour--bg-secondary;
-  --wp--custom--color--fg-tertiary: colours.$pp--colour--fg-tertiary;
-  --wp--custom--color--bg-tertiary: colours.$pp--colour--bg-tertiary;
-  --wp--custom--line-height--normal: fonts.$pp--line-height;
+  --wp--custom--color--fg-primary: #404040;
+  --wp--custom--color--bg-primary: white;
+  --wp--custom--color--fg-secondary: black;
+  --wp--custom--color--bg-secondary: #bfbfbf;
+  --wp--custom--color--fg-tertiary: #80ff00;
+  --wp--custom--color--bg-tertiary: #ff0080;
+  --wp--custom--font-family--primary: sans-serif;
+  --wp--custom--line-height--normal: 1.5;
 }
 
 .wp-site-blocks .pp-header a:any-link {
