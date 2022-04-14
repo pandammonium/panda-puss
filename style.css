@@ -17,6 +17,9 @@ Text Domain: panda-puss
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+.wp-site-blocks {
+  font-family: sans-serif;
+}
 .wp-site-blocks .wp-block-embed {
   margin: 0;
   margin-left: auto;

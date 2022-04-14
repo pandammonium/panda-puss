@@ -2,6 +2,7 @@ $is-front_end: true !default;
 // @debug #{$is-front_end};
 
 @use '../mixins/mixins';
+@use '../initialise/fonts';
 
 //
 // Override WordPress settings either because they don't work or they interfere
@@ -9,6 +10,7 @@ $is-front_end: true !default;
 //
 .wp-site-blocks {
   // background-color: saddlebrown;
+  font-family: fonts.$pp--font-family--primary; // Needed for the editor in Safari
   .wp-block {
     // There is no wp-block; it's used for convenience with suffixes to create the WP blocks:
     &-embed {
