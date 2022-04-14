@@ -29,7 +29,7 @@ $is-front_end: true !default;
         gap: $row-gap $col-gap;
         @supports (grid-template-rows: masonry) {
           display: grid;
-          grid-template-columns: repeat(auto, minmax(300px, auto));
+          grid-template-columns: repeat(auto-fit, minmax(300px, auto));
           grid-template-rows: masonry;
           .wp-block-post {
             // background-color: mintcream;

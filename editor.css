@@ -951,7 +951,7 @@ svg {
 @supports (grid-template-rows: masonry) {
   .pp-main.pp-front-page .pp-template.pp-front-page {
     display: grid;
-    grid-template-columns: repeat(auto, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     grid-template-rows: masonry;
   }
 }
