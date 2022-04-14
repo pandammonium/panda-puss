@@ -29,4 +29,8 @@
   .wp-block-code {
     @include mixins.code-lang;
   }
+  button,
+  input[type="submit"] {
+    padding: 0 clamp(1ch, calc(10 * var(--pp--space--hor)), 3%);
+  }
 }

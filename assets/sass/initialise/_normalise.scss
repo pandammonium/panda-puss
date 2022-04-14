@@ -5,6 +5,8 @@ $is-front_end: true !default;
 @use '../mixins/mixins';
 @use 'quotation-marks';
 
+@include mixins.initialise-spacing($is-front_end);
+
 //
 // -----------------------------------------------------------------------------
 // Normalise the CSS.
