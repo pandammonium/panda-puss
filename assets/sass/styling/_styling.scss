@@ -1,5 +1,4 @@
 @use 'sass:map';
-@use '../mixins/mixins';
 @use '../initialise/colours';
 @use 'wp-theme-settings';
 @use 'blocks';
@@ -26,9 +25,6 @@
       font-size: 3rem;
       text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
     }
-  }
-  .wp-block-code {
-    @include mixins.code-lang;
   }
   button,
   input[type="submit"] {

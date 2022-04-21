@@ -1051,6 +1051,81 @@ svg {
   --wp--custom--line-height--normal: 1.5;
 }
 
+.wp-block-code code.ada {
+  color: #bf4040;
+}
+.wp-block-code code.algol {
+  color: #9abf40;
+}
+.wp-block-code code.basic {
+  color: #40bf8a;
+}
+.wp-block-code code.bibtex {
+  color: #4050bf;
+}
+.wp-block-code code.c {
+  color: #bf4240;
+}
+.wp-block-code code.c + + {
+  color: #98bf40;
+}
+.wp-block-code code.c-- {
+  color: #40bf8c;
+}
+.wp-block-code code.c-sharp {
+  color: #404ebf;
+}
+.wp-block-code code.caml {
+  color: #bf4440;
+}
+.wp-block-code code.css {
+  color: #96bf40;
+}
+.wp-block-code code.curl {
+  color: #40bf8e;
+}
+.wp-block-code code.delphi {
+  color: #404bbf;
+}
+.wp-block-code code.fortan {
+  color: #bf4640;
+}
+.wp-block-code code.go {
+  color: #94bf40;
+}
+.wp-block-code code.haskell {
+  color: #40bf91;
+}
+.wp-block-code code.html {
+  color: #4049bf;
+}
+.wp-block-code code.javascript {
+  color: #bf4840;
+}
+.wp-block-code code.js {
+  color: #92bf40;
+}
+.wp-block-code code.latex {
+  color: #40bf93;
+}
+.wp-block-code code.matlab {
+  color: #4047bf;
+}
+.wp-block-code code.modula {
+  color: #bf4a40;
+}
+.wp-block-code code.objective-c {
+  color: #8fbf40;
+}
+.wp-block-code code.occam {
+  color: #40bf95;
+}
+.wp-block-code code.perl {
+  color: #4045bf;
+}
+.wp-block-code code.php {
+  color: #bf4d40;
+}
 .wp-site-blocks .pp-header a:any-link {
   background-color: inherit;
   color: inherit;
@@ -1064,36 +1139,6 @@ svg {
   background: radial-gradient(white, #bfbfbf);
   font-size: 3rem;
   text-shadow: 0 0 10px white;
-}
-.wp-site-blocks .wp-block-code code {
-  color: #bf4040;
-}
-.wp-site-blocks .wp-block-code code.ada {
-  color: #bf5040;
-}
-.wp-site-blocks .wp-block-code code.algol {
-  color: #bf6040;
-}
-.wp-site-blocks .wp-block-code code.basic {
-  color: #bf7040;
-}
-.wp-site-blocks .wp-block-code code.c {
-  color: #bf8040;
-}
-.wp-site-blocks .wp-block-code code.c\+\+ {
-  color: #bf8f40;
-}
-.wp-site-blocks .wp-block-code code.c-- {
-  color: #bf9f40;
-}
-.wp-site-blocks .wp-block-code code.javascript, .wp-site-blocks .wp-block-code code.js {
-  color: #bfaf40;
-}
-.wp-site-blocks .wp-block-code code.latex {
-  color: #bfbf40;
-}
-.wp-site-blocks .wp-block-code code.php {
-  color: #afbf40;
 }
 .wp-site-blocks button,
 .wp-site-blocks input[type=submit] {
