@@ -2,6 +2,7 @@
 @use '../mixins/mixins';
 @use '../initialise/colours';
 @use 'wp-theme-settings';
+@use 'blocks';
 
 .wp-site-blocks {
   .pp-header {
