@@ -18,9 +18,9 @@
     }
   }
   .pp-focus {
-    .pp-article-featured_image + .pp-article-title {
+    .pp-article-title {
       background:
-        radial-gradient(colours.$pp--colour--bg-primary, colours.$pp--colour--bg-secondary)
+        radial-gradient(colours.$pp--colour--fg-tertiary, transparent)
       ;
       font-size: 3rem;
       text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
