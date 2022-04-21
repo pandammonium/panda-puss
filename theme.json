@@ -99,6 +99,7 @@
         "color": {},
         "spacing": {},
         "typography": {}
+      }
     },
     "blocks": {
       "core/archives": {},
@@ -170,7 +171,6 @@
       "core/verse": {},
       "core/video": {},
       "core/widget-group": {}
-    }
   },
   "customTemplates": [
     {
