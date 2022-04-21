@@ -646,7 +646,7 @@ svg {
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: repeat(3, min-content);
-  column-gap: calc(2 * var(--pp--space--hor));
+  column-gap: 0;
   row-gap: 0;
 }
 .pp-template .wp-block-post .pp-article-header {
@@ -750,7 +750,7 @@ svg {
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: repeat(3, min-content);
-  column-gap: calc(2 * var(--pp--space--hor));
+  column-gap: 0;
   row-gap: 0;
 }
 .pp-main:not(.pp-front-page) .pp-article-header {
@@ -861,7 +861,7 @@ svg {
   display: grid;
   grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
   grid-template-rows: repeat(3, min-content);
-  column-gap: calc(2 * var(--pp--space--hor));
+  column-gap: 0;
   row-gap: 0;
 }
 .pp-main.pp-front-page .pp-article-header {

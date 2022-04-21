@@ -10,6 +10,7 @@
     @error "Unknown post content type";
   }
   $grid-areas: "";
+  $col-gap: 0;
 
   // @debug "content type: #{$content-type}";
 
@@ -21,8 +22,8 @@
     display: grid;
     grid-template-columns: clamp(10vw, 200px, 20vw) minmax(10px, 1fr);
     grid-template-rows: repeat(3, min-content);
-    column-gap: calc(2 * var(--pp--space--hor));
-    row-gap: 0;//calc(1 * var(--pp--space--ver));
+    column-gap: $col-gap;
+    row-gap: 0;
     // End of grid container
     // @debug "#{&}";
     &-header {
@@ -131,8 +132,8 @@
       grid-template-areas:
         #{$grid-areas}
       ;
-      column-gap: 0;//calc(0 * var(--pp--space--hor));
-      row-gap: 0;//calc(1 * var(--pp--space--ver));
+      column-gap: $col-gap;
+      row-gap: 0;
       // End of grid container
     }
     &.pp-focus {
@@ -170,8 +171,8 @@
       grid-template-areas:
         #{$grid-areas}
       ;
-      column-gap: 0;//calc(0 * var(--pp--space--hor));
-      row-gap: 0;//calc(1 * var(--pp--space--ver));
+      column-gap: $col-gap;
+      row-gap: 0;
       // End of grid container
     }
   } @else if ($content-type == "excerpt") {
@@ -195,7 +196,7 @@
       grid-template-areas:
         #{$grid-areas}
       ;
-      column-gap: 0;//calc(0 * var(--pp--space--hor));
+      column-gap: $col-gap;
       row-gap: calc(0.5 * var(--pp--space--ver));
       // End of grid container
     }
