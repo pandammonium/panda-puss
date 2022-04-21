@@ -677,6 +677,7 @@ svg {
   margin-left: auto;
   margin-right: auto;
   grid-area: article-featured_image;
+  place-self: start center;
 }
 .pp-template .wp-block-post .pp-article-title {
   grid-area: post-title;
@@ -780,6 +781,7 @@ svg {
   margin-left: auto;
   margin-right: auto;
   grid-area: article-featured_image;
+  place-self: start center;
 }
 .pp-main:not(.pp-front-page) .pp-article-title {
   grid-area: post-title;
@@ -890,6 +892,7 @@ svg {
   margin-left: auto;
   margin-right: auto;
   grid-area: article-featured_image;
+  place-self: start center;
 }
 .pp-main.pp-front-page .pp-article-title {
   grid-area: post-title;
