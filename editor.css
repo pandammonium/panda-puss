@@ -1139,7 +1139,7 @@ svg {
   text-shadow: 0 0 1ch #404040;
 }
 .wp-site-blocks .pp-focus .pp-article-title {
-  background: radial-gradient(#80ff00, transparent);
+  background: radial-gradient(#404040, transparent);
   font-size: 3rem;
   text-shadow: 0 0 10px white;
 }
