@@ -3,7 +3,9 @@
 .wp-block {
   &-archives {}
   &-audio {}
-  &-block {}
+  &-block {
+    // Covered by the parent property.
+  }
   &-button {}
   &-buttons {}
   &-calendar {}
@@ -22,47 +24,62 @@
   &-heading {}
   &-html {}
   &-image {}
-  &-latest-comments {}
-  &-latest-posts {}
+  &-latest {
+    // There is no wp-block-latest, so don't style this bit.
+    &-comments {}
+    &-posts {}
+  }
   &-legacy-widget {}
   &-list {}
   &-media-text {}
   &-missing {}
   &-more {}
-  &-navigation {}
-  &-navigation-link {}
-  &-navigation-submenu {}
+  &-navigation {
+    &-link {}
+    &-submenu {}
+  }
   &-nextpage {}
   &-paragraph {}
   &-pattern {}
-  &-post-author {}
-  &-post-comments {}
-  &-post-content {}
-  &-post-date {}
-  &-post-excerpt {}
-  &-post-featured-image {}
-  &-post-navigation-link {}
-  &-post-template {}
-  &-post-terms {}
-  &-post-title {}
+  &-post {
+    // There is no wp-block-post, so don't style this bit.
+    &-author {}
+    &-comments {}
+    &-content {}
+    &-date {}
+    &-excerpt {}
+    &-featured-image {}
+    &-navigation-link {}
+    &-template {}
+    &-terms {}
+    &-title {}
+  }
   &-preformatted {}
   &-pullquote {}
-  &-query {}
-  &-query-pagination {}
-  &-query-pagination-next {}
-  &-query-pagination-numbers {}
-  &-query-pagination-previous {}
-  &-query-title {}
+  &-query {
+    &-pagination {
+      &-next {}
+      &-numbers {}
+      &-previous {}
+    }
+    &-title {}
+  }
   &-quote {}
   &-rss {}
   &-search {}
   &-separator {}
   &-shortcode {}
-  &-site-logo {}
-  &-site-tagline {}
-  &-site-title {}
-  &-social-link {}
-  &-social-links {}
+  &-site {
+    // There is no wp-block-site, so don't style this bit.
+    &-logo {}
+    &-tagline {}
+    &-title {}
+  }
+  &-social {
+    // There is no wp-block-social, so don't style this bit.
+    &-link {}
+    &-links {}
+  }
   &-spacer {}
   &-table {}
   &-tag-cloud {}
