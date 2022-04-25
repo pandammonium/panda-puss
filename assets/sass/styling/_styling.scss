@@ -47,4 +47,5 @@ $is-front_end: true !default;
   :not(pre) code {
     @include mixins.code-lang;
   }
+  @include mixins.list-spacing-left($is-front_end);
 }

@@ -119,8 +119,56 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding-inline: 0;
 }
 
-ol, ul, dl {
-  padding-inline-start: 1.5ch;
+ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+  padding-inline-start: 2.25ch;
+}
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 2ch;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 2.25ch;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 2.25ch;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+    ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+      padding-inline-start: 2ch;
+    }
+  }
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+      padding-inline-start: 2.5ch;
+    }
+  }
+}
+@-moz-document url-prefix() {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 1.5ch;
+  }
+}
+@supports (-moz-appearance: none) {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 1.5ch;
+  }
+}
+
+:not(pp-footer) .block-editor-block-list__block {
+  outline: 5px solid honeydew;
+  padding-inline-start: 3ch;
+}
+@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+  :not(pp-footer) .block-editor-block-list__block {
+    outline: 5px solid lightblue;
+    padding-inline-start: 3.5ch;
+  }
 }
 
 body {
@@ -1143,7 +1191,7 @@ svg {
   color: inherit;
 }
 .wp-block-list-editor {
-  padding-inline-start: 1.5ch;
+  padding-inline-start: 2.5ch;
 }
 .wp-site-blocks .pp-header a:any-link {
   background-color: inherit;
@@ -1313,4 +1361,56 @@ svg {
 }
 :not(pre) code.php {
   color: #40bfbf;
+}
+
+ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+  padding-inline-start: 2.25ch;
+}
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 2ch;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 2.25ch;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 2.25ch;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+    ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+      padding-inline-start: 2ch;
+    }
+  }
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+      padding-inline-start: 2.5ch;
+    }
+  }
+}
+@-moz-document url-prefix() {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 1.5ch;
+  }
+}
+@supports (-moz-appearance: none) {
+  ol, ul, dl, .pp-footer-blocks.block-editor-block-list__layout, .block-editor-block-list__block {
+    padding-inline-start: 1.5ch;
+  }
+}
+
+:not(pp-footer) .block-editor-block-list__block {
+  outline: 5px solid honeydew;
+  padding-inline-start: 3ch;
+}
+@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+  :not(pp-footer) .block-editor-block-list__block {
+    outline: 5px solid lightblue;
+    padding-inline-start: 3.5ch;
+  }
 }

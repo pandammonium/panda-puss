@@ -133,7 +133,44 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 ol, ul, dl {
-  padding-inline-start: 1.5ch;
+  padding-inline-start: 2.25ch;
+}
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+  ol, ul, dl {
+    padding-inline-start: 2ch;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  ol, ul, dl {
+    padding-inline-start: 2.25ch;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  ol, ul, dl {
+    padding-inline-start: 2.25ch;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+    ol, ul, dl {
+      padding-inline-start: 2ch;
+    }
+  }
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    ol, ul, dl {
+      padding-inline-start: 2.5ch;
+    }
+  }
+}
+@-moz-document url-prefix() {
+  ol, ul, dl {
+    padding-inline-start: 1.5ch;
+  }
+}
+@supports (-moz-appearance: none) {
+  ol, ul, dl {
+    padding-inline-start: 1.5ch;
+  }
 }
 
 body {
