@@ -79,11 +79,10 @@ body {
 
 //
 // 2. Set the quotes style.
-// 3. Remove the margin in all browsers.
+// 3. Set the box sizing in all browsers.
 //
 body {
   box-sizing: border-box; // 3
-  margin: 0; // 3
   // 2:
   q {
     quotes: quotation-marks.$pp--quotes--default;
