@@ -67,6 +67,71 @@
   }
 }
 
+@mixin list-spacing-left($is-front_end) {
+  $list-type: 'ol, ul, dl';
+  @if ($is-front_end == false) {
+    // $list-type: ':not(.pp-footer-blocks) .wp-block-list ol, :not(.pp-footer-blocks) .wp-block-list ul, :not(.pp-footer-blocks) .wp-block-list dl';
+    #{$list-type} {
+      padding: {
+        // left: revert;
+        inline-start: revert !important;
+      }
+    }
+  } @else if ($is-front_end == true) {
+    #{$list-type} {
+      padding-inline-start: revert;
+    }
+    $list-type: '.pp-footer-blocks ' + $list-type;
+    #{$list-type} {
+      // Default value; works best in Chrome, whose specific test is unacceptable to SASS for 22–28:
+      // outline: 5px solid black;
+      padding-inline-start: 2.25ch;
+      // Browser-specific settings taken from https://www.browserstack.com/guide/create-browser-specific-css; Opera 85.0, Chrome 100.0 and Safari15.4+ all seem to use the Safari 6.1–10.0 one: put it first so that the more specific ones match.
+      // Don't bother with IE.
+      @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
+        // Safari 6.1-10.0, 15.4+
+        // Opera 85.0
+        // Chrome 100.0+
+        // outline: 5px solid green;
+        padding-inline-start: 2ch;
+      }
+      @supports (-ms-ime-align:auto) {
+        // Edge
+        // outline: 5px solid skyblue;
+        padding-inline-start: 2.25ch;
+      }
+      @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+        // Chrome 29+
+        // Opera 85.0+
+        // outline: 5px solid red;
+        padding-inline-start: 2.25ch;
+      }
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+          // Safari 10.1
+          // outline: 5px solid darkblue;
+          padding-inline-start: 2ch;
+        }
+        @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+          // Safari 11+
+          // outline: 5px solid lightblue;
+          padding-inline-start: 2.125ch;
+        }
+      }
+      @-moz-document url-prefix() {
+        // Firefox
+        // outline: 5px solid orange;
+        padding-inline-start: 1.5ch;
+      }
+      @supports (-moz-appearance: none) {
+        // Firefox (native OS styling)
+        // outline: 5px solid darkorange;
+        padding-inline-start: 1.5ch;
+      }
+    }
+  }
+}
+
 @mixin initialise-spacing($is-front_end) {
   $reset-margin: ':root, body,\
   header, footer, div,\
@@ -99,7 +164,5 @@
     };
     // outline: 1px dotted hotpink;
   }
-  ol,ul,dl {
-    padding-inline-start: 1.5ch;
-  }
+  @include list-spacing-left($is-front_end);
 }

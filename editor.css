@@ -120,7 +120,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 ol, ul, dl {
-  padding-inline-start: 1.5ch;
+  padding-inline-start: revert !important;
 }
 
 body {
@@ -1143,7 +1143,7 @@ svg {
   color: inherit;
 }
 .wp-block-list-editor {
-  padding-inline-start: 1.5ch;
+  padding-inline-start: 2.5ch;
 }
 .wp-site-blocks .pp-header a:any-link {
   background-color: inherit;
