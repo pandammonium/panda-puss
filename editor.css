@@ -948,34 +948,34 @@ svg {
   grid-area: navigation-link-next;
   place-self: center end;
 }
-.pp-main.pp-front-page .pp-template.pp-front-page {
+.pp-main.pp-front-page .pp-template {
   gap: calc(0.5 * var(--pp--space--ver)) calc(1 * var(--pp--space--hor));
 }
 @supports (grid-template-rows: masonry) {
-  .pp-main.pp-front-page .pp-template.pp-front-page {
+  .pp-main.pp-front-page .pp-template {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     grid-template-rows: masonry;
   }
 }
 @supports not (grid-template-rows: masonry) {
-  .pp-main.pp-front-page .pp-template.pp-front-page {
+  .pp-main.pp-front-page .pp-template {
     display: flex;
     flex-flow: row wrap;
     align-content: stretch;
     align-items: stretch;
     justify-content: center;
   }
-  .pp-main.pp-front-page .pp-template.pp-front-page .wp-block-post {
+  .pp-main.pp-front-page .pp-template .wp-block-post {
     flex: 1 1 calc(33.3333333333% - 3 * 1 * var(--pp--space--hor));
   }
   @media screen and (max-width: 782px) {
-    .pp-main.pp-front-page .pp-template.pp-front-page .wp-block-post {
+    .pp-main.pp-front-page .pp-template .wp-block-post {
       flex: 1 1 calc(50% - 3 * 1 * var(--pp--space--hor));
     }
   }
   @media screen and (max-width: 599px) {
-    .pp-main.pp-front-page .pp-template.pp-front-page .wp-block-post {
+    .pp-main.pp-front-page .pp-template .wp-block-post {
       flex: 1 1 calc(100% - 3 * 1 * var(--pp--space--hor));
     }
   }

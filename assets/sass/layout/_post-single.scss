@@ -23,7 +23,7 @@ $is-front_end: true !default;
       // @debug #{&};
       @include post-content.post-content('excerpt', $is-front_end);
       // End of grid container
-      .pp-template.pp-front-page {
+      .pp-template {
         $col-gap: calc(1 * var(--pp--space--hor));
         $row-gap: calc(0.5 * var(--pp--space--ver));
         gap: $row-gap $col-gap;
