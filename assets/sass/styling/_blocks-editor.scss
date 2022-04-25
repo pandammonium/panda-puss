@@ -1,0 +1,101 @@
+$is-front_end: false !default;
+
+@use '../initialise/fonts';
+@use '../mixins/mixins';
+
+@if $is-front-end == false {
+
+  .wp-block {
+    // background: seagreen;
+    &-archives-editor {}
+    &-audio-editor {}
+    &-button-editor {}
+    &-buttons-editor {}
+    &-calendar-editor {}
+    &-categories-editor {}
+    &-code {
+      @include mixins.code-lang;
+      code {
+        color: inherit;
+      }
+    }
+    &-column-editor {}
+    &-columns-editor {}
+    &-cover-editor {}
+    &-embed-editor {}
+    &-file-editor {}
+    &-freeform-editor {}
+    &-gallery-editor {}
+    &-group-editor {}
+    &-heading-editor {}
+    &-html-editor {}
+    &-image-editor {}
+    &-latest {
+      // There is no wp-block-latest, so don't style this bit.
+      &-comments-editor {}
+      &-posts-editor {}
+    }
+    &-legacy-widget-editor {}
+    &-list-editor {
+      padding-inline-start: 1.5ch;
+    }
+    &-media-text-editor {}
+    &-missing-editor {}
+    &-more-editor {}
+    &-navigation {
+      &-link-editor {}
+      &-submenu-editor {}
+    }
+    &-nextpage-editor {}
+    &-paragraph-editor {}
+    &-pattern-editor {}
+    &-post {
+      // There is no wp-block-post, so don't style this bit.
+      &-author-editor {}
+      &-comments-editor {}
+      &-content-editor {}
+      &-date-editor {}
+      &-excerpt-editor {}
+      &-featured-image-editor {}
+      &-navigation-link-editor {}
+      &-template-editor {}
+      &-terms-editor {}
+      &-title-editor {}
+    }
+    &-preformatted-editor {}
+    &-pullquote-editor {}
+    &-query {
+      &-pagination {
+        &-next-editor {}
+        &-numbers-editor {}
+        &-previous-editor {}
+      }
+      &-title-editor {}
+    }
+    &-quote-editor {}
+    &-rss-editor {}
+    &-search-editor {}
+    &-separator-editor {}
+    &-shortcode-editor {}
+    &-site {
+      // There is no wp-block-site, so don't style this bit.
+      &-logo-editor {}
+      &-tagline-editor {}
+      &-title-editor {}
+    }
+    &-social {
+      // There is no wp-block-social, so don't style this bit.
+      &-link-editor {}
+      &-links-editor {}
+    }
+    &-spacer-editor {}
+    &-table-editor {}
+    &-tag-cloud-editor {}
+    &-template-part-editor {}
+    &-term-description-editor {}
+    &-text-columns-editor {}
+    &-verse-editor {}
+    &-video-editor {}
+    &-widget-group-editor {}
+  }
+}

@@ -1,97 +1,101 @@
+$is-front_end: true !default;
+@use '../initialise/fonts';
 @use '../mixins/mixins';
 
-.wp-block {
-  &-archives {}
-  &-audio {}
-  &-block {
-    // Covered by the parent property.
-  }
-  &-button {}
-  &-buttons {}
-  &-calendar {}
-  &-categories {}
-  &-code {
-    @include mixins.code-lang;
-  }
-  &-column {}
-  &-columns {}
-  &-cover {}
-  &-embed {}
-  &-file {}
-  &-freeform {}
-  &-gallery {}
-  &-group {}
-  &-heading {}
-  &-html {}
-  &-image {}
-  &-latest {
+@if $is-front-end == true {
+  .wp-block {
     // There is no wp-block-latest, so don't style this bit.
-    &-comments {}
-    &-posts {}
-  }
-  &-legacy-widget {}
-  &-list {}
-  &-media-text {}
-  &-missing {}
-  &-more {}
-  &-navigation {
-    &-link {}
-    &-submenu {}
-  }
-  &-nextpage {}
-  &-paragraph {}
-  &-pattern {}
-  &-post {
-    // There is no wp-block-post, so don't style this bit.
-    &-author {}
-    &-comments {}
-    &-content {}
-    &-date {}
-    &-excerpt {}
-    &-featured-image {}
-    &-navigation-link {}
-    &-template {}
-    &-terms {}
-    &-title {}
-  }
-  &-preformatted {}
-  &-pullquote {}
-  &-query {
-    &-pagination {
-      &-next {}
-      &-numbers {}
-      &-previous {}
+    &-archives {}
+    &-audio {}
+    &-button {}
+    &-buttons {}
+    &-calendar {}
+    &-categories {}
     &-code {
       @include mixins.code-lang;
       code {
         color: inherit;
       }
     }
-    &-title {}
+    &-column {}
+    &-columns {}
+    &-cover {}
+    &-embed {}
+    &-file {}
+    &-freeform {}
+    &-gallery {}
+    &-group {}
+    &-heading {
+      stroke-color: red;
+    }
+    &-html {}
+    &-image {}
+    &-latest {
+      // There is no wp-block-latest, so don't style this bit.
+      &-comments {}
+      &-posts {}
+    }
+    &-legacy-widget {}
+    &-list {
+      padding-inline-start: 1.5ch;
+    }
+    &-media-text {}
+    &-missing {}
+    &-more {}
+    &-navigation {
+      &-link {}
+      &-submenu {}
+    }
+    &-nextpage {}
+    &-paragraph {}
+    &-pattern {}
+    &-post {
+      // There is no wp-block-post, so don't style this bit.
+      &-author {}
+      &-comments {}
+      &-content {}
+      &-date {}
+      &-excerpt {}
+      &-featured-image {}
+      &-navigation-link {}
+      &-template {}
+      &-terms {}
+      &-title {}
+    }
+    &-preformatted {}
+    &-pullquote {}
+    &-query {
+      &-pagination {
+        &-next {}
+        &-numbers {}
+        &-previous {}
+      }
+      &-title {}
+    }
+    &-quote {}
+    &-rss {}
+    &-search {}
+    &-separator {}
+    &-shortcode {}
+    &-site {
+      // There is no wp-block-site, so don't style this bit.
+      &-logo {}
+      &-tagline {}
+      &-title {}
+    }
+    &-social {
+      // There is no wp-block-social, so don't style this bit.
+      &-link {}
+      &-links {}
+    }
+    &-spacer {}
+    &-table {}
+    &-tag-cloud {}
+    &-template-part {}
+    &-term-description {}
+    &-text-columns {}
+    &-verse {}
+    &-video {}
+    &-widget-group {}
   }
-  &-quote {}
-  &-rss {}
-  &-search {}
-  &-separator {}
-  &-shortcode {}
-  &-site {
-    // There is no wp-block-site, so don't style this bit.
-    &-logo {}
-    &-tagline {}
-    &-title {}
-  }
-  &-social {
-    // There is no wp-block-social, so don't style this bit.
-    &-link {}
-    &-links {}
-  }
-  &-spacer {}
-  &-table {}
-  &-tag-cloud {}
-  &-template-part {}
-  &-term-description {}
-  &-text-columns {}
-  &-verse {}
-  &-video {}
-  &-widget-group {}
 }

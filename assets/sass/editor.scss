@@ -6,4 +6,6 @@ $is-front_end: false;
 @use 'layout/layout' with (
   $is-front_end: $is-front_end
 );
-@use 'styling/styling';
+@use 'styling/styling' with (
+  $is-front_end: $is-front_end
+);
