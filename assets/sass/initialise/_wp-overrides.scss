@@ -147,6 +147,12 @@ $is-front_end: true !default;
   }
 }
 
+.block-editor {
+  &-rich-text__editable {
+    color: inherit;
+  }
+}
+
 //
 // End of WordPress overrides
 //
