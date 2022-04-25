@@ -13,6 +13,14 @@ $is-front_end: true !default;
   font-family: fonts.$pp--font-family--primary; // Needed for the editor in Safari
   .wp-block {
     // There is no wp-block; it's used for convenience with suffixes to create the WP blocks:
+    &-code {
+      code {
+        border: 1px solid currentColor;
+        border-radius: inherit;
+        font-family: fonts.$pp--font-family--monospace;
+        tab-size: 2;
+      }
+    }
     &-embed {
       margin: 0 {
         left: auto;

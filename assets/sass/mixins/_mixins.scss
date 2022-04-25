@@ -51,22 +51,19 @@
   // Plus BibTeX, LaTeX
   $langs: 'ada', 'algol', 'basic', 'bibtex', 'c', 'c-minus-minus', 'c-plus-plus', 'c-sharp', 'caml', 'css', 'curl', 'delphi', 'fortan', 'go', 'haskell', 'html', 'javascript', 'js', 'latex', 'matlab', 'modula', 'objective-c', 'occam', 'perl', 'php';
 
-    $code-hue-initial: 0;
-    $code-hue: $code-hue-initial;
-    $hue-increment: 7.5;
-    @each $lang in $langs {
-      // @debug '$lang: ' + #{$lang} + '; $code-hue: ' + #{$code-hue};
-      &.#{$lang} {
-        color: hsla($code-hue, 50%, 50%, 100%);
-        $code-hue: $code-hue + $hue-increment;
-        @if $code-hue > 360 - $hue-increment {
-          $code-hue-initial: $code-hue-initial + 1;
-          $code-hue: $code-hue-initial;
-        }
+  $code-hue-initial: 0;
+  $code-hue: $code-hue-initial;
+  $hue-increment: 7.5;
+  @each $lang in $langs {
+    // @debug '$lang: ' + #{$lang} + '; $code-hue: ' + #{$code-hue};
+    &.#{$lang} {
+      color: hsla($code-hue, 50%, 50%, 100%);
+      $code-hue: $code-hue + $hue-increment;
+      @if $code-hue > 360 - $hue-increment {
+        $code-hue-initial: $code-hue-initial + 1;
+        $code-hue: $code-hue-initial;
       }
     }
-  code {
-    color: inherit;
   }
 }
 
@@ -82,7 +79,9 @@
   .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article,\
   .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article,\
   .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article,\
-  .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous';
+  .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous,\
+  .wp-block-code, wp-block-code > code, .wp-site-blocks .wp-block-code, .wp-site-blocks .wp-block-code code,\
+  .block-editor-block-list__block wp-block .wp-block-code basic, pre code';
 
   @if ($is-front_end == true) {
     $reset-margin: #{$reset-margin} + ', .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type="reset"], [type="button"], [type="submit"]), .wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]), .wp-block-post-comments textarea, .wp-block-post-author__avatar, .wp-block-post-author__content, .wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio';

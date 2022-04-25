@@ -173,7 +173,7 @@ hr {
 // 2. Correct the odd `em` font sizing in all browsers.
 //
 pre {
-  font-family: monospace; // 1
+  font-family: fonts.$pp--font-family--monospace; // 1
   font-size: fonts.$pp--primary-font-size; // 2
   tab-size: 2;
 }

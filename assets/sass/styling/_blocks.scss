@@ -61,6 +61,11 @@
       &-next {}
       &-numbers {}
       &-previous {}
+    &-code {
+      @include mixins.code-lang;
+      code {
+        color: inherit;
+      }
     }
     &-title {}
   }

@@ -20,6 +20,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks {
   font-family: sans-serif;
 }
+.wp-site-blocks .wp-block-code code {
+  border: 1px solid currentColor;
+  border-radius: inherit;
+  font-family: monospace;
+  tab-size: 2;
+}
 .wp-site-blocks .wp-block-embed {
   margin: 0;
   margin-left: auto;
@@ -113,7 +119,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   row-gap: 0;
 }
 
-:root, body, header, footer, div, ol, ul, menu, dir, p, dl, img, time, multicol, blockquote, figure, h1, h2, h3, h4, h5, h6, :is(article, aside, nav, section) h1, button, input, optgroup, select, textarea, legend, fieldset, .wp-block, .wp-site-blocks, .wp-block-post-author__bio, .wp-block-post-template, .wp-block-search__button, .wp-block-search__input, .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article, .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article, .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article, .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous, .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type=reset], [type=button], [type=submit]), .wp-block-post-comments input:not([type=submit]):not([type=checkbox]), .wp-block-post-comments textarea, .wp-block-post-author__avatar, .wp-block-post-author__content, .wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio {
+:root, body, header, footer, div, ol, ul, menu, dir, p, dl, img, time, multicol, blockquote, figure, h1, h2, h3, h4, h5, h6, :is(article, aside, nav, section) h1, button, input, optgroup, select, textarea, legend, fieldset, .wp-block, .wp-site-blocks, .wp-block-post-author__bio, .wp-block-post-template, .wp-block-search__button, .wp-block-search__input, .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article, .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article, .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article, .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous, .wp-block-code, wp-block-code > code, .wp-site-blocks .wp-block-code, .wp-site-blocks .wp-block-code code, .block-editor-block-list__block wp-block .wp-block-code basic, pre code, .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type=reset], [type=button], [type=submit]), .wp-block-post-comments input:not([type=submit]):not([type=checkbox]), .wp-block-post-comments textarea, .wp-block-post-author__avatar, .wp-block-post-author__content, .wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio {
   margin: 0;
   margin-block: 0;
   margin-inline: 0;
@@ -1579,4 +1585,79 @@ svg {
 .wp-site-blocks button,
 .wp-site-blocks input[type=submit] {
   padding: 0 clamp(1ch, 10 * var(--pp--space--hor), 3%);
+}
+.wp-site-blocks code.ada {
+  color: #bf4040;
+}
+.wp-site-blocks code.algol {
+  color: #bf5040;
+}
+.wp-site-blocks code.basic {
+  color: #bf6040;
+}
+.wp-site-blocks code.bibtex {
+  color: #bf7040;
+}
+.wp-site-blocks code.c {
+  color: #bf8040;
+}
+.wp-site-blocks code.c-minus-minus {
+  color: #bf8f40;
+}
+.wp-site-blocks code.c-plus-plus {
+  color: #bf9f40;
+}
+.wp-site-blocks code.c-sharp {
+  color: #bfaf40;
+}
+.wp-site-blocks code.caml {
+  color: #bfbf40;
+}
+.wp-site-blocks code.css {
+  color: #afbf40;
+}
+.wp-site-blocks code.curl {
+  color: #9fbf40;
+}
+.wp-site-blocks code.delphi {
+  color: #8fbf40;
+}
+.wp-site-blocks code.fortan {
+  color: #80bf40;
+}
+.wp-site-blocks code.go {
+  color: #70bf40;
+}
+.wp-site-blocks code.haskell {
+  color: #60bf40;
+}
+.wp-site-blocks code.html {
+  color: #50bf40;
+}
+.wp-site-blocks code.javascript {
+  color: #40bf40;
+}
+.wp-site-blocks code.js {
+  color: #40bf50;
+}
+.wp-site-blocks code.latex {
+  color: #40bf60;
+}
+.wp-site-blocks code.matlab {
+  color: #40bf70;
+}
+.wp-site-blocks code.modula {
+  color: #40bf80;
+}
+.wp-site-blocks code.objective-c {
+  color: #40bf8f;
+}
+.wp-site-blocks code.occam {
+  color: #40bf9f;
+}
+.wp-site-blocks code.perl {
+  color: #40bfaf;
+}
+.wp-site-blocks code.php {
+  color: #40bfbf;
 }

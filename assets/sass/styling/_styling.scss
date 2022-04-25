@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use '../initialise/colours';
+@use '../mixins/mixins';
 @use 'wp-theme-settings';
 @use 'blocks';
 
@@ -30,5 +31,14 @@
   button,
   input[type="submit"] {
     padding: 0 clamp(1ch, calc(10 * var(--pp--space--hor)), 3%);
+  }
+  code {
+    @include mixins.code-lang;
+  }
+}
+
+@if $is-front_end == false {
+  :not(pre) code {
+    @include mixins.code-lang;
   }
 }
