@@ -1054,80 +1054,89 @@ svg {
   --wp--custom--line-height--normal: 1.5;
 }
 
-.wp-block-code code.ada {
+.wp-block {
+  background: seagreen;
+}
+.wp-block-code.ada {
   color: #bf4040;
 }
-.wp-block-code code.algol {
-  color: #9abf40;
+.wp-block-code.algol {
+  color: #bf5040;
 }
-.wp-block-code code.basic {
-  color: #40bf8a;
+.wp-block-code.basic {
+  color: #bf6040;
 }
-.wp-block-code code.bibtex {
-  color: #4050bf;
+.wp-block-code.bibtex {
+  color: #bf7040;
 }
-.wp-block-code code.c {
-  color: #bf4240;
+.wp-block-code.c {
+  color: #bf8040;
 }
-.wp-block-code code.c + + {
-  color: #98bf40;
+.wp-block-code.c-minus-minus {
+  color: #bf8f40;
 }
-.wp-block-code code.c-- {
-  color: #40bf8c;
+.wp-block-code.c-plus-plus {
+  color: #bf9f40;
 }
-.wp-block-code code.c-sharp {
-  color: #404ebf;
+.wp-block-code.c-sharp {
+  color: #bfaf40;
 }
-.wp-block-code code.caml {
-  color: #bf4440;
+.wp-block-code.caml {
+  color: #bfbf40;
 }
-.wp-block-code code.css {
-  color: #96bf40;
+.wp-block-code.css {
+  color: #afbf40;
 }
-.wp-block-code code.curl {
-  color: #40bf8e;
+.wp-block-code.curl {
+  color: #9fbf40;
 }
-.wp-block-code code.delphi {
-  color: #404bbf;
-}
-.wp-block-code code.fortan {
-  color: #bf4640;
-}
-.wp-block-code code.go {
-  color: #94bf40;
-}
-.wp-block-code code.haskell {
-  color: #40bf91;
-}
-.wp-block-code code.html {
-  color: #4049bf;
-}
-.wp-block-code code.javascript {
-  color: #bf4840;
-}
-.wp-block-code code.js {
-  color: #92bf40;
-}
-.wp-block-code code.latex {
-  color: #40bf93;
-}
-.wp-block-code code.matlab {
-  color: #4047bf;
-}
-.wp-block-code code.modula {
-  color: #bf4a40;
-}
-.wp-block-code code.objective-c {
+.wp-block-code.delphi {
   color: #8fbf40;
 }
-.wp-block-code code.occam {
-  color: #40bf95;
+.wp-block-code.fortan {
+  color: #80bf40;
 }
-.wp-block-code code.perl {
-  color: #4045bf;
+.wp-block-code.go {
+  color: #70bf40;
 }
-.wp-block-code code.php {
-  color: #bf4d40;
+.wp-block-code.haskell {
+  color: #60bf40;
+}
+.wp-block-code.html {
+  color: #50bf40;
+}
+.wp-block-code.javascript {
+  color: #40bf40;
+}
+.wp-block-code.js {
+  color: #40bf50;
+}
+.wp-block-code.latex {
+  color: #40bf60;
+}
+.wp-block-code.matlab {
+  color: #40bf70;
+}
+.wp-block-code.modula {
+  color: #40bf80;
+}
+.wp-block-code.objective-c {
+  color: #40bf8f;
+}
+.wp-block-code.occam {
+  color: #40bf9f;
+}
+.wp-block-code.perl {
+  color: #40bfaf;
+}
+.wp-block-code.php {
+  color: #40bfbf;
+}
+.wp-block-code code {
+  color: inherit;
+}
+.wp-block-list-editor {
+  padding-inline-start: 1.5ch;
 }
 .wp-site-blocks .pp-header a:any-link {
   background-color: inherit;

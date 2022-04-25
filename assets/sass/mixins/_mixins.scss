@@ -49,12 +49,11 @@
   // List of programming languages:
   // https://en.wikipedia.org/wiki/List_of_programming_languages
   // Plus BibTeX, LaTeX
-  $langs: 'ada', 'algol', 'basic', 'bibtex', 'c', 'c\+\+', 'c--', 'c-sharp', 'caml', 'css', 'curl', 'delphi', 'fortan', 'go', 'haskell', 'html', 'javascript', 'js', 'latex', 'matlab', 'modula', 'objective-c', 'occam', 'perl', 'php';
+  $langs: 'ada', 'algol', 'basic', 'bibtex', 'c', 'c-minus-minus', 'c-plus-plus', 'c-sharp', 'caml', 'css', 'curl', 'delphi', 'fortan', 'go', 'haskell', 'html', 'javascript', 'js', 'latex', 'matlab', 'modula', 'objective-c', 'occam', 'perl', 'php';
 
-  code {
     $code-hue-initial: 0;
     $code-hue: $code-hue-initial;
-    $hue-increment: 77.5;
+    $hue-increment: 7.5;
     @each $lang in $langs {
       // @debug '$lang: ' + #{$lang} + '; $code-hue: ' + #{$code-hue};
       &.#{$lang} {
@@ -66,6 +65,8 @@
         }
       }
     }
+  code {
+    color: inherit;
   }
 }
 
