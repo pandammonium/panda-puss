@@ -1,7 +1,8 @@
 @use 'sass:map';
-// @use '../initialise/colours';
+@use "sass:meta";
+@use '../initialise/colours';
 @use '../initialise/fonts';
-@use '../initialise/miscellaneous';
+@use '../initialise/spacing';
 
 body {
   --wp--preset--font-size--small: #{map.get(fonts.$pp--fonts, "sizes", "small")};
@@ -12,20 +13,21 @@ body {
 
 :root {
 
-  --wp--custom--border--colour: #{map.get(miscellaneous.$pp--border, "colour")};
-  --wp--custom--border--colour: #{map.get(miscellaneous.$pp--border, "radius")};
-  --wp--custom--border--colour: #{map.get(miscellaneous.$pp--border, "style")};
-  --wp--custom--border--colour: #{map.get(miscellaneous.$pp--border, "width")};
+  --wp--custom--border--color: #{colours.$pp--colour--fg-primary};
+  --wp--custom--border--radius: 5px;
+  --wp--custom--border--style: solid;
+  --wp--custom--border--width: 1px;
 
-  --wp--custom--colour--bg-primary: #{map.get(miscellaneous.$pp--colour, "background")};
-  --wp--custom--colour--fg-primary: #{map.get(miscellaneous.$pp--colour, "text")};
-  // --wp--custom--colour--fg-secondary: #{colours.$pp--colour--fg-secondary};
-  // --wp--custom--colour--bg-secondary: #{colours.$pp--colour--bg-secondary};
-  // --wp--custom--colour--fg-tertiary: #{colours.$pp--colour--fg-tertiary};
-  // --wp--custom--colour--bg-tertiary: #{colours.$pp--colour--bg-tertiary};
+  --wp--custom--color--bg-primary: #{colours.$pp--colour--fg-primary};
+  --wp--custom--color--fg-primary: #{colours.$pp--colour--bg-primary};
+  --wp--custom--color--fg-secondary: #{colours.$pp--colour--fg-secondary};
+  --wp--custom--color--bg-secondary: #{colours.$pp--colour--bg-secondary};
+  --wp--custom--color--fg-tertiary: #{colours.$pp--colour--fg-tertiary};
+  --wp--custom--color--bg-tertiary: #{colours.$pp--colour--bg-tertiary};
 
-  --wp--custom--font-family--primary: ##{map.get(fonts.$pp--fonts, "families", "primary")};
+  --wp--custom--font-family--primary: #{map.get(fonts.$pp--fonts, "families", "primary")};
+  --wp--custom--font-size--primary: #{map.get(fonts.$pp--fonts, "sizes", "primary")};;
+  --wp--custom--line-height--normal: #{map.get(fonts.$pp--fonts, "line-heights", "primary")};;
 
-  --wp--custom--spacing--block-gap: #{map.get(miscellaneous.$pp--spacing, 'block-gap')};
-  --wp--custom--line-height--normal: #{map.get(fonts.$pp--fonts, "line-heights", "primary")};
+  --wp--custom--spacing--block-gap: var(--pp--space);
 }

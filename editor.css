@@ -1062,15 +1062,20 @@ body {
 }
 
 :root {
-  --wp--custom--border--colour: #404040;
-  --wp--custom--border--colour: 5px;
-  --wp--custom--border--colour: solid;
-  --wp--custom--border--colour: from-font;
-  --wp--custom--colour--bg-primary: #404040;
-  --wp--custom--colour--fg-primary: white;
-  --wp--custom--font-family--primary: #sans-serif;
-  --wp--custom--spacing--block-gap: 0;
+  --wp--custom--border--color: #404040;
+  --wp--custom--border--radius: 5px;
+  --wp--custom--border--style: solid;
+  --wp--custom--border--width: 1px;
+  --wp--custom--color--bg-primary: #404040;
+  --wp--custom--color--fg-primary: white;
+  --wp--custom--color--fg-secondary: black;
+  --wp--custom--color--bg-secondary: #bfbfbf;
+  --wp--custom--color--fg-tertiary: white;
+  --wp--custom--color--bg-tertiary: #8000ff;
+  --wp--custom--font-family--primary: sans-serif;
+  --wp--custom--font-size--primary: 16px;
   --wp--custom--line-height--normal: 1.5;
+  --wp--custom--spacing--block-gap: var(--pp--space);
 }
 
 .wp-block-code.ada {
