@@ -3,7 +3,8 @@ $is-front_end: true !default;
 
 @use 'sass:map';
 @use '../mixins/mixins';
-@use '../initialise/fonts';
+@use '../settings/fonts';
+@use '../settings/spacing';
 
 //
 // Override WordPress settings either because they don't work or they interfere
@@ -113,7 +114,7 @@ $is-front_end: true !default;
         text-align: center;
       }
       &__inside-wrapper {
-        column-gap: calc(1 * var(--pp--space--hor));
+        column-gap: calc(1 * #{map.get(spacing.$pp--spacing, "horizontal")});
         flex: unset;
       }
       &__button {
@@ -121,7 +122,7 @@ $is-front_end: true !default;
         background: inherit;
         @include mixins.ui-element;
         @include mixins.ui-button;
-        // padding: 0 clamp(1ch, calc(10 * var(--pp--space--hor)), 3%);
+        // padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "horizontal")}), 3%);
       }
       &__label {
         display: none;

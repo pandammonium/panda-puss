@@ -1,14 +1,15 @@
 $is-front_end: true !default;
 
 @use 'sass:map';
-@use '../initialise/colours';
-@use '../mixins/mixins';
 @use 'blocks' with (
   $is-front_end: $is-front_end
 );
 @use 'blocks-editor' with (
   $is-front_end: $is-front_end
 );
+@use '../mixins/mixins';
+@use '../settings/colours';
+@use '../settings/spacing';
 
 .wp-site-blocks {
   .pp-header {
@@ -35,7 +36,7 @@ $is-front_end: true !default;
   }
   button,
   input[type="submit"] {
-    padding: 0 clamp(1ch, calc(10 * var(--pp--space--hor)), 3%);
+    padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "horizontal")}), 3%);
   }
   code {
     @include mixins.code-lang;

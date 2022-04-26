@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use '../settings/spacing';
+
 @mixin metadata($metadata-type, $is-front_end) {
   @if $metadata-type != 'comment' and $metadata-type != 'article' {
     @error "Unknown post metadata type";
@@ -9,7 +12,7 @@
   // @debug 'class: ' + #{&};
   // @debug 'is-front_end: ' + #{$is-front_end};
   @if ($is-front_end == true) {
-    $col-gap: calc(1 * var(--pp--space--hor));
+    $col-gap: calc(1 * #{map.get(spacing.$pp--spacing, "horizontal")});
     & {
       // .pp-#{$metadata-type}-metadata,
       .pp-#{$metadata-type}-metadata {

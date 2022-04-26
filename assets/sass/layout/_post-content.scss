@@ -1,5 +1,7 @@
+@use 'sass:map';
 @use 'sass:string';
 @use 'article';
+@use '../settings/spacing';
 
 @mixin post-content($content-type, $is-front_end) {
 
@@ -39,8 +41,8 @@
     grid-template-rows: repeat($num-rows, min-content);
     // @debug 'num rows: ' + $num-rows;
     grid-template-areas: #{$grid-areas};
-    column-gap: calc(2 * var(--pp--space--hor));
-    row-gap: calc(0.5 * var(--pp--space--ver));
+    column-gap: calc(2 * #{map.get(spacing.$pp--spacing, "horizontal")});
+    row-gap: calc(0.5 * #{map.get(spacing.$pp--spacing, "vertical")});
     // End of grid container
 
     .pp-article {

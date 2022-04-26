@@ -1,8 +1,9 @@
 $is-front_end: true !default;
 
+@use 'sass:map';
 @use 'post-content';
 @use 'pagination';
-@use '../initialise/colours';
+@use '../settings/spacing';
 
 $list: '.pp-template';
 @if ($is-front_end == true) {
@@ -18,7 +19,7 @@ $list: '.pp-template';
   align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
-  gap: calc(1 * var(--pp--space--ver)) calc(0 * var(--pp--space--hor));
+  gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")}) calc(0 * #{map.get(spacing.$pp--spacing, "horizontal")});
   justify-content: stretch;
   // End of flex container
   @if ($is-front_end == true) {

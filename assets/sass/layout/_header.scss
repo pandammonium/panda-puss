@@ -1,9 +1,12 @@
+@use 'sass:map';
+@use '../settings/spacing';
+
 .pp-header {
   // background-color: burlywood;
   // Grid container
   display: grid;
-  $col-gap: calc(2 * var(--pp--space--hor));
-  gap: calc(1 * var(--pp--space--ver)) $col-gap;
+  $col-gap: calc(2 * #{map.get(spacing.$pp--spacing, "horizontal")});
+  gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")}) $col-gap;
   grid-template-columns: clamp(250px, 30%, 500px) 1fr;
   grid-template-rows: min-content;
   grid-template-areas:
@@ -56,7 +59,7 @@
     // Grid container
     display: grid;
     $col-gap: 0;
-    gap: calc(0 * var(--pp--space--ver)) $col-gap;
+    gap: calc(0 * #{map.get(spacing.$pp--spacing, "vertical")}) $col-gap;
     grid-template-columns: 100%;
     grid-template-rows: min-content;
     grid-template-areas:
@@ -99,7 +102,7 @@
     // Grid container
     display: grid;
     $col-gap: 0;
-    gap: calc(0 * var(--pp--space--ver)) $col-gap;
+    gap: calc(0 * #{map.get(spacing.$pp--spacing, "vertical")}) $col-gap;
     grid-template-columns: 100%;
     grid-template-rows: min-content;
     grid-template-areas:
@@ -141,7 +144,7 @@
     // Grid container
     display: grid;
     $col-gap: 0;
-    gap: calc(0 * var(--pp--space--ver)) $col-gap;
+    gap: calc(0 * #{map.get(spacing.$pp--spacing, "vertical")}) $col-gap;
     grid-template-columns: 100%;
     grid-template-rows: min-content;
     grid-template-areas:
@@ -172,7 +175,7 @@
         // Grid container
         display: grid;
         $col-gap: 0;
-        gap: calc(5 * var(--pp--space--ver)) $col-gap;
+        gap: calc(5 * #{map.get(spacing.$pp--spacing, "vertical")}) $col-gap;
         grid-template-columns: 100%;
         grid-template-rows: min-content;
         grid-template-areas:

@@ -1,5 +1,6 @@
-@use '../initialise/colours';
+@use 'sass:map';
 @use 'metadata';
+@use '../settings/spacing';
 
 $is-front_end: false !default;
 
@@ -88,7 +89,7 @@ $is-front_end: false !default;
     // background-color: moccasin;
     display: grid;
     column-gap: 0;
-    row-gap: calc(0.5 * var(--pp--space--ver));
+    row-gap: calc(0.5 * #{map.get(spacing.$pp--spacing, "vertical")});
     grid-template-columns: 100%;
     &.pp-user_is_not_logged_in {
       // background-color: skyblue;
@@ -184,7 +185,7 @@ $is-front_end: false !default;
       display: grid;
       grid-template-columns: clamp(10%, 18ch, 25%) 1fr;
       grid-template-rows: min-content;
-      column-gap: calc(1.5 * var(--pp--space--hor));
+      column-gap: calc(1.5 * #{map.get(spacing.$pp--spacing, "horizontal")});
       row-gap: 0;
       place-content: center stretch;
       place-items: start stretch;

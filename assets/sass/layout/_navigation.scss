@@ -1,4 +1,7 @@
-$column-gap: calc(4 * var(--pp--space--hor));
+@use 'sass:map';
+@use '../settings/spacing';
+
+$column-gap: calc(4 * #{map.get(spacing.$pp--spacing, "horizontal")});
 
 .pp-header-navigation {
     // background-color: rosybrown;
@@ -11,9 +14,7 @@ $column-gap: calc(4 * var(--pp--space--hor));
   }
 }
 
-// .pp-sidebar-navigation,
 .pp-block-navigation {
-
   .submenu-container,
   .pp-nav-pages {
     // background-color: lightslategrey;
@@ -25,9 +26,8 @@ $column-gap: calc(4 * var(--pp--space--hor));
     align-items: stretch;
     justify-content: stretch;
     column-gap: $column-gap;
-    row-gap: calc(0.5 * var(--pp--space--ver));
+    row-gap: calc(0.5 * #{map.get(spacing.$pp--spacing, "vertical")});
     // End of flex container
-
     .wp-block-navigation-item,
     .wp-block-navigation-item:hover {
       // border: 1px solid lightsteelblue;

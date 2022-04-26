@@ -1,6 +1,8 @@
 $is-front_end: true !default;
 
+@use 'sass:map';
 @use 'post-content';
+@use '../settings/spacing';
 
 // Used by single post, page, etc.
 
@@ -24,8 +26,8 @@ $is-front_end: true !default;
       @include post-content.post-content('excerpt', $is-front_end);
       // End of grid container
       .pp-template {
-        $col-gap: calc(1 * var(--pp--space--hor));
-        $row-gap: calc(0.5 * var(--pp--space--ver));
+        $col-gap: calc(1 * #{map.get(spacing.$pp--spacing, "horizontal")});
+        $row-gap: calc(0.5 * #{map.get(spacing.$pp--spacing, "vertical")});
         gap: $row-gap $col-gap;
         @supports (grid-template-rows: masonry) {
           display: grid;

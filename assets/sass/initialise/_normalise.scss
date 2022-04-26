@@ -1,10 +1,10 @@
 $is-front_end: true !default;
 
 @use 'sass:map';
-@use 'colours';
-@use 'fonts';
 @use '../mixins/mixins';
-@use 'quotation-marks';
+@use '../settings/colours';
+@use '../settings/fonts';
+@use '../settings/quotation-marks';
 
 @include mixins.initialise-spacing($is-front_end);
 
@@ -136,6 +136,7 @@ footer {
 // Correct the font size on `h1` elements within `section` and
 // `article` contexts in Chrome, Firefox, and Safari.
 //
+
 h1 {
   font-size: #{map.get(fonts.$pp--fonts, "sizes", "h1")};
 }

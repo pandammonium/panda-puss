@@ -1,7 +1,10 @@
 $site-width: 1000px !default;
 
+@use 'sass:map';
+@use '../settings/spacing';
+
 .wp-site-blocks {
-  $row-gap: calc(1 * var(--pp--space--ver));
+  $row-gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")});
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
   margin: {
@@ -41,8 +44,8 @@ $site-width: 1000px !default;
       // Flex container
       display: flex;
       flex-flow: row nowrap;
-      $col-gap: calc(2 * var(--pp--space--hor));
-      gap: calc(1 * var(--pp--space--ver)) $col-gap;
+      $col-gap: calc(2 * #{map.get(spacing.$pp--spacing, "horizontal")});
+      gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")}) $col-gap;
       place-content: stretch;
       place-items: stretch;
       @media screen and (max-width: 782px) {

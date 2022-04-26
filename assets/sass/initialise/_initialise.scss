@@ -9,9 +9,9 @@ $is-front_end: false !default;
 @use 'normalise' with (
   $is-front_end: $is-front_end
 );
-@use 'colours';
-@use 'fonts';
-@use 'spacing';
-@use 'quotation-marks';
+@use '../settings/colours';
+@use '../settings/fonts';
+@use '../settings/spacing';
+@use '../settings/quotation-marks';
 
 // @debug #{$is-front_end};
