@@ -104,7 +104,7 @@ $is-front_end: true !default;
       &__input {
         @include mixins.ui-element;
         @include mixins.ui-field;
-        color: inherit;
+        color: currentColor;
         flex-grow: 1;
         min-width: 1ch;
         font-size: unset;
@@ -117,6 +117,7 @@ $is-front_end: true !default;
         flex: unset;
       }
       &__button {
+        color: currentColor;
         background: inherit;
         @include mixins.ui-element;
         @include mixins.ui-button;

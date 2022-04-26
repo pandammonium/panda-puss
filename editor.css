@@ -70,7 +70,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border-color: currentColor;
   border-width: 1px;
   border-style: inset;
-  color: inherit;
+  color: currentColor;
   flex-grow: 1;
   min-width: 1ch;
   font-size: unset;
@@ -83,6 +83,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   flex: unset;
 }
 .wp-site-blocks .wp-block-search__button {
+  color: currentColor;
   background: inherit;
   border-color: currentColor;
   border-width: 1px;
