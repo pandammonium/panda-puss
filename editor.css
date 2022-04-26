@@ -1323,3 +1323,7 @@ body {
 :not(pre) code.php {
   color: #40bfbf;
 }
+
+ol, ul, dl {
+  padding-inline-start: revert !important;
+}
