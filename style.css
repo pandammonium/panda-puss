@@ -322,12 +322,12 @@ samp {
 }
 
 small {
-  font-size: 0.6rem;
+  font-size: 9.6px;
 }
 
 sub,
 sup {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -1457,7 +1457,7 @@ svg {
 }
 
 .pp-footer {
-  font-size: smaller;
+  font-size: 0.8rem;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: min-content;
@@ -1518,15 +1518,23 @@ svg {
   display: inline-block;
 }
 
+body {
+  --wp--preset--font-size--small: 9.6px;
+  --wp--preset--font-size--medium: 16px;
+  --wp--preset--font-size--large: 22.4px;
+  --wp--preset--font-size--x-large: 28.8px;
+}
+
 :root {
-  --wp--custom--color--fg-primary: #404040;
-  --wp--custom--color--bg-primary: white;
-  --wp--custom--color--fg-secondary: black;
-  --wp--custom--color--bg-secondary: #bfbfbf;
-  --wp--custom--color--fg-tertiary: #80ff00;
-  --wp--custom--color--bg-tertiary: #ff0080;
-  --wp--custom--font-family--primary: sans-serif;
-  --wp--custom--line-height--normal: 1.5;
+  --wp--custom--border--color: #404040;
+  --wp--custom--border--color: 5px;
+  --wp--custom--border--color: solid;
+  --wp--custom--border--color: from-font;
+  --wp--custom--color--bg-primary: #404040;
+  --wp--custom--color--fg-primary: white;
+  --wp--custom--font-family--primary: #;
+  --wp--custom--spacing--block-gap: 0;
+  --wp--custom--line-height--normal: ;
 }
 
 .wp-block-code.ada {

@@ -1,15 +1,31 @@
-@use '../initialise/colours';
+@use 'sass:map';
+// @use '../initialise/colours';
 @use '../initialise/fonts';
+@use '../initialise/miscellaneous';
+
+body {
+  --wp--preset--font-size--small: #{map.get(fonts.$pp--fonts, "sizes", "small")};
+  --wp--preset--font-size--medium: #{map.get(fonts.$pp--fonts, "sizes", "medium")};
+  --wp--preset--font-size--large: #{map.get(fonts.$pp--fonts, "sizes", "large")};
+  --wp--preset--font-size--x-large: #{map.get(fonts.$pp--fonts, "sizes", "x-large")};
+}
 
 :root {
-  --wp--custom--color--fg-primary: #{colours.$pp--colour--fg-primary};
-  --wp--custom--color--bg-primary: #{colours.$pp--colour--bg-primary};
-  --wp--custom--color--fg-secondary: #{colours.$pp--colour--fg-secondary};
-  --wp--custom--color--bg-secondary: #{colours.$pp--colour--bg-secondary};
-  --wp--custom--color--fg-tertiary: #{colours.$pp--colour--fg-tertiary};
-  --wp--custom--color--bg-tertiary: #{colours.$pp--colour--bg-tertiary};
 
-  --wp--custom--font-family--primary: #{fonts.$pp--font-family--primary};
+  --wp--custom--border--color: #{map.get(miscellaneous.$pp--border, "colour")};
+  --wp--custom--border--color: #{map.get(miscellaneous.$pp--border, "radius")};
+  --wp--custom--border--color: #{map.get(miscellaneous.$pp--border, "style")};
+  --wp--custom--border--color: #{map.get(miscellaneous.$pp--border, "width")};
 
-  --wp--custom--line-height--normal: #{fonts.$pp--line-height};
+  --wp--custom--color--bg-primary: #{map.get(miscellaneous.$pp--colour, "background")};
+  --wp--custom--color--fg-primary: #{map.get(miscellaneous.$pp--colour, "text")};
+  // --wp--custom--color--fg-secondary: #{colours.$pp--colour--fg-secondary};
+  // --wp--custom--color--bg-secondary: #{colours.$pp--colour--bg-secondary};
+  // --wp--custom--color--fg-tertiary: #{colours.$pp--colour--fg-tertiary};
+  // --wp--custom--color--bg-tertiary: #{colours.$pp--colour--bg-tertiary};
+
+  --wp--custom--font-family--primary: ##{map.get(fonts.$pp--fonts, "families", "pp--font-family--primary")};
+
+  --wp--custom--spacing--block-gap: #{map.get(miscellaneous.$pp--spacing, 'block-gap')};
+  --wp--custom--line-height--normal: #{map.get(fonts.$pp--fonts, "pp--line-height--primary")};
 }

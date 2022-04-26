@@ -1,23 +1,64 @@
-$pp--font-family--serif: serif;
-$pp--font-family--sans-serif: sans-serif;
-$pp--font-family--cursive: cursive;
-$pp--font-family--monospace: monospace;
-
-$pp--font-family--primary: $pp--font-family--sans-serif !default;
-$pp--font-family--secondary: $pp--font-family--cursive !default;
+@use 'sass:map';
 
 $-pp--font-size--base: 16px;
+$-pp--font-size--heading: calc(2 * $-pp--font-size--base);
 
-$pp--font-size--small: 0.6rem;
-$pp--font-size--medium: $-pp--font-size--base;
-$pp--font-size--large: 1.4rem;
-$pp--font-size--huge: 1.8rem;
+$-pp--fonts: (
+  "sizes": (
+    "small": calc(0.6 * $-pp--font-size--base),
+    "medium": $-pp--font-size--base,
+    "large": calc(1.4 * $-pp--font-size--base),
+    "x-large": calc(1.8 * $-pp--font-size--base),
+    "h1": max(21px, calc(1.0 * $-pp--font-size--heading)),
+    "h2": max(20px, calc(0.9 * $-pp--font-size--heading)),
+    "h3": max(19px, calc(0.8 * $-pp--font-size--heading)),
+    "h4": max(18px, calc(0.7 * $-pp--font-size--heading)),
+    "h5": max(17px, calc(0.6 * $-pp--font-size--heading)),
+    "h6": max(16px, calc(0.5 * $-pp--font-size--heading)),
+  ),
+  "families": (
+    "serif": serif,
+    "sans-serif": sans-serif,
+    "cursive": cursive,
+    "monospace": monospace,
+  ),
+);
 
-$pp--font-size--sub: -0.25rem;
-$pp--font-size--sup: -0.5rem;
+$pp--fonts: (
+  "sizes": (
+    "primary": #{map.get($-pp--fonts, "sizes", "medium")},
+    "secondary": #{map.get($-pp--fonts, "sizes", "x-large")},
+    "small": #{map.get($-pp--fonts, "sizes", "small")},
+    "medium": #{map.get($-pp--fonts, "sizes", "medium")},
+    "large": #{map.get($-pp--fonts, "sizes", "large")},
+    "x-large": #{map.get($-pp--fonts, "sizes", "x-large")},
+    "smaller": 0.8rem,
+    "larger": 1.2rem,
+    "h1": #{map.get($-pp--fonts, "sizes", "h1")},
+    "h2": #{map.get($-pp--fonts, "sizes", "h2")},
+    "h3": #{map.get($-pp--fonts, "sizes", "h3")},
+    "h4": #{map.get($-pp--fonts, "sizes", "h4")},
+    "h5": #{map.get($-pp--fonts, "sizes", "h5")},
+    "h6": #{map.get($-pp--fonts, "sizes", "h6")},
+    "sub-sup": 0.75rem,
+  ),
+  "families": (
+    "primary": #{map.get($-pp--fonts, "families", "sans-serif")},
+    "secondary": #{map.get($-pp--fonts, "families", "cursive")},
+    "monospace": #{map.get($-pp--fonts, "families", "monospace")},
+  ),
+  "line-heights": (
+    "primary": 1.5,
+    "sub-sup": 0,
+  ),
+  "positions": (
+    "sub": -0.25rem,
+    "sup": -0.5rem,
+  ),
+);
 
 
-$pp--primary-font-size: $pp--font-size--medium !default;
-$pp--secondary-font-size: $pp--font-size--huge !default;
 
-$pp--line-height: 1.5;
+
+
+

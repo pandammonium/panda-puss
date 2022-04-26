@@ -6,7 +6,8 @@ $is-front_end: false !default;
 @if $is-front-end == false {
 
   .wp-block {
-    // background: seagreen;
+    // background-color: seagreen;
+    // border: 1px solid seagreen;
     &-archives-editor {}
     &-audio-editor {}
     &-button-editor {}

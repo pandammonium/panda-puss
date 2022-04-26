@@ -1,6 +1,7 @@
 $is-front_end: true !default;
 // @debug #{$is-front_end};
 
+@use 'sass:map';
 @use '../mixins/mixins';
 @use '../initialise/fonts';
 
@@ -10,14 +11,14 @@ $is-front_end: true !default;
 //
 .wp-site-blocks {
   // background-color: saddlebrown;
-  font-family: fonts.$pp--font-family--primary; // Needed for the editor in Safari
+  font-family: #{map.get(fonts.$pp--fonts, "families", "primary")}; // Needed for the editor in Safari
   .wp-block {
     // There is no wp-block; it's used for convenience with suffixes to create the WP blocks:
     &-code {
       code {
         border: 1px solid currentColor;
         border-radius: inherit;
-        font-family: fonts.$pp--font-family--monospace;
+        font-family: #{map.get(fonts.$pp--fonts, "families", "monospace")};
         tab-size: 2;
       }
     }
