@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use '../settings/fonts';
+
+.wp-site-blocks {
+  .pp-footer {
+    font-size: #{map.get(fonts.$pp--fonts, "sizes", "smaller")};
+  }
+}

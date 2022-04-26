@@ -1,51 +1,20 @@
 $is-front_end: true !default;
 
 @use 'sass:map';
+@use 'article';
 @use 'blocks' with (
   $is-front_end: $is-front_end
 );
 @use 'blocks-editor' with (
   $is-front_end: $is-front_end
 );
+@use 'footer';
+@use 'elements' with (
+  $is-front_end: $is-front_end
+);
+@use 'header';
 @use '../mixins/mixins';
 @use '../settings/colours';
 @use '../settings/spacing';
 
-.wp-site-blocks {
-  .pp-header {
-    a:any-link {
-      background-color: inherit;
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-  .pp-cover {
-    .pp-header-site-title,
-    .pp-header-site-tagline {
-      text-shadow: 0 0 1ch colours.$pp--colour--fg-primary;
-    }
-  }
-  .pp-focus {
-    .pp-article-title {
-      background:
-        radial-gradient(colours.$pp--colour--fg-primary, transparent)
-      ;
-      font-size: 3rem;
-      text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
-    }
-  }
-  button,
-  input[type="submit"] {
-    padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "horizontal")}), 3%);
-  }
-  code {
-    @include mixins.code-lang;
-  }
-}
 
-@if $is-front_end == false {
-  :not(pre) code {
-    @include mixins.code-lang;
-  }
-  @include mixins.list-spacing-left($is-front_end);
-}

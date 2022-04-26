@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '../settings/colours';
+
+.wp-site-blocks {
+  .pp-header {
+    a:any-link {
+      background-color: inherit;
+      color: inherit;
+      text-decoration: none;
+    }
+    .pp-cover {
+      .pp-header-site-title,
+      .pp-header-site-tagline {
+        text-shadow: 0 0 1ch colours.$pp--colour--fg-primary;
+      }
+    }
+  }
+}

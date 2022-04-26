@@ -1,0 +1,22 @@
+$is-front_end: true !default;
+
+@use 'sass:map';
+@use '../mixins/mixins';
+@use '../settings/spacing';
+
+.wp-site-blocks {
+  button,
+  input[type="submit"] {
+    padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "horizontal")}), 3%);
+  }
+  code {
+    @include mixins.code-lang;
+  }
+}
+
+@if $is-front_end == false {
+  :not(pre) code {
+    @include mixins.code-lang;
+  }
+  @include mixins.list-spacing-left($is-front_end);
+}

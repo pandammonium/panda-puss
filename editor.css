@@ -1058,6 +1058,12 @@ svg {
   display: inline-block;
 }
 
+.wp-site-blocks .pp-focus .pp-article-title {
+  background: radial-gradient(#404040, transparent);
+  font-size: 3rem;
+  text-shadow: 0 0 10px white;
+}
+
 .wp-block-code.ada {
   color: #bf4040;
 }
@@ -1139,20 +1145,10 @@ svg {
 .wp-block-list-editor {
   padding-inline-start: 2.5ch;
 }
-.wp-site-blocks .pp-header a:any-link {
-  background-color: inherit;
-  color: inherit;
-  text-decoration: none;
+.wp-site-blocks .pp-footer {
+  font-size: 0.8rem;
 }
-.wp-site-blocks .pp-cover .pp-header-site-title,
-.wp-site-blocks .pp-cover .pp-header-site-tagline {
-  text-shadow: 0 0 1ch #404040;
-}
-.wp-site-blocks .pp-focus .pp-article-title {
-  background: radial-gradient(#404040, transparent);
-  font-size: 3rem;
-  text-shadow: 0 0 10px white;
-}
+
 .wp-site-blocks button,
 .wp-site-blocks input[type=submit] {
   padding: 0 clamp(1ch, 10 * calc(0.5 * 1ch), 3%);
@@ -1311,4 +1307,14 @@ svg {
 
 ol, ul, dl {
   padding-inline-start: revert !important;
+}
+
+.wp-site-blocks .pp-header a:any-link {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.wp-site-blocks .pp-header .pp-cover .pp-header-site-title,
+.wp-site-blocks .pp-header .pp-cover .pp-header-site-tagline {
+  text-shadow: 0 0 1ch #404040;
 }
