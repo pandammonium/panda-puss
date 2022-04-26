@@ -3,7 +3,6 @@ $is-front_end: true !default;
 @use 'sass:map';
 @use '../initialise/colours';
 @use '../mixins/mixins';
-@use 'wp-theme-settings';
 @use 'blocks' with (
   $is-front_end: $is-front_end
 );
