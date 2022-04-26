@@ -12,20 +12,20 @@ body {
 
 :root {
 
-  --wp--custom--border--color: #{map.get(miscellaneous.$pp--border, "colour")};
-  --wp--custom--border--color: #{map.get(miscellaneous.$pp--border, "radius")};
-  --wp--custom--border--color: #{map.get(miscellaneous.$pp--border, "style")};
-  --wp--custom--border--color: #{map.get(miscellaneous.$pp--border, "width")};
+  --wp--custom--border--colour: #{map.get(miscellaneous.$pp--border, "colour")};
+  --wp--custom--border--colour: #{map.get(miscellaneous.$pp--border, "radius")};
+  --wp--custom--border--colour: #{map.get(miscellaneous.$pp--border, "style")};
+  --wp--custom--border--colour: #{map.get(miscellaneous.$pp--border, "width")};
 
-  --wp--custom--color--bg-primary: #{map.get(miscellaneous.$pp--colour, "background")};
-  --wp--custom--color--fg-primary: #{map.get(miscellaneous.$pp--colour, "text")};
-  // --wp--custom--color--fg-secondary: #{colours.$pp--colour--fg-secondary};
-  // --wp--custom--color--bg-secondary: #{colours.$pp--colour--bg-secondary};
-  // --wp--custom--color--fg-tertiary: #{colours.$pp--colour--fg-tertiary};
-  // --wp--custom--color--bg-tertiary: #{colours.$pp--colour--bg-tertiary};
+  --wp--custom--colour--bg-primary: #{map.get(miscellaneous.$pp--colour, "background")};
+  --wp--custom--colour--fg-primary: #{map.get(miscellaneous.$pp--colour, "text")};
+  // --wp--custom--colour--fg-secondary: #{colours.$pp--colour--fg-secondary};
+  // --wp--custom--colour--bg-secondary: #{colours.$pp--colour--bg-secondary};
+  // --wp--custom--colour--fg-tertiary: #{colours.$pp--colour--fg-tertiary};
+  // --wp--custom--colour--bg-tertiary: #{colours.$pp--colour--bg-tertiary};
 
-  --wp--custom--font-family--primary: ##{map.get(fonts.$pp--fonts, "families", "pp--font-family--primary")};
+  --wp--custom--font-family--primary: ##{map.get(fonts.$pp--fonts, "families", "primary")};
 
   --wp--custom--spacing--block-gap: #{map.get(miscellaneous.$pp--spacing, 'block-gap')};
-  --wp--custom--line-height--normal: #{map.get(fonts.$pp--fonts, "pp--line-height--primary")};
+  --wp--custom--line-height--normal: #{map.get(fonts.$pp--fonts, "line-heights", "primary")};
 }
