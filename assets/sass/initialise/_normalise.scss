@@ -33,10 +33,15 @@ body {
   font-size: #{map.get(fonts.$pp--fonts, "sizes", "primary")};
   line-height: #{map.get(fonts.$pp--fonts, "line-heights", "primary")}; // 1
   overflow-wrap: break-word;
-  -moz-text-size-adjust: 100%; // 2
-  -ms-text-size-adjust: 100%; // 2
-  -webkit-text-size-adjust: 100%; // 2
-  text-size-adjust: 100%; // 2
+  @supports (text-size-adjust: auto) {
+    text-size-adjust: auto; // 2
+  }
+  @supports (text-size-adjust: auto) and (not (text-size-adjust: 100%)) {
+    text-size-adjust: auto; // 2
+  }
+  @supports (text-size-adjust: 100%) and (not (text-size-adjust: auto)) {
+    text-size-adjust: 100%; // 2
+  }
   // Hyphenation
   // 4
   // From http://clagnut.com/blog/2395
