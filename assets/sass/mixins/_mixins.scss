@@ -134,7 +134,7 @@
 @mixin initialise-spacing($is-front_end) {
   $reset-margin: ':root, body,\
   header, footer, div,\
-  ol, ul, menu, dir, p, dl, img, time,\
+  ol, ul, menu, div, p, dl, img, time,\
   multicol, blockquote, figure,\
   h1, h2, h3, h4, h5, h6,\
   :is(article, aside, nav, section) h1,\
