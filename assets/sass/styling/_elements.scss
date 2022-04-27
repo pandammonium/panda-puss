@@ -7,7 +7,7 @@ $is-front_end: true !default;
 .wp-site-blocks {
   button,
   input[type="submit"] {
-    padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "horizontal")}), 3%);
+    padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "vertical")}), 3%);
   }
   code {
     @include mixins.code-lang;

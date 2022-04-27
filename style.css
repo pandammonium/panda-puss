@@ -1619,7 +1619,7 @@ svg {
 
 .wp-site-blocks button,
 .wp-site-blocks input[type=submit] {
-  padding: 0 clamp(1ch, 10 * calc(0.5 * 1ch), 3%);
+  padding: 0 clamp(1ch, 10 * calc(2.0 * 1ch), 3%);
 }
 .wp-site-blocks code.ada {
   color: #bf4040;
