@@ -240,7 +240,7 @@ h5 {
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 hr {
@@ -280,7 +280,7 @@ samp {
 }
 
 small {
-  font-size: 9.6px;
+  font-size: 12px;
 }
 
 sub,
@@ -1058,9 +1058,12 @@ svg {
   display: inline-block;
 }
 
+.wp-site-blocks .pp-article-title {
+  font-size: 32px;
+}
 .wp-site-blocks .pp-focus .pp-article-title {
   background: radial-gradient(#404040, transparent);
-  font-size: 3rem;
+  font-size: 48px;
   text-shadow: 0 0 10px white;
 }
 

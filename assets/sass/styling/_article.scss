@@ -1,13 +1,17 @@
+@use 'sass:map';
 @use '../settings/colours';
 @use '../settings/fonts';
 
 .wp-site-blocks {
+  .pp-article-title {
+    font-size: #{map.get(fonts.$pp--fonts, "sizes", "large")};
+  }
   .pp-focus {
     .pp-article-title {
       background:
         radial-gradient(colours.$pp--colour--fg-primary, transparent)
       ;
-      font-size: 3rem;
+      font-size: #{map.get(fonts.$pp--fonts, "sizes", "x-large")};
       text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
     }
   }

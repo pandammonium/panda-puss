@@ -1,20 +1,22 @@
 @use 'sass:map';
 
+// All things fonts and text.
+
 $-pp--font-size--base: 16px;
 $-pp--font-size--heading: calc(2 * $-pp--font-size--base);
 
 $-pp--fonts: (
   "sizes": (
-    "small": calc(0.6 * $-pp--font-size--base),
+    "small": max(12px, calc(0.6 * $-pp--font-size--base)),
     "medium": $-pp--font-size--base,
-    "large": calc(1.4 * $-pp--font-size--base),
-    "x-large": calc(1.8 * $-pp--font-size--base),
-    "h1": max(21px, calc(1.0 * $-pp--font-size--heading)),
-    "h2": max(20px, calc(0.9 * $-pp--font-size--heading)),
-    "h3": max(19px, calc(0.8 * $-pp--font-size--heading)),
-    "h4": max(18px, calc(0.7 * $-pp--font-size--heading)),
-    "h5": max(17px, calc(0.6 * $-pp--font-size--heading)),
-    "h6": max(16px, calc(0.5 * $-pp--font-size--heading)),
+    "large": max(24px, calc(2 * $-pp--font-size--base)),
+    "x-large": max(32px, calc(3 * $-pp--font-size--base)),
+    "h1": max(23px, calc(1.0 * $-pp--font-size--heading)),
+    "h2": max(22px, calc(0.9 * $-pp--font-size--heading)),
+    "h3": max(21px, calc(0.8 * $-pp--font-size--heading)),
+    "h4": max(20px, calc(0.7 * $-pp--font-size--heading)),
+    "h5": max(19px, calc(0.6 * $-pp--font-size--heading)),
+    "h6": max(18px, calc(0.5 * $-pp--font-size--heading)),
   ),
   "families": (
     "serif": serif,
