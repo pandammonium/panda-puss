@@ -2,7 +2,7 @@ $is-front_end: true !default;
 // @debug #{$is-front_end};
 
 @use 'sass:map';
-@use '../mixins/mixins';
+@use '../inc/mixins';
 @use '../settings/fonts';
 @use '../settings/spacing';
 

@@ -1,7 +1,7 @@
 $is-front_end: false !default;
 
 // @use '../settings/fonts';
-@use '../mixins/mixins';
+@use '../inc/mixins';
 
 @if $is-front-end == false {
 

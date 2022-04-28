@@ -1,7 +1,7 @@
 $is-front_end: true !default;
 
 @use 'sass:map';
-@use '../mixins/mixins';
+@use '../inc/mixins';
 @use '../settings/colours';
 @use '../settings/fonts';
 @use '../settings/quotation-marks';
