@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 ?>
 <div id="pp-comments" class="pp-comments-area <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
-<h3 class="pp-comments-title">Comments</h3>
+<h2 class="pp-comments-title">Comments</h2>
 
 <?php
   $pp_comment_count = get_comments_number();
@@ -173,8 +173,8 @@ if ( post_password_required() ) {
     'title_reply'          => __( 'What do you think?' ),
     /* translators: %s: Author of the comment being replied to. */
     'title_reply_to'       => __( 'Replying to %s' ),
-    'title_reply_before'   => '<h4 id="pp-comment-reply-title" class="pp-comment-reply-title">',
-    'title_reply_after'    => '</h4>',
+    'title_reply_before'   => '<h3 id="pp-comment-reply-title" class="pp-comment-reply-title">',
+    'title_reply_after'    => '</h3>',
     'cancel_reply_before'  => ' ',
     'cancel_reply_after'   => '',
     'cancel_reply_link'    => __( 'Cancel reply' ),
