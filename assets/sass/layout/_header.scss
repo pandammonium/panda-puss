@@ -71,28 +71,28 @@
     ;
     // End of grid container
     .pp-header-site-title {
-      font-size: 5rem;
+      // font-size: 5em;
       text-align: center;
     }
 
     .pp-header-site-tagline {
-      font-size: 2.75rem;
+      // font-size: 2.75em;
       text-align: center;
     }
 
     // .pp-header-logo {
     // }
 
-    .pp-header-navigation {
-      font-size: 2rem;
-    }
+    // .pp-header-navigation {
+    //   // font-size: 2em;
+    // }
 
     .pp-header-search.pp-site-search {
       & .wp-block-search {
         // &__inside-wrapper {
         // }
         &__input {
-          font-size: 2rem;
+          // font-size: 2em;
           text-align: center;
         }
       }
@@ -126,17 +126,17 @@
       }
     }
 
-    .pp-header-navigation {
-      font-size: 2rem;
-    }
+    // .pp-header-navigation {
+    //   // font-size: 2em;
+    // }
 
     .pp-header-search.pp-site-search {
       & .wp-block-search {
         // &__inside-wrapper {
         // }
-        &__input {
-          font-size: 1.75rem;
-        }
+        // &__input {
+        //   // font-size: 1.75em;
+        // }
       }
     }
   }
