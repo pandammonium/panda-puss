@@ -1,0 +1,39 @@
+@use 'sass:list';
+
+@function get-next-fibonacci-number($n-minus-2, $n-minus-1) {
+  @if ($n-minus-2 > $n-minus-1) {
+    @error "n-minus-2 (#{$n-minus-2}) cannot be higher than n-minus-1 (#{$n-minus-1})";
+  }
+  @if ($n-minus-2 < 0) {
+    @error "n-minus-2 cannot be less than 0 (zero)";
+  }
+  @if ($n-minus-1 < 0) {
+    @error "n-minus-1 cannot be less than 0 (zero)";
+  }
+  // @if ($n-minus-1 == 0) {
+  //   @error "n-minus-1 cannot be #{$n-minus-1} (zero)";
+  // }
+  @if ($n-minus-2 == 0 and $n-minus-1 == 0) {
+    @return 1;
+  }
+  @return $n-minus-1 + $n-minus-2;
+}
+
+@function add-next-fibonacci-number($fibonacci-numbers) {
+  $-n-minus-1: list.nth($fibonacci-numbers, -1);
+  $-n-minus-2: list.nth($fibonacci-numbers, -2);
+  @if ($-n-minus-2 > $-n-minus-1) {
+    @error "n-minus-2 (#{$-n-minus-2}) cannot be higher than n-minus-1 (#{$-n-minus-1}): [#{$fibonacci-numbers}]";
+  }
+  @if ($-n-minus-2 < 0) {
+    @error "n-minus-2 cannot be less than 0 (zero): [#{$fibonacci-numbers}]";
+  }
+  @if ($-n-minus-1 < 1) {
+    @error "n-minus-1 cannot be less than 0 (zero): [#{$fibonacci-numbers}]";
+  }
+  @if ($-n-minus-2 == 0 and $-n-minus-1 == 0) {
+    @warn "n-minus-1 should not be 0 (zero): [#{$fibonacci-numbers}]";
+    @return append($fibonacci-numbers, 1);
+  }
+  @return append($fibonacci-numbers, $-n-minus-2 + $-n-minus-1);
+}
