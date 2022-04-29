@@ -142,7 +142,7 @@
           // Display title on overlaid on featured image:
           position: relative;
           text-align: center;
-          // Only overlay the title over the featured image if there is a featured image:
+          // Only overlay the title over the featured image if there is an adjacent featured image:
           .pp-article-featured_image + .pp-article-title {
             left: 50%;
             position: absolute;

@@ -1,23 +1,15 @@
+@use 'sass:list';
 @use 'sass:map';
+@use 'sass:math';
+@use '../inc/functions';
 
-// All things fonts and text.
-
-$-pp--font-size--base: 16px;
-$-pp--font-size--heading: calc(2 * $-pp--font-size--base);
+$-base-font-size: 16;
+// @debug #{$-base-font-size}px;
+$-pp--font-size--base: #{$-base-font-size}px;
+// @debug $-pp--font-size--base;
+$-heading-level: 6;
 
 $-pp--fonts: (
-  "sizes": (
-    "small": max(12px, calc(0.6 * $-pp--font-size--base)),
-    "medium": $-pp--font-size--base,
-    "large": max(24px, calc(2 * $-pp--font-size--base)),
-    "x-large": max(32px, calc(3 * $-pp--font-size--base)),
-    "h1": max(23px, calc(1.0 * $-pp--font-size--heading)),
-    "h2": max(22px, calc(0.9 * $-pp--font-size--heading)),
-    "h3": max(21px, calc(0.8 * $-pp--font-size--heading)),
-    "h4": max(20px, calc(0.7 * $-pp--font-size--heading)),
-    "h5": max(19px, calc(0.6 * $-pp--font-size--heading)),
-    "h6": max(18px, calc(0.5 * $-pp--font-size--heading)),
-  ),
   "families": (
     "serif": serif,
     "sans-serif": sans-serif,
@@ -26,6 +18,37 @@ $-pp--fonts: (
   ),
 );
 
+// Font sizes:
+// Headings:
+$-factor: 7;
+$-fib: 0, 1;
+// @debug $-fib;
+@while $-heading-level > 0 {
+  $-fib: functions.add-next-fibonacci-number($-fib);
+  $-n-minus-1: list.nth($-fib, -1);
+  $-n-minus-2: list.nth($-fib, -2);
+  // @debug $-n-minus-1 $-base-font-size ($-n-minus-1 >= $-base-font-size);
+  @if $-n-minus-1 >= $-base-font-size {
+    $-font-size: math.sqrt($-n-minus-1 - $-n-minus-2) * $-factor;
+    // @debug 'h#{$-heading-level} {font-size: ' + $-font-size + 'px} | #{$-n-minus-1}';
+    $-pp--fonts: map.set($-pp--fonts, "sizes", "h#{$-heading-level}", "#{$-font-size}px");
+    $-heading-level: $-heading-level - 1;
+  } @else {
+    // @debug ' – | #{$-n-minus-1}';
+  }
+}
+// @debug $-fib;
+// Text:
+$-sizes: "x-large", "large", "medium", "small";
+$-n: list.length($-fib);
+@each $-size in $-sizes {
+  $-n-minus-1: list.nth($-fib, ($-n - 1));
+  $-n-minus-2: list.nth($-fib, ($-n - 2));
+  $-font-size: math.log(($-n-minus-1 - $-n-minus-2)) * 5.5;
+  // @debug '#{$-n} | #{$-n-minus-1} #{$-n-minus-2} | size #{$-size}: #{$-font-size}';
+  $-pp--fonts: map.set($-pp--fonts, "sizes", "#{$-size}", "#{$-font-size}px");
+  $-n: ($-n - 1);
+}
 $pp--fonts: (
   "sizes": (
     "primary": #{map.get($-pp--fonts, "sizes", "medium")},
@@ -34,15 +57,15 @@ $pp--fonts: (
     "medium": #{map.get($-pp--fonts, "sizes", "medium")},
     "large": #{map.get($-pp--fonts, "sizes", "large")},
     "x-large": #{map.get($-pp--fonts, "sizes", "x-large")},
-    "smaller": 0.8rem,
-    "larger": 1.2rem,
+    "smaller": 0.8em,
+    "larger": 1.2em,
     "h1": #{map.get($-pp--fonts, "sizes", "h1")},
     "h2": #{map.get($-pp--fonts, "sizes", "h2")},
     "h3": #{map.get($-pp--fonts, "sizes", "h3")},
     "h4": #{map.get($-pp--fonts, "sizes", "h4")},
     "h5": #{map.get($-pp--fonts, "sizes", "h5")},
     "h6": #{map.get($-pp--fonts, "sizes", "h6")},
-    "sub-sup": 0.75rem,
+    "sub-sup": 0.75em,
   ),
   "families": (
     "primary": #{map.get($-pp--fonts, "families", "sans-serif")},
@@ -58,9 +81,24 @@ $pp--fonts: (
     "sup": -0.5rem,
   ),
 );
+// @debug map.get($pp--fonts, "sizes");
 
-
-
-
-
+.small {
+  font-size: map.get($pp--fonts, "sizes", "small");
+}
+.medium {
+  font-size: map.get($pp--fonts, "sizes", "medium");
+}
+.large {
+  font-size: map.get($pp--fonts, "sizes", "large");
+}
+.x-large {
+  font-size: map.get($pp--fonts, "sizes", "x-large");
+}
+.smaller {
+  font-size: map.get($pp--fonts, "sizes", "smaller");
+}
+.larger {
+  font-size: map.get($pp--fonts, "sizes", "larger");
+}
 
