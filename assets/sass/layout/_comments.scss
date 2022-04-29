@@ -35,10 +35,9 @@ $is-front_end: false !default;
         content: counters(comments, ".") "\00A0";
         counter-increment: comments;
         float: left;
-        // font-size: 32px;
         margin-right: calc(2 * var(--pp--space---hor));
         position: relative;
-        top: 10px;
+        top: 3px;
       }
       .pp-comment-individual {
         // background-color: bisque;

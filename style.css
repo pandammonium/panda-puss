@@ -1341,7 +1341,7 @@ svg {
   float: left;
   margin-right: calc(2 * var(--pp--space---hor));
   position: relative;
-  top: 10px;
+  top: 3px;
 }
 .pp-comment-list .pp-comment-item .pp-comment-individual {
   display: grid;
