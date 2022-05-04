@@ -1534,9 +1534,26 @@ svg {
 .pp-search-404 .wp-block-search__label {
   display: inline-block;
 }
+
+.wp-site-blocks .pp-query .pp-article-title {
+  font-size: 22px;
+}
 .wp-site-blocks .pp-focus .pp-article-title {
   background: radial-gradient(#404040, transparent);
   text-shadow: 0 0 10px white;
+}
+@media screen and (min-width: 600px) and (max-width: 782px) {
+  .wp-site-blocks .pp-focus .pp-article-title {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .wp-site-blocks .pp-focus .pp-article-title {
+    font-size: 22px;
+  }
+}
+.wp-site-blocks .pp-focus .pp-article-featured_image {
+  box-shadow: 0 0 10px #404040;
 }
 
 .wp-block-code.ada {

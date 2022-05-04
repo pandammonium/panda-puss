@@ -1,18 +1,35 @@
 @use 'sass:map';
+@use '../inc/functions';
 @use '../settings/colours';
 @use '../settings/fonts';
 
 .wp-site-blocks {
-  .pp-article-title {
-    font-size: #{map.get(fonts.$pp--fonts, "sizes", "large")};
+  .pp-query {
+    .pp-article-title {
+      font-size: map.get(fonts.$pp--fonts, "sizes", "x-large");
+    }
   }
   .pp-focus {
-    .pp-article-title {
-      background:
-        radial-gradient(colours.$pp--colour--fg-primary, transparent)
-      ;
-      font-size: #{map.get(fonts.$pp--fonts, "sizes", "x-large")};
-      text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
+    .pp-article {
+      &-title {
+        $min-title-size: map.get(fonts.$pp--fonts, "sizes", "x-large");
+        // @debug 'Min title size #{$min-title-size} is a #{type-of($min-title-size)}';
+        $med-title-size: functions.average(map.get(fonts.$pp--fonts, "sizes", "h1"), $min-title-size) * 1px;
+        // @debug 'Med title size #{$med-title-size} is a #{type-of($med-title-size)}';
+        @media screen and (min-width: 600px) and (max-width: 782px) {
+          font-size: $med-title-size;
+        }
+        @media screen and (max-width: 599px) {
+          font-size: $min-title-size;
+        }
+        background:
+          radial-gradient(colours.$pp--colour--bg-primary, transparent)
+        ;
+        text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
+      }
+      &-featured_image {
+        box-shadow:  0 0 10px colours.$pp--colour--fg-primary;
+      }
     }
   }
 }
