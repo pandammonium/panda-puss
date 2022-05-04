@@ -18,19 +18,19 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 .small {
-  font-size: 14.107221466px;
+  font-size: 14px;
 }
 
 .medium {
-  font-size: 16.7448734075px;
+  font-size: 17px;
 }
 
 .large {
-  font-size: 19.3949828854px;
+  font-size: 19px;
 }
 
 .x-large {
-  font-size: 22.0403325188px;
+  font-size: 22px;
 }
 
 .smaller {
@@ -206,7 +206,7 @@ body {
   background-color: white;
   color: #404040;
   font-family: sans-serif;
-  font-size: 16.7448734075px;
+  font-size: 17px;
   line-height: 1.5;
   overflow-wrap: break-word;
   -webkit-hyphens: auto;
@@ -298,27 +298,27 @@ footer {
 }
 
 h1 {
-  font-size: 66.0378679244px;
+  font-size: 66px;
 }
 
 h2 {
-  font-size: 51.9133894097px;
+  font-size: 52px;
 }
 
 h3 {
-  font-size: 40.8166632639px;
+  font-size: 41px;
 }
 
 h4 {
-  font-size: 32.0780298647px;
+  font-size: 32px;
 }
 
 h5 {
-  font-size: 25.2388589282px;
+  font-size: 25px;
 }
 
 h6 {
-  font-size: 19.7989898732px;
+  font-size: 20px;
 }
 
 hr {
@@ -329,7 +329,7 @@ hr {
 
 pre {
   font-family: monospace;
-  font-size: 16.7448734075px;
+  font-size: 17px;
   tab-size: 2;
 }
 
@@ -354,11 +354,11 @@ code,
 kbd,
 samp {
   font-family: monospace;
-  font-size: 16.7448734075px;
+  font-size: 17px;
 }
 
 small {
-  font-size: 14.107221466px;
+  font-size: 14px;
 }
 
 sub,
@@ -390,7 +390,7 @@ textarea {
   background: inherit;
   color: inherit;
   font-family: inherit;
-  font-size: 16.7448734075px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -1621,7 +1621,7 @@ svg {
   padding-inline-start: 1.5ch;
 }
 .wp-site-blocks .pp-footer {
-  font-size: 14.107221466px;
+  font-size: 14px;
 }
 
 .wp-site-blocks button,
@@ -1705,7 +1705,7 @@ svg {
 }
 
 .wp-site-blocks .pp-header {
-  font-size: 19.3949828854px;
+  font-size: 19px;
 }
 .wp-site-blocks .pp-header a:any-link {
   background-color: inherit;
@@ -1715,28 +1715,4 @@ svg {
 .wp-site-blocks .pp-header .pp-cover .pp-header-site-title,
 .wp-site-blocks .pp-header .pp-cover .pp-header-site-tagline {
   text-shadow: 0 0 1ch #404040;
-}
-
-.small {
-  font-size: 14.107221466px;
-}
-
-.medium {
-  font-size: 16.7448734075px;
-}
-
-.large {
-  font-size: 19.3949828854px;
-}
-
-.x-large {
-  font-size: 22.0403325188px;
-}
-
-.smaller {
-  font-size: 0.8em;
-}
-
-.larger {
-  font-size: 1.2em;
 }
