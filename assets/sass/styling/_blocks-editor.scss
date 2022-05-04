@@ -4,7 +4,6 @@ $is-front_end: false !default;
 @use '../inc/mixins';
 
 @if $is-front-end == false {
-
   .wp-block {
     // background-color: seagreen;
     // border: 1px solid seagreen;

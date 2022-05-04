@@ -13,8 +13,3 @@ $is-front_end: true !default;
   $is-front_end: $is-front_end
 );
 @use 'header';
-@use '../inc/mixins';
-@use '../settings/colours';
-@use '../settings/spacing';
-
-
