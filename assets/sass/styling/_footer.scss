@@ -3,6 +3,6 @@
 
 .wp-site-blocks {
   .pp-footer {
-    font-size: #{map.get(fonts.$pp--fonts, "sizes", "smaller")};
+    font-size: #{map.get(fonts.$pp--fonts, "sizes", "small")};
   }
 }
