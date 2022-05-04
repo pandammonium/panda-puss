@@ -5,7 +5,7 @@
 
 $-base-font-size: 16;
 // @debug #{$-base-font-size}px;
-$-pp--font-size--base: #{$-base-font-size}px;
+$-pp--font-size--base: $-base-font-size * 1px;
 // @debug $-pp--font-size--base;
 $-heading-level: 6;
 
@@ -31,7 +31,7 @@ $-fib: 0, 1;
   @if $-n-minus-1 >= $-base-font-size {
     $-font-size: math.sqrt($-n-minus-1 - $-n-minus-2) * $-factor;
     // @debug 'h#{$-heading-level} {font-size: ' + $-font-size + 'px} | #{$-n-minus-1}';
-    $-pp--fonts: map.set($-pp--fonts, "sizes", "h#{$-heading-level}", "#{math.round($-font-size)}px");
+    $-pp--fonts: map.set($-pp--fonts, "sizes", "h#{$-heading-level}", math.round($-font-size) * 1px);
     $-heading-level: $-heading-level - 1;
   } @else {
     // @debug ' – | #{$-n-minus-1}';
@@ -46,39 +46,39 @@ $-n: list.length($-fib);
   $-n-minus-2: list.nth($-fib, ($-n - 2));
   $-font-size: math.log(($-n-minus-1 - $-n-minus-2)) * 5.5;
   // @debug '#{$-n} | #{$-n-minus-1} #{$-n-minus-2} | size #{$-size}: #{$-font-size}';
-  $-pp--fonts: map.set($-pp--fonts, "sizes", "#{$-size}", "#{math.round($-font-size)}px");
+  $-pp--fonts: map.set($-pp--fonts, "sizes", "#{$-size}", math.round($-font-size) * 1px);
   $-n: ($-n - 1);
 }
 $pp--fonts: (
   "sizes": (
-    "primary": #{map.get($-pp--fonts, "sizes", "medium")},
-    "secondary": #{map.get($-pp--fonts, "sizes", "x-large")},
-    "small": #{map.get($-pp--fonts, "sizes", "small")},
-    "medium": #{map.get($-pp--fonts, "sizes", "medium")},
-    "large": #{map.get($-pp--fonts, "sizes", "large")},
-    "x-large": #{map.get($-pp--fonts, "sizes", "x-large")},
+    "primary": map.get($-pp--fonts, "sizes", "medium"),
+    "secondary": map.get($-pp--fonts, "sizes", "x-large"),
+    "small": map.get($-pp--fonts, "sizes", "small"),
+    "medium": map.get($-pp--fonts, "sizes", "medium"),
+    "large": map.get($-pp--fonts, "sizes", "large"),
+    "x-large": map.get($-pp--fonts, "sizes", "x-large"),
     "smaller": 0.8em,
     "larger": 1.2em,
-    "h1": #{map.get($-pp--fonts, "sizes", "h1")},
-    "h2": #{map.get($-pp--fonts, "sizes", "h2")},
-    "h3": #{map.get($-pp--fonts, "sizes", "h3")},
-    "h4": #{map.get($-pp--fonts, "sizes", "h4")},
-    "h5": #{map.get($-pp--fonts, "sizes", "h5")},
-    "h6": #{map.get($-pp--fonts, "sizes", "h6")},
+    "h1": map.get($-pp--fonts, "sizes", "h1"),
+    "h2": map.get($-pp--fonts, "sizes", "h2"),
+    "h3": map.get($-pp--fonts, "sizes", "h3"),
+    "h4": map.get($-pp--fonts, "sizes", "h4"),
+    "h5": map.get($-pp--fonts, "sizes", "h5"),
+    "h6": map.get($-pp--fonts, "sizes", "h6"),
     "sub-sup": 0.75em,
   ),
   "families": (
-    "primary": #{map.get($-pp--fonts, "families", "sans-serif")},
-    "secondary": #{map.get($-pp--fonts, "families", "cursive")},
-    "monospace": #{map.get($-pp--fonts, "families", "monospace")},
+    "primary": map.get($-pp--fonts, "families", "sans-serif"),
+    "secondary": map.get($-pp--fonts, "families", "cursive"),
+    "monospace": map.get($-pp--fonts, "families", "monospace"),
   ),
   "line-heights": (
     "primary": 1.5,
     "sub-sup": 0,
   ),
   "positions": (
-    "sub": -0.25rem,
-    "sup": -0.5rem,
+    "sub": -0.25em,
+    "sup": -0.5em,
   ),
 );
 // @debug map.get($pp--fonts, "sizes");
@@ -101,4 +101,3 @@ $pp--fonts: (
 .larger {
   font-size: map.get($pp--fonts, "sizes", "larger");
 }
-
