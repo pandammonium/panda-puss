@@ -1,8 +1,10 @@
 @use 'sass:map';
 @use '../settings/colours';
+@use '../settings/fonts';
 
 .wp-site-blocks {
   .pp-header {
+    font-size: #{map.get(fonts.$pp--fonts, "sizes", "large")};
     a:any-link {
       background-color: inherit;
       color: inherit;
