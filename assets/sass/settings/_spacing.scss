@@ -4,7 +4,7 @@ $-pp--space: 1ch;
 
 $pp--spacing: (
   "unit": $-pp--space,
-  "horizontal": calc(0.5 * #{$-pp--space}),
-  "vertical": calc(2.0 * #{$-pp--space}),
+  "horizontal": calc(0.5 * $-pp--space),
+  "vertical": calc(2.0 * $-pp--space),
 );
 // @debug $pp--spacing;
