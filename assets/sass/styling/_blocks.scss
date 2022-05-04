@@ -5,7 +5,7 @@ $is-front_end: true !default;
 
 @if $is-front-end == true {
   .wp-block {
-    // There is no wp-block-latest, so don't style this bit.
+    // There is no wp-block, so don't style this bit.
     &-archives {}
     &-audio {}
     &-button {}
