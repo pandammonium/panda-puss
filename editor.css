@@ -1344,6 +1344,10 @@ ol, ul, dl {
   color: inherit;
   text-decoration: none;
 }
+.wp-site-blocks .pp-header .pp-site-title {
+  margin-block-start: 2ch;
+  margin-block-end: 2ch;
+}
 .wp-site-blocks .pp-header .pp-cover .pp-header-site-title,
 .wp-site-blocks .pp-header .pp-cover .pp-header-site-tagline {
   text-shadow: 0 0 1ch #404040;

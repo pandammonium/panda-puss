@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../settings/colours';
 @use '../settings/fonts';
+@use '../settings/spacing';
 
 .wp-site-blocks {
   .pp-header {
@@ -9,6 +10,28 @@
       background-color: inherit;
       color: inherit;
       text-decoration: none;
+    }
+    .pp-site-title {
+      margin: {
+        block: {
+          start: calc(1 * map.get(spacing.$pp--spacing, "vertical"));
+          end: calc(1 * map.get(spacing.$pp--spacing, "vertical"));
+        }
+        // inline: {
+        //   start: 0;//calc(5 * #{map.get(spacing.$pp--spacing, "horizontal")});
+        //   end: 0;
+        // }
+      }
+      // padding: 0 {
+      //   block: {
+      //     start: 0;
+      //     end: 0;
+      //   }
+      //   inline:{
+      //     start: 0;
+      //     end: 0;
+      //   }
+      // }
     }
     .pp-cover {
       .pp-header-site-title,
