@@ -1070,25 +1070,9 @@ svg {
   display: inline-block;
 }
 
-.wp-site-blocks .pp-query .pp-article-title {
-  font-size: 22px;
-}
 .wp-site-blocks .pp-focus .pp-article-title {
-  background: radial-gradient(white, transparent);
+  background: radial-gradient(#404040, transparent);
   text-shadow: 0 0 10px white;
-}
-@media screen and (min-width: 600px) and (max-width: 782px) {
-  .wp-site-blocks .pp-focus .pp-article-title {
-    font-size: 44px;
-  }
-}
-@media screen and (max-width: 599px) {
-  .wp-site-blocks .pp-focus .pp-article-title {
-    font-size: 22px;
-  }
-}
-.wp-site-blocks .pp-focus .pp-article-featured_image {
-  box-shadow: 0 0 10px #404040;
 }
 
 .wp-block-code.ada {
@@ -1343,18 +1327,6 @@ ol, ul, dl {
   background-color: inherit;
   color: inherit;
   text-decoration: none;
-}
-.wp-site-blocks .pp-header .pp-site-title {
-  margin: 0;
-  margin-block-start: 2ch;
-  margin-block-end: 2ch;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding: 0;
-  padding-block-start: 0;
-  padding-block-end: 0;
-  padding-inline-start: 0;
-  padding-inline-end: 0;
 }
 .wp-site-blocks .pp-header .pp-cover .pp-header-site-title,
 .wp-site-blocks .pp-header .pp-cover .pp-header-site-tagline {
