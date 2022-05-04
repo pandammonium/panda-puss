@@ -1539,7 +1539,7 @@ svg {
   font-size: 22px;
 }
 .wp-site-blocks .pp-focus .pp-article-title {
-  background: radial-gradient(#404040, transparent);
+  background: radial-gradient(white, transparent);
   text-shadow: 0 0 10px white;
 }
 @media screen and (min-width: 600px) and (max-width: 782px) {
