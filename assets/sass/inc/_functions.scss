@@ -1,4 +1,6 @@
 @use 'sass:list';
+@use 'sass:math';
+@use 'sass:string';
 
 @function get-next-fibonacci-number($n-minus-2, $n-minus-1) {
   @if ($n-minus-2 > $n-minus-1) {
@@ -36,4 +38,34 @@
     @return append($fibonacci-numbers, 1);
   }
   @return append($fibonacci-numbers, $-n-minus-2 + $-n-minus-1);
+}
+
+// Removes the unit of a length
+// @param {number} $number - Number to remove unit from
+// @see https://css-tricks.com/snippets/sass/strip-unit-function/
+// @return {number} - Unitless number
+@function strip-unit($number) {
+  // @debug 'Input #{$number} is a #{type-of($number)}';
+  @if type-of($number) == 'number' and not unitless($number) {
+    // @debug 'Units stripped from #{$number} → ' + math.div($number, ($number * 0 + 1));
+    @return math.div($number, ($number * 0 + 1));
+  }
+  // @debug 'Cannot strip units from #{$number}';
+  @return $number;
+}
+
+@function average($numbers...) {
+  $sum: 0;
+  $count: 0;
+  // @debug 'Number #{$count}; running total: #{$sum}';
+  @each $number in $numbers {
+    $count: $count + 1;
+    $sum: $sum + strip-unit($number);
+    // @debug 'Number #{$count}: #{$number}; running total: #{$sum}';
+  }
+  @if $count == 0 {
+    @error 'Can\'t take average of no numbers.';
+  }
+  // @debug 'Average: #{$sum} / #{$count} = #{math.div($sum, $count)}';
+  @return math.div($sum, $count);
 }
