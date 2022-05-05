@@ -1,8 +1,18 @@
 $is-front_end: true !default;
+// $metadata-type: 'article' !default;
 
 @use 'sass:map';
 @use '../inc/mixins';
 @use '../settings/spacing';
+
+// @debug $is-front_end;
+// @debug $metadata-type;
+@if $is-front_end != true and $is-front_end != false {
+  @error "Cannot determine whether is front end or back end";
+}
+// @if $metadata-type != 'comment' and $metadata-type != 'article' {
+//   @error "Unknown post metadata type";
+// }
 
 .wp-site-blocks {
   button,
@@ -12,6 +22,30 @@ $is-front_end: true !default;
   code {
     @include mixins.code-lang;
   }
+
+//   h1, h2, h3, h4, h5, h6 {
+//     // outline: 1px solid currentColor;
+//     margin: 0 {
+//       block: {
+//         start: 0;
+//         end: calc(2 * #{map.get(spacing.$pp--spacing, "horizontal")});
+//       }
+//       inline: {
+//         start: 0;
+//         end: 0;
+//       }
+//     }
+//     padding: 0 {
+//       block: {
+//         start: 0;
+//         end: 0;
+//       }
+//       inline:{
+//         start: 0;
+//         end: 0;
+//       }
+//     }
+//   }
 }
 
 @if $is-front_end == false {
