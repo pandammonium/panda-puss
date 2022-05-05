@@ -19,6 +19,7 @@
 
   &-site-title {
     // background-color: complement(burlywood);
+    text-align: center;
     // Grid item
     grid-area: site-title;
     place-self: center;
@@ -27,6 +28,7 @@
 
   &-site-tagline {
     // background-color: complement(peachpuff);
+    text-align: center;
     // Grid item
     grid-area: site-tagline;
     place-self: center;

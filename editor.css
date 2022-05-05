@@ -520,10 +520,12 @@ svg {
   grid-template-areas: "site-logo site-title" "site-logo site-tagline" "site-logo site-nav" "site-search site-search";
 }
 .pp-header-site-title {
+  text-align: center;
   grid-area: site-title;
   place-self: center;
 }
 .pp-header-site-tagline {
+  text-align: center;
   grid-area: site-tagline;
   place-self: center;
 }
