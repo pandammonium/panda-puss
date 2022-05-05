@@ -12,7 +12,10 @@
     0 0 $main-len ($main-len + 1) color.adjust($colour, $lightness: 0%),
     0 0 (2 * $main-len) (2 * $main-len + 1) color.adjust($colour, $lightness: 50%),
   ;
-  margin: $main-len;
+  margin: {
+    top: $main-len;
+    bottom: $main-len;
+  };
 }
 
 @mixin ui-element {
