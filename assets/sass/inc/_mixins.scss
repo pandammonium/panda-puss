@@ -1,4 +1,5 @@
 @use 'sass:color';
+@use 'sass:math';
 @use '../settings/colours';
 
 @mixin background-shadow($colour) {
@@ -7,15 +8,34 @@
   // box-shadow: 0 0 10px $colour;
   // First box-shadow is on the top; last box-shadow is on the bottom:
   $main-len: 5px;
+  $long-len: 0.5 * $main-len;
+  $lightness-factor: 20;
+  $short-lightness-factor: math.sqrt($lightness-factor) * -1%;
+  $main-lightness-factor: $lightness-factor * 0%;
+  $long-lightness-factor: math.sqrt($lightness-factor) * 1%;
   box-shadow:
-    0 0 1px 1px color.adjust($colour, $lightness: -50%),
-    0 0 $main-len ($main-len + 1) color.adjust($colour, $lightness: 0%),
-    0 0 (2 * $main-len) (2 * $main-len + 1) color.adjust($colour, $lightness: 50%),
+    0 0 1px 1px color.adjust($colour, $lightness: $short-lightness-factor),
+    0 0 $main-len ($main-len + 1) color.adjust($colour, $lightness: $main-lightness-factor),
+    0 0 $long-len ($long-len + 1) color.adjust($colour, $lightness: $long-lightness-factor),
   ;
   margin: {
     top: $main-len;
     bottom: $main-len;
   };
+}
+@mixin text-shadow($colour) {
+  // border: 1px solid colours.$pp--colour--bg-primary;
+  // box-shadow: 0 0 30px colours.$pp--colour--fg-secondary;
+  // box-shadow: 0 0 10px $colour;
+  // First box-shadow is on the top; last box-shadow is on the bottom:
+  $main-len: 5px;
+  $long-len: 2 * $main-len;
+  $lightness-factor: 50%;
+  text-shadow:
+    0 0 1px color.adjust($colour, $lightness: -$lightness-factor + 10),
+    0 0 $main-len color.adjust($colour, $lightness: (0 * $lightness-factor)),
+    0 0 (2 * $main-len) color.adjust($colour, $lightness: $lightness-factor),
+  ;
 }
 
 @mixin ui-element {
@@ -62,7 +82,6 @@
 }
 
 @mixin code-lang {
-
   // List of programming languages:
   // https://en.wikipedia.org/wiki/List_of_programming_languages
   // Plus BibTeX, LaTeX

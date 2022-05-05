@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use '../inc/mixins';
 @use '../settings/colours';
 @use '../settings/fonts';
 @use '../settings/spacing';
@@ -11,32 +12,38 @@
       color: inherit;
       text-decoration: none;
     }
-    .pp-site-title {
-      margin: {
-        block: {
-          start: calc(1 * map.get(spacing.$pp--spacing, "vertical"));
-          end: calc(1 * map.get(spacing.$pp--spacing, "vertical"));
+    .pp-site {
+      &-title {
+        margin: {
+          block: {
+            start: calc(1 * map.get(spacing.$pp--spacing, "vertical"));
+            end: calc(1 * map.get(spacing.$pp--spacing, "vertical"));
+          }
+          // inline: {
+          //   start: 0;//calc(5 * #{map.get(spacing.$pp--spacing, "horizontal")});
+          //   end: 0;
+          // }
         }
-        // inline: {
-        //   start: 0;//calc(5 * #{map.get(spacing.$pp--spacing, "horizontal")});
-        //   end: 0;
+        // padding: 0 {
+        //   block: {
+        //     start: 0;
+        //     end: 0;
+        //   }
+        //   inline:{
+        //     start: 0;
+        //     end: 0;
+        //   }
         // }
       }
-      // padding: 0 {
-      //   block: {
-      //     start: 0;
-      //     end: 0;
-      //   }
-      //   inline:{
-      //     start: 0;
-      //     end: 0;
-      //   }
-      // }
+      &-logo {
+        @include mixins.background-shadow(colours.$pp--colour--fg-primary);
+      }
     }
     .pp-cover {
       .pp-header-site-title,
       .pp-header-site-tagline {
-        text-shadow: 0 0 1ch colours.$pp--colour--fg-primary;
+        @include mixins.text-shadow(colours.$pp--colour--bg-primary);
+        // text-shadow: 0 0 1ch colours.$pp--colour--fg-primary;
       }
     }
   }

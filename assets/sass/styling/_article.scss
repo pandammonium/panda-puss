@@ -25,10 +25,7 @@
         @media screen and (max-width: 599px) {
           font-size: $min-title-size;
         }
-        background:
-          radial-gradient(color.adjust(colours.$pp--colour--bg-primary, $alpha: math.div(-1, 2)) 50%, transparent 75%)
-        ;
-        text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
+        @include mixins.text-shadow(colours.$pp--colour--bg-primary);
       }
       &-featured_image {
         @include mixins.background-shadow(colours.$pp--colour--fg-primary);
