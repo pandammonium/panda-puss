@@ -1,18 +1,17 @@
 $is-front_end: true !default;
-// @debug #{$is-front_end};
 
 @use 'sass:map';
 @use '../inc/mixins';
 @use '../settings/fonts';
 @use '../settings/spacing';
 
+// @debug #{$is-front_end};
 //
 // Override WordPress settings either because they don't work or they interfere
 // with other styling/layout.
 //
 .wp-site-blocks {
   // background-color: saddlebrown;
-  font-family: #{map.get(fonts.$pp--fonts, "families", "primary")}; // Needed for the editor in Safari
   .wp-block {
     // There is no wp-block; it's used for convenience with suffixes to create the WP blocks:
     &-code {
@@ -148,14 +147,26 @@ $is-front_end: true !default;
       row-gap: 0;
     }
   }
-}
-
-.block-editor {
-  &-rich-text__editable {
-    color: inherit;
+  @if $is-front_end == false {
+    // Make sure the site logo is full width in the editor:
+    // works with Firefox Developer Edition only:
+    .wp-block-site-logo div,
+    // works in Firefox Developer Edition, Chrome:
+    .editor-styles-wrapper .wp-site-blocks .wp-block-site-logo div.components-resizable-box__container.has-show-handle,
+    // works in Firefox, Opera, Safari:
+    .editor-styles-wrapper .wp-site-blocks .wp-block-site-logo div {
+      // @debug #{&};
+      height: auto !important;
+      width: 100% !important;
+    }
+    // font-family: #{map.get(fonts.$pp--fonts, "families", "primary")}; // Needed for the editor in Safari – or is it?
+    .block-editor {
+      &-rich-text__editable {
+        color: inherit;
+      }
+    }
   }
 }
-
 //
 // End of WordPress overrides
 //
