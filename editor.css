@@ -1088,7 +1088,8 @@ svg {
   }
 }
 .wp-site-blocks .pp-focus .pp-article-featured_image {
-  box-shadow: 0 0 10px #404040;
+  box-shadow: 0 0 1px 1px black, 0 0 5px 6px #404040, 0 0 10px 11px #bfbfbf;
+  margin: 5px;
 }
 
 .wp-block-code.ada {

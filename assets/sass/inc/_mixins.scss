@@ -1,4 +1,19 @@
 @use 'sass:color';
+@use '../settings/colours';
+
+@mixin background-shadow($colour) {
+  // border: 1px solid colours.$pp--colour--bg-primary;
+  // box-shadow: 0 0 30px colours.$pp--colour--fg-secondary;
+  // box-shadow: 0 0 10px $colour;
+  // First box-shadow is on the top; last box-shadow is on the bottom:
+  $main-len: 5px;
+  box-shadow:
+    0 0 1px 1px color.adjust($colour, $lightness: -50%),
+    0 0 $main-len ($main-len + 1) color.adjust($colour, $lightness: 0%),
+    0 0 (2 * $main-len) (2 * $main-len + 1) color.adjust($colour, $lightness: 50%),
+  ;
+  margin: $main-len;
+}
 
 @mixin ui-element {
   border-color: currentColor;

@@ -1,5 +1,8 @@
+@use 'sass:color';
 @use 'sass:map';
+@use 'sass:math';
 @use '../inc/functions';
+@use '../inc/mixins';
 @use '../settings/colours';
 @use '../settings/fonts';
 
@@ -28,7 +31,7 @@
         text-shadow: 0 0 10px colours.$pp--colour--bg-primary;
       }
       &-featured_image {
-        box-shadow:  0 0 10px colours.$pp--colour--fg-primary;
+        @include mixins.background-shadow(colours.$pp--colour--fg-primary);
       }
     }
   }
