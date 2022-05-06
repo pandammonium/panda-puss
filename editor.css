@@ -127,9 +127,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   display: grid;
   row-gap: 0;
 }
-.wp-site-blocks .wp-block-site-logo div,
-.wp-site-blocks .editor-styles-wrapper .wp-site-blocks .wp-block-site-logo div.components-resizable-box__container.has-show-handle,
-.wp-site-blocks .editor-styles-wrapper .wp-site-blocks .wp-block-site-logo div {
+.wp-site-blocks .wp-block-site-logo div {
   height: auto !important;
   width: 100% !important;
 }

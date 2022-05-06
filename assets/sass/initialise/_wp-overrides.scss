@@ -149,12 +149,7 @@ $is-front_end: true !default;
   }
   @if $is-front_end == false {
     // Make sure the site logo is full width in the editor:
-    // works with Firefox Developer Edition only:
-    .wp-block-site-logo div,
-    // works in Firefox Developer Edition, Chrome:
-    .editor-styles-wrapper .wp-site-blocks .wp-block-site-logo div.components-resizable-box__container.has-show-handle,
-    // works in Firefox, Opera, Safari:
-    .editor-styles-wrapper .wp-site-blocks .wp-block-site-logo div {
+    .wp-block-site-logo div {
       // @debug #{&};
       height: auto !important;
       width: 100% !important;
