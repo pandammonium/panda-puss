@@ -34,6 +34,10 @@
         //     end: 0;
         //   }
         // }
+        text-align: center;
+      }
+      &-tagline {
+        text-align: center;
       }
       &-logo {
         @include mixins.background-shadow(colours.$pp--colour--fg-primary);
@@ -43,7 +47,6 @@
       .pp-header-site-title,
       .pp-header-site-tagline {
         @include mixins.text-shadow(colours.$pp--colour--bg-primary);
-        // text-shadow: 0 0 1ch colours.$pp--colour--fg-primary;
       }
     }
   }

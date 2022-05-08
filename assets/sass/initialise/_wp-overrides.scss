@@ -154,11 +154,15 @@ $is-front_end: true !default;
       height: auto !important;
       width: 100% !important;
     }
-    // font-family: #{map.get(fonts.$pp--fonts, "families", "primary")}; // Needed for the editor in Safari – or is it?
+    // Sort the text and font out.
+    font-family: #{map.get(fonts.$pp--fonts, "families", "primary")}; // Needed for the editor in Safari – or is it?
     .block-editor {
       &-rich-text__editable {
         color: inherit;
       }
+    }
+    .wp-block-navigation, .wp-block-navigation .wp-block-page-list, .wp-block-navigation__container, .wp-block-navigation__responsive-container-content {
+      gap: 0 calc(4 * #{map.get(spacing.$pp--spacing, "horizontal")});;//var(--wp--style--block-gap,2em);
     }
   }
 }

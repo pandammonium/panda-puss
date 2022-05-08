@@ -5,7 +5,9 @@ $site-width: 1200px !default;
 @use 'site' with (
   $site-width: $site-width,
 );
-@use 'header';
+@use 'header' with (
+  $is-front_end: $is-front_end
+);
 @use 'navigation';
 @use 'posts-loop'with (
   $is-front_end: $is-front_end

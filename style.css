@@ -567,12 +567,10 @@ svg {
   grid-template-areas: "site-logo site-title" "site-logo site-tagline" "site-logo site-nav" "site-search site-search";
 }
 .pp-header-site-title {
-  text-align: center;
   grid-area: site-title;
   place-self: center;
 }
 .pp-header-site-tagline {
-  text-align: center;
   grid-area: site-tagline;
   place-self: center;
 }
@@ -595,10 +593,10 @@ svg {
   grid-template-rows: min-content;
   grid-template-areas: "site-title" "site-logo" "site-tagline" "site-nav" "site-search";
 }
-.pp-header-fancy .pp-header-site-title {
+.pp-header-fancy-site-title {
   text-align: center;
 }
-.pp-header-fancy .pp-header-site-tagline {
+.pp-header-fancy-site-tagline {
   text-align: center;
 }
 .pp-header-fancy .pp-header-search.pp-site-search .wp-block-search__input {
@@ -611,13 +609,13 @@ svg {
   grid-template-rows: min-content;
   grid-template-areas: "site-logo" "site-nav" "site-search";
 }
-.pp-header-no_titles .pp-header-site-title {
+.pp-header-no_titles-site-title {
   display: none;
 }
-.pp-header-no_titles .pp-header-site-tagline {
+.pp-header-no_titles-site-tagline {
   display: none;
 }
-.pp-header-no_titles .pp-header-logo .custom-logo {
+.pp-header-no_titles-logo .custom-logo {
   height: auto;
   width: 100%;
 }
@@ -628,20 +626,23 @@ svg {
   grid-template-rows: min-content;
   grid-template-areas: "site-title" "site-nav";
 }
-.pp-header-minimal .pp-header-site-tagline {
+.pp-header-minimal-site-tagline {
   display: none;
 }
-.pp-header-minimal .pp-header-search.pp-site-search {
+.pp-header-minimal-search.pp-site-search {
   display: none;
 }
 .pp-header-cover {
+  display: grid;
   grid-template-columns: auto;
   grid-template-rows: min-content;
   grid-template-areas: "site-cover" "site-nav";
-  row-gap: 0;
+  gap: 0;
+}
+.pp-header-cover .pp-cover {
+  grid-area: site-cover;
 }
 .pp-header-cover .pp-cover .wp-block-cover__inner-container {
-  grid-area: site-cover;
   display: grid;
   gap: calc(5 * 2ch) 0;
   grid-template-columns: 100%;
@@ -1728,6 +1729,10 @@ svg {
 .wp-site-blocks .pp-header .pp-site-title {
   margin-block-start: 2ch;
   margin-block-end: 2ch;
+  text-align: center;
+}
+.wp-site-blocks .pp-header .pp-site-tagline {
+  text-align: center;
 }
 .wp-site-blocks .pp-header .pp-site-logo {
   box-shadow: 0 0 1px 1px #343434, 0 0 5px 6px #404040, 0 0 2.5px 3.5px #4b4b4b;
