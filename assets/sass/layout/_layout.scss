@@ -3,20 +3,21 @@ $is-front_end: true !default;
 $site-width: 1200px !default;
 
 @use 'site' with (
+  $is-front_end: $is-front_end,
   $site-width: $site-width,
 );
 @use 'header' with (
-  $is-front_end: $is-front_end
+  $is-front_end: $is-front_end,
 );
 @use 'navigation';
 @use 'posts-loop'with (
-  $is-front_end: $is-front_end
+  $is-front_end: $is-front_end,
 );
 @use 'post-single'with (
-  $is-front_end: $is-front_end
+  $is-front_end: $is-front_end,
 );
 @use 'comments' with (
-  $is-front_end: $is-front_end
+  $is-front_end: $is-front_end,
 );
 @use 'footer';
 

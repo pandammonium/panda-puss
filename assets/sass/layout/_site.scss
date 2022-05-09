@@ -1,32 +1,49 @@
+$is-front_end: true !default;
 $site-width: 1000px !default;
 
 @use 'sass:map';
+@use '../inc/mixins';
 @use '../settings/spacing';
+
+@if $is-front_end != true and $is-front_end != false {
+  @error "Can't tell if is front end or back end. Second argument should be boolean (true: front end; false: back end).";
+}
+@debug 'Is front end: ' + $is-front_end;
 
 .wp-site-blocks {
   $row-gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")});
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
-  margin: {
-    // Centre the site content:
-    left: auto;
-    right: auto;
-  };
-  width: 90vw;
-  max-width: $site-width;
-  min-height: calc(100vh - (3 * $row-gap));
+  @if $is-front_end == true {
+    @debug 'Front end: ' + #{&};
+    margin: {
+      // Centre the site content:
+      left: auto;
+      right: auto;
+    };
+    width: 90vw;
+    max-width: $site-width;
+    min-height: calc(100vh - (3 * $row-gap));
 
-  // Grid container
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: min-content 1fr min-content;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer"
-  ;
-  column-gap: 0;
-  row-gap: $row-gap;
+    // Grid container
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer"
+    ;
+    column-gap: 0;
+    row-gap: $row-gap;
+  } @else {
+    // .is-outline-mode {
+      @debug 'Back end: ' + #{&};
+      // background-color: green !important;
+      // color: red !important;
+      @include mixins.header(&, '.is-outline-mode');
+    // }
+  }
   // End of grid container
 
   .pp-header {

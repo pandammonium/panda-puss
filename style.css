@@ -566,6 +566,7 @@ svg {
   grid-template-rows: min-content;
   grid-template-areas: "site-logo site-title" "site-logo site-tagline" "site-logo site-nav" "site-search site-search";
 }
+
 .pp-header-site-title {
   grid-area: site-title;
   place-self: center;
