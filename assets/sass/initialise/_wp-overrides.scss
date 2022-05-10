@@ -155,7 +155,7 @@ $is-front_end: true !default;
       width: 100% !important;
     }
     // Sort the text and font out.
-    font-family: #{map.get(fonts.$pp--fonts, "families", "primary")}; // Needed for the editor in Safari – or is it?
+    // font-family: #{map.get(fonts.$pp--fonts, "families", "primary")}; // Needed for the editor in Safari – or is it? I think it uses the browser's setting.
     .block-editor {
       &-rich-text__editable {
         color: inherit;
