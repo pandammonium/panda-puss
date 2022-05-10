@@ -517,7 +517,6 @@ svg {
   grid-template-rows: min-content;
   grid-template-areas: "site-logo site-title" "site-logo site-tagline" "site-logo site-nav" "site-search site-search";
 }
-
 .pp-header-site-title {
   grid-area: site-title;
   place-self: center;
@@ -578,10 +577,7 @@ svg {
   grid-template-rows: min-content;
   grid-template-areas: "site-title" "site-nav";
 }
-.pp-header-minimal-site-tagline {
-  display: none;
-}
-.pp-header-minimal-search.pp-site-search {
+.pp-header-minimal-site-tagline, .pp-header-minimal-search.pp-site-search {
   display: none;
 }
 .pp-header-cover {
@@ -975,7 +971,6 @@ svg {
   /* 6 footer block(s) */
   flex: 1 1 16.6666666667%;
 }
-
 .pp-footer-navigation .wp-block-navigation__container {
   display: flex;
   flex-flow: column nowrap;
