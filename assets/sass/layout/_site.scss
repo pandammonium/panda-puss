@@ -8,14 +8,14 @@ $site-width: 1000px !default;
 @if $is-front_end != true and $is-front_end != false {
   @error "Can't tell if is front end or back end. Second argument should be boolean (true: front end; false: back end).";
 }
-@debug 'Is front end: ' + $is-front_end;
 
 .wp-site-blocks {
-  $row-gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")});
+  $is-site: true;
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
   @if $is-front_end == true {
-    @debug 'Front end: ' + #{&};
+    // @debug 'Front end: ' + #{&};
+    $row-gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")});
     margin: {
       // Centre the site content:
       left: auto;
