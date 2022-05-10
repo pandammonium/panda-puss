@@ -33,9 +33,9 @@ $is-front_end: true !default;
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(300px, auto));
           grid-template-rows: masonry;
-          .wp-block-post {
-            // background-color: mintcream;
-          }
+          // .wp-block-post {
+          //   // background-color: mintcream;
+          // }
         }
         @supports not (grid-template-rows: masonry) {
           // background-color: lawngreen;
