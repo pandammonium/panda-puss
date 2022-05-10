@@ -1341,10 +1341,6 @@ svg {
   color: #40bfbf;
 }
 
-ol, ul, dl {
-  padding-inline-start: revert !important;
-}
-
 .wp-site-blocks .pp-header {
   font-size: 19px;
 }
