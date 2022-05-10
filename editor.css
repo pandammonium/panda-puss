@@ -471,12 +471,12 @@ svg {
     flex-flow: row wrap;
   }
 }
-.wp-site-blocks .pp-site.pp-columns .pp-column.pp-main_content {
+.wp-site-blocks .pp-site.pp-columns .pp-column.pp-main_column {
   flex: 2 1 75%;
   order: 2;
 }
 @media screen and (max-width: 782px) {
-  .wp-site-blocks .pp-site.pp-columns .pp-column.pp-main_content {
+  .wp-site-blocks .pp-site.pp-columns .pp-column.pp-main_column {
     flex: 1 1 100%;
     order: 1;
   }
