@@ -4,27 +4,120 @@
 @use '../settings/colours';
 @use '../settings/spacing';
 
+@mixin footer($parent-class, $footer-class) {
+  // @debug 'Invoked mixins.footer(#{$parent-class}, #{$footer-class})';
+  $footer-superclass: '';
+  $grid-container-class: $footer-class;
+  $grid-item-extendable-class: '.pp-footer';
+  @if $footer-class == '.pp-footer' {
+    $grid-container-class: '';
+  } @else {
+    @error Unexpected footer class #{$footer-class};
+  }
+  // @debug 'Footer parent: ' + $parent-class;
+  // @debug 'Footer class: ' + $footer-class;
+  // @debug 'Footer superclass: ' + $footer-superclass;
+  // @debug 'Footer grid container class: ' + $grid-container-class;
+  // @debug 'Footer grid item (extendable) class: ' + $grid-item-extendable-class;
+
+  @at-root #{$parent-class}#{$grid-container-class}#{$footer-class} {
+    // @debug 'Footer grid container class (actual): #{&}';
+    // Grid container
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content;
+    grid-template-areas:
+      "credits"
+    ;
+    // End of grid container
+    &-fancy {
+      grid-template-areas:
+        "blocks"
+        "credits"
+      ;
+      place-self: stretch;
+      .pp-footer-blocks {
+        // Grid item
+        grid-area: blocks;
+        // End of grid item
+        // Flex container
+        display: flex;
+        flex-flow: row wrap;
+        align-content: center;
+        align-items: stretch;
+        justify-content: flex-start;
+        // End of flex container
+      }
+    }
+    &-block {
+      // Flex item
+      @include lay_out-footer-blocks(1, 1, 1, 6);
+      // End of flex item
+      // $pp-footer-blocks-child-colour: color.scale(colours.$pp--colour--bg-tertiary, $lightness: 70%);
+      // &:nth-child(odd) {
+      //   background-color: $pp-footer-blocks-child-colour;
+      // }
+      // &:nth-child(even) {
+      //   background-color: complement($pp-footer-blocks-child-colour);
+      // }
+    }
+  }
+  @at-root #{$parent-class}#{$footer-superclass} #{$grid-item-extendable-class} {
+    // @debug 'Footer grid item (extendable) class (actual): #{&}';
+    &-navigation {
+      .wp-block-navigation {
+        &__container {
+          // Flex container
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 0;
+          align-items: stretch;
+          align-content: flex-start;
+          justify-content: flex-start;
+          // End of flex container
+        }
+      }
+    }
+    &-credits {
+      // Grid item
+      grid-area: credits;
+      place-self: center;
+      // End of grid item
+    }
+  }
+}
+
+@mixin lay_out-footer-blocks($flexInc, $flexDec, $minItems, $maxItems) {
+  // @debug 'Invoked mixins.lay_out-footer-blocks(#{$flexInc}, #{$flexDec}, #{$minItems}, #{$maxItems})';
+  @for $i from $minItems through $maxItems {
+    &:first-child:nth-last-child(#{$i}),
+    &:first-child:nth-last-child(#{$i}) ~ & {
+      /* #{$i} footer block(s) */
+      flex: $flexInc $flexDec calc(100% / $i);
+      // @debug $i footer block(s) → flex $flexInc $flexDec calc(100% / $i);
+    }
+  }
+}
+
+
 @mixin header($parent-class, $header-class) {
+  // @debug 'Invoked mixins.header(#{$parent-class}, #{$header-class})';
   $header-superclass: '';
   $grid-container-class: $header-class;
   $grid-item-extendable-class: '.pp-header';
-  @if $header-class == $template-part-header-class {
-    $header-superclass: $template-part-header-class;
-    $header-class: '';
-    // @debug #{$header-superclass} + ' ' + #{$header-class};
-  } @else if $header-class == '.pp-header' {
+  @if $header-class == '.pp-header' {
     $grid-container-class: '';
+  } @else {
+    @error Unexpected header class #{$header-class};
   }
-  @debug 'Parent: ' + $parent-class;
-  @debug 'Header class: ' + $header-class;
-  @debug 'Header superclass: ' + $header-superclass;
-  @debug 'Grid container class: ' + $grid-container-class;
-  @debug 'Grid item (extendable) class: ' + $grid-item-extendable-class;
-  // @debug 'Grid container class (actual): ' + #{$grid-container-class}#{$header-class};
-  // @debug 'Grid item (extendable) class (actual): ' + #{$header-superclass} #{$grid-item-extendable-class};
+  // @debug 'Header parent: ' + $parent-class;
+  // @debug 'Header class: ' + $header-class;
+  // @debug 'Header superclass: ' + $header-superclass;
+  // @debug 'Header grid container class: ' + $grid-container-class;
+  // @debug 'Header grid item (extendable) class: ' + $grid-item-extendable-class;
 
   @at-root #{$parent-class}#{$grid-container-class}#{$header-class} {
-    @debug 'Grid container class (actual): #{&}';
+    // @debug 'Header grid container class (actual): #{&}';
     // Grid container
     display: grid;
     $col-gap: calc(2 * #{map.get(spacing.$pp--spacing, "horizontal")});
@@ -39,10 +132,8 @@
     ;
     // End of grid container
   }
-
   @at-root #{$parent-class}#{$header-superclass} #{$grid-item-extendable-class} {
-  // .pp-header {
-    @debug 'Grid item (extendable) class (actual): #{&}';
+    // @debug 'Header grid item (extendable) class (actual): #{&}';
     // background-color: burlywood;
     &-site-title {
       // background-color: complement(burlywood);
@@ -220,6 +311,7 @@
 }
 
 @mixin background-shadow($colour) {
+  // @debug 'Invoked mixins.background-shadow(#{$colour})';
   // border: 1px solid colours.$pp--colour--bg-primary;
   // box-shadow: 0 0 30px colours.$pp--colour--fg-secondary;
   // box-shadow: 0 0 10px $colour;
@@ -409,7 +501,6 @@
   }
 
   #{$reset-margin} {
-    // @debug #{$is-front_end} – #{&};
     margin: 0 {
       block: 0;
       inline: 0;
