@@ -37,12 +37,7 @@ $site-width: 1000px !default;
     column-gap: 0;
     row-gap: $row-gap;
   } @else {
-    // .is-outline-mode {
-      @debug 'Back end: ' + #{&};
-      // background-color: green !important;
-      // color: red !important;
-      @include mixins.header(&, '.is-outline-mode');
-    // }
+    // @debug 'Back end: ' + #{&};
   }
   // End of grid container
 
