@@ -147,7 +147,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding-inline: 0;
 }
 
-ol, ul, dl {
+ol {
+  padding-inline-start: revert !important;
+}
+
+ul {
+  padding-inline-start: revert !important;
+}
+
+dl {
   padding-inline-start: revert !important;
 }
 
