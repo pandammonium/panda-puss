@@ -42,6 +42,7 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
       'image'  => array( 'label' => __( 'Images', 'panda-puss' ) ),
       'page'  => array( 'label' => __( 'Pages', 'panda-puss' ) ),
       'query'  => array( 'label' => __( 'Queries', 'panda-puss' ) ),
+      'ui'  => array( 'label' => __( 'User Interface', 'panda-puss' ) ),
     );
     $pattern_categories = apply_filters( 'panda_puss_pattern_categories', $pattern_categories );
 
@@ -60,6 +61,7 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
      * @param array $patterns List of patterns by name.
      */
     $patterns = array(
+      'button-login',
       'general-login',
       'title-image',
       'hidden-404',
