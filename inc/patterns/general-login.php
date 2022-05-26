@@ -31,6 +31,6 @@ $content = '
 
 return array(
   'title'      => _x('Log in/out', 'Block pattern title', 'panda-puss'),
-  'categories' => array('panda-puss', 'button'),
+  'categories' => array('panda-puss', 'ui'),
   'content'    => $content,
 );
