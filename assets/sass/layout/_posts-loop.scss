@@ -41,7 +41,7 @@ $list: '.pp-template';
     // @debug #{&};
     // Grid container
     @include post-content.post-content('excerpt', $is-front_end);
-    // End of grid contaaner
+    // End of grid container
   }
 }
 
