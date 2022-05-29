@@ -179,7 +179,7 @@ if ( post_password_required() ) {
     'cancel_reply_after'   => '',
     'cancel_reply_link'    => __( 'Cancel reply' ),
     'label_submit'         => __( 'Post comment' ),
-    'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
+    'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s pp-button" value="%4$s" />',
     'submit_field'         => '<p class="pp-comment-form-submit">%1$s %2$s</p>',
     'format'               => $html5 ? 'html5' : 'xhtml',
   );
