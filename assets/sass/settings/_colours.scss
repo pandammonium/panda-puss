@@ -1,34 +1,53 @@
 @use 'sass:map';
+@use 'sass:math';
+@use '../inc/functions';
 
-// ColorSlurp [https://colorslurp.com/] was used to develop the colour palette, and is the source of the colour names.
+// // ColorSlurp [https://colorslurp.com/] was used to develop the colour palette, and is the source of the colour names.
+
 $-pp--colours: (
   "hue": (
-    "000":   0,
-    "030":  30,
-    "060":  60,
-    "090":  90,
-    "120": 120,
-    "150": 150,
-    "180": 180,
-    "210": 210,
-    "240": 240,
-    "270": 270,
-    "300": 300,
-    "330": 330,
-    "360": 360,
+    "000":   0deg,
+    "030":  30deg,
+    "060":  60deg,
+    "090":  90deg,
+    "120": 120deg,
+    "150": 150deg,
+    "180": 180deg,
+    "210": 210deg,
+    "240": 240deg,
+    "270": 270deg,
+    "300": 300deg,
+    "330": 330deg,
+    "360": 360deg,
   ),
   "saturation": (
     "000":   0%,
+    "010":  10%,
+    "020":  20%,
     "025":  25%,
+    "030":  30%,
+    "040":  40%,
     "050":  50%,
+    "060":  60%,
+    "070":  70%,
     "075":  75%,
+    "080":  80%,
+    "090":  90%,
     "100": 100%,
   ),
   "lightness": (
     "000":   0%,
+    "010":  10%,
+    "020":  20%,
     "025":  25%,
+    "030":  30%,
+    "040":  40%,
     "050":  50%,
+    "060":  60%,
+    "070":  70%,
     "075":  75%,
+    "080":  80%,
+    "090":  90%,
     "100": 100%,
   ),
   "alpha": (
@@ -39,103 +58,53 @@ $-pp--colours: (
     "1-00": 1.00,
   ),
 );
-// @debug $-pp--colours;
-// @debug map.get($-pp--colours, "hue");
-// @debug map.get($-pp--colours, "saturation");
-// @debug map.get($-pp--colours, "lightness");
-// @debug map.get($-pp--colours, "alpha");
+// // @debug $-pp--colours;
+// // @debug map.get($-pp--colours, "hue");
+// // @debug map.get($-pp--colours, "saturation");
+// // @debug map.get($-pp--colours, "lightness");
+// // @debug map.get($-pp--colours, "alpha");
 
-$-pp--colours--greyscale: (
-  "black": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "000"), map.get($-pp--colours, "lightness", "000"), map.get($-pp--colours, "alpha", "1-00")),
-  "tundora": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "000"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "tundora--alpha-025": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "000"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "0-25")),
-  "grey": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "000"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "silver": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "000"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "white": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "000"), map.get($-pp--colours, "lightness", "100"), map.get($-pp--colours, "alpha", "1-00")),
-  "white--alpha-025": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "000"), map.get($-pp--colours, "lightness", "100"), map.get($-pp--colours, "alpha", "0-25")),
-  "white--alpha-075": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "000"), map.get($-pp--colours, "lightness", "100"), map.get($-pp--colours, "alpha", "0-75")),
+$-pp-colour-base: hsla( // base colour
+  map.get($-pp--colours, "hue",        "270"),
+  map.get($-pp--colours, "saturation", "000"),
+  map.get($-pp--colours, "lightness",  "050"),
+  map.get($-pp--colours, "alpha",      "0-50")
 );
-// @debug $-pp--colours--greyscale;
+// @debug functions.displayColour('hsla', $-pp-colour-base, 'Base');
 
-$-pp--colours--bright: (
-  "red": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "flush-orange": hsla(map.get($-pp--colours, "hue", "030"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "yellow": hsla(map.get($-pp--colours, "hue", "060"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "chartreuse": hsla(map.get($-pp--colours, "hue", "090"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "green": hsla(map.get($-pp--colours, "hue", "120"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "spring-green": hsla(map.get($-pp--colours, "hue", "150"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "cyan": hsla(map.get($-pp--colours, "hue", "180"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "azure-radiance": hsla(map.get($-pp--colours, "hue", "210"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "100"), map.get($-pp--colours, "alpha", "1-00")),
-  "blue": hsla(map.get($-pp--colours, "hue", "240"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "electric-violet": hsla(map.get($-pp--colours, "hue", "270"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "magenta": hsla(map.get($-pp--colours, "hue", "300"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
-  "rose": hsla(map.get($-pp--colours, "hue", "330"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "050"), map.get($-pp--colours, "alpha", "1-00")),
+$-pp-colour-fg: adjust-color( // foreground
+  $-pp-colour-base,
+  $hue:        0deg,
+  $saturation: 0%,
+  $lightness:  lightness($-pp-colour-base) * math.div(-2, 3),
+  $alpha:      alpha($-pp-colour-base)
 );
-// @debug $-pp--colours--bright;
+$-pp-colour-bg: adjust-color( // background
+  $-pp-colour-base,
+  $hue:        0deg,
+  $saturation: 0%,
+  $lightness:  lightness($-pp-colour-base) * math.div(5, 6),
+  $alpha:      alpha($-pp-colour-base)
+);
+$-pp-colour-hl: scale-color( // highlight
+  $-pp-colour-fg,
+  $saturation: 0%,
+  $lightness:  40%,
+  $alpha:      0%
+);
+$-pp-colour-ll: scale-color( // lowlight
+  $-pp-colour-bg,
+  $saturation: 0%,
+  $lightness:  0%,
+  $alpha:      0%
+);
 
-$-pp--colours--light: (
-  "vivid-tangerine": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "macaroni-and-cheese": hsla(map.get($-pp--colours, "hue", "030"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "dolly": hsla(map.get($-pp--colours, "hue", "060"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "reef": hsla(map.get($-pp--colours, "hue", "090"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "mint-green": hsla(map.get($-pp--colours, "hue", "120"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "aquamarine": hsla(map.get($-pp--colours, "hue", "150"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "anakiwa": hsla(map.get($-pp--colours, "hue", "180"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "malibu-1": hsla(map.get($-pp--colours, "hue", "210"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "malibu-2": hsla(map.get($-pp--colours, "hue", "240"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "heliotrope": hsla(map.get($-pp--colours, "hue", "270"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "blush-pink": hsla(map.get($-pp--colours, "hue", "300"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-  "hot-pink": hsla(map.get($-pp--colours, "hue", "330"), map.get($-pp--colours, "saturation", "050"), map.get($-pp--colours, "lightness", "075"), map.get($-pp--colours, "alpha", "1-00")),
-);
-// @debug $-pp--colours--light;
+$pp--colour--fg-primary: $-pp-colour-fg !default; // foreground
+$pp--colour--bg-primary: $-pp-colour-bg !default; // background
+$pp--colour--hl-primary: $-pp-colour-hl !default; // highlight
+$pp--colour--ll-primary: $-pp-colour-ll !default; // lowlight
 
-$-pp--colours--dark: (
-  "maroon": hsla(map.get($-pp--colours, "hue", "000"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "cinnamon": hsla(map.get($-pp--colours, "hue", "030"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "olive": hsla(map.get($-pp--colours, "hue", "060"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "verdun-green": hsla(map.get($-pp--colours, "hue", "090"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "japanese-laurel": hsla(map.get($-pp--colours, "hue", "120"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "fun-green": hsla(map.get($-pp--colours, "hue", "150"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "teal": hsla(map.get($-pp--colours, "hue", "180"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "congress-blue": hsla(map.get($-pp--colours, "hue", "210"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "navy-blue": hsla(map.get($-pp--colours, "hue", "240"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "pigment-indigo": hsla(map.get($-pp--colours, "hue", "270"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "fresh-aubergine": hsla(map.get($-pp--colours, "hue", "300"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-  "siren": hsla(map.get($-pp--colours, "hue", "330"), map.get($-pp--colours, "saturation", "100"), map.get($-pp--colours, "lightness", "025"), map.get($-pp--colours, "alpha", "1-00")),
-);
-// @debug $-pp--colours--dark;
-
-$-pp--colours--primary: (
-  "fg": map.get($-pp--colours--greyscale, "tundora"),
-  "bg": map.get($-pp--colours--greyscale, "white"),
-);
-// @debug $-pp--colours--primary;
-$-pp--colours--secondary: (
-  "fg": map.get($-pp--colours--greyscale, "black"),
-  "bg": map.get($-pp--colours--greyscale, "silver"),
-);
-// @debug $-pp--colours--secondary;
-$-pp--colours--tertiary: (
-  "fg": map.get($-pp--colours--greyscale, "white"),
-  "bg": map.get($-pp--colours--bright, "electric-violet"),
-);
-// @debug $-pp--colours--tertiary;
-$-pp--colours--dark: (
-  "fg": map.get($-pp--colours--greyscale, "silver"),
-  "bg": map.get($-pp--colours--dark, "pigment-indigo"),
-);
-// @debug $-pp--colours--dark;
-$-pp--colours--light: (
-  "fg": map.get($-pp--colours--greyscale, "tundora"),
-  "bg": map.get($-pp--colours--light, "heliotrope"),
-);
-// @debug $-pp--colours--light;
-
-$pp--colour--fg-primary: map.get($-pp--colours--primary, "fg") !default;
-$pp--colour--bg-primary: map.get($-pp--colours--primary, "bg") !default;
-
-$pp--colour--fg-secondary: map.get($-pp--colours--secondary, "fg") !default;
-$pp--colour--bg-secondary: map.get($-pp--colours--secondary, "bg") !default;
-
-$pp--colour--fg-tertiary: map.get($-pp--colours--tertiary, "fg") !default;
-$pp--colour--bg-tertiary: map.get($-pp--colours--tertiary, "bg") !default;
+// @debug functions.displayColour('hsla', $pp--colour--fg-primary, 'FG');
+// @debug functions.displayColour('hsla', $pp--colour--bg-primary, 'BG');
+// @debug functions.displayColour('hsla', $pp--colour--hl-primary, 'HL');
+// @debug functions.displayColour('hsla', $pp--colour--ll-primary, 'LL');
