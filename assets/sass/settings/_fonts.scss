@@ -52,7 +52,6 @@ $-n: list.length($-fib);
 $pp--fonts: (
   "sizes": (
     "primary": map.get($-pp--fonts, "sizes", "medium"),
-    "secondary": map.get($-pp--fonts, "sizes", "x-large"),
     "small": map.get($-pp--fonts, "sizes", "small"),
     "medium": map.get($-pp--fonts, "sizes", "medium"),
     "large": map.get($-pp--fonts, "sizes", "large"),
@@ -69,7 +68,8 @@ $pp--fonts: (
   ),
   "families": (
     "primary": map.get($-pp--fonts, "families", "sans-serif"),
-    "secondary": map.get($-pp--fonts, "families", "cursive"),
+    "cursive": map.get($-pp--fonts, "families", "cursive"),
+    "italic": map.get($-pp--fonts, "families", "italic"),
     "monospace": map.get($-pp--fonts, "families", "monospace"),
   ),
   "line-heights": (
