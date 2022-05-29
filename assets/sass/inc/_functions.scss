@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'sass:list';
 @use 'sass:math';
 @use 'sass:string';
@@ -68,4 +69,20 @@
   }
   // @debug 'Average: #{$sum} / #{$count} = #{math.div($sum, $count)}';
   @return math.div($sum, $count);
+}
+
+@function getColour($colour-system, $colour, $colour-name: null) {
+  @if $colour-system == 'hsla' or $colour-system == 'HSLA' {
+    @return $colour-name + ': hsla(' + hue($colour)  + ', ' + saturation($colour) + ', ' + lightness($colour) + ', ' + alpha($colour) + ')';
+  } @else if $colour-system == 'rgb' or $colour-system == 'RGB' {
+    @return $colour-name + ': rgb(' + red($colour)  + ', ' + green($colour) + ', ' + blue($colour) + ', ' + alpha($colour) + ')';
+  } @else if $colour-system == 'rgba' or $colour-system == 'RGBA' {
+    @return $colour-name + ': rgb(' + red($colour)  + ', ' + green($colour) + ', ' + blue($colour) + ', ' + alpha($colour) + ')';
+  } @else if $colour-system == 'hwb' or $colour-system == 'hwb' {
+    @return $colour-name + ': hwb(' + hue($colour)  + ', ' + color.whiteness($colour) + ', ' + color.blackness($colour) + ')';
+  } @else if $colour-system == 'hwba' or $colour-system == 'hwba' {
+    @return $colour-name + ': hwba(' + hue($colour)  + ', ' + color.whiteness($colour) + ', ' + color.blackness($colour) + ', ' + alpha($colour) + ')';
+  } @else {
+    @error 'Unrecognised colour system: ' + $colour-system;
+  }
 }

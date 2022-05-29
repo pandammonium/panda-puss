@@ -58,33 +58,33 @@ $-pp--colours: (
     "1-00": 1.00,
   ),
 );
-// // @debug $-pp--colours;
-// // @debug map.get($-pp--colours, "hue");
-// // @debug map.get($-pp--colours, "saturation");
-// // @debug map.get($-pp--colours, "lightness");
-// // @debug map.get($-pp--colours, "alpha");
+// @debug $-pp--colours;
+// @debug map.get($-pp--colours, "hue");
+// @debug map.get($-pp--colours, "saturation");
+// @debug map.get($-pp--colours, "lightness");
+// @debug map.get($-pp--colours, "alpha");
 
 $-pp-colour-base: hsla( // base colour
   map.get($-pp--colours, "hue",        "270"),
   map.get($-pp--colours, "saturation", "000"),
   map.get($-pp--colours, "lightness",  "050"),
   map.get($-pp--colours, "alpha",      "0-50")
-);
-// @debug functions.displayColour('hsla', $-pp-colour-base, 'Base');
+) !default;
+// @debug functions.getColour('hsla', $-pp-colour-base, 'Base');
 
 $-pp-colour-fg: adjust-color( // foreground
   $-pp-colour-base,
   $hue:        0deg,
   $saturation: 0%,
   $lightness:  lightness($-pp-colour-base) * math.div(-2, 3),
-  $alpha:      alpha($-pp-colour-base)
+  $alpha:      alpha($-pp-colour-base) * 1%
 );
 $-pp-colour-bg: adjust-color( // background
   $-pp-colour-base,
   $hue:        0deg,
   $saturation: 0%,
   $lightness:  lightness($-pp-colour-base) * math.div(5, 6),
-  $alpha:      alpha($-pp-colour-base)
+  $alpha:      alpha($-pp-colour-base) * 1%
 );
 $-pp-colour-hl: scale-color( // highlight
   $-pp-colour-fg,
@@ -95,16 +95,16 @@ $-pp-colour-hl: scale-color( // highlight
 $-pp-colour-ll: scale-color( // lowlight
   $-pp-colour-bg,
   $saturation: 0%,
-  $lightness:  0%,
+  $lightness:  -40%,
   $alpha:      0%
 );
 
-$pp--colour--fg-primary: $-pp-colour-fg !default; // foreground
-$pp--colour--bg-primary: $-pp-colour-bg !default; // background
-$pp--colour--hl-primary: $-pp-colour-hl !default; // highlight
-$pp--colour--ll-primary: $-pp-colour-ll !default; // lowlight
+$pp--colour--fg-primary: $-pp-colour-fg; // foreground
+$pp--colour--bg-primary: $-pp-colour-bg; // background
+$pp--colour--hl-primary: $-pp-colour-hl; // highlight
+$pp--colour--ll-primary: $-pp-colour-ll; // lowlight
 
-// @debug functions.displayColour('hsla', $pp--colour--fg-primary, 'FG');
-// @debug functions.displayColour('hsla', $pp--colour--bg-primary, 'BG');
-// @debug functions.displayColour('hsla', $pp--colour--hl-primary, 'HL');
-// @debug functions.displayColour('hsla', $pp--colour--ll-primary, 'LL');
+// @debug functions.getColour('hsla', $pp--colour--fg-primary, 'FG');
+// @debug functions.getColour('hsla', $pp--colour--bg-primary, 'BG');
+// @debug functions.getColour('hsla', $pp--colour--hl-primary, 'HL');
+// @debug functions.getColour('hsla', $pp--colour--ll-primary, 'LL');

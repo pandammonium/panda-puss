@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 $is-front_end: false !default;
+$-pp-colour-base: hsla(270deg, 0%, 50%, 0.5);
+
+@use '../settings/colours' with (
+  $-pp-colour-base: $-pp-colour-base
+);
+@use '../settings/fonts';
+@use '../settings/spacing';
+@use '../settings/quotation-marks';
 
 @use 'fileheader';
 @use 'wp-overrides' with (
@@ -9,9 +17,5 @@ $is-front_end: false !default;
 @use 'normalise' with (
   $is-front_end: $is-front_end
 );
-@use '../settings/colours';
-@use '../settings/fonts';
-@use '../settings/spacing';
-@use '../settings/quotation-marks';
-
-// @debug #{$is-front_end};
+// @debug 'Is front end: ' + #{$is-front_end};
+// @debug 'Base colour: ' + $-pp-colour-base;
