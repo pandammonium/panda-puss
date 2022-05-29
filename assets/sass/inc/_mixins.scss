@@ -44,19 +44,14 @@
 @mixin background-shadow($colour) {
   // @debug 'Invoked mixins.background-shadow(#{$colour})';
   // border: 1px solid colours.$pp--colour--bg-primary;
-  // box-shadow: 0 0 30px colours.$pp--colour--fg-secondary;
+  // box-shadow: 0 0 30px colours.$pp--colour--hl-primary;
   // box-shadow: 0 0 10px $colour;
-  // First box-shadow is on the top; last box-shadow is on the bottom:
   $main-len: 5px;
   $long-len: 0.5 * $main-len;
-  $lightness-factor: 20;
-  $short-lightness-factor: math.sqrt($lightness-factor) * -1%;
-  $main-lightness-factor: $lightness-factor * 0%;
-  $long-lightness-factor: math.sqrt($lightness-factor) * 1%;
   box-shadow:
-    0 0 1px 1px color.adjust($colour, $lightness: $short-lightness-factor),
-    0 0 $main-len ($main-len + 1) color.adjust($colour, $lightness: $main-lightness-factor),
-    0 0 $long-len ($long-len + 1) color.adjust($colour, $lightness: $long-lightness-factor),
+    0 0 1px 1px colours.$pp--colour--ll-primary,
+    0 0 $main-len ($main-len + 1) colours.$pp--colour--fg-primary,
+    0 0 $long-len ($long-len + 1) colours.$pp--colour--ll-primary,
   ;
   margin: {
     top: $main-len;
@@ -65,7 +60,7 @@
 }
 @mixin text-shadow($colour) {
   // border: 1px solid colours.$pp--colour--bg-primary;
-  // box-shadow: 0 0 30px colours.$pp--colour--fg-secondary;
+  // box-shadow: 0 0 30px colours.$pp--colour--hl-primary;
   // box-shadow: 0 0 10px $colour;
   // First box-shadow is on the top; last box-shadow is on the bottom:
   $main-len: 5px;
@@ -79,9 +74,11 @@
 }
 
 @mixin ui-element {
-  border-color: currentColor;
   // border-style: solid;
   border-width: 1px;
+  background-color: inherit;
+  border-color: colours.$pp--colour--ll-primary;
+  color: colours.$pp--colour--fg-primary;
 }
 // // This palaver fakes inset and outset so it looks better in Firefox. However, the colour must be hard-coded: 'currentColor' can't be used because at preprocessing time (i.e. when Sass sees it), it hasn't been defined: it's only defined once the page is rendered.
 // // @see https://stackoverflow.com/a/70990728
