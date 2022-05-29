@@ -90,17 +90,18 @@
 // // @debug $current-colour + ' Lx ' + (-1 * $change-by) + ' => ' + $darker;
 // // @debug $current-colour + ' Lx  ' + $change-by + ' => ' + $lighter;
 @mixin ui-field {
-  // border-bottom-color: $lighter;
   // border-left-color: $darker;
-  // border-right-color: $lighter;
   // border-top-color: $darker;
+  // border-right-color: $lighter;
+  // border-bottom-color: $lighter;
   border-style: inset;
 }
 @mixin ui-button {
-  // border-bottom-color: $darker;
-  // border-left-color: $lighter;
-  // border-right-color: $darker;
-  // border-top-color: $lighter;
+  @include ui-element;
+  // // border-left-color: $lighter;
+  // // border-top-color: $lighter;
+  // // border-right-color: $darker;
+  // // border-bottom-color: $darker;
   border-style: outset;
 }
 @mixin ui-element-border {
