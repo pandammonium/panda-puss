@@ -273,17 +273,12 @@ input,
 optgroup,
 select,
 textarea {
-  background: inherit;
-  color: inherit;
+  // background: inherit;
+  // color: inherit;
   font-family: inherit; // 1
-  font-size: #{map.get(fonts.$pp--fonts, "sizes", "primary")}; // 1
-  line-height: #{map.get(fonts.$pp--fonts, "line-heights", "primary")}; // 1
+  font-size: inherit;//#{map.get(fonts.$pp--fonts, "sizes", "primary")}; // 1
+  line-height: inherit;//#{map.get(fonts.$pp--fonts, "line-heights", "primary")}; // 1
 }
-
-//
-// Set the border for user interface elements.
-//
-@include mixins.ui-element-border;
 
 //
 // Show the overflow in IE.
@@ -303,17 +298,30 @@ select { // 1
   text-transform: none;
 }
 
+button,
+input[type="submit"] {
+  @include mixins.ui-button;
+}
+button:active,
+input[type="submit"]:active {
+  @include mixins.ui-button-active;
+}
+input:not([type=submit]),
+textarea {
+  @include mixins.ui-field;
+}
+
 //
 // Correct the inability to style clickable types in iOS and Safari.
 //
-// button,
-// [type="button"],
-// [type="reset"],
-// [type="submit"] {
-//   -moz-appearance: none;
-//   -webkit-appearance: none;
-//   appearance: none;
-// }
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
 
 //
 // Remove the inner border and padding in Firefox.
@@ -322,7 +330,9 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
+  border-color: transparent;
   border-style: none;
+  border-width: 0;
   // padding: 0;
 }
 
@@ -336,9 +346,9 @@ button:-moz-focusring,
   outline: 1px solid currentColor;
 }
 
-//
-// Correct the padding in Firefox.
-//
+// //
+// // Correct the padding in Firefox.
+// //
 // fieldset {
 //   padding: 0.35em 0.75em 0.625em;
 // }

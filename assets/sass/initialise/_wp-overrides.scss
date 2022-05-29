@@ -14,6 +14,19 @@ $is-front_end: true !default;
   // background-color: saddlebrown;
   .wp-block {
     // There is no wp-block; it's used for convenience with suffixes to create the WP blocks:
+    &-button {
+      &__link,
+      &__link:link,
+      &__link:visited,
+      &__link:hover,
+      // &__link:active,
+      &__link:focus {
+        @include mixins.ui-button;
+      }
+      &__link:active {
+        @include mixins.ui-button-active;
+      }
+    }
     &-code {
       code {
         border: 1px solid currentColor;
@@ -96,13 +109,15 @@ $is-front_end: true !default;
       @if ($is-front_end == true) {
         &-comments {
           // background-color: honeydew;
-          @include mixins.ui-element-border;
+          input:not([type=submit]),
+          textarea {
+            @include mixins.ui-field;
+          }
         }
       }
     }
     &-search {
       &__input {
-        @include mixins.ui-element;
         @include mixins.ui-field;
         color: currentColor;
         flex-grow: 1;
@@ -117,11 +132,10 @@ $is-front_end: true !default;
         flex: unset;
       }
       &__button {
-        color: currentColor;
-        background: inherit;
-        @include mixins.ui-element;
         @include mixins.ui-button;
-        // padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "horizontal")}), 3%);
+      }
+      &__button:active {
+        @include mixins.ui-button-active;
       }
       &__label {
         display: none;

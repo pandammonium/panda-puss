@@ -1,6 +1,8 @@
 @use 'sass:color';
+@use 'sass:map';
 @use 'sass:math';
 @use '../settings/colours';
+@use '../settings/spacing';
 
 @mixin footer($parent-class, $footer-class) {
   @error 'Invoked mixins.footer(#{$parent-class}, #{$footer-class})';
@@ -17,7 +19,6 @@
     }
   }
 }
-
 
 @mixin header($parent-class, $header-class) {
   @warn 'Invoked mixins.header(#{$parent-class}, #{$header-class})';
@@ -73,56 +74,37 @@
   ;
 }
 
-@mixin ui-element-border {
-  .wp-block-button__link,
-  textarea {
-    @include ui-element;
-  }
-  input:not([type=submit]),
-  textarea {
-    @include ui-field;
-  }
-  button,
-  input[type="submit"] {
-    // @include ui-button;
-  }
-}
 @mixin ui-element {
-  // border-style: solid;
-  border-width: 1px;
   background-color: inherit;
   border-color: colours.$pp--colour--ll-primary;
+  border-radius: inherit;
+  border-style: solid;
+  border-width: 2px;
   color: colours.$pp--colour--fg-primary;
 }
-// // This palaver fakes inset and outset so it looks better in Firefox. However, the colour must be hard-coded: 'currentColor' can't be used because at preprocessing time (i.e. when Sass sees it), it hasn't been defined: it's only defined once the page is rendered.
-// // @see https://stackoverflow.com/a/70990728
-// // This will be a problem if a different colour is used.
-// $current-colour: colours.$pp--colour--fg-primary;
-// $change-by: 80%;
-// $darker: color.scale($current-colour, $lightness: (-1 * $change-by));
-// $lighter: color.scale($current-colour, $lightness: $change-by);
-// // @debug $current-colour + ' Lx ' + (-1 * $change-by) + ' => ' + $darker;
-// // @debug $current-colour + ' Lx  ' + $change-by + ' => ' + $lighter;
+
 @mixin ui-field {
-  // border-left-color: $darker;
-  // border-top-color: $darker;
-  // border-right-color: $lighter;
-  // border-bottom-color: $lighter;
+  @include ui-element;
   border-style: inset;
 }
+
 @mixin ui-button {
   @include ui-element;
-  // // border-left-color: $lighter;
-  // // border-top-color: $lighter;
-  // // border-right-color: $darker;
-  // // border-bottom-color: $darker;
   border-style: outset;
+  padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "vertical")}), 3%);
+  width: fit-content;
 }
+@mixin ui-button-active {
+  @include ui-button;
+  // background-color: colours.$pp--colour--fg-primary;
+  // border-color: colours.$pp--colour--bg-primary;
+  border-style: inset;
+  // color: colours.$pp--colour--bg-primary;
 }
 
 @mixin code-lang {
   // List of programming languages:
-  // https://en.wikipedia.org/wiki/List_of_programming_languages
+  // @see https://en.wikipedia.org/wiki/List_of_programming_languages
   // Plus BibTeX, LaTeX
   $langs: 'ada', 'algol', 'basic', 'bibtex', 'c', 'c-minus-minus', 'c-plus-plus', 'c-sharp', 'caml', 'css', 'curl', 'delphi', 'fortan', 'go', 'haskell', 'html', 'javascript', 'js', 'latex', 'matlab', 'modula', 'objective-c', 'occam', 'perl', 'php';
 
@@ -222,9 +204,13 @@
   .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article,\
   .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article,\
   .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article,\
+  .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-home-page) .pp-article, .page .pp-main:not(.pp-home-page) .pp-article,\
+  .block-editor-block-list__layout .pp-main:not(.pp-home-page) .pp-article,\
+  .single .pp-main.pp-home-page .pp-article, .page .pp-main.pp-home-page .pp-article, .block-editor-block-list__layout .pp-main.pp-home-page .pp-article, .pp-template .wp-block-post .pp-article,\
   .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous,\
   .wp-block-code, wp-block-code > code, .wp-site-blocks .wp-block-code, .wp-site-blocks .wp-block-code code,\
-  .block-editor-block-list__block wp-block .wp-block-code basic, pre code';
+  .block-editor-block-list__block wp-block .wp-block-code basic, pre code\
+  fieldset';
 
   @if ($is-front_end == true) {
     $reset-margin: #{$reset-margin} + ', .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type="reset"], [type="button"], [type="submit"]), .wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]), .wp-block-post-comments textarea, .wp-block-post-author__avatar, .wp-block-post-author__content, .wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio';
