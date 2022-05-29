@@ -17,7 +17,7 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
    */
   function panda_puss_register_patterns() {
     /**
-     * Filters the theme pattern categories.
+     * Registers the theme patterns and their categories.
      *
      * @since Panda-Puss 0.0.4
      *
