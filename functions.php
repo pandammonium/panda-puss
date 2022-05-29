@@ -69,6 +69,8 @@ if ( ! function_exists( 'panda_puss_theme_setup' ) ) :
   //     'social' => __('Social navigation', 'panda-puss')
   //   )
   // );
+  // Remove core block patterns.
+  remove_theme_support( 'core-block-patterns' );
 }
 endif;
 add_action( 'after_setup_theme', 'panda_puss_theme_setup' );
