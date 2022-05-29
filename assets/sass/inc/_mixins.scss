@@ -73,6 +73,20 @@
   ;
 }
 
+@mixin ui-element-border {
+  .wp-block-button__link,
+  textarea {
+    @include ui-element;
+  }
+  input:not([type=submit]),
+  textarea {
+    @include ui-field;
+  }
+  button,
+  input[type="submit"] {
+    // @include ui-button;
+  }
+}
 @mixin ui-element {
   // border-style: solid;
   border-width: 1px;
@@ -104,19 +118,6 @@
   // // border-bottom-color: $darker;
   border-style: outset;
 }
-@mixin ui-element-border {
-  textarea,
-  input,
-  button {
-    @include ui-element;
-  }
-  input:not([type=submit]),
-  textarea {
-    @include ui-field;
-  }
-  input[type="submit"] {
-    @include ui-button;
-  }
 }
 
 @mixin code-lang {
