@@ -1,67 +1,62 @@
 <?php
-/** Shows log-in and log-out links.
+/** Shows log-in and log-out button, and a register button.
  *
  * @package Panda-Puss
  * @since 0.0.4
  */
-$user_is_logged_in = is_user_logged_in();
+?>
+<?php
+  $user_is_logged_in = is_user_logged_in();
+  $log_in_out_link = '';
+  $log_in_out_text = '';
+  // $log_in_out_class = 'pp-button-link pp-log_in_out';
+  // $log_in_out_class_in_out = '';
+  $sign_up_link = '';
+  $sign_up_text = '';
+  // $sign_up_class = '';
+  $sign_up_anchor = '';
+  if ($user_is_logged_in) {
+    $log_in_out_link = wp_logout_url();
+    $log_in_out_text = esc_html_x('Log out', 'log-out text', 'panda-puss');
+    // $log_in_out_class_in_out = $log_in_out_class . ' pp-log_out';
+  } else {
+    $log_in_out_link = wp_login_url();
+    $log_in_out_text = esc_html_x('Log in', 'log-in text', 'panda-puss');
+    // $log_in_out_class_in_out = $log_in_out_class .' pp-log_in';
+    $sign_up_link = wp_registration_url();
+    $sign_up_text =esc_html_x('Sign up', 'sign-up text', 'panda-puss');
+    // $sign_up_class = 'pp-button-link pp-sign_up';
+    $sign_up_anchor = '<a class="wp-block-button__link" href="' . $sign_up_link . '">' . $sign_up_text . '</a>';
+  }
+  $log_in_out_anchor = '<a class="wp-block-button__link" href="' . $log_in_out_link . '">' . $log_in_out_text . '</a>';
 
-$log_in_out_link = '';
-$log_in_out_text = '';
-$log_in_out_class = ' pp-log-in_out';
-$log_in_out_class_in_out = '';
-
-$register_link = '';
-$register_text = '';
-$register_class = '';
-$register_anchor = '';
-
-if ($user_is_logged_in) {
-  $log_in_out_link = wp_logout_url();
-  $log_in_out_text = esc_html_x('Log out', 'log-out text', 'panda-puss' );
-  $log_in_out_class_in_out = $log_in_out_class . ' pp-log_out';
-} else {
-  $log_in_out_link = wp_login_url();
-  $log_in_out_text = esc_html_x( 'Log in', 'log-in text', 'panda-puss' );
-  $log_in_out_class_in_out = $log_in_out_class .' pp-log_in';
-  $register_link = wp_registration_url();
-  $register_text = esc_html_x( 'Sign up', 'register text', 'panda-puss' );
-  $register_class = ' pp-register';
-  $register_anchor = '<a class="wp-block-button__link ' . $register_class . '" href="' . $register_link . '">' . $register_text . '</a>';
-}
-
-$log_in_out_anchor = '<a class="wp-block-button__link ' . $log_in_out_class_in_out . '" href="' . $log_in_out_link . '">' . $log_in_out_text . '</a>';
-
-$log_in_out_button = '
-<!-- wp:button {"className":"' . $log_in_out_class . '",url":"' . $log_in_out_link . '"} -->
-<div class="wp-block-button' . $log_in_out_class . '">
-  ' . $log_in_out_anchor . '
-</div>
-<!-- /wp:button -->
-';
-$register_button = '
-<!-- wp:button {"className":"' . $register_class . '",url":"' . $register_link . '"} -->
-<div class="wp-block-button' . $register_class . '">
-  ' . $register_anchor . '
-</div>
-<!-- /wp:button -->
-';
-
-$content = '';
-if ($user_is_logged_in) {
-  $content = $log_in_out_button;
-} else {
   $content = '
-<!-- wp:buttons -->
+<!-- wp:buttons {"className":"pp-buttons"} -->
 <div class="wp-block-buttons">
-  ' . $log_in_out_button . $register_button . '
+';
+
+  $content .= '
+  <!-- wp:button {"className":"pp-button"} -->
+  <div class="wp-block-button">' . $log_in_out_anchor . '</div>
+  <!-- /wp:button -->
+    ';
+  if (!$user_is_logged_in) {
+  $content .= '
+  <!-- wp:button {"className":"pp-button"} -->
+  <div class="wp-block-button">' . $sign_up_anchor . '</div>
+  <!-- /wp:button -->
+    ';
+  }
+  $content .= '
 </div>
 <!-- /wp:buttons -->
-';
-}
+  ';
 
-return array(
-  'title'      => _x('User account', 'Block pattern title', 'panda-puss'),
-  'categories' => array('panda-puss', 'ui', 'button'),
-  'content'    => $content,
-);
+  return array(
+    'title' => _x('User account buttons', 'Block pattern title', 'panda-puss'),
+    'blockTypes' => array('core/template-part'),
+    'categories' => array('panda-puss', 'panda-puss-button', 'panda-puss-ui'),
+    'content' => $content,
+    'description' => _x('If the user is logged in, a button to log out is displayed. If the user is logged out, a button to log in and a button to sign up are displayed. Will not work as expected if used on a page or post.', 'Block pattern description', 'panda-puss'),
+    'keywords' => array( 'buttons', 'log in', 'log out', 'login', 'logout', 'register', 'sign up', 'signup' ),
+  );

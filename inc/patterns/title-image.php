@@ -19,6 +19,8 @@ $content = '
 
 return array(
   'title'      => _x('Title Image', 'Block pattern title', 'panda-puss'),
-  'categories' => array('panda-puss', 'image'),
+  'categories' => array('panda-puss', 'panda-puss-image'),
   'content'    => $content,
+  'description' => _x('Displays a WP cover block: an image overlaid with the site title and tagline.', 'Block pattern description', 'panda-puss'),
+  'keywords'    => array('title', 'image', 'cover', 'text'),
 );

@@ -31,6 +31,8 @@ $content = '
 
 return array(
   'title'      => _x('Log in/out', 'Block pattern title', 'panda-puss'),
-  'categories' => array('panda-puss', 'ui'),
+  'categories' => array('panda-puss', 'panda-puss-button', 'panda-puss-ui'),
   'content'    => $content,
+  'description' => _x('A log-in/out link to be used in places other than the site header.', 'Block pattern description', 'panda-puss'),
+  'keywords'    => array('log in', 'log out', 'login', 'logout', 'log-in', 'log-out', 'link', 'links'),
 );

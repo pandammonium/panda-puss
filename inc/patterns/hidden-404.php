@@ -15,5 +15,7 @@ return array (
     <!-- wp:paragraph -->
     <p>' . esc_html__('We\'ve looked in every cupboard and every room, but we can\'t seem to find that page anywhere.', 'panda-puss') . '</p>
     <!-- /wp:paragraph -->
-    <!-- wp:search {"label":"' . esc_html_x('Try searching for it?', 'label', 'panda-puss') . '","buttonText":"Ok","showLabel":true,"className":"pp-search-404"} /-->'
+    <!-- wp:search {"label":"' . esc_html_x('Try searching for it?', 'label', 'panda-puss') . '","buttonText":"Ok","showLabel":true,"className":"pp-search-404"} /-->',
+  'description' => _x('Displays the 404 page contents.', 'Block pattern description', 'panda-puss'),
+  'keywords'    => array('404', 'error'. 'not found'),
 );

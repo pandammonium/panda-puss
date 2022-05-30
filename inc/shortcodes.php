@@ -18,12 +18,12 @@ function login_logout() {
   if (is_user_logged_in()) :
     // Set the logout URL - below it is set to the root URL
     ?>
-    <div class="pp-block-navigation-item pp-site-nav-link pp-header-nav-link pp-block-navigation-link"><a class="pp-log-in_out pp-log-out" href="<?php echo wp_logout_url('/'); ?>">Log out</a></div>
+    <div class="pp-block-navigation-item pp-site-nav-link pp-header-nav-link pp-block-navigation-link"><a class="pp-log_in_out pp-log_out" href="<?php echo wp_logout_url('/'); ?>">Log out</a></div>
     <?php
   else :
   // Set the login URL - below it is set to get_permalink() - you can set that to whatever URL eg '/whatever'
     ?>
-    <div class="pp-block-navigation-item pp-site-nav-link pp-header-nav-link pp-block-navigation-link"><a class="pp-log-in_out pp-log-in" href="<?php echo wp_login_url(get_permalink()); ?>">Log in</span></a></div>
+    <div class="pp-block-navigation-item pp-site-nav-link pp-header-nav-link pp-block-navigation-link"><a class="pp-log_in_out pp-log_in" href="<?php echo wp_login_url(get_permalink()); ?>">Log in</span></a></div>
 <?php
   endif;
 
