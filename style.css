@@ -1,4 +1,22 @@
 @charset "UTF-8";
+/*
+Theme Name: Panda-Puss
+Theme URI: https://pandammonium.org/wordpress/wordpress-dev/pandapuss/
+Author: pandammonium
+Author URI: https://pandammonium.org/
+Description:
+Tags: full-site-editing, blog, pandas
+Version: 0.0.4
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 8.1.2
+License: GNU General Public License (GPL) v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: panda-puss
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
 .small {
   font-size: 14px;
 }
@@ -23,24 +41,6 @@
   font-size: 1.2em;
 }
 
-/*
-Theme Name: Panda-Puss
-Theme URI: https://pandammonium.org/wordpress/wordpress-dev/pandapuss/
-Author: pandammonium
-Author URI: https://pandammonium.org/
-Description:
-Tags: full-site-editing, blog, pandas
-Version: 0.0.4
-Requires at least: 5.9
-Tested up to: 5.9
-Requires PHP: 8.1.2
-License: GNU General Public License (GPL) v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: panda-puss
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
 .wp-site-blocks .wp-block-button__link, .wp-site-blocks .wp-block-button__link:link, .wp-site-blocks .wp-block-button__link:visited, .wp-site-blocks .wp-block-button__link:hover, .wp-site-blocks .wp-block-button__link:focus {
   background-color: inherit;
   border-color: #8c8c8c;
