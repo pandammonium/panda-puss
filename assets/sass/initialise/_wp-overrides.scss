@@ -2,6 +2,7 @@ $is-front_end: true !default;
 
 @use 'sass:map';
 @use '../inc/mixins';
+@use '../settings/colours';
 @use '../settings/fonts';
 @use '../settings/spacing';
 
@@ -65,6 +66,9 @@ $is-front_end: true !default;
       }
     }
     &-navigation {
+      &:not(.has-background) .wp-block-navigation__submenu-container {
+        background-color: colours.$pp--colour--bg-primary;
+      }
       &__submenu {
         &-icon {
           // Make the icon display properly in Safari:
