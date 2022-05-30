@@ -86,6 +86,7 @@ if ( ! function_exists( 'panda_puss_register_patterns' ) ) :
      */
     $patterns = array(
       'button-user-account',
+      'calls-to-action',
       'general-login',
       'title-image',
       'hidden-404',
