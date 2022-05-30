@@ -10,6 +10,17 @@ $heading = '
 <!-- /wp:heading -->
 ';
 
+$column_login = '
+<!-- wp:column {"verticalAlignment":"top"} -->
+<div class="wp-block-column is-vertically-aligned-top">
+  <!-- wp:heading {"level":2} -->
+    <h2>Your account</h2>
+  <!-- /wp:heading -->
+<!-- wp:pattern {"slug":"panda-puss/button-user-account"} /-->
+</div>
+<!-- /wp:column -->
+';
+
 $column_services = '
 <!-- wp:column {"verticalAlignment":"top"} -->
 <div class="wp-block-column is-vertically-aligned-top">
@@ -33,7 +44,7 @@ $column_blog = '
 <!-- wp:column {"verticalAlignment":"top"} -->
 <div class="wp-block-column is-vertically-aligned-top">
   <!-- wp:heading {"level":2} -->
-    <h2>Blog</h2>
+    <h2>Our blog</h2>
   <!-- /wp:heading -->
   <!-- wp:buttons {"className":""} -->
   <div class="wp-block-buttons">
@@ -85,6 +96,7 @@ $column_calls_to_action = '
 $columns = '
 <!-- wp:columns  -->
 <div class="wp-block-columns">
+  ' . $column_login . '
   ' . $column_services . '
   ' . $column_calls_to_action . '
   ' . $column_blog . '
