@@ -89,6 +89,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .wp-site-blocks .wp-block-image.is-style-rounded img {
   border-radius: 100px;
 }
+.wp-site-blocks .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  background-color: #eaeaea;
+}
 .wp-site-blocks .wp-block-navigation__submenu-icon {
   height: unset;
   margin: 0;
