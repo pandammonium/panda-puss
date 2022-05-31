@@ -2,9 +2,10 @@ $is-front_end: true !default;
 
 @use '../inc/mixins';
 
-// @debug $is-front_end;
 @if $is-front_end != true and $is-front_end != false {
   @error 'Cannot determine whether is front end or back end: ' + $is-front_end;
+// } @else {
+//   @debug $is-front_end;
 }
 
 .wp-site-blocks {
