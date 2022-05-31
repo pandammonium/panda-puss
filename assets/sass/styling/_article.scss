@@ -10,19 +10,26 @@
   .pp-query {
     .pp-article {
       &-title {
-        font-size: map.get(fonts.$pp--fonts, "sizes", "x-large");
+        font-size: map.get(fonts.$pp--fonts, "sizes", "h4");
+        @include mixins.title-font-size('h4', 'h5');
       }
     }
   }
   .pp-article {
     &-title {
-      @include mixins.title-font-size('x-large', 'h1');
+      @include mixins.title-font-size('h3', 'h2');
+    }
+  }
+  .pp-front_page {
+    .pp-article {
+      &-title {
+        @include mixins.title-font-size('h3', 'h4');
+      }
     }
   }
   .pp-focus {
     .pp-article {
       &-title {
-        @include mixins.title-font-size('x-large', 'h1');
         @include mixins.text-shadow(colours.$pp--colour--bg-primary);
       }
       &-featured_image {
