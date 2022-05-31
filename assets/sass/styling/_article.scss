@@ -15,16 +15,7 @@
   .pp-focus {
     .pp-article {
       &-title {
-        $min-title-size: map.get(fonts.$pp--fonts, "sizes", "x-large");
-        // @debug 'Min title size #{$min-title-size} is a #{type-of($min-title-size)}';
-        $med-title-size: functions.average(map.get(fonts.$pp--fonts, "sizes", "h1"), $min-title-size) * 1px;
-        // @debug 'Med title size #{$med-title-size} is a #{type-of($med-title-size)}';
-        @media screen and (min-width: 600px) and (max-width: 782px) {
-          font-size: $med-title-size;
-        }
-        @media screen and (max-width: 599px) {
-          font-size: $min-title-size;
-        }
+        @include mixins.title-font-size('x-large', 'h1');
         @include mixins.text-shadow(colours.$pp--colour--bg-primary);
       }
       &-featured_image {

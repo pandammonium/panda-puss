@@ -1,8 +1,25 @@
 @use 'sass:color';
 @use 'sass:map';
 @use 'sass:math';
+@use 'functions';
 @use '../settings/colours';
+@use '../settings/fonts';
 @use '../settings/spacing';
+
+@mixin title-font-size($min-font-size: 'x-large', $med-font-size: 'h1') {
+  @debug 'Minimum font size: ' + $min-font-size;
+  @debug 'Medium font size:  ' + $med-font-size;
+  $min-title-size: map.get(fonts.$pp--fonts, "sizes", "#{$min-font-size}");
+  @debug 'Min title size #{$min-title-size} is a #{type-of($min-title-size)}';
+  $med-title-size: functions.average(map.get(fonts.$pp--fonts, "sizes", "#{$med-font-size}"), $min-title-size) * 1px;
+  @debug 'Med title size #{$med-title-size} is a #{type-of($med-title-size)}';
+  @media screen and (min-width: 600px) and (max-width: 782px) {
+    font-size: $med-title-size;
+  }
+  @media screen and (max-width: 599px) {
+    font-size: $min-title-size;
+  }
+}
 
 @mixin footer($parent-class, $footer-class) {
   @error 'Invoked mixins.footer(#{$parent-class}, #{$footer-class})';
