@@ -8,12 +8,12 @@
 
 @mixin title-font-size($narrow-font-size, $medium-font-size) {
   // Only the narrow screen and medium screen font sizes need to be specified here: the widest screen font size is given by the default size.
-  @debug 'Narrow screen font size: ' + $narrow-font-size;
-  @debug 'Medium screen font size: ' + $medium-font-size;
+  // @debug 'Narrow screen font size: ' + $narrow-font-size;
+  // @debug 'Medium screen font size: ' + $medium-font-size;
   $nar-title-size: map.get(fonts.$pp--fonts, "sizes", "#{$narrow-font-size}");
-  @debug 'Narrow screen title size #{$nar-title-size} is a #{type-of($nar-title-size)}';
+  // @debug 'Narrow screen title size #{$nar-title-size} is a #{type-of($nar-title-size)}';
   $med-title-size: map.get(fonts.$pp--fonts, "sizes", "#{$medium-font-size}");
-  @debug 'Medium screen title size #{$med-title-size} is a #{type-of($med-title-size)}';
+  // @debug 'Medium screen title size #{$med-title-size} is a #{type-of($med-title-size)}';
   @media screen and (min-width: 600px) and (max-width: 782px) {
     font-size: $med-title-size;
   }
