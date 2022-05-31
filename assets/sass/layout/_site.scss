@@ -128,12 +128,15 @@ $site-width: 1000px !default;
         // End of grid item
       }
     }
-    .pp-main.pp-home {
+    .pp-main.pp-home,
+    .pp-main.pp-index,
+    .pp-main.pp-search {
       // Grid container
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: min-content min-content;
       grid-template-areas:
+        "title"
         "description"
         "posts"
         "navigation"
@@ -141,6 +144,11 @@ $site-width: 1000px !default;
       column-gap: 0;
       row-gap: $row-gap;
       // End of grid container
+      .pp-query-title {
+        // Grid item
+        grid-area: title;
+        // End of grid item
+      }
       .pp-description {
         // Grid item
         grid-area: description;
