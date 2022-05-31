@@ -1069,6 +1069,16 @@ svg {
 .wp-site-blocks .pp-query .pp-article-title {
   font-size: 22px;
 }
+@media screen and (min-width: 600px) and (max-width: 782px) {
+  .wp-site-blocks .pp-article-title {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .wp-site-blocks .pp-article-title {
+    font-size: 22px;
+  }
+}
 .wp-site-blocks .pp-focus .pp-article-title {
   text-shadow: 0 0 1px #848484, 0 0 5px #eaeaea, 0 0 10px white;
 }

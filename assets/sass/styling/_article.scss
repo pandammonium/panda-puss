@@ -8,8 +8,15 @@
 
 .wp-site-blocks {
   .pp-query {
-    .pp-article-title {
-      font-size: map.get(fonts.$pp--fonts, "sizes", "x-large");
+    .pp-article {
+      &-title {
+        font-size: map.get(fonts.$pp--fonts, "sizes", "x-large");
+      }
+    }
+  }
+  .pp-article {
+    &-title {
+      @include mixins.title-font-size('x-large', 'h1');
     }
   }
   .pp-focus {
