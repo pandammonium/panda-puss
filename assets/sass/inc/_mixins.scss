@@ -6,18 +6,19 @@
 @use '../settings/fonts';
 @use '../settings/spacing';
 
-@mixin title-font-size($min-font-size: 'x-large', $med-font-size: 'h1') {
-  @debug 'Minimum font size: ' + $min-font-size;
-  @debug 'Medium font size:  ' + $med-font-size;
-  $min-title-size: map.get(fonts.$pp--fonts, "sizes", "#{$min-font-size}");
-  @debug 'Min title size #{$min-title-size} is a #{type-of($min-title-size)}';
-  $med-title-size: functions.average(map.get(fonts.$pp--fonts, "sizes", "#{$med-font-size}"), $min-title-size) * 1px;
-  @debug 'Med title size #{$med-title-size} is a #{type-of($med-title-size)}';
+@mixin title-font-size($narrow-font-size, $medium-font-size) {
+  // Only the narrow screen and medium screen font sizes need to be specified here: the widest screen font size is given by the default size.
+  @debug 'Narrow screen font size: ' + $narrow-font-size;
+  @debug 'Medium screen font size: ' + $medium-font-size;
+  $nar-title-size: map.get(fonts.$pp--fonts, "sizes", "#{$narrow-font-size}");
+  @debug 'Narrow screen title size #{$nar-title-size} is a #{type-of($nar-title-size)}';
+  $med-title-size: map.get(fonts.$pp--fonts, "sizes", "#{$medium-font-size}");
+  @debug 'Medium screen title size #{$med-title-size} is a #{type-of($med-title-size)}';
   @media screen and (min-width: 600px) and (max-width: 782px) {
     font-size: $med-title-size;
   }
   @media screen and (max-width: 599px) {
-    font-size: $min-title-size;
+    font-size: $nar-title-size;
   }
 }
 
