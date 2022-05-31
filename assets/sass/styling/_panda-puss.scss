@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use '../inc/mixins';
+@use '../settings/fonts';
+
+.pp-columns {
+  .pp-column {
+    &-heading {
+      font-size: map.get(fonts.$pp--fonts, "sizes", "h4");
+      @include mixins.title-font-size('h3', 'h4');
+    }
+  }
+}
