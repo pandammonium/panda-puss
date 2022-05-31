@@ -7,6 +7,8 @@
 
   @if $content-type != "content" and $content-type != 'excerpt' {
     @error "Unknown post content type";
+  // } @else {
+  //   @debug $content-type;
   }
   $grid-areas: "";
   $col-gap: 0;
@@ -25,23 +27,23 @@
     row-gap: 0;
     // End of grid container
     // @debug "#{&}";
-    @if $is-front_end == true {
-      &-header {
-        // Grid item
-        grid-area: article-header;
-        // End of grid item
-        // Grid container
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: min-content;
-        grid-template-areas:
-          "post-title"
-        ;
-        place-self: start stretch;
-        // End of grid container
-      }
+    &-header {
+    @debug #{&};
+      // Grid item
+      grid-area: article-header;
+      // End of grid item
+      // Grid container
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: min-content;
+      grid-template-areas:
+        "post-title"
+      ;
+      place-self: start stretch;
+      // End of grid container
     }
     &-body {
+      @debug #{&};
       // background-color: cornsilk;
       // Grid item
       grid-area: article-body;
@@ -56,41 +58,39 @@
       place-self: center stretch;
       // End of grid container
     }
-    @if $is-front_end == true {
-      &-footer {
-        // Grid item
-        grid-area: article-footer;
-        // End of grid item
-        // Grid container
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: min-content;
-        grid-template-areas:
-          "metadata"
-        ;
-        place-self: end stretch;
-        // End of grid container
-        @include metadata.metadata('article', $is-front_end);
-      }
-      &-featured_image {
-        // background-color: gold;
-        // border: 1px solid gold;
-        margin: 0 {
-          left: auto;
-          right: auto;
-        };
-        // Grid item
-        grid-area: article-featured_image;
-        place-self: start center;
-        // End of grid item
-      }
-      &-title {
-        // background-color: green;
-        // border: 1px solid green;
-        // Grid item
-        grid-area: post-title;
-        // End of grid item
-      }
+    &-footer {
+      // Grid item
+      grid-area: article-footer;
+      // End of grid item
+      // Grid container
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: min-content;
+      grid-template-areas:
+        "metadata"
+      ;
+      place-self: end stretch;
+      // End of grid container
+      @include metadata.metadata('article', $is-front_end);
+    }
+    &-featured_image {
+      // background-color: gold;
+      // border: 1px solid gold;
+      margin: 0 {
+        left: auto;
+        right: auto;
+      };
+      // Grid item
+      grid-area: article-featured_image;
+      place-self: start center;
+      // End of grid item
+    }
+    &-title {
+      // background-color: green;
+      // border: 1px solid green;
+      // Grid item
+      grid-area: post-title;
+      // End of grid item
     }
 
     &-body {

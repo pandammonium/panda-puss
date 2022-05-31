@@ -122,9 +122,38 @@ $site-width: 1000px !default;
         grid-area: info;
         // End of grid item
       }
-      .pp-query.pp-front_page.pp-loop {
+      .pp-query.pp-loop.pp-front_page {
         // Grid item
         grid-area: posts;
+        // End of grid item
+      }
+    }
+    .pp-main.pp-home {
+      // Grid container
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: min-content min-content;
+      grid-template-areas:
+        "description"
+        "posts"
+        "navigation"
+      ;
+      column-gap: 0;
+      row-gap: $row-gap;
+      // End of grid container
+      .pp-description {
+        // Grid item
+        grid-area: description;
+        // End of grid item
+      }
+      .pp-query.pp-loop.pp-home {
+        // Grid item
+        grid-area: posts;
+        // End of grid item
+      }
+      .pp-pagination {
+        // Grid item
+        grid-area: navigation;
         // End of grid item
       }
     }
