@@ -120,6 +120,7 @@
 
   @if ($content-type == "content") {
     &.pp-alt {
+      // @debug "#{$content-type}: #{&}";
       $header: "\"article-header\"";
       $image: "\"article-featured_image\"";
       $footer: "\"article-footer\"";
@@ -139,7 +140,7 @@
       // End of grid container
     }
     &.pp-focus {
-      // @debug #{&};
+      // @debug "#{$content-type}: #{&}";
       @if ($is-front_end == true) {
         .pp-article-header {
           // Display title on overlaid on featured image:
@@ -181,7 +182,7 @@
     &.pp-front_page {
       // background-color: darkorchid;
       // border: 1px solid darkorchid;
-      // @debug "#{&}";
+      // @debug "#{$content-type}: #{&}";
       grid-template-columns: 100%;
       $image: "\"article-featured_image\"";
       $header: "\"article-header\"";
@@ -204,7 +205,7 @@
     }
   }
   &.pp-no-featured_image {
-    // @debug "#{&}";
+    // @debug "#{$content-type}: #{&}";
     grid-template-columns: 100%;
     $header: "\"article-header\"";
     $footer: "\"article-footer\"";
