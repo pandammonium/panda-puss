@@ -1,6 +1,6 @@
 @use 'sass:string';
 @use 'sass:map';
-@use 'metadata';
+@use '../inc/mixins';
 @use '../settings/spacing';
 
 @mixin article($content-type, $is-front_end) {
@@ -28,7 +28,7 @@
     // End of grid container
     // @debug "#{&}";
     &-header {
-    @debug #{&};
+    // @debug #{&};
       // Grid item
       grid-area: article-header;
       // End of grid item
@@ -43,7 +43,7 @@
       // End of grid container
     }
     &-body {
-      @debug #{&};
+      // @debug #{&};
       // background-color: cornsilk;
       // Grid item
       grid-area: article-body;
@@ -71,7 +71,7 @@
       ;
       place-self: end stretch;
       // End of grid container
-      @include metadata.metadata('article', $is-front_end);
+      @include mixins.metadata('article', $is-front_end);
     }
     &-featured_image {
       // background-color: gold;
