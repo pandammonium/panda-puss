@@ -10,11 +10,11 @@ $site-width: 1000px !default;
 }
 
 .wp-site-blocks {
+  $row-gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")});
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
   @if $is-front_end == true {
     // @debug 'Front end: ' + #{&};
-    $row-gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")});
     margin: {
       // Centre the site content:
       left: auto;
@@ -103,6 +103,29 @@ $site-width: 1000px !default;
           order: 3;
           // End of flex item
         }
+      }
+    }
+    &.pp-main.pp-front_page {
+      // Grid container
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: min-content min-content;
+      grid-template-areas:
+        "info"
+        "posts"
+      ;
+      column-gap: 0;
+      row-gap: $row-gap;
+      // End of grid container
+      .pp-column-block {
+        // Grid item
+        grid-area: info;
+        // End of grid item
+      }
+      .pp-query.pp-front_page.pp-loop {
+        // Grid item
+        grid-area: posts;
+        // End of grid item
       }
     }
   }

@@ -584,6 +584,20 @@ svg {
 .wp-site-blocks .pp-site.pp-columns .pp-column.pp-sidebar.pp-sidebar_rhs {
   order: 3;
 }
+.wp-site-blocks .pp-site.pp-main.pp-front_page {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: min-content min-content;
+  grid-template-areas: "info" "posts";
+  column-gap: 0;
+  row-gap: calc(1 * 2ch);
+}
+.wp-site-blocks .pp-site.pp-main.pp-front_page .pp-column-block {
+  grid-area: info;
+}
+.wp-site-blocks .pp-site.pp-main.pp-front_page .pp-query.pp-front_page.pp-loop {
+  grid-area: posts;
+}
 .wp-site-blocks .pp-footer {
   grid-area: footer;
 }
