@@ -10,7 +10,7 @@ $site-width: 1000px !default;
 }
 
 .wp-site-blocks {
-  $row-gap: calc(1 * #{map.get(spacing.$pp--spacing, "vertical")});
+  $row-gap: 0px;
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
   @if $is-front_end == true {
@@ -130,7 +130,8 @@ $site-width: 1000px !default;
     }
     .pp-main.pp-home,
     .pp-main.pp-index,
-    .pp-main.pp-search {
+    .pp-main.pp-search,
+    .pp-main.pp-archive {
       // Grid container
       display: grid;
       grid-template-columns: auto;
@@ -154,7 +155,7 @@ $site-width: 1000px !default;
         grid-area: description;
         // End of grid item
       }
-      .pp-query.pp-loop.pp-home {
+      .pp-query.pp-loop {
         // Grid item
         grid-area: posts;
         // End of grid item
