@@ -9,17 +9,15 @@
 @mixin metadata($metadata-type, $is-front_end) {
   @if $metadata-type != 'comment' and $metadata-type != 'article' {
     @error "Unknown post metadata type";
-  } @else {
-    @debug 'Metadata type: #{$metadata-type}';
+  // } @else {
+  //   @debug 'Metadata type: #{$metadata-type}';
   }
   @if $is-front_end != true and $is-front_end != false {
     @error "Can't tell if is front end or back end. Second argument should be boolean (true: front end; false: back end).";
-  } @else {
-    @debug 'Is front end: #{$is-front-end}';
+  // } @else {
+  //   @debug 'Is front end: #{$is-front-end}';
   }
-  // @debug 'metadata-type: ' + #{$metadata-type};
   // @debug 'class: ' + #{&};
-  // @debug 'is-front_end: ' + #{$is-front_end};
   @if ($is-front_end == true or $metadata-type == 'article') {
     $col-gap: calc(1 * #{map.get(spacing.$pp--spacing, "horizontal")});
     & {
