@@ -13,14 +13,14 @@ $is-front_end: true !default;
     // @debug #{&};
     // background-color: palegreen;
     // border: 1px solid palegreen;
-    // &:not(.pp-home-page),
+    // &:not(.pp-home),
     &:not(.pp-front_page) {
       // @debug #{&};
       // Grid container
       @include post-content.post-content('content', $is-front_end);
       // End of grid container
     }
-    // &.pp-home-page,
+    // &.pp-home,
     &.pp-front_page {
       // Currently acts like it's in the loop, even though it's a page.
       // Grid container
