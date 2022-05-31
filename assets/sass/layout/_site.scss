@@ -10,7 +10,6 @@ $site-width: 1000px !default;
 }
 
 .wp-site-blocks {
-  $is-site: true;
   // background-color: papayawhip;
   // border: 1px solid papayawhip;
   @if $is-front_end == true {
