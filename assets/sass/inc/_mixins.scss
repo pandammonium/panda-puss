@@ -219,9 +219,9 @@
   :is(article, aside, nav, section) h1,\
   button, input, optgroup, select, textarea, legend, fieldset,\
   .wp-block, .wp-site-blocks, .wp-block-post-author__bio, .wp-block-post-template, .wp-block-search__button, .wp-block-search__input,\
-  .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front-page) .pp-article, .page .pp-main:not(.pp-front-page) .pp-article,\
-  .block-editor-block-list__layout .pp-main:not(.pp-front-page) .pp-article,\
-  .single .pp-main.pp-front-page .pp-article, .page .pp-main.pp-front-page .pp-article, .block-editor-block-list__layout .pp-main.pp-front-page .pp-article, .pp-template .wp-block-post .pp-article,\
+  .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front_page) .pp-article, .page .pp-main:not(.pp-front_page) .pp-article,\
+  .block-editor-block-list__layout .pp-main:not(.pp-front_page) .pp-article,\
+  .single .pp-main.pp-front_page .pp-article, .page .pp-main.pp-front_page .pp-article, .block-editor-block-list__layout .pp-main.pp-front_page .pp-article, .pp-template .wp-block-post .pp-article,\
   .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-home-page) .pp-article, .page .pp-main:not(.pp-home-page) .pp-article,\
   .block-editor-block-list__layout .pp-main:not(.pp-home-page) .pp-article,\
   .single .pp-main.pp-home-page .pp-article, .page .pp-main.pp-home-page .pp-article, .block-editor-block-list__layout .pp-main.pp-home-page .pp-article, .pp-template .wp-block-post .pp-article,\
