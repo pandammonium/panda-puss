@@ -141,25 +141,23 @@
     }
     &.pp-focus {
       // @debug "#{$content-type}: #{&}";
-      @if ($is-front_end == true) {
-        .pp-article-header {
-          // Display title on overlaid on featured image:
-          position: relative;
-          text-align: center;
-          // Only overlay the title over the featured image if there is an adjacent featured image:
-          .pp-article-featured_image + .pp-article-title {
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-          }
-          display: flex;
-          flex-flow: column nowrap;
-          align-items: stretch;
-          align-content: center;
-          justify-content: center;
+      .pp-article-header {
+        // Display title on overlaid on featured image:
+        position: relative;
+        text-align: center;
+        // Only overlay the title over the featured image if there is an adjacent featured image:
+        .pp-article-featured_image + .pp-article-title {
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
         }
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        align-content: center;
+        justify-content: center;
       }
       $header: "\"article-header\"";
       $footer: "\"article-footer\"";

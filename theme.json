@@ -122,7 +122,7 @@
   "customTemplates": [
     {
       "name":"page-alt",
-      "title":"Page | with Sidebar | with Featured Image in line",
+      "title":"Page | with Sidebar – LHS | with Featured Image in line",
       "postTypes": [
         "page"
       ]
