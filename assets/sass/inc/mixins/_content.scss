@@ -487,9 +487,7 @@
 } // End of @mixin pagination
 
 @mixin post-content($content-type, $is-front_end) {
-
   // @debug "content type: #{$content-type}";
-
   $article: "\"article\"";
   $num-rows: 0;
   $grid-areas: #{$article};
@@ -506,29 +504,29 @@
   } @else if $content-type == 'excerpt' {
     $num-rows: 1;
   } @else {
-    @error "Unknown post content type";
+    @error "Unknown post content type: #{$content-type}";
   }
   @if ($num-rows == 0) {
     @error 'There should be more than #{$num-rows} rows for grid #{$grid-areas}';
   }
-
   // @debug '#{&}';
 
   & {
     // @debug #{&};
     // background-color: red;
     // border: 1px solid red;
-    // Grid container
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat($num-rows, min-content);
-    // @debug 'num rows: ' + $num-rows;
-    grid-template-areas: #{$grid-areas};
-    column-gap: calc(2 * #{map.get(spacing.$pp--spacing, "horizontal")});
-    row-gap: calc(0.5 * #{map.get(spacing.$pp--spacing, "vertical")});
-    // End of grid container
-
     .pp-article {
+      @debug #{&};
+      // Grid container
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat($num-rows, min-content);
+      // @debug 'num rows: ' + $num-rows;
+      grid-template-areas: #{$grid-areas};
+      column-gap: calc(2 * #{map.get(spacing.$pp--spacing, "horizontal")});
+      row-gap: calc(0.5 * #{map.get(spacing.$pp--spacing, "vertical")});
+      // End of grid container
+
       // background-color: palegoldenrod;
       // border: 1px solid palegoldenrod;
       // Grid item

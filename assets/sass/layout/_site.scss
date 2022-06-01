@@ -105,6 +105,7 @@ $site-width: 1000px !default;
       }
     }
     &.pp-main.pp-front_page {
+      // background-color: red;;
       // Grid container
       display: grid;
       grid-template-columns: auto;
@@ -127,12 +128,13 @@ $site-width: 1000px !default;
         // End of grid item
       }
     }
-    &.pp-main.pp-archive,
-    &.pp-main.pp-author,
-    &.pp-main.pp-home,
-    &.pp-main.pp-index,
-    &.pp-main.pp-search,
-    &.pp-main.pp-term {
+    & .pp-main.pp-archive,
+    & .pp-main.pp-author,
+    & .pp-main.pp-home,
+    & .pp-main.pp-index,
+    &.pp-main.pp-search, // Must be no space here (because there are no sidebars and therefore no columns.)
+    & .pp-main.pp-term {
+      // background-color: red;;
       // Grid container
       display: grid;
       grid-template-columns: auto;

@@ -14,14 +14,21 @@ $is-front_end: true !default;
     // background-color: palegreen;
     // border: 1px solid palegreen;
     // &:not(.pp-home),
-    &:not(.pp-front_page) {
-      // @debug #{&};
-      // Grid container
-      @include content.post-content('content', $is-front_end);
-      // End of grid container
-    }
+    // &.pp-archive,
+    // &.pp-author,
+    // &.pp-home,
+    // &.pp-index,
+    // &.pp-search,
+    // &.pp-term {
+    //   background-color: paleturquoise;
+    //   // @debug #{&};
+    //   // Grid container
+    //   @include content.post-content('excerpt', $is-front_end);
+    //   // End of grid container
+    // }
     // &.pp-home,
     &.pp-front_page {
+      // background-color: palegoldenrod;
       // Currently acts like it's in the loop, even though it's a page.
       // Grid container
       // @debug #{&};

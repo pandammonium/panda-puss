@@ -8,9 +8,8 @@ $list: '.pp-template';
 @if ($is-front_end == true) {
   $list: #{$list} + ', .pp-comment-list';
 }
-#{$list}
- {
-  // @debug #{&};
+#{$list} {
+  @debug #{&};
   // background-color: pink;
   // border: 1px solid pink;
   // Flex container
