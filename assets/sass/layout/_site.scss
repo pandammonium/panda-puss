@@ -21,7 +21,7 @@ $site-width: 1000px !default;
     };
     width: 90vw;
     max-width: $site-width;
-    min-height: calc(100vh - (3 * $row-gap));
+    min-height: calc(100vh - (3 * $row-gap) - 32px); // The WP top menu bar is 32px high.
 
     // Grid container
     display: grid;
@@ -138,13 +138,14 @@ $site-width: 1000px !default;
       // Grid container
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: min-content min-content;
+      grid-template-rows: min-content;
       grid-template-areas:
         "title"
-        "about"
-        "posts"
-        "navigation"
+        "description"
+        "query"
       ;
+      place-content: start stretch;
+      place-items: start stretch;
       column-gap: 0;
       row-gap: $row-gap;
       // End of grid container
@@ -153,20 +154,34 @@ $site-width: 1000px !default;
         grid-area: title;
         // End of grid item
       }
-      .pp-archive-about {
+      .pp-query-description {
         // Grid item
-        grid-area: about;
+        grid-area: description;
         // End of grid item
       }
-      .pp-query.pp-loop {
+      .pp-query {
         // Grid item
-        grid-area: posts;
+        grid-area: query;
         // End of grid item
-      }
-      .pp-pagination {
-        // Grid item
-        grid-area: navigation;
-        // End of grid item
+        // Grid container
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: min-content;
+        grid-template-areas:
+          "content"
+          "pagination"
+        ;
+        // End of grid container
+        .pp-template {
+          // Grid item
+          grid-area: content;
+          // End of grid item
+        }
+        .pp-pagination {
+          // Grid item
+          grid-area: pagination;
+          // End of grid item
+        }
       }
     }
   }
