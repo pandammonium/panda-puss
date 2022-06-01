@@ -1,8 +1,7 @@
 $is-front_end: true !default;
 
 @use 'sass:map';
-@use 'post-content';
-@use 'pagination';
+@use '../inc/mixins';
 @use '../settings/spacing';
 
 $list: '.pp-template';
@@ -33,14 +32,14 @@ $list: '.pp-template';
     }
   }
 }
-@include pagination.pagination;
+@include mixins.pagination;
 .pp-template {
   // @debug #{&};
   // background-color: palegreen;
   .wp-block-post {
     // @debug #{&};
     // Grid container
-    @include post-content.post-content('excerpt', $is-front_end);
+    @include mixins.post-content('excerpt', $is-front_end);
     // End of grid container
   }
 }
