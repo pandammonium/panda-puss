@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../inc/mixins';
+@use '../inc/mixins/content';
 @use '../settings/spacing';
 
 $is-front_end: false !default;
@@ -54,7 +54,7 @@ $is-front_end: false !default;
         ;
         // End of grid container
 
-        @include mixins.metadata('comment', $is-front_end);
+        @include content.metadata('comment', $is-front_end);
 
         .pp-comment-header {
           // Grid item

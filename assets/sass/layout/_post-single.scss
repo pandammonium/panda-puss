@@ -1,7 +1,7 @@
 $is-front_end: true !default;
 
 @use 'sass:map';
-@use '../inc/mixins';
+@use '../inc/mixins/content';
 @use '../settings/spacing';
 
 // Used by single post, page, etc.
@@ -17,7 +17,7 @@ $is-front_end: true !default;
     &:not(.pp-front_page) {
       // @debug #{&};
       // Grid container
-      @include mixins.post-content('content', $is-front_end);
+      @include content.post-content('content', $is-front_end);
       // End of grid container
     }
     // &.pp-home,
@@ -25,7 +25,7 @@ $is-front_end: true !default;
       // Currently acts like it's in the loop, even though it's a page.
       // Grid container
       // @debug #{&};
-      @include mixins.post-content('excerpt', $is-front_end);
+      @include content.post-content('excerpt', $is-front_end);
       // End of grid container
       .pp-template {
         $col-gap: calc(1 * #{map.get(spacing.$pp--spacing, "horizontal")});

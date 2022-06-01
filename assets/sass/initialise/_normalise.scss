@@ -1,12 +1,13 @@
 $is-front_end: true !default;
 
 @use 'sass:map';
-@use '../inc/mixins';
+@use '../inc/mixins/forms';
+@use '../inc/mixins/layout';
 @use '../settings/colours';
 @use '../settings/fonts';
 @use '../settings/quotation-marks';
 
-@include mixins.initialise-spacing($is-front_end);
+@include layout.initialise-spacing($is-front_end);
 
 //
 // -----------------------------------------------------------------------------
@@ -300,15 +301,15 @@ select { // 1
 
 button,
 input[type="submit"] {
-  @include mixins.ui-button;
+  @include forms.ui-button;
 }
 button:active,
 input[type="submit"]:active {
-  @include mixins.ui-button-active;
+  @include forms.ui-button-active;
 }
 input:not([type=submit]),
 textarea {
-  @include mixins.ui-field;
+  @include forms.ui-field;
 }
 
 //

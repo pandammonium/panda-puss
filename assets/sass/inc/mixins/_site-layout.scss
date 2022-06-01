@@ -1,0 +1,37 @@
+@mixin footer($parent-class, $footer-class) {
+  @error 'Invoked mixins.footer(#{$parent-class}, #{$footer-class})';
+} // End of @mixin footer
+
+@mixin header($parent-class, $header-class) {
+  @warn 'Invoked mixins.header(#{$parent-class}, #{$header-class})';
+  $header-superclass: '';
+  $grid-container-class: $header-class;
+  $grid-item-extendable-class: '.pp-header';
+  @if $header-class == '.pp-header' {
+    $grid-container-class: '';
+  } @else {
+    @error Unexpected header class #{$header-class};
+  }
+  // @debug 'Header parent: ' + $parent-class;
+  // @debug 'Header class: ' + $header-class;
+  // @debug 'Header superclass: ' + $header-superclass;
+  // @debug 'Header grid container class: ' + $grid-container-class;
+  // @debug 'Header grid item (extendable) class: ' + $grid-item-extendable-class;
+
+  @at-root #{$parent-class}#{$grid-container-class}#{$header-class} {
+    // @debug 'Header grid container class (actual): #{&}';
+    // Grid container
+  }
+} // End of @mixin header
+
+@mixin lay_out-footer-blocks($flexInc, $flexDec, $minItems, $maxItems) {
+  // @debug 'Invoked mixins.lay_out-footer-blocks(#{$flexInc}, #{$flexDec}, #{$minItems}, #{$maxItems})';
+  @for $i from $minItems through $maxItems {
+    &:first-child:nth-last-child(#{$i}),
+    &:first-child:nth-last-child(#{$i}) ~ & {
+      /* #{$i} footer block(s) */
+      flex: $flexInc $flexDec calc(100% / $i);
+      // @debug $i footer block(s) → flex $flexInc $flexDec calc(100% / $i);
+    }
+  }
+} // End of @mixin lay_out-footer-blocks

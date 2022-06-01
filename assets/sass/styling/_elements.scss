@@ -1,6 +1,6 @@
 $is-front_end: true !default;
 
-@use '../inc/mixins';
+@use '../inc/mixins/styling';
 
 @if $is-front_end != true and $is-front_end != false {
   @error 'Cannot determine whether is front end or back end: ' + $is-front_end;
@@ -10,7 +10,7 @@ $is-front_end: true !default;
 
 .wp-site-blocks {
   code {
-    @include mixins.code-lang;
+    @include styling.code-lang;
   }
 
 //   h1, h2, h3, h4, h5, h6 {
@@ -40,6 +40,6 @@ $is-front_end: true !default;
 
 @if $is-front_end == false {
   :not(pre) code {
-    @include mixins.code-lang;
+    @include styling.code-lang;
   }
 }

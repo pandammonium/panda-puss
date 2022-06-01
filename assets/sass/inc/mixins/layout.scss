@@ -1,0 +1,105 @@
+@mixin initialise-spacing($is-front_end) {
+  $reset-margin: ':root, body,\
+  header, footer, div,\
+  ol, ul, menu, div, p, dl, img, time,\
+  multicol, blockquote, figure,\
+  h1, h2, h3, h4, h5, h6,\
+  :is(article, aside, nav, section) h1,\
+  button, input, optgroup, select, textarea, legend, fieldset,\
+  .wp-block, .wp-site-blocks, .wp-block-post-author__bio, .wp-block-post-template, .wp-block-search__button, .wp-block-search__input,\
+  .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-front_page) .pp-article, .page .pp-main:not(.pp-front_page) .pp-article,\
+  .block-editor-block-list__layout .pp-main:not(.pp-front_page) .pp-article,\
+  .single .pp-main.pp-front_page .pp-article, .page .pp-main.pp-front_page .pp-article, .block-editor-block-list__layout .pp-main.pp-front_page .pp-article, .pp-template .wp-block-post .pp-article,\
+  .pp-template .wp-block-post .pp-article, .single .pp-main:not(.pp-home) .pp-article, .page .pp-main:not(.pp-home) .pp-article,\
+  .block-editor-block-list__layout .pp-main:not(.pp-home) .pp-article,\
+  .single .pp-main.pp-home .pp-article, .page .pp-main.pp-home .pp-article, .block-editor-block-list__layout .pp-main.pp-home .pp-article, .pp-template .wp-block-post .pp-article,\
+  .wp-block-query-pagination > .wp-block-query-pagination-next, .wp-block-query-pagination > .wp-block-query-pagination-numbers, .wp-block-query-pagination > .wp-block-query-pagination-previous,\
+  .wp-block-code, wp-block-code > code, .wp-site-blocks .wp-block-code, .wp-site-blocks .wp-block-code code,\
+  .block-editor-block-list__block wp-block .wp-block-code basic, pre code\
+  fieldset';
+
+  @if ($is-front_end == true) {
+    $reset-margin: #{$reset-margin} + ', .wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent, button, ::file-selector-button, input:is([type="reset"], [type="button"], [type="submit"]), .wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]), .wp-block-post-comments textarea, .wp-block-post-author__avatar, .wp-block-post-author__content, .wp-block-post-author__byline, .wp-block-post-author__name, .wp-block-post-author__bio';
+  }
+
+  #{$reset-margin} {
+    margin: 0 {
+      block: 0;
+      inline: 0;
+    };
+    padding: 0 {
+      block: 0;
+      inline: 0;
+    };
+    // outline: 1px dotted hotpink;
+  }
+  @include list-spacing-left($is-front_end);
+} // End of @mixin initialise-spacing
+
+@mixin list-spacing-left($is-front_end) {
+  $list-types: ol, ul, dl;
+  @each $list-type in $list-types {
+    @if ($is-front_end == false) {
+      #{$list-type} {
+        padding: {
+          // left: revert;
+          inline-start: revert !important;
+        }
+      }
+    } @else if ($is-front_end == true) {
+      #{$list-type} {
+        padding: {
+          inline-start: revert;
+        }
+      }
+      $list-type: '.pp-footer-blocks ' + $list-type;
+      #{$list-type} {
+        // Default value; works best in Chrome, whose specific test is unacceptable to SASS for v22–28:
+        // outline: 5px solid black;
+        padding-inline-start: 2.25ch;
+        // Browser-specific settings taken from https://www.browserstack.com/guide/create-browser-specific-css; Opera 85.0, Chrome 100.0 and Safari15.4+ all seem to use the Safari 6.1–10.0 one: put it first so that the more specific ones match.
+        // Don't bother with IE.
+        @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
+          // Safari 6.1-10.0, 15.4+
+          // Opera 85.0
+          // Chrome 100.0+
+          // outline: 5px solid green;
+          padding-inline-start: 2ch;
+        }
+        @supports (-ms-ime-align:auto) {
+          // Edge
+          // outline: 5px solid skyblue;
+          padding-inline-start: 2.25ch;
+        }
+        @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+          // Chrome 29+
+          // Opera 85.0+
+          // outline: 5px solid red;
+          padding-inline-start: 2.25ch;
+        }
+        @media not all and (min-resolution: 0.001dpcm) {
+          @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+            // Safari 10.1
+            // outline: 5px solid darkblue;
+            padding-inline-start: 2ch;
+          }
+          @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+            // Safari 11+
+            // outline: 5px solid lightblue;
+            padding-inline-start: 2.125ch;
+          }
+        }
+        @-moz-document url-prefix() {
+          // Firefox
+          // outline: 5px solid orange;
+          padding-inline-start: 1.5ch;
+        }
+        @supports (-moz-appearance: none) {
+          // Firefox (native OS styling)
+          // outline: 5px solid darkorange;
+          padding-inline-start: 1.5ch;
+        }
+      }
+    }
+  }
+} // End of @mixin list-spacing-left

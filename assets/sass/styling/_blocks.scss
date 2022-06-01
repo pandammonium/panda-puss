@@ -1,7 +1,7 @@
 $is-front_end: true !default;
 
 // @use '../settings/fonts';
-@use '../inc/mixins';
+@use '../inc/mixins/styling';
 
 @if $is-front-end == true {
   .wp-block {
@@ -13,7 +13,7 @@ $is-front_end: true !default;
     &-calendar {}
     &-categories {}
     &-code {
-      @include mixins.code-lang;
+      @include styling.code-lang;
       code {
         color: inherit;
       }

@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use 'layout';
+@use '../../settings/colours';
+@use '../../settings/spacing';
+
+@mixin ui-button {
+  @include ui-element;
+  border-style: outset;
+  padding: 0 clamp(1ch, calc(10 * #{map.get(spacing.$pp--spacing, "vertical")}), 3%);
+  width: fit-content;
+} // End of @mixin ui-button
+
+@mixin ui-button-active {
+  @include ui-button;
+  // background-color: colours.$pp--colour--fg-primary;
+  // border-color: colours.$pp--colour--bg-primary;
+  border-style: inset;
+  // color: colours.$pp--colour--bg-primary;
+} // End of @mixin ui-button-active
+
+@mixin ui-element {
+  background-color: inherit;
+  border-color: colours.$pp--colour--ll-primary;
+  border-radius: inherit;
+  border-style: solid;
+  border-width: 2px;
+  color: colours.$pp--colour--fg-primary;
+} // End of @mixin ui-element
+
+@mixin ui-field {
+  @include ui-element;
+  border-style: inset;
+} // End of @mixin ui-field

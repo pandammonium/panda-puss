@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../inc/mixins';
+@use '../inc/mixins/styling';
 @use '../settings/colours';
 @use '../settings/fonts';
 @use '../settings/spacing';
@@ -40,13 +40,13 @@
         text-align: center;
       }
       &-logo {
-        @include mixins.background-shadow(colours.$pp--colour--fg-primary);
+        @include styling.background-shadow(colours.$pp--colour--fg-primary);
       }
     }
     .pp-cover {
       .pp-header-site-title,
       .pp-header-site-tagline {
-        @include mixins.text-shadow(colours.$pp--colour--bg-primary);
+        @include styling.text-shadow(colours.$pp--colour--bg-primary);
       }
     }
   }

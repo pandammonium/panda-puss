@@ -1,4 +1,4 @@
-@use '../inc/mixins';
+@use '../inc/mixins/site-layout';
 
 .pp-footer {
   // Grid container
@@ -30,7 +30,7 @@
   }
   &-block {
     // Flex item
-    @include mixins.lay_out-footer-blocks(1, 1, 1, 6);
+    @include site-layout.lay_out-footer-blocks(1, 1, 1, 6);
     // End of flex item
     // $pp-footer-blocks-child-colour: color.scale(colours.$pp--colour--bg-tertiary, $lightness: 70%);
     // &:nth-child(odd) {

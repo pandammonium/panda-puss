@@ -1,7 +1,7 @@
 $is-front_end: true !default;
 
 @use 'sass:map';
-@use '../inc/mixins';
+@use '../inc/mixins/forms';
 @use '../settings/colours';
 @use '../settings/fonts';
 @use '../settings/spacing';
@@ -22,10 +22,10 @@ $is-front_end: true !default;
       &__link:hover,
       // &__link:active,
       &__link:focus {
-        @include mixins.ui-button;
+        @include forms.ui-button;
       }
       &__link:active {
-        @include mixins.ui-button-active;
+        @include forms.ui-button-active;
       }
     }
     &-code {
@@ -115,14 +115,14 @@ $is-front_end: true !default;
           // background-color: honeydew;
           input:not([type=submit]),
           textarea {
-            @include mixins.ui-field;
+            @include forms.ui-field;
           }
         }
       }
     }
     &-search {
       &__input {
-        @include mixins.ui-field;
+        @include forms.ui-field;
         color: currentColor;
         flex-grow: 1;
         min-width: 1ch;
@@ -136,10 +136,10 @@ $is-front_end: true !default;
         flex: unset;
       }
       &__button {
-        @include mixins.ui-button;
+        @include forms.ui-button;
       }
       &__button:active {
-        @include mixins.ui-button-active;
+        @include forms.ui-button-active;
       }
       &__label {
         display: none;

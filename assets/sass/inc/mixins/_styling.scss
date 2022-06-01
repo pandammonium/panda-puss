@@ -1,0 +1,76 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../../settings/colours';
+@use '../../settings/fonts';
+
+@mixin background-shadow($colour) {
+  // @debug 'Invoked mixins.background-shadow(#{$colour})';
+  // border: 1px solid colours.$pp--colour--bg-primary;
+  // box-shadow: 0 0 30px colours.$pp--colour--hl-primary;
+  // box-shadow: 0 0 10px $colour;
+  $main-len: 5px;
+  $long-len: 0.5 * $main-len;
+  box-shadow:
+    0 0 1px 1px colours.$pp--colour--ll-primary,
+    0 0 $main-len ($main-len + 1) colours.$pp--colour--fg-primary,
+    0 0 $long-len ($long-len + 1) colours.$pp--colour--ll-primary,
+  ;
+  margin: {
+    top: $main-len;
+    bottom: $main-len;
+  };
+} // End of @mixin background-shadow
+
+@mixin code-lang {
+  // List of programming languages:
+  // @see https://en.wikipedia.org/wiki/List_of_programming_languages
+  // Plus BibTeX, LaTeX
+  $langs: 'ada', 'algol', 'basic', 'bibtex', 'c', 'c-minus-minus', 'c-plus-plus', 'c-sharp', 'caml', 'css', 'curl', 'delphi', 'fortan', 'go', 'haskell', 'html', 'javascript', 'js', 'latex', 'matlab', 'modula', 'objective-c', 'occam', 'perl', 'php';
+
+  $code-hue-initial: 0;
+  $code-hue: $code-hue-initial;
+  $hue-increment: 7.5;
+  @each $lang in $langs {
+    // @debug '$lang: ' + #{$lang} + '; $code-hue: ' + #{$code-hue};
+    &.#{$lang} {
+      color: hsla($code-hue, 50%, 50%, 100%);
+      $code-hue: $code-hue + $hue-increment;
+      @if $code-hue > 360 - $hue-increment {
+        $code-hue-initial: $code-hue-initial + 1;
+        $code-hue: $code-hue-initial;
+      }
+    }
+  }
+} // End of @mixin code-lang
+
+@mixin text-shadow($colour) {
+  // border: 1px solid colours.$pp--colour--bg-primary;
+  // box-shadow: 0 0 30px colours.$pp--colour--hl-primary;
+  // box-shadow: 0 0 10px $colour;
+  // First box-shadow is on the top; last box-shadow is on the bottom:
+  $main-len: 5px;
+  $long-len: 2 * $main-len;
+  $lightness-factor: 50%;
+  text-shadow:
+    0 0 1px color.adjust($colour, $lightness: -$lightness-factor + 10),
+    0 0 $main-len color.adjust($colour, $lightness: (0 * $lightness-factor)),
+    0 0 (2 * $main-len) color.adjust($colour, $lightness: $lightness-factor),
+  ;
+} // End of @mixin text-shadow
+
+@mixin title-font-size($narrow-font-size, $medium-font-size) {
+  // Only the narrow screen and medium screen font sizes need to be specified here: the widest screen font size is given by the default size.
+  // @debug 'Narrow screen font size: ' + $narrow-font-size;
+  // @debug 'Medium screen font size: ' + $medium-font-size;
+  $nar-title-size: map.get(fonts.$pp--fonts, "sizes", "#{$narrow-font-size}");
+  // @debug 'Narrow screen title size #{$nar-title-size} is a #{type-of($nar-title-size)}';
+  $med-title-size: map.get(fonts.$pp--fonts, "sizes", "#{$medium-font-size}");
+  // @debug 'Medium screen title size #{$med-title-size} is a #{type-of($med-title-size)}';
+  @media screen and (min-width: 600px) and (max-width: 782px) {
+    font-size: $med-title-size;
+  }
+  @media screen and (max-width: 599px) {
+    font-size: $nar-title-size;
+  }
+} // End of @mixin title-font-size
+
