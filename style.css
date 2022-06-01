@@ -755,12 +755,12 @@ svg {
 .wp-site-blocks .pp-site .pp-main.pp-term .pp-query-title {
   grid-area: title;
 }
-.wp-site-blocks .pp-site .pp-main.pp-archive .pp-description,
-.wp-site-blocks .pp-site .pp-main.pp-author .pp-description,
-.wp-site-blocks .pp-site .pp-main.pp-home .pp-description,
-.wp-site-blocks .pp-site .pp-main.pp-index .pp-description,
-.wp-site-blocks .pp-site .pp-main.pp-search .pp-description,
-.wp-site-blocks .pp-site .pp-main.pp-term .pp-description {
+.wp-site-blocks .pp-site .pp-main.pp-archive .pp-archive-about,
+.wp-site-blocks .pp-site .pp-main.pp-author .pp-archive-about,
+.wp-site-blocks .pp-site .pp-main.pp-home .pp-archive-about,
+.wp-site-blocks .pp-site .pp-main.pp-index .pp-archive-about,
+.wp-site-blocks .pp-site .pp-main.pp-search .pp-archive-about,
+.wp-site-blocks .pp-site .pp-main.pp-term .pp-archive-about {
   grid-area: about;
 }
 .wp-site-blocks .pp-site .pp-main.pp-archive .pp-query.pp-loop,
