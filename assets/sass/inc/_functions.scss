@@ -20,7 +20,7 @@
     @return 1;
   }
   @return $n-minus-1 + $n-minus-2;
-}
+} // end of @function get-next-fibonacci-number
 
 @function add-next-fibonacci-number($fibonacci-numbers) {
   $-n-minus-1: list.nth($fibonacci-numbers, -1);
@@ -39,7 +39,7 @@
     @return append($fibonacci-numbers, 1);
   }
   @return append($fibonacci-numbers, $-n-minus-2 + $-n-minus-1);
-}
+} // End of @function add-next-fibonacci-number
 
 // Removes the unit of a length
 // @param {number} $number - Number to remove unit from
@@ -53,7 +53,7 @@
   }
   // @debug 'Cannot strip units from #{$number}';
   @return $number;
-}
+} // End of @function strip-unit
 
 @function average($numbers...) {
   $sum: 0;
@@ -69,7 +69,7 @@
   }
   // @debug 'Average: #{$sum} / #{$count} = #{math.div($sum, $count)}';
   @return math.div($sum, $count);
-}
+} // End of @function average
 
 @function getColour($colour-system, $colour, $colour-name: null) {
   @if $colour-system == 'hsla' or $colour-system == 'HSLA' {
@@ -85,4 +85,4 @@
   } @else {
     @error 'Unrecognised colour system: ' + $colour-system;
   }
-}
+} // End of @function getColour
