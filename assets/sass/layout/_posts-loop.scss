@@ -9,7 +9,7 @@ $list: '.pp-template';
   $list: #{$list} + ', .pp-comment-list';
 }
 #{$list} {
-  @debug #{&};
+  // @debug #{&};
   // background-color: pink;
   // border: 1px solid pink;
   // Flex container

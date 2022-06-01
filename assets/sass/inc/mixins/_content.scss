@@ -516,7 +516,7 @@
     // background-color: red;
     // border: 1px solid red;
     .pp-article {
-      @debug #{&};
+      // @debug #{&};
       // Grid container
       display: grid;
       grid-template-columns: 100%;
