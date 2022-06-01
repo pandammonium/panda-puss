@@ -105,41 +105,6 @@ $site-width: 1000px !default;
         }
       }
     }
-    .pp-main {
-      // Grid container
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: min-content min-content;
-      grid-template-areas:
-        "title"
-        "about"
-        "posts"
-        "navigation"
-      ;
-      column-gap: 0;
-      row-gap: $row-gap;
-      // End of grid container
-      .pp-query-title {
-        // Grid item
-        grid-area: title;
-        // End of grid item
-      }
-      .pp-archive-about {
-        // Grid item
-        grid-area: about;
-        // End of grid item
-      }
-      .pp-query.pp-loop {
-        // Grid item
-        grid-area: posts;
-        // End of grid item
-      }
-      .pp-pagination {
-        // Grid item
-        grid-area: navigation;
-        // End of grid item
-      }
-    }
     &.pp-main.pp-front_page {
       // Grid container
       display: grid;
@@ -160,6 +125,46 @@ $site-width: 1000px !default;
       .pp-query.pp-loop.pp-front_page {
         // Grid item
         grid-area: posts;
+        // End of grid item
+      }
+    }
+    .pp-main.pp-archive,
+    .pp-main.pp-author,
+    .pp-main.pp-home,
+    .pp-main.pp-index,
+    .pp-main.pp-search,
+    .pp-main.pp-term {
+      // Grid container
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: min-content min-content;
+      grid-template-areas:
+        "title"
+        "about"
+        "posts"
+        "navigation"
+      ;
+      column-gap: 0;
+      row-gap: $row-gap;
+      // End of grid container
+      .pp-query-title {
+        // Grid item
+        grid-area: title;
+        // End of grid item
+      }
+      .pp-description {
+        // Grid item
+        grid-area: about;
+        // End of grid item
+      }
+      .pp-query.pp-loop {
+        // Grid item
+        grid-area: posts;
+        // End of grid item
+      }
+      .pp-pagination {
+        // Grid item
+        grid-area: navigation;
         // End of grid item
       }
     }
